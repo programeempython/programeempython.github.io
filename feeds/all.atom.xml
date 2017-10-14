@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2017-10-13T19:56:00-03:00</updated><entry><title>Pequeno Imprevisto</title><link href="/pequeno-imprevisto.html" rel="alternate"></link><published>2017-10-13T19:56:00-03:00</published><updated>2017-10-13T19:56:00-03:00</updated><author><name>Julio Melanda</name></author><id>tag:None,2017-10-13:/pequeno-imprevisto.html</id><summary type="html">&lt;p&gt;Olá!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2017-10-14T12:10:00-03:00</updated><entry><title>Hacktoberfest 2017</title><link href="/hacktoberfest-2017.html" rel="alternate"></link><published>2017-10-14T12:10:00-03:00</published><updated>2017-10-14T12:10:00-03:00</updated><author><name>Julio Melanda</name></author><id>tag:None,2017-10-14:/hacktoberfest-2017.html</id><summary type="html">&lt;p&gt;Fala pessoal!&lt;/p&gt;
+&lt;p&gt;Sei que já estamos no meio do mês, mas ainda assim vale comentar pois ainda temos meio mês pela frente :D&lt;/p&gt;
+&lt;p&gt;Há alguns anos a DigitalOcean junto ao Github tem feito todo outubro a Hacktoberfest, uma campanha de colaboração em projetos de código aberto!
+E o mais legal …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Fala pessoal!&lt;/p&gt;
+&lt;p&gt;Sei que já estamos no meio do mês, mas ainda assim vale comentar pois ainda temos meio mês pela frente :D&lt;/p&gt;
+&lt;p&gt;Há alguns anos a DigitalOcean junto ao Github tem feito todo outubro a Hacktoberfest, uma campanha de colaboração em projetos de código aberto!
+E o mais legal e que além de participar contribuindo com projetos opensource, você ganha uma camiseta muito massa e adesivos!&lt;/p&gt;
+&lt;p&gt;E pra participar?&lt;/p&gt;
+&lt;p&gt;Bom, entre em &lt;a class="reference external" href="https://hacktoberfest.digitalocean.com"&gt;https://hacktoberfest.digitalocean.com&lt;/a&gt; e faça login com sua conta do Github. Agora é só abrir 4 pull requests em projetos abertos do Github e você está no jogo!&lt;/p&gt;
+&lt;p&gt;Para acompanhar como estão seus pull requests, basta acessar &lt;a class="reference external" href="https://hacktoberfest.digitalocean.com/stats"&gt;https://hacktoberfest.digitalocean.com/stats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Caso você não saiba com que projetos contribuir, minha amiga &lt;a class="reference external" href="https://twitter.com/jesstemporal"&gt;Jéssica Temporal&lt;/a&gt;
+fez um post muito massa no medium com uma &lt;a class="reference external" href="https://medium.com/nossa-coletividad/projetos-brasileiros-para-fazer-pull-requests-nesse-hacktoberfest-4dc9b9b576c0"&gt;lista de projetos brasileiros para contribuir&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Agora é só codar muito e fazer seus pull requests!&lt;/p&gt;
+&lt;p&gt;Até a próxima!&lt;/p&gt;
+</content><category term="hacktoberfest"></category><category term="camiseta"></category><category term="promo"></category></entry><entry><title>Pequeno Imprevisto</title><link href="/pequeno-imprevisto.html" rel="alternate"></link><published>2017-10-13T19:56:00-03:00</published><updated>2017-10-13T19:56:00-03:00</updated><author><name>Julio Melanda</name></author><id>tag:None,2017-10-13:/pequeno-imprevisto.html</id><summary type="html">&lt;p&gt;Olá!&lt;/p&gt;
 &lt;p&gt;Vocês devem ter reparado que ficamos uns dias fora do ar e que agora estamos de cara nova, né?&lt;/p&gt;
 &lt;p&gt;Acontece que tive uns problemas com a Openshift onde tinha meu blog e agora tenho que recuperar o blog.
 A parte boa é que isto me fez precisar voltar a …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Olá!&lt;/p&gt;

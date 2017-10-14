@@ -4,7 +4,6 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Julio Melanda'
 SITENAME = 'Programe em Python'
-SITEURL = ''
 
 PATH = 'content'
 
@@ -33,6 +32,3 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-
-JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
-THEME = 'pelican-themes/pelican-bootstrap3'

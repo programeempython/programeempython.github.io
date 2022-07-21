@@ -1,2 +1,3 @@
 ghp-import
-pelican
+pelican[markdown]
+typogrify

@@ -1,15 +1,12 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
-
 AUTHOR = 'Julio Melanda'
 SITENAME = 'Programe em Python'
+SITEURL = 'http://programeempython.com.br'
 
 PATH = 'content'
 
-TIMEZONE = 'America/Sao_Paulo'
+TIMEZONE = 'Europe/Copenhagen'
 
-DEFAULT_LANG = 'pt'
+DEFAULT_LANG = 'pt_br'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -19,17 +16,32 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),)
+LINKS = (('Pelican', 'https://getpelican.com/'),
+         ('Python.org', 'https://www.python.org/'),
+         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
+         ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('Julio Melanda no Twitter', 'https://twitter.com/jcemelanda'),
-          ('Programe em Python no Twitter', 'https://twitter.com/programepython'),)
+SOCIAL = (('You can add links in your config file', '#'),
+          ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-STATIC_PATHS = ['extra']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
+
+TYPOGRIFY = True
+
+DISQUS_SITENAME = "programeempython"
+TWITTER_USERNAME = 'jcemelanda'
+
+# path-specific metadata
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+    }
+
+# static paths will be copied without parsing their contents
+STATIC_PATHS = [
+    'images',
+    'extra/robots.txt',
+    ]

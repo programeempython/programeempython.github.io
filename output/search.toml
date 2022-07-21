@@ -1,0 +1,8 @@
+[input]
+base_directory = "output"
+html_selector = "main"
+
+[[input.files]]
+path = "um-novo-comeco.html"
+url = "um-novo-comeco.html"
+title = "Um novo começo"

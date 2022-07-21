@@ -12,11 +12,11 @@ RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
+RSS_FEED_SUMMARY_ONLY = True
 
 DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-DISQUS_SITENAME = "programeempython"
-
 GOOGLE_ANALYTICS = "G-CWQ34LZTCX"
+DISQUS_SITENAME = "programeempython"

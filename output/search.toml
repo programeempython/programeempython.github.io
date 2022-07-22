@@ -1,5 +1,5 @@
 [input]
-base_directory = "output"
+base_directory = "/home/jcemelanda/Projetos/programeempython.github.io/output"
 html_selector = "main"
 
 [[input.files]]

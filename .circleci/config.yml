@@ -6,7 +6,6 @@ jobs:
       - image: jcemelanda/programeempython:0.0.5
     steps:
         - checkout
-        - run: pip freeze
         - run: make publish
         - run: make github
 

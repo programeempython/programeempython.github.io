@@ -4,16 +4,13 @@ version: 2.1
 
 jobs:
   build:
-    machine:
-      image: ubuntu-2204:2022.04.1 
-      steps:
+    docker:
+      - image: jcemelanda/programeempython:0.0.3
+    steps:
         - checkout
-        - run:
-          name: install dependencies
-          command: |
-            pip install -r requirements.
-            cargo install stork-search --locked
-            export PATH=$HOME/.cargo/bin:$PATH
+        - run: pip freeze
+        - run: make publish
+        - run: make github
 
 workflows:
   publish-article:

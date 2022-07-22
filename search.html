@@ -15,6 +15,10 @@
     <link
         href="http://programeempython.com.br/feeds/all.atom.xml"
         type="application/atom+xml" rel="alternate" title="Programe em Python Atom Feed" />
+    <script src="https://files.stork-search.net/releases/v1.4.0/stork.js"></script>
+    <script>
+        stork.register("sitesearch", "http://programeempython.com.br/search-index.st")
+    </script>
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -95,16 +99,6 @@
     ga('create', 'G-CWQ34LZTCX', 'auto');
     ga('send', 'pageview');
 </script>
-<script type="text/javascript">
-    var disqus_shortname = 'programeempython';
-    (function () {
-        var s = document.createElement('script');
-        s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
 
     <script>
         let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -137,10 +131,6 @@
                 }
             }
         });
-    </script>
-    <script src="https://files.stork-search.net/releases/v1.4.0/stork.js"></script>
-    <script>
-        stork.register("sitesearch", "http://programeempython.com.br/search-index.st")
     </script>
 </body>
 

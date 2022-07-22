@@ -140,16 +140,24 @@
     </div>
   </footer>
   <div>
-<script type="text/javascript">
-    var disqus_shortname = 'programeempython';
-    (function () {
-        var s = document.createElement('script');
-        s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'http://programeempython.com.br/um-novo-comeco.html';
+      this.page.identifier = 'um-novo-comeco';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//programeempython.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
   </div>
 </main>
 
@@ -177,16 +185,6 @@
 
     ga('create', 'G-CWQ34LZTCX', 'auto');
     ga('send', 'pageview');
-</script>
-<script type="text/javascript">
-    var disqus_shortname = 'programeempython';
-    (function () {
-        var s = document.createElement('script');
-        s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
 </script>
 
     <script>
@@ -220,10 +218,6 @@
                 }
             }
         });
-    </script>
-    <script src="https://files.stork-search.net/releases/v1.4.0/stork.js"></script>
-    <script>
-        stork.register("sitesearch", "http://programeempython.com.br/search-index.st")
     </script>
 </body>
 

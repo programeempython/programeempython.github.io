@@ -6,7 +6,7 @@ jobs:
       - image: jcemelanda/programeempython:0.0.7
     steps:
         - checkout
-        - run: make publish
+        - run:ls themes/Papyrus 
         - run: make github
 
 workflows:

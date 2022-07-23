@@ -10,7 +10,7 @@ COPY --from=base /cargo /cargo
 ENV PATH /cargo/bin:$PATH
 COPY requirements.txt /requirements.txt
 
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt && apk update && apk add make
 
 CMD [ "python3" ]
 

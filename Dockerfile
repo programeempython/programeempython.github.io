@@ -1,16 +1,12 @@
-FROM rust as base
+FROM rust
+
+RUN apt-get update -y && apt-get install -y python3 python3-pip make
 
 RUN mkdir /cargo
 RUN cargo install stork-search --locked --root /cargo
 
-FROM python:alpine3.16
-
-COPY --from=base /cargo /cargo
-
-ENV PATH /cargo/bin:$PATH
 COPY requirements.txt /requirements.txt
 
-RUN pip install -r requirements.txt && apk update && apk add make
+RUN pip install -r requirements.txt
 
 CMD [ "python3" ]
-

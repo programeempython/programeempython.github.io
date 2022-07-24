@@ -6,7 +6,7 @@ jobs:
       - image: jcemelanda/programeempython:0.0.7
     steps:
         - checkout
-        - run: ls /cargo
+        - run: ls /cargo/bin
         - run: make publish
         - run: make github
 

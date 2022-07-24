@@ -1,0 +1,1 @@
+[![CircleCI](https://dl.circleci.com/insights-snapshot/gh/programeempython/programeempython.github.io/pelican/publish-article/badge.svg?window=30d)](https://app.circleci.com/insights/github/programeempython/programeempython.github.io/workflows/publish-article/overview?branch=pelican&reporting-window=last-30-days&insights-snapshot=true)

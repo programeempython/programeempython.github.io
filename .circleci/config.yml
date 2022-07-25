@@ -1,0 +1,9 @@
+jobs:
+  skip:
+    steps:
+      - run: echo "Skips"
+
+workflows:
+  skip-task:
+    jobs:
+      - skip

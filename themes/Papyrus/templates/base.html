@@ -61,15 +61,15 @@
                     {% endif %} href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
             {% endfor %}
             {% endif %}
-            <li class="mr-4 pt-6"><a {% if current=="archive" %} class="border-b-2 border-zinc-800 dark:border-zinc-300"
-                    {% endif %} href="{{ SITEURL }}/archives.html">Archive</a></li>
-            <li class="mr-4 pt-6"><a {% if current=="categories" %}
+            <li class="mr-4 pt-6"><a {% if current=="Aquivo" %} class="border-b-2 border-zinc-800 dark:border-zinc-300"
+                    {% endif %} href="{{ SITEURL }}/Aquivos.html">Aquivo</a></li>
+            <li class="mr-4 pt-6"><a {% if current=="Categorias" %}
                     class="border-b-2 border-zinc-800 dark:border-zinc-300" {% endif %}
-                    href="{{ SITEURL }}/categories.html">Categories</a></li>
+                    href="{{ SITEURL }}/Categorias.html">Categorias</a></li>
             <li class="mr-4 pt-6"><a {% if current=="tags" %} class="border-b-2 border-zinc-800 dark:border-zinc-300"
                     {% endif %} href="{{ SITEURL }}/tags.html">Tags</a></li>
-            <li class="mr-4 pt-6"><a {% if current=="search" %} class="border-b-2 border-zinc-800 dark:border-zinc-300"
-                    {% endif %} href="{{ SITEURL }}/search.html">Search</a></li>
+            <li class="mr-4 pt-6"><a {% if current=="Busca" %} class="border-b-2 border-zinc-800 dark:border-zinc-300"
+                    {% endif %} href="{{ SITEURL }}/Busca.html">Busca</a></li>
         </ul>
     </nav>
     <div class="flex-grow md:max-w-screen-md md:mx-auto md:w-3/4 px-4">
@@ -93,7 +93,7 @@
                     </svg>
                 </li>
                 <li class="flex items-center">
-                    <a href="{{ SITEURL }}/categories.html">Categories</a>
+                    <a href="{{ SITEURL }}/Categorias.html">Categorias</a>
                     <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 320 512">
                         <path
@@ -185,7 +185,7 @@
                     </svg>
                 </li>
                 <li class="flex items-center">
-                    <a href="{{ SITEURL }}/categories.html">Categories</a>
+                    <a href="{{ SITEURL }}/Categorias.html">Categorias</a>
                     <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 320 512">
                         <path

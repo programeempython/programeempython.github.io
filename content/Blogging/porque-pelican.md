@@ -8,7 +8,7 @@ Olá!
 
 Eu andei avaliando se e como eu deveria retomar o blog, e depois de muitas ideias, aqui estamos, e acho que nada como começar falando um pouco sobre o processo de decisão para escolher fazer o blog em Pelican hospedado no Github Pages ao invés de qualqer outra plataforma.
 
-Pata isto acho que podemos começar com um pequeno histórico do blog.
+Para isto acho que podemos começar com um pequeno histórico do blog.
 
 Minha primeira versão do Programe em Python foi no Blogger. Era bastante fácil e prático de início, porém, para customizar as páginas era um tanto trabalhoso devido às especificidades dos templates HTML do Blogger.
 

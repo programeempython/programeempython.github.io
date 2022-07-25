@@ -14,5 +14,4 @@ workflows:
     jobs:
       - build:
         filters:
-            branches:
-              only: pelican
+            only: pelican

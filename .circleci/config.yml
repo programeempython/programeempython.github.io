@@ -12,4 +12,7 @@ jobs:
 workflows:
   publish-article:
     jobs:
-      - build
+      - build:
+        filters:
+            branches:
+              only: pelican

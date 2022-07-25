@@ -6,7 +6,7 @@ Summary: Aqui vou apresentar alguma razões para eu ter escolhido publicar meu b
 
 Olá!
 
-Eu andei avaliando se e como eu deveria retomar o blog, e depois de muitas ideias, aqui estamos, e acho que nada como começar falando um pouco sobre o processo de decisão para escolher fazer o blog em Pelican hospedado no Github Pages ao invés de qualqer outra plataforma.
+Eu andei avaliando se e como eu deveria retomar o blog, e depois de muitas ideias, aqui estamos, e acho que nada como começar falando um pouco sobre o processo de decisão para escolher fazer o blog em Pelican hospedado no Github Pages ao invés de qualquer outra plataforma.
 
 Para isto acho que podemos começar com um pequeno histórico do blog.
 

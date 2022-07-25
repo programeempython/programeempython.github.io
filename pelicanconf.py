@@ -2,7 +2,7 @@ AUTHOR = 'Julio Melanda'
 SITENAME = 'Programe em Python'
 SITEURL = 'http://localhost:8000'
 
-SUBTITLE = 'Programação em Python'
+SUBTITLE = 'Um pouco de tudo sobre programação em Python'
 
 COPYRIGHT = '©2022'
 

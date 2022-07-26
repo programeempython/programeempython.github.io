@@ -3,6 +3,11 @@ base_directory = "/root/project/output"
 html_selector = "main"
 
 [[input.files]]
+path = "pages/contato.html"
+url = "pages/contato.html"
+title = "Contato"
+
+[[input.files]]
 path = "pages/sobre-mim.html"
 url = "pages/sobre-mim.html"
 title = "Sobre Mim"

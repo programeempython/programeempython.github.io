@@ -59,9 +59,7 @@
               prose-img:rounded-md
               ">
     {% import 'translations.html' as translations with context %}
-    {% if translations.entry_hreflang(article) %}
-    {{ translations.entry_hreflang(article) }}
-    {% endif %}
+    {{ translations.translations_for(article) }}
     {{ article.content }}
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>

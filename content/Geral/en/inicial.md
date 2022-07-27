@@ -5,6 +5,7 @@ Tags: Geral
 Summary: Here I am once again starting this beautiful blog over aiming to teach python and also share some of my experiences and challanges with this beloved technology. :D
 Language: en
 Translation: true
+Slug: um-novo-comeco
 
 Here I am once again starting this beautiful blog over aiming to teach python and also share some of my experiences and challanges with this beloved technology.
 

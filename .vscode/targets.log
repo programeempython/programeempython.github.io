@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-redhat-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jul 25 22:19:10 2022
+# Make data base, printed on Thu Jul 28 00:42:31 2022
 
 # Variables
 
@@ -119,7 +121,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 31023
+VSCODE_PID = 51935
 # environment
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS = 0
 # environment
@@ -127,7 +129,7 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/9943,unix/unix:/tmp/.ICE-unix/9943
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/2150,unix/unix:/tmp/.ICE-unix/2150
 # automatic
 *F = $(notdir $*)
 # environment
@@ -188,7 +190,7 @@ LC_TIME = da_DK.UTF-8
 # makefile (from 'Makefile', line 5)
 BASEDIR = $(CURDIR)
 # environment
-INVOCATION_ID = c163e7bed5704e639557c5da49d53e4a
+INVOCATION_ID = f4ded80952e94a5a93d2e4586fe0660c
 # environment
 VIRTUALENVWRAPPER_SCRIPT = /usr/bin/virtualenvwrapper.sh
 # makefile (from 'Makefile', line 24)
@@ -224,7 +226,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := help
 # environment
-SYSTEMD_EXEC_PID = 9996
+SYSTEMD_EXEC_PID = 2206
 # makefile (from 'Makefile', line 3)
 PELICANOPTS = 
 # environment
@@ -238,7 +240,7 @@ USER = jcemelanda
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 9642
+MANAGERPID = 1864
 # environment
 which_declare = declare -f
 # environment
@@ -246,9 +248,9 @@ LC_MEASUREMENT = da_DK.UTF-8
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 31023
+GIO_LAUNCHED_DESKTOP_FILE_PID = 51935
 # environment
-SSH_AGENT_PID = 9862
+SSH_AGENT_PID = 2069
 # environment
 _ = /usr/bin/make
 # environment
@@ -258,7 +260,7 @@ XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from 'Makefile', line 7)
 OUTPUTDIR = $(BASEDIR)/output
 # environment
-JOURNAL_STREAM = 8:43088
+JOURNAL_STREAM = 8:21089
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -317,14 +319,12 @@ devserver-global:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 69):
+ 
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -b 0.0.0.0
 
 devserver:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
- 
-make: *** No rule to make target 'all'.  Stop.
-
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 66):
@@ -349,7 +349,7 @@ regenerate:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-22 18:54:04.608463858
+#  Last modified 2022-07-26 02:39:03.871681757
 #  File has been updated.
 #  Successfully updated.
 
@@ -419,7 +419,7 @@ github: publish
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 75):
-	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) "$(OUTPUTDIR)"
+	ghp-import -m "[skip ci] Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) "$(OUTPUTDIR)"
 	git push origin $(GITHUB_PAGES_BRANCH)
 
 serve:
@@ -449,6 +449,6 @@ serve:
 # strcache performance: lookups = 59 / hit rate = 42%
 # hash-table stats:
 # Load=34/8192=0%, Rehash=0, Collisions=0/59=0%
-# Finished Make data base on Mon Jul 25 22:19:10 2022
+# Finished Make data base on Thu Jul 28 00:42:31 2022
 
  

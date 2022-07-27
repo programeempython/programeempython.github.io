@@ -3,6 +3,8 @@ Date: 2022-07-21 11:52
 Category: Geral
 Tags: Geral
 Summary: Here I am once again starting this beautiful blog over aiming to teach python and also share some of my experiences and challanges with this beloved technology. :D
+Language: en
+Translation: true
 
 Here I am once again starting this beautiful blog over aiming to teach python and also share some of my experiences and challanges with this beloved technology.
 

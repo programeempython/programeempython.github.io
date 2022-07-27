@@ -3,7 +3,6 @@ Date: 2022-07-21 11:52
 Tags: Geral
 Category: Geral
 Slug: um-novo-comeco
-Summary: Here I am once again starting this beautiful blog over aiming to teach python and also share some of my experiences and challanges with this beloved technology. :D
 Translation: true
 Lang: en
 

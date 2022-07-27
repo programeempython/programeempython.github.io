@@ -21,3 +21,8 @@ title = "Porque Pelican"
 path = "um-novo-comeco.html"
 url = "um-novo-comeco.html"
 title = "Um novo começo"
+
+[[input.files]]
+path = "um-novo-comeco-en.html"
+url = "um-novo-comeco-en.html"
+title = "A new beggining"

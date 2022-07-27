@@ -7,12 +7,6 @@
 {% endif %}
 {% endblock %}
 {% block title %}{{ article.title|striptags }}{% endblock %}
-{% block extra_head %}
-{% import 'translations.html' as translations with context %}
-{% if translations.entry_hreflang(article) %}
-{{ translations.entry_hreflang(article) }}
-{% endif %}
-{% endblock %}
 
 {% block content %}
 
@@ -64,6 +58,10 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
+    {% import 'translations.html' as translations with context %}
+    {% if translations.entry_hreflang(article) %}
+    {{ translations.entry_hreflang(article) }}
+    {% endif %}
     {{ article.content }}
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>

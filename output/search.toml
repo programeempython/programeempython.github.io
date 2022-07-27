@@ -3,6 +3,21 @@ base_directory = "/home/jcemelanda/Projetos/programeempython.github.io/output"
 html_selector = "main"
 
 [[input.files]]
+path = "pages/contato.html"
+url = "pages/contato.html"
+title = "Contato"
+
+[[input.files]]
+path = "pages/sobre-mim.html"
+url = "pages/sobre-mim.html"
+title = "Sobre Mim"
+
+[[input.files]]
+path = "porque-pelican.html"
+url = "porque-pelican.html"
+title = "Porque Pelican"
+
+[[input.files]]
 path = "um-novo-comeco.html"
 url = "um-novo-comeco.html"
 title = "Um novo começo"

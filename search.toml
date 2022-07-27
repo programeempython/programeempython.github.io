@@ -18,6 +18,11 @@ url = "porque-pelican.html"
 title = "Porque Pelican"
 
 [[input.files]]
+path = "a-new-beggining.html"
+url = "a-new-beggining.html"
+title = "A new beggining"
+
+[[input.files]]
 path = "um-novo-comeco.html"
 url = "um-novo-comeco.html"
 title = "Um novo começo"

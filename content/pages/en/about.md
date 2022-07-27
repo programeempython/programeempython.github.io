@@ -1,11 +1,13 @@
 Title: About me
 Date: 2022-07-26 01:30
 Slug: sobre-mim
-Summary: Uma rápida introdução sobre mim
+Summary: A fast introduction about me
 Lang: en
 Translation: true
 
-Well, nice to meet you, I'm Julio. I work with python since 2012 at least, and I already had a blog about Python with this same name from around 2010 to 2016. Unfortunately, not everything went as I would like and I ended away from the blog for 6 years or so.
+Well, nice to meet you, I'm Julio. 
+
+I've been working with python since 2012 at least, and I already had a blog about Python with this same name from around 2010 to 2016. Unfortunately, not everything went as I would like and I ended away from the blog for 6 years or so.
 
 Meanwhile I basically lost everything I've written before so I'm starting over again.
 

@@ -1,11 +1,11 @@
 Title: A new beggining
 Date: 2022-07-21 11:52
+Tags: Geral
 Category: Geral
 Slug: um-novo-comeco
-Tags: Geral
-Lang: en
-Translation: true
 Summary: Here I am once again starting this beautiful blog over aiming to teach python and also share some of my experiences and challanges with this beloved technology. :D
+Translation: true
+Lang: en
 
 Here I am once again starting this beautiful blog over aiming to teach python and also share some of my experiences and challanges with this beloved technology.
 

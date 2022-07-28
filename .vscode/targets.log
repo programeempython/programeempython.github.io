@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul 28 00:42:31 2022
+# Make data base, printed on Thu Jul 28 02:21:38 2022
 
 # Variables
 
@@ -121,7 +121,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 51935
+VSCODE_PID = 65203
 # environment
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS = 0
 # environment
@@ -248,7 +248,7 @@ LC_MEASUREMENT = da_DK.UTF-8
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 51935
+GIO_LAUNCHED_DESKTOP_FILE_PID = 65203
 # environment
 SSH_AGENT_PID = 2069
 # environment
@@ -304,6 +304,7 @@ GDMSESSION = gnome-xorg
 
 # Directories
 
+ 
 # . (device 40, inode 2121490): 18 files, no impossibilities.
 
 # 18 files, no impossibilities in 1 directories.
@@ -319,7 +320,6 @@ devserver-global:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 69):
- 
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -b 0.0.0.0
 
 devserver:
@@ -449,6 +449,6 @@ serve:
 # strcache performance: lookups = 59 / hit rate = 42%
 # hash-table stats:
 # Load=34/8192=0%, Rehash=0, Collisions=0/59=0%
-# Finished Make data base on Thu Jul 28 00:42:31 2022
+# Finished Make data base on Thu Jul 28 02:21:38 2022
 
  

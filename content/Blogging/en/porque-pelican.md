@@ -3,6 +3,8 @@ Date: 2022-07-25 22:03
 Modified: 2022-07-28 01:52
 Category: Blogging
 Tags: Geral, Blogging
+Lang: en
+Translation: true
 
 Olá!
 
@@ -41,4 +43,4 @@ Espero que tenham gostado. Quer saber mais sobre como funciona o Pelican, ou com
 
 Deixe seu comentário!
 
-Te vejo no próximo psot!
+Abraço!

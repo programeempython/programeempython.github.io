@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python</title><link href="http://programeempython.com.br/" rel="alternate"></link><link href="http://programeempython.com.br/feeds/all.atom.xml" rel="self"></link><id>http://programeempython.com.br/</id><updated>2022-07-28T01:52:00+02:00</updated><entry><title>Porque Pelican</title><link href="http://programeempython.com.br/porque-pelican.html" rel="alternate"></link><published>2022-07-25T22:03:00+02:00</published><updated>2022-07-28T01:52:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-25:/porque-pelican.html</id><summary type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python</title><link href="http://programeempython.com.br/" rel="alternate"></link><link href="http://programeempython.com.br/feeds/all.atom.xml" rel="self"></link><id>http://programeempython.com.br/</id><updated>2022-07-29T01:06:00+02:00</updated><entry><title>Python 101 - Primeira Parte</title><link href="http://programeempython.com.br/python-101-parte-1.html" rel="alternate"></link><published>2022-07-29T01:06:00+02:00</published><updated>2022-07-29T01:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-29:/python-101-parte-1.html</id><summary type="html">&lt;p&gt;Bom, um blog com o nome Programe em Python n&amp;atilde;o pode ficar sem um tutorial b&amp;aacute;sico de Python,&amp;nbsp;n&amp;eacute;?&lt;/p&gt;
+&lt;p&gt;Antes de mais nada, se voc&amp;ecirc; usa Linux ou MacOS voc&amp;ecirc; provavelmente j&amp;aacute; tem o Python ent&amp;atilde;o voc&amp;ecirc; est&amp;aacute; com&amp;nbsp;sorte.&lt;/p&gt;
+&lt;p&gt;No windows, v&amp;aacute; &amp;agrave; &lt;a href="https://www.python.org/downloads/"&gt;p&amp;aacute;gina de downloads do Python&lt;/a&gt; e …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bom, um blog com o nome Programe em Python n&amp;atilde;o pode ficar sem um tutorial b&amp;aacute;sico de Python,&amp;nbsp;n&amp;eacute;?&lt;/p&gt;
+&lt;p&gt;Antes de mais nada, se voc&amp;ecirc; usa Linux ou MacOS voc&amp;ecirc; provavelmente j&amp;aacute; tem o Python ent&amp;atilde;o voc&amp;ecirc; est&amp;aacute; com&amp;nbsp;sorte.&lt;/p&gt;
+&lt;p&gt;No windows, v&amp;aacute; &amp;agrave; &lt;a href="https://www.python.org/downloads/"&gt;p&amp;aacute;gina de downloads do Python&lt;/a&gt; e baixe dali a vers&amp;atilde;o mais&amp;nbsp;recente.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Download Python" src="/images/download-python.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Quando terminar o download, execute o instalador e siga as instru&amp;ccedil;&amp;otilde;es de&amp;nbsp;instala&amp;ccedil;&amp;atilde;o.&lt;/p&gt;
+&lt;p&gt;Lembre-se de marcar a op&amp;ccedil;&amp;atilde;o para inserir Python nos caminhos do sistema (&lt;em&gt;Add Python to &lt;span class="caps"&gt;PATH&lt;/span&gt;&lt;/em&gt;), pois isto vai facilitar muito a sua&amp;nbsp;vida.&lt;/p&gt;
+&lt;p&gt;Quando o Python estiver finalmente instalado, numa janela de linha de comando, (&lt;span class="caps"&gt;CMD&lt;/span&gt; ou powershell no Windows) digite Python e voc&amp;ecirc; deve ver algo semelhante a&amp;nbsp;isto.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Terminal Python" src="/images/python-terminal.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Veja que na primeira linha voc&amp;ecirc; consegue ver qual a vers&amp;atilde;o do Python, e na &amp;uacute;ltima linha h&amp;aacute; um prompt esperando pelos seus&amp;nbsp;comandos. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Este prompt ser&amp;aacute; usado neste blog sempre para denotar que devemos escrever c&amp;oacute;digo no console do&amp;nbsp;Python.&lt;/p&gt;
+&lt;p&gt;Fa&amp;ccedil;a um teste. Digite, seguido de &lt;code&gt;ENTER&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; print('Ol&amp;aacute; Mundo!')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O resultado deve ser algo&amp;nbsp;assim:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; print('Ol&amp;aacute; Mundo!')
+Ol&amp;aacute; Mundo!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Isto significa que o console do Python j&amp;aacute; te retorna as respostas para os comando logo em seguida de voc&amp;ecirc; execut&amp;aacute;-los. Veja por&amp;nbsp;exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 23*256/98+3
+63.08163265306123
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Finalmente, quando formos executar c&amp;oacute;digos com blocos, como &lt;code&gt;if&lt;/code&gt; por exemplo, ser&amp;aacute;&amp;nbsp;assim:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;True&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;:
+...     &lt;span class="nv"&gt;print&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;&amp;Eacute; verdade!&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
+...
+&amp;Eacute; &lt;span class="nv"&gt;verdade&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Assim, note que os 3 pontos &lt;code&gt;...&lt;/code&gt; s&amp;atilde;o indicadores de bloco de c&amp;oacute;digo no terminal do Python, ou seja, indicam que um comando iniciado acima ainda n&amp;atilde;o foi terminado. Desta forma, precisamos inserir uma linha em branco para o Python perceber que finalizamos aquele comando e ele pode ent&amp;atilde;o&amp;nbsp;execut&amp;aacute;-lo.&lt;/p&gt;
+&lt;p&gt;Acho que este &amp;eacute; um bom momento para finalizarmos esta primeira parte do tutorial&amp;nbsp;:D&lt;/p&gt;
+&lt;p&gt;N&amp;atilde;o deixem de &lt;strong&gt;comentar&lt;/strong&gt; abaixo com sua opini&amp;atilde;o e&amp;nbsp;d&amp;uacute;vidas!&lt;/p&gt;
+&lt;p&gt;At&amp;eacute; o pr&amp;oacute;ximo&amp;nbsp;post!&lt;/p&gt;</content><category term="Tutoriais"></category><category term="Tutorial"></category><category term="Python 101"></category></entry><entry><title>Python 101 - Primeira Parte</title><link href="http://programeempython.com.br/python-101-parte-1-en.html" rel="alternate"></link><published>2022-07-29T01:06:00+02:00</published><updated>2022-07-29T01:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-29:/python-101-parte-1-en.html</id><summary type="html">&lt;p&gt;Well, a blog with the name Programe em Python can&amp;rsquo;e exist without a basic Python Tutorial,&amp;nbsp;right?&lt;/p&gt;
+&lt;p&gt;First things first, if you are using Linux or &lt;span class="caps"&gt;OSX&lt;/span&gt; you most probably already have Python installed, so you are a lucky person&amp;nbsp;;)&lt;/p&gt;
+&lt;p&gt;On windows, go to the &lt;a href="https://www.python.org/downloads/"&gt;Python downloads page&lt;/a&gt; and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Well, a blog with the name Programe em Python can&amp;rsquo;e exist without a basic Python Tutorial,&amp;nbsp;right?&lt;/p&gt;
+&lt;p&gt;First things first, if you are using Linux or &lt;span class="caps"&gt;OSX&lt;/span&gt; you most probably already have Python installed, so you are a lucky person&amp;nbsp;;)&lt;/p&gt;
+&lt;p&gt;On windows, go to the &lt;a href="https://www.python.org/downloads/"&gt;Python downloads page&lt;/a&gt; and download the most recent version from&amp;nbsp;there.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Download Python" src="/images/download-python.png"/&gt;&lt;/p&gt;
+&lt;p&gt;When the download is complete, run the installer and follow the installation&amp;nbsp;instructions.&lt;/p&gt;
+&lt;p&gt;Remember to check the option to insert Python in the system paths (&lt;em&gt;Add Python to &lt;span class="caps"&gt;PATH&lt;/span&gt;&lt;/em&gt;), as this will make your life a lot&amp;nbsp;easier.&lt;/p&gt;
+&lt;p&gt;When Python is finally installed, in a command line window (&lt;span class="caps"&gt;CMD&lt;/span&gt; or powershell on Windows) type Python and you should see something similar to&amp;nbsp;this.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Python Terminal" src="/images/python-terminal.png"/&gt;&lt;/p&gt;
+&lt;p&gt;See that on the first line you can see the version of Python, and on the last line there is a prompt waiting for your&amp;nbsp;commands.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This prompt will be used throughout this blog to denote that we must write code in the Python console.
+Try it. Type, followed by &lt;code&gt;ENTER&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; print('Hello World!')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The result should be something like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; print('Hello World!')
+Hello World!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This means that the Python console already returns the answers to the commands right after you execute them. See for&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 23*256/98+3
+63.08163265306123
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Finally, when we run code with blocks, like &lt;code&gt;if&lt;/code&gt; for example, it will look like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;True&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;:
+... &lt;span class="nv"&gt;print&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;It&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="nv"&gt;s&lt;/span&gt; &lt;span class="nv"&gt;true&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;)&lt;/span&gt;
+...
+&lt;span class="nv"&gt;It&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;s true!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So, note that the 3 dots &lt;code&gt;...&lt;/code&gt; are code block indicators in the Python terminal, that means they indicate that a command started above has not yet been finished. This way, we need to insert a blank line for Python to realize that we have finished that command and it can then execute&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;I think this is a good time to finish this first part of the tutorial&amp;nbsp;:D&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t forget to &lt;strong&gt;comment&lt;/strong&gt; below with your opinion and&amp;nbsp;questions!&lt;/p&gt;
+&lt;p&gt;See you in the next&amp;nbsp;post!&lt;/p&gt;</content><category term="Tutoriais"></category><category term="Tutorial"></category><category term="Python 101"></category></entry><entry><title>Porque Pelican</title><link href="http://programeempython.com.br/porque-pelican.html" rel="alternate"></link><published>2022-07-25T22:03:00+02:00</published><updated>2022-07-28T01:52:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-25:/porque-pelican.html</id><summary type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
 &lt;p&gt;Eu andei avaliando se e como eu deveria retomar o blog, e depois de muitas ideias, aqui estamos, e acho que nada como come&amp;ccedil;ar falando um pouco sobre o processo de decis&amp;atilde;o para escolher fazer o blog em Pelican hospedado no Github Pages ao inv&amp;eacute;s de qualquer outra&amp;nbsp;plataforma …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
 &lt;p&gt;Eu andei avaliando se e como eu deveria retomar o blog, e depois de muitas ideias, aqui estamos, e acho que nada como come&amp;ccedil;ar falando um pouco sobre o processo de decis&amp;atilde;o para escolher fazer o blog em Pelican hospedado no Github Pages ao inv&amp;eacute;s de qualquer outra&amp;nbsp;plataforma.&lt;/p&gt;
 &lt;p&gt;Para isto acho que podemos come&amp;ccedil;ar com um pequeno hist&amp;oacute;rico do&amp;nbsp;blog.&lt;/p&gt;
@@ -45,7 +113,7 @@
 &lt;p&gt;See you in the next&amp;nbsp;post!&lt;/p&gt;</content><category term="Blogging"></category><category term="Geral"></category><category term="Blogging"></category></entry><entry><title>Um novo começo</title><link href="http://programeempython.com.br/um-novo-comeco.html" rel="alternate"></link><published>2022-07-21T11:52:00+02:00</published><updated>2022-07-28T01:22:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-21:/um-novo-comeco.html</id><summary type="html">&lt;p&gt;Estamos aqui mais uma vez recome&amp;ccedil;ando este lindo blog que tem como intuito ensinar python e tamb&amp;eacute;m compartilhar um pouco das minhas experi&amp;ecirc;ncias e desafios com esta t&amp;atilde;o amada&amp;nbsp;tecnologia.&lt;/p&gt;
 &lt;p&gt;Voc&amp;ecirc; pode esperar que este site tenha sempre conte&amp;uacute;dos de qualidade, e voc&amp;ecirc; pode tirar todas as d&amp;uacute;vidas diretamente comigo …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Estamos aqui mais uma vez recome&amp;ccedil;ando este lindo blog que tem como intuito ensinar python e tamb&amp;eacute;m compartilhar um pouco das minhas experi&amp;ecirc;ncias e desafios com esta t&amp;atilde;o amada&amp;nbsp;tecnologia.&lt;/p&gt;
 &lt;p&gt;Voc&amp;ecirc; pode esperar que este site tenha sempre conte&amp;uacute;dos de qualidade, e voc&amp;ecirc; pode tirar todas as d&amp;uacute;vidas diretamente comigo nos coment&amp;aacute;rios ou redes sociais&amp;nbsp;:D&lt;/p&gt;
-&lt;p&gt;At&amp;eacute; o pr&amp;oacute;ximo&amp;nbsp;post!&lt;/p&gt;</content><category term="Geral"></category><category term="Geral"></category></entry><entry><title>A new beggining</title><link href="http://programeempython.com.br/um-novo-comeco-en.html" rel="alternate"></link><published>2022-07-21T11:52:00+02:00</published><updated>2022-07-21T11:52:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-21:/um-novo-comeco-en.html</id><summary type="html">&lt;p&gt;Here I am once again starting this beautiful blog over aiming to teach python and also share some of my experiences and challanges with this beloved&amp;nbsp;technology.&lt;/p&gt;
-&lt;p&gt;Here you can expect that this blog will have always quality content, and you can eliminate your doubts directly with me or on …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here I am once again starting this beautiful blog over aiming to teach python and also share some of my experiences and challanges with this beloved&amp;nbsp;technology.&lt;/p&gt;
+&lt;p&gt;At&amp;eacute; o pr&amp;oacute;ximo&amp;nbsp;post!&lt;/p&gt;</content><category term="Geral"></category><category term="Geral"></category></entry><entry><title>A new beggining</title><link href="http://programeempython.com.br/um-novo-comeco-en.html" rel="alternate"></link><published>2022-07-21T11:52:00+02:00</published><updated>2022-07-21T11:52:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-21:/um-novo-comeco-en.html</id><summary type="html">&lt;p&gt;Here I am once again starting this beautiful blog over aiming to teach python and also share some of my experiences and challenges with this beloved&amp;nbsp;technology.&lt;/p&gt;
+&lt;p&gt;Here you can expect that this blog will have always quality content, and you can eliminate your doubts directly with me or on …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here I am once again starting this beautiful blog over aiming to teach python and also share some of my experiences and challenges with this beloved&amp;nbsp;technology.&lt;/p&gt;
 &lt;p&gt;Here you can expect that this blog will have always quality content, and you can eliminate your doubts directly with me or on social networks&amp;nbsp;:D&lt;/p&gt;
 &lt;p&gt;See you in the next&amp;nbsp;post!&lt;/p&gt;</content><category term="Geral"></category><category term="Geral"></category></entry></feed>

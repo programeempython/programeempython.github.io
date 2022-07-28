@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Pelican" />
-    <title>A new beggining</title>
+    <title>Python 101 - Primeira Parte</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
     <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/css/main.css" />
@@ -15,7 +15,7 @@
     <link
         href="http://programeempython.com.br/feeds/all.atom.xml"
         type="application/atom+xml" rel="alternate" title="Programe em Python Atom Feed" />
-<meta name="description" content="Here I am once again starting this beautiful blog over aiming to teach python and also share some of my experiences and challenges with this..." />
+<meta name="description" content="Well, a blog with the name Programe em Python can’e exist without a basic Python Tutorial, right? First things first, if you are using Linux or..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -82,7 +82,7 @@
                     </svg>
                 </li>
                 <li class="flex items-center">
-                    <a href="http://programeempython.com.br/category/geral.html">Geral</a>
+                    <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
                 </li>
                 <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                     <path
@@ -93,10 +93,10 @@
 
 <main>
   <header>
-    <h1 class="font-semibold text-3xl my-2">A new&nbsp;beggining</h1>
+    <h1 class="font-semibold text-3xl my-2">Python 101 - Primeira&nbsp;Parte</h1>
     <footer class="flex text-sm text-zinc-800 dark:text-zinc-400">
       <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
-        <time>July 21, 2022</time>
+        <time>July 29, 2022</time>
         <div>
         </div>
         <div>
@@ -122,28 +122,65 @@
               prose-img:rounded-md
               ">
       Translations:
-      <a href="http://programeempython.com.br/um-novo-comeco.html" hreflang="pt_br">pt_br</a>
+      <a href="http://programeempython.com.br/python-101-parte-1.html" hreflang="pt_br">pt_br</a>
 
-    <p>Here I am once again starting this beautiful blog over aiming to teach python and also share some of my experiences and challenges with this beloved&nbsp;technology.</p>
-<p>Here you can expect that this blog will have always quality content, and you can eliminate your doubts directly with me or on social networks&nbsp;:D</p>
+    <p>Well, a blog with the name Programe em Python can&rsquo;e exist without a basic Python Tutorial,&nbsp;right?</p>
+<p>First things first, if you are using Linux or <span class="caps">OSX</span> you most probably already have Python installed, so you are a lucky person&nbsp;;)</p>
+<p>On windows, go to the <a href="https://www.python.org/downloads/">Python downloads page</a> and download the most recent version from&nbsp;there.</p>
+<p><img alt="Download Python" src="/images/download-python.png"/></p>
+<p>When the download is complete, run the installer and follow the installation&nbsp;instructions.</p>
+<p>Remember to check the option to insert Python in the system paths (<em>Add Python to <span class="caps">PATH</span></em>), as this will make your life a lot&nbsp;easier.</p>
+<p>When Python is finally installed, in a command line window (<span class="caps">CMD</span> or powershell on Windows) type Python and you should see something similar to&nbsp;this.</p>
+<p><img alt="Python Terminal" src="/images/python-terminal.png"/></p>
+<p>See that on the first line you can see the version of Python, and on the last line there is a prompt waiting for your&nbsp;commands.</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
+</code></pre></div>
+<p>This prompt will be used throughout this blog to denote that we must write code in the Python console.
+Try it. Type, followed by <code>ENTER</code>:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; print('Hello World!')
+</code></pre></div>
+<p>The result should be something like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; print('Hello World!')
+Hello World!
+</code></pre></div>
+<p>This means that the Python console already returns the answers to the commands right after you execute them. See for&nbsp;example:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; 23*256/98+3
+63.08163265306123
+</code></pre></div>
+<p>Finally, when we run code with blocks, like <code>if</code> for example, it will look like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span><span class="ss">(</span><span class="nv">True</span><span class="ss">)</span>:
+... <span class="nv">print</span><span class="ss">(</span><span class="s1">'</span><span class="s">It</span><span class="s1">'</span><span class="nv">s</span> <span class="nv">true</span><span class="o">!</span><span class="s1">'</span><span class="s">)</span>
+...
+<span class="nv">It</span><span class="s1">'</span><span class="s">s true!</span>
+</code></pre></div>
+<p>So, note that the 3 dots <code>...</code> are code block indicators in the Python terminal, that means they indicate that a command started above has not yet been finished. This way, we need to insert a blank line for Python to realize that we have finished that command and it can then execute&nbsp;it.</p>
+<p>I think this is a good time to finish this first part of the tutorial&nbsp;:D</p>
+<p>Don&rsquo;t forget to <strong>comment</strong> below with your opinion and&nbsp;questions!</p>
 <p>See you in the next&nbsp;post!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
     <ul class="flex flex-wrap">
-      <a href="http://programeempython.com.br/tag/geral.html">
+      <a href="http://programeempython.com.br/tag/python-101.html">
         <li
           class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
-          Geral
+          Python 101
+        </li>
+      </a>
+      <a href="http://programeempython.com.br/tag/tutorial.html">
+        <li
+          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
+          Tutorial
         </li>
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://programeempython.com.br/porque-pelican-en.html">
-          <div class="mx-4 py-2 text-left">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline">Porque&nbsp;Pelican</p>
+      <div class="w-1/2 rounded-l-lg"></div>
+      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
+        <a class="flex flex-col" href="http://programeempython.com.br/porque-pelican-en.html">
+          <div class="text-right mx-4 py-2">
+            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
+            <p class="text-right py-1 hover:underline">Porque&nbsp;Pelican</p>
           </div>
         </a>
       </div>
@@ -156,8 +193,8 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function() {
-      this.page.url = 'http://programeempython.com.br/um-novo-comeco-en.html';
-      this.page.identifier = 'um-novo-comeco';
+      this.page.url = 'http://programeempython.com.br/python-101-parte-1-en.html';
+      this.page.identifier = 'python-101-parte-1';
     };
     (function() {
       var d = document;

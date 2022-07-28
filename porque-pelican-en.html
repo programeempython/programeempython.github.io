@@ -15,7 +15,7 @@
     <link
         href="http://programeempython.com.br/feeds/all.atom.xml"
         type="application/atom+xml" rel="alternate" title="Programe em Python Atom Feed" />
-<meta name="description" content="Olá! Eu andei avaliando se e como eu deveria retomar o blog, e depois de muitas ideias, aqui estamos, e acho que nada como começar falando um..." />
+<meta name="description" content="Hi! I’ve been thinking about how and if I should restart blogging, and after a long brainstorm, here we are, and I think nothing could be better..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -127,28 +127,27 @@
       Translations:
       <a href="http://programeempython.com.br/porque-pelican.html" hreflang="pt_br">pt_br</a>
 
-    <p>Ol&aacute;!</p>
-<p>Eu andei avaliando se e como eu deveria retomar o blog, e depois de muitas ideias, aqui estamos, e acho que nada como come&ccedil;ar falando um pouco sobre o processo de decis&atilde;o para escolher fazer o blog em Pelican hospedado no Github Pages ao inv&eacute;s de qualquer outra&nbsp;plataforma.</p>
-<p>Para isto acho que podemos come&ccedil;ar com um pequeno hist&oacute;rico do&nbsp;blog.</p>
-<p>Minha primeira vers&atilde;o do Programe em Python foi no Blogger. Era bastante f&aacute;cil e pr&aacute;tico de in&iacute;cio, por&eacute;m, para customizar as p&aacute;ginas era um tanto trabalhoso devido &agrave;s especificidades dos templates <span class="caps">HTML</span> do&nbsp;Blogger.</p>
-<p>Depois, migrei para uma solu&ccedil;&atilde;o django rodando no openshift da redhat. Eu adorava. 100% customiz&aacute;vel, meus textos saiam bem como eu queria, mas depois de um tempo, o openshift teve mudan&ccedil;as pras quais eu demorei pra me atentar e tive que fazer um backup super corrido dos textos e infelizmente n&atilde;o consegui mais continuar com o&nbsp;blog.</p>
-<p>Um tempo depois eu descobri github pages e pelican e fiz uma tentativa inicial, mas n&atilde;o estava num bom momento e o projeto mais uma vez n&atilde;o foi pra&nbsp;frente.</p>
-<p>Agora, quando decidi retomar o blog tive que escolher entre continuar usando github pages e pelican ou procurar uma nova&nbsp;plataforma.</p>
-<p>Minha escolha teve alguns pontos&nbsp;decisivos.</p>
+    <p>Hi!</p>
+<p>I&rsquo;ve been thinking about how and if I should restart blogging, and after a long brainstorm, here we are, and I think nothing could be better here than to talk a little about the thinking process of my decision to use Pelican hosted on Github Pages instead of any other&nbsp;platform.</p>
+<p>So, I think we can start with a little timeline of my blog&rsquo;s&nbsp;history.</p>
+<p>My first version of Programe em Python was hosted on Blogger. It was quite easy and practical at first, but, it wasn&rsquo;t that easy to customize the pages because it has some very specific things on it&rsquo;s <span class="caps">HTML</span>.</p>
+<p>After that I migrated to a django solution running on RedHat&rsquo;s Openshift. I used to love it. It was 100% customizable, my texts wen&rsquo;t through exectly as I wanted them to be, but after a while, opeshift changed it&rsquo;s rules and I took to long to notice as I wasn&rsquo;t on the best of my moments at that time. In the end I had to make a backup in a hurry, ando unfortunately I couldnt go on with the blog after&nbsp;that.</p>
+<p>Some time later I found out about Github Pages and pelican, and I took my changes, but it wasn&rsquo;t still a good moment for me and the project once again&nbsp;stalled.</p>
+<p>Now, when I decided to blog again, I had to choose between going on with Github Pages + Pelican or to look for something else that would fit me as I&nbsp;wanted.</p>
+<p>I had some decisive points to&nbsp;consider.vos.</p>
 <ul>
-<li>O blog &eacute; um site est&aacute;tico e dificilmente vou precisar de muito mais do que um site est&aacute;tico pode me oferecer, dado que o Pelican simplifica muito a postagem dos textos e acrescentar as&nbsp;p&aacute;ginas.</li>
-<li>Git &eacute; um sistema que eu uso diariamente e que eu sempre recomendo, al&eacute;m de permitir versionamento dos texto, o que pode ser bastante &uacute;til, eu posso escrever de basicamente qualquer lugar e enviar facilmente para o&nbsp;github.</li>
-<li>Pelican &eacute; um gerador de sites est&aacute;ticos, que me permite facilmente acrescentar novos posts ao blog, escrevendo com&nbsp;Markdown</li>
+<li>The blog is mostly a static content website and it would hardly ever need much more than a static site given that with Pelican it&rsquo;s quite easy to add new articles and&nbsp;pages.</li>
+<li>Git is something I use daily and I always recommend, besides that it would allow me to blog from basically anywhere. Also, I would have my posts in a version control system, and that can come in handy&nbsp;sometimes.</li>
+<li>Pelican is a nice piece of software, allowing me to add new posts easily throuhg git and using&nbsp;Markdown.</li>
 </ul>
-<p>Alguns pontos precisei levar em considera&ccedil;&atilde;o s&atilde;o que o Pelican n&atilde;o tem um suporte nativo no Github Pages como tem o Jekyll por exemplo, e para ter busca e outras features, precisei de alguns plugins do pelican. Isto aumenta um pouco as complexidades, por&eacute;m n&atilde;o o suficiente para me&nbsp;desanimar.</p>
-<p>Algo que eu fiz tamb&eacute;m foi implementar um workflow no CircleCI para publicar a postagem quando eu fizer um commit na branch do blog, assim, a publica&ccedil;&atilde;o que dependeria de eu rodar alguns comandos do pelican fica&nbsp;automatizada.</p>
-<p>Uma pergunta que pode ficar &eacute;, por que usei Pelican no lugar de Jekyll ou Hugo por&nbsp;exemplo?</p>
-<p>Minha ideia neste sentido foi bem simples. Eu queria um gerador de site est&aacute;tico feito em Python. Assim, se eu eu sentir que preciso de algo ou que tem um bug eu posso trabalhar na mudan&ccedil;a&nbsp;facilmente.</p>
-<p>Tamb&eacute;m, Pelican usa Jinja2 para os templates, e esta biblioteca eu j&aacute; usei diversas vezes, al&eacute;m de ser parecida com a biblioteca de templates do&nbsp;Django.</p>
-<p>Assim, aqui estamos. Um blog usando Pelican para gerar o site, o host sendo o sistema de pages do github, e com CircleCI automatizando as publica&ccedil;&otilde;es quando eu envio os&nbsp;posts.</p>
-<p>Espero que tenham gostado. Quer saber mais sobre como funciona o Pelican, ou como criar seu pr&oacute;prio blog usando esta&nbsp;stack?</p>
-<p>Deixe seu&nbsp;coment&aacute;rio!</p>
-<p>Abra&ccedil;o!</p>
+<p>Some issues that I had to find workarounds for include the fact that Pelican is not natively supported by Github Pages like Jekyll for example, and to be able to have search and some other things I&rsquo;d need Pelican plugins, increasing a bit the complexity of using it. But it wasn&rsquo;t enough to let me&nbsp;down.</p>
+<p>One of the workarounds were the creation of a CircleCI workflow that generates the static site and commits to the proper branch of Github when I add a content to the work branch of the repo. This way, publishing the content wouldn&rsquo;t anymore depend on me running pelican commands&nbsp;locally.</p>
+<p>One question you may ask is why I decided to use Pelican instead of Jekyll or Hugo for&nbsp;example?</p>
+<p>My thought in that case was simple. I wanted a python software for that. So if I ever need to bugfix or improve something, I&rsquo;ll be working with the language I know the&nbsp;most.</p>
+<p>Besides that, Pelican uses Jinja2 for then templates, and that&rsquo;s a library I have already used and it kind of resembles the Django template system&nbsp;too.</p>
+<p>So, here we are. A blog using Pelican to generate the static site, hosted on Github Pages and CircleCI to automate the publishing of the posts when I push&nbsp;them.</p>
+<p>I hope you enjoyed this little post. If you would like to know more about how Pelican works or how to create your own blog using this setup, let me know in the comments&nbsp;below!</p>
+<p>See you in the next&nbsp;post!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">

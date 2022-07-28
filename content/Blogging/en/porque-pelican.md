@@ -3,6 +3,7 @@ Date: 2022-07-25 22:03
 Modified: 2022-07-28 01:52
 Category: Blogging
 Tags: Geral, Blogging
+Slug: porque-pelican
 Lang: en
 Translation: true
 

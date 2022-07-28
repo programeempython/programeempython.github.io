@@ -1,8 +1,10 @@
 Title: Python 101 - Primeira Parte
 Date: 2022-07-29 01:06
+Slug: python-101-parte-1
 Category: Tutoriais
 Tags: Tutorial, Python 101
-Slug: python-101-parte-1
+Summary: Bom, um blog com o nome Programe em Python não pode ficar sem um tutorial básico de Python, né?
+
 
 Bom, um blog com o nome Programe em Python não pode ficar sem um tutorial básico de Python, né?
 

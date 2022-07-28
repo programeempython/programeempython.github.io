@@ -1,10 +1,12 @@
-Title: Python 101 - Primeira Parte
+Title: Python 101 - First Part
 Date: 2022-07-29 01:06
+Slug: python-101-parte-1
 Category: Tutoriais
 Tags: Tutorial, Python 101
-Slug: python-101-parte-1
 Lang: en
 Translation: true
+Summary: Well, a blog with the name Programe em Python can'e exist without a basic Python Tutorial, right?
+
 
 Well, a blog with the name Programe em Python can'e exist without a basic Python Tutorial, right?
 

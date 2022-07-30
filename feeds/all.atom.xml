@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python</title><link href="http://programeempython.com.br/" rel="alternate"></link><link href="http://programeempython.com.br/feeds/all.atom.xml" rel="self"></link><id>http://programeempython.com.br/</id><updated>2022-07-31T01:44:00+02:00</updated><entry><title>Python 101 - Segunda Parte</title><link href="http://programeempython.com.br/python-101-parte-2.html" rel="alternate"></link><published>2022-07-29T12:06:00+02:00</published><updated>2022-07-29T12:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-29:/python-101-parte-2.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python</title><link href="http://programeempython.com.br/" rel="alternate"></link><link href="http://programeempython.com.br/feeds/all.atom.xml" rel="self"></link><id>http://programeempython.com.br/</id><updated>2022-07-31T01:44:00+02:00</updated><entry><title>Python 101 - Segunda Parte</title><link href="http://programeempython.com.br/python-101-parte-2.html" rel="alternate"></link><published>2022-07-29T12:06:00+02:00</published><updated>2022-07-29T12:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-29:/python-101-parte-2.html</id><summary type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
+&lt;p&gt;Agora que j&amp;aacute; temos o Python instalado e j&amp;aacute; conhecemos a sua interface interativa, vamos aprender um pouco sobre os comandos mais b&amp;aacute;sicos da&amp;nbsp;linguagem!&lt;/p&gt;
+&lt;p&gt;Antes de continuarmos, se n&amp;atilde;o leu o post anterior, acesse&amp;nbsp;aqui:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://programeempython.com.br/python-101-parte-1.html"&gt;Python 101 - Primeira&amp;nbsp;Parte&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Como visto, no shell Python, temos dois&amp;nbsp;cursores:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ao …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
 &lt;p&gt;Agora que j&amp;aacute; temos o Python instalado e j&amp;aacute; conhecemos a sua interface interativa, vamos aprender um pouco sobre os comandos mais b&amp;aacute;sicos da&amp;nbsp;linguagem!&lt;/p&gt;
 &lt;p&gt;Antes de continuarmos, se n&amp;atilde;o leu o post anterior, acesse&amp;nbsp;aqui:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://programeempython.com.br/python-101-parte-1.html"&gt;Python 101 - Primeira&amp;nbsp;Parte&lt;/a&gt;&lt;/p&gt;
@@ -35,7 +43,11 @@ Em seguida, comparamos o valor contido em x com 1. Ao terminarmos um comando com
 &lt;p&gt;Por enquanto &amp;eacute;&amp;nbsp;s&amp;oacute;!&lt;/p&gt;
 &lt;p&gt;No pr&amp;oacute;ximo post aproveitamos a deixa, e falamos sobre estruturas condicionais em&amp;nbsp;Python!&lt;/p&gt;
 &lt;p&gt;N&amp;atilde;o deixe de deixar d&amp;uacute;vidas e opini&amp;otilde;es nos coment&amp;aacute;rios&amp;nbsp;abaixo!&lt;/p&gt;
-&lt;p&gt;At&amp;eacute; o pr&amp;oacute;ximo&amp;nbsp;post!&lt;/p&gt;</content><category term="Tutoriais"></category><category term="Tutorial"></category><category term="Python 101"></category></entry><entry><title>Python 101 - Segunda Parte</title><link href="http://programeempython.com.br/python-101-parte-2-en.html" rel="alternate"></link><published>2022-07-29T12:06:00+02:00</published><updated>2022-07-29T12:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-29:/python-101-parte-2-en.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Hi!&lt;/p&gt;
+&lt;p&gt;At&amp;eacute; o pr&amp;oacute;ximo&amp;nbsp;post!&lt;/p&gt;</content><category term="Tutoriais"></category><category term="Tutorial"></category><category term="Python 101"></category></entry><entry><title>Python 101 - Segunda Parte</title><link href="http://programeempython.com.br/python-101-parte-2-en.html" rel="alternate"></link><published>2022-07-29T12:06:00+02:00</published><updated>2022-07-29T12:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-29:/python-101-parte-2-en.html</id><summary type="html">&lt;p&gt;Hi!&lt;/p&gt;
+&lt;p&gt;Now that we have Python installed and we already know its interactive interface, let&amp;rsquo;s learn a little about the most basic commands of the&amp;nbsp;language!&lt;/p&gt;
+&lt;p&gt;Before we continue, if you haven&amp;rsquo;t read the previous post, go&amp;nbsp;here:&lt;/p&gt;
+&lt;p&gt;&lt;a href="{filename}/Tutorials/python101.md"&gt;Python 101 - Part&amp;nbsp;One&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As seen, in the Python shell …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hi!&lt;/p&gt;
 &lt;p&gt;Now that we have Python installed and we already know its interactive interface, let&amp;rsquo;s learn a little about the most basic commands of the&amp;nbsp;language!&lt;/p&gt;
 &lt;p&gt;Before we continue, if you haven&amp;rsquo;t read the previous post, go&amp;nbsp;here:&lt;/p&gt;
 &lt;p&gt;&lt;a href="{filename}/Tutorials/python101.md"&gt;Python 101 - Part&amp;nbsp;One&lt;/a&gt;&lt;/p&gt;

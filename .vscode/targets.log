@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul 28 23:59:57 2022
+# Make data base, printed on Fri Jul 29 11:45:51 2022
 
 # Variables
 
@@ -121,7 +121,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 60468
+VSCODE_PID = 4045
 # environment
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS = 0
 # environment
@@ -129,7 +129,7 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/25555,unix/unix:/tmp/.ICE-unix/25555
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/2175,unix/unix:/tmp/.ICE-unix/2175
 # automatic
 *F = $(notdir $*)
 # environment
@@ -190,7 +190,7 @@ LC_TIME = da_DK.UTF-8
 # makefile (from 'Makefile', line 5)
 BASEDIR = $(CURDIR)
 # environment
-INVOCATION_ID = 63a0c6bac4a2433ebf377e78e731ef7b
+INVOCATION_ID = 95dc57cc5a87496a8f3b4d337c895527
 # environment
 VIRTUALENVWRAPPER_SCRIPT = /usr/bin/virtualenvwrapper.sh
 # makefile (from 'Makefile', line 24)
@@ -226,7 +226,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := help
 # environment
-SYSTEMD_EXEC_PID = 25604
+SYSTEMD_EXEC_PID = 2230
 # makefile (from 'Makefile', line 3)
 PELICANOPTS = 
 # environment
@@ -240,7 +240,7 @@ USER = jcemelanda
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 25259
+MANAGERPID = 1879
 # environment
 which_declare = declare -f
 # environment
@@ -248,9 +248,9 @@ LC_MEASUREMENT = da_DK.UTF-8
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 60468
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4045
 # environment
-SSH_AGENT_PID = 25473
+SSH_AGENT_PID = 2093
 # environment
 _ = /usr/bin/make
 # environment
@@ -260,7 +260,7 @@ XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from 'Makefile', line 7)
 OUTPUTDIR = $(BASEDIR)/output
 # environment
-JOURNAL_STREAM = 8:155819
+JOURNAL_STREAM = 8:22025
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -394,6 +394,7 @@ help:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+ 
 #  recipe to execute (from 'Makefile', line 33):
 	@echo 'Makefile for a pelican Web site                                           '
 	@echo '                                                                          '
@@ -448,6 +449,6 @@ serve:
 # strcache performance: lookups = 59 / hit rate = 42%
 # hash-table stats:
 # Load=34/8192=0%, Rehash=0, Collisions=0/59=0%
-# Finished Make data base on Thu Jul 28 23:59:57 2022
+# Finished Make data base on Fri Jul 29 11:45:51 2022
 
  

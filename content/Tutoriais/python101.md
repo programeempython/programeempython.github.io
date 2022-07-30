@@ -1,5 +1,6 @@
 Title: Python 101 - Primeira Parte
 Date: 2022-07-29 01:06
+Modified: 2022-07-31 01:44
 Slug: python-101-parte-1
 Category: Tutoriais
 Tags: Tutorial, Python 101
@@ -44,7 +45,7 @@ Isto significa que o console do Python já te retorna as respostas para os coman
 
 Finalmente, quando formos executar códigos com blocos, como `if` por exemplo, será assim:
 
-    >>> if(True):
+    >>> if True:
     ...     print('É verdade!')
     ...
     É verdade!

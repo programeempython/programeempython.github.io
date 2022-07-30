@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python</title><link href="http://programeempython.com.br/" rel="alternate"></link><link href="http://programeempython.com.br/feeds/all.atom.xml" rel="self"></link><id>http://programeempython.com.br/</id><updated>2022-07-29T01:06:00+02:00</updated><entry><title>Python 101 - Primeira Parte</title><link href="http://programeempython.com.br/python-101-parte-1.html" rel="alternate"></link><published>2022-07-29T01:06:00+02:00</published><updated>2022-07-29T01:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-29:/python-101-parte-1.html</id><summary type="html">&lt;p&gt;Bom, um blog com o nome Programe em Python não pode ficar sem um tutorial básico de Python,&amp;nbsp;né?&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bom, um blog com o nome Programe em Python n&amp;atilde;o pode ficar sem um tutorial b&amp;aacute;sico de Python,&amp;nbsp;n&amp;eacute;?&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python</title><link href="http://programeempython.com.br/" rel="alternate"></link><link href="http://programeempython.com.br/feeds/all.atom.xml" rel="self"></link><id>http://programeempython.com.br/</id><updated>2022-07-31T01:44:00+02:00</updated><entry><title>Python 101 - Segunda Parte</title><link href="http://programeempython.com.br/python-101-parte-2.html" rel="alternate"></link><published>2022-07-29T12:06:00+02:00</published><updated>2022-07-29T12:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-29:/python-101-parte-2.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
+&lt;p&gt;Agora que j&amp;aacute; temos o Python instalado e j&amp;aacute; conhecemos a sua interface interativa, vamos aprender um pouco sobre os comandos mais b&amp;aacute;sicos da&amp;nbsp;linguagem!&lt;/p&gt;
+&lt;p&gt;Antes de continuarmos, se n&amp;atilde;o leu o post anterior, acesse&amp;nbsp;aqui:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://programeempython.com.br/python-101-parte-1.html"&gt;Python 101 - Primeira&amp;nbsp;Parte&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Como visto, no shell Python, temos dois&amp;nbsp;cursores:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ao fazermos um if, estrutura condicional que ser&amp;aacute; explicada em mais detalhes num pr&amp;oacute;ximo post, temos o seguinte no&amp;nbsp;console:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;:
+...     &lt;span class="nv"&gt;print&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;x &amp;eacute; menor que 1&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
+... 
+&lt;span class="nv"&gt;x&lt;/span&gt; &amp;eacute; &lt;span class="nv"&gt;menor&lt;/span&gt; &lt;span class="nv"&gt;que&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Agora, a explica&amp;ccedil;&amp;atilde;o&amp;nbsp;=]&lt;/p&gt;
+&lt;p&gt;Na primeira linha, dizemos que a vari&amp;aacute;vel x cont&amp;eacute;m o valor 0;
+Em seguida, comparamos o valor contido em x com 1. Ao terminarmos um comando com : o interpretador entende que este &amp;eacute; um comando que n&amp;atilde;o acabou no final daquela linha, e que &amp;eacute; composto por mais comandos, ent&amp;atilde;o surge o cursor secund&amp;aacute;rio &lt;code&gt;...&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Ent&amp;atilde;o, muitos programadores habituados com outras linguagens devem se perguntar onde est&amp;atilde;o as chaves pra determinar o&amp;nbsp;bloco.&lt;/p&gt;
+&lt;p&gt;No Python, os blocos s&amp;atilde;o determinados pela identa&amp;ccedil;&amp;atilde;o (ou edenta&amp;ccedil;&amp;atilde;o, ou endenta&amp;ccedil;&amp;atilde;o&amp;hellip; j&amp;aacute; vi v&amp;aacute;rias formas da&amp;nbsp;palavra).&lt;/p&gt;
+&lt;p&gt;As linhas que est&amp;atilde;o dentro do if, ou seja o que deve ser executado caso a compara&amp;ccedil;&amp;atilde;o seja verdadeira deve estar&amp;nbsp;identado.&lt;/p&gt;
+&lt;p&gt;Em geral &amp;eacute; uma conven&amp;ccedil;&amp;atilde;o, no Python, usarmos 4 espa&amp;ccedil;os para a&amp;nbsp;identa&amp;ccedil;&amp;atilde;o.&lt;/p&gt;
+&lt;p&gt;O &lt;code&gt;print("x &amp;eacute; menor que 1")&lt;/code&gt; &amp;eacute; o comando que deve ser executado se a compara&amp;ccedil;&amp;atilde;o &lt;code&gt;x &amp;lt; 1&lt;/code&gt; for verdadeira. Assim, esta linha est&amp;aacute; identada, e o interpretador sabe que s&amp;oacute; deve execut&amp;aacute;-la caso &lt;em&gt;x&lt;/em&gt; seja menor que &lt;em&gt;1&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Quando voc&amp;ecirc; d&amp;aacute; um &lt;code&gt;ENTER&lt;/code&gt; no final desta linha, o interpretador te mostra novamente o cursor secund&amp;aacute;rio, pois um &lt;code&gt;if&lt;/code&gt; pode ter v&amp;aacute;rios comandos ali dentro. Como veremos mais adiante a execu&amp;ccedil;&amp;atilde;o de um programa todo pode estar dentro de um &lt;strong&gt;if&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Assim, s&amp;oacute; depois de um segundo &lt;code&gt;ENTER&lt;/code&gt; &amp;eacute; que o interpretador executa o comando e mostra o&amp;nbsp;resultado.&lt;/p&gt;
+&lt;p&gt;Ent&amp;atilde;o,&amp;nbsp;recapitulando:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Blocos em Python s&amp;atilde;o definidos pela&amp;nbsp;identa&amp;ccedil;&amp;atilde;o&lt;/li&gt;
+&lt;li&gt;A identa&amp;ccedil;&amp;atilde;o deve seguir um padr&amp;atilde;o, preferencialmente em todos os&amp;nbsp;programas&lt;/li&gt;
+&lt;li&gt;&amp;Eacute; conven&amp;ccedil;&amp;atilde;o usar 4 espa&amp;ccedil;os para&amp;nbsp;identa&amp;ccedil;&amp;atilde;o&lt;/li&gt;
+&lt;li&gt;No interpretador, blocos identados s&amp;atilde;o precedidos do cursos secund&amp;aacute;rio&amp;nbsp;&amp;hellip;&lt;/li&gt;
+&lt;li&gt;Um bloco indica um trecho de c&amp;oacute;digo que est&amp;aacute; dentro de outro&amp;nbsp;comando&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Por enquanto &amp;eacute;&amp;nbsp;s&amp;oacute;!&lt;/p&gt;
+&lt;p&gt;No pr&amp;oacute;ximo post aproveitamos a deixa, e falamos sobre estruturas condicionais em&amp;nbsp;Python!&lt;/p&gt;
+&lt;p&gt;N&amp;atilde;o deixe de deixar d&amp;uacute;vidas e opini&amp;otilde;es nos coment&amp;aacute;rios&amp;nbsp;abaixo!&lt;/p&gt;
+&lt;p&gt;At&amp;eacute; o pr&amp;oacute;ximo&amp;nbsp;post!&lt;/p&gt;</content><category term="Tutoriais"></category><category term="Tutorial"></category><category term="Python 101"></category></entry><entry><title>Python 101 - Segunda Parte</title><link href="http://programeempython.com.br/python-101-parte-2-en.html" rel="alternate"></link><published>2022-07-29T12:06:00+02:00</published><updated>2022-07-29T12:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-29:/python-101-parte-2-en.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Hi!&lt;/p&gt;
+&lt;p&gt;Now that we have Python installed and we already know its interactive interface, let&amp;rsquo;s learn a little about the most basic commands of the&amp;nbsp;language!&lt;/p&gt;
+&lt;p&gt;Before we continue, if you haven&amp;rsquo;t read the previous post, go&amp;nbsp;here:&lt;/p&gt;
+&lt;p&gt;&lt;a href="{filename}/Tutorials/python101.md"&gt;Python 101 - Part&amp;nbsp;One&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As seen, in the Python shell we have two&amp;nbsp;cursors:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When we make an if, conditional structure that will be explained in more detail in a next post, we have the following in the&amp;nbsp;console:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;:
+...     &lt;span class="nv"&gt;print&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;x is less than 1&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
+...
+&lt;span class="nv"&gt;x&lt;/span&gt; &lt;span class="nv"&gt;is&lt;/span&gt; &lt;span class="nv"&gt;less&lt;/span&gt; &lt;span class="nv"&gt;than&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now the explanation&amp;nbsp;=]&lt;/p&gt;
+&lt;p&gt;In the first line, we say that the variable &lt;em&gt;x&lt;/em&gt; contains the value &lt;em&gt;0&lt;/em&gt;;
+Next, we compare the value contained in &lt;em&gt;x&lt;/em&gt; with &lt;em&gt;1&lt;/em&gt;. When we end a command with &lt;strong&gt;:&lt;/strong&gt; the interpreter understands that this is a command that did not end at the end of that line, and that it is composed of more commands, so the secondary cursor &lt;code&gt;...&lt;/code&gt; gets in the&amp;nbsp;game.&lt;/p&gt;
+&lt;p&gt;So, many programmers used to other languages &amp;ZeroWidthSpace;&amp;ZeroWidthSpace;must ask themselves where are the curly braces to determine the&amp;nbsp;block.&lt;/p&gt;
+&lt;p&gt;In Python, blocks are determined by&amp;nbsp;indentation.&lt;/p&gt;
+&lt;p&gt;The lines that are inside the &lt;em&gt;if&lt;/em&gt;, ie what must be executed if the comparison is true must be&amp;nbsp;indented.&lt;/p&gt;
+&lt;p&gt;It is generally a convention, in Python, to use 4 spaces for the&amp;nbsp;indentation.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;print("x is less than 1")&lt;/code&gt; is the command that should be executed if the comparison &lt;code&gt;x &amp;lt; 1&lt;/code&gt; is true. Thus, this line is indented, and the interpreter knows that it should only execute it if &lt;em&gt;x&lt;/em&gt; is less than &lt;em&gt;1&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;When you press &lt;code&gt;ENTER&lt;/code&gt; at the end of this line, the interpreter shows you the secondary cursor again, because an &lt;code&gt;if&lt;/code&gt; can have several commands inside. As we will see later, the execution of an entire program can be inside an &lt;strong&gt;if&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Thus, only after a second &lt;code&gt;ENTER&lt;/code&gt; does the interpreter execute the command and display the&amp;nbsp;result.&lt;/p&gt;
+&lt;p&gt;So, let&amp;rsquo;s&amp;nbsp;recap:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Blocks in Python are defined by&amp;nbsp;indentation&lt;/li&gt;
+&lt;li&gt;The indentation must follow a pattern, preferably in all&amp;nbsp;programs&lt;/li&gt;
+&lt;li&gt;It is convention to use 4 spaces for&amp;nbsp;indentation&lt;/li&gt;
+&lt;li&gt;In the interpreter, indented blocks are preceded by the secondary cursor &lt;code&gt;...&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;A block indicates a snippet of code that is inside another&amp;nbsp;command&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That&amp;rsquo;s all for&amp;nbsp;now!&lt;/p&gt;
+&lt;p&gt;In the next Python 101 post we take the hint, and talk about conditional structures in&amp;nbsp;Python!&lt;/p&gt;
+&lt;p&gt;Be sure to leave your questions and opinions in the comments&amp;nbsp;below!&lt;/p&gt;
+&lt;p&gt;See you in the next&amp;nbsp;post!&lt;/p&gt;</content><category term="Tutoriais"></category><category term="Tutorial"></category><category term="Python 101"></category></entry><entry><title>Python 101 - Primeira Parte</title><link href="http://programeempython.com.br/python-101-parte-1.html" rel="alternate"></link><published>2022-07-29T01:06:00+02:00</published><updated>2022-07-31T01:44:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-07-29:/python-101-parte-1.html</id><summary type="html">&lt;p&gt;Bom, um blog com o nome Programe em Python não pode ficar sem um tutorial básico de Python,&amp;nbsp;né?&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bom, um blog com o nome Programe em Python n&amp;atilde;o pode ficar sem um tutorial b&amp;aacute;sico de Python,&amp;nbsp;n&amp;eacute;?&lt;/p&gt;
 &lt;p&gt;Antes de mais nada, se voc&amp;ecirc; usa Linux ou MacOS voc&amp;ecirc; provavelmente j&amp;aacute; tem o Python ent&amp;atilde;o voc&amp;ecirc; est&amp;aacute; com&amp;nbsp;sorte.&lt;/p&gt;
 &lt;p&gt;No windows, v&amp;aacute; &amp;agrave; &lt;a href="https://www.python.org/downloads/"&gt;p&amp;aacute;gina de downloads do Python&lt;/a&gt; e baixe dali a vers&amp;atilde;o mais&amp;nbsp;recente.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Download Python" src="/images/download-python.png"/&gt;&lt;/p&gt;
@@ -23,7 +95,7 @@ Ol&amp;aacute; Mundo!
 63.08163265306123
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Finalmente, quando formos executar c&amp;oacute;digos com blocos, como &lt;code&gt;if&lt;/code&gt; por exemplo, ser&amp;aacute;&amp;nbsp;assim:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;True&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;:
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;True&lt;/span&gt;:
 ...     &lt;span class="nv"&gt;print&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;&amp;Eacute; verdade!&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
 ...
 &amp;Eacute; &lt;span class="nv"&gt;verdade&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;

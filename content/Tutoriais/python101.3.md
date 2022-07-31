@@ -1,6 +1,6 @@
 Title: Python 101 - Segunda Parte
 Date: 2022-07-29 12:06
-Slug: python-101-parte-2
+Slug: python-101-parte-3
 Category: Tutoriais
 Tags: Tutorial, Python 101
 Status: draft

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
         href="http://localhost:8000/theme/css/stork-dark.css">
-<meta name="description" content="Estruturas Condicionais em Python Parte 1 Olá Pessoal! Hoje vou fazer um post mais feliz! Resultados na faculdade todos bons! Acabei de passar em..." />
+<meta name="description" content="Estruturas de Repetição Parte 1 - While Olá Pessoal! Ontem não tava muito legal não deu pra postar nada… Mas vamos continuar falando sobre..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -119,39 +119,45 @@
               prose-img:rounded-md
               ">
     
-    <p>Estruturas Condicionais em Python Parte 1
+    <p>Estruturas de Repeti&ccedil;&atilde;o Parte 1 - While
 Ol&aacute;&nbsp;Pessoal!</p>
-<p>Hoje vou fazer um post mais feliz! Resultados na faculdade todos bons! Acabei de passar em mais uma mat&eacute;ria&nbsp;=]</p>
-<p>Bem&hellip; conforme prometido, vamos falar um pouco sobre as estruturas condicionais que temos em&nbsp;Python.</p>
-<p>As estruturas condicionais s&atilde;o essenciais na programa&ccedil;&atilde;o. Sem elas, os programas seriam chatos, mon&oacute;tonos, e nunca teriam a capacidade toda que temos&nbsp;atualmente.</p>
-<p><span class="caps">SEM</span> <span class="caps">ESTRUTURAS</span> <span class="caps">CONDICIONAIS</span> N&Atilde;O <span class="caps">HAVERIA</span> <span class="caps">JOGOS</span>&nbsp;ELETR&Ocirc;NICOS!!!!</p>
-<p>Ent&atilde;o, vejamos como o Python implementa suas estruturas&nbsp;condicionais.</p>
-<p>A principal estrutura condicional do Python (e mais usada tamb&eacute;m) &eacute; a constru&ccedil;&atilde;o if/else ou sua varia&ccedil;&atilde;o&nbsp;if/elif/else.</p>
-<p>if, traduzindo do ingl&ecirc;s quer dizer se, e else sen&atilde;o, logo, estas constru&ccedil;&otilde;es nos permitem orientar a execu&ccedil;&atilde;o de um trecho de c&oacute;digo. Se isso, faz aquilo, sen&atilde;o, faz aquilo&nbsp;outro&hellip;</p>
-<p>Veja abaixo um exemplo de utiliza&ccedil;&atilde;o do&nbsp;if/else:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">if</span> <span class="nv">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>:
-    <span class="nv">print</span> <span class="s2">"</span><span class="s">x e par</span><span class="s2">"</span>
-<span class="k">else</span>:
-    <span class="nv">print</span> <span class="s2">"</span><span class="s">x e impar</span><span class="s2">"</span>
+<p>Ontem n&atilde;o tava muito legal n&atilde;o deu pra postar&nbsp;nada&hellip;</p>
+<p>Mas vamos continuar falando sobre Programa&ccedil;&atilde;o B&aacute;sica no&nbsp;Python!</p>
+<p>Hoje vamos falar de uma das estruturas mais importantes: o&nbsp;while.</p>
+<p>O while &eacute; um comando que manda um bloco de c&oacute;digo ser executado enquanto uma condi&ccedil;&atilde;o n&atilde;o for satisfeita. Assim, permite que sejam criados loops de execu&ccedil;&atilde;o, assim como temos em jogos e aplicativos com interfaces&nbsp;gr&aacute;ficas.</p>
+<p>O while &eacute; um comando muito &uacute;til, mas pode ser perigoso, pois se n&atilde;o tratarmos corretamente o crit&eacute;rio de parada, o la&ccedil;o pode n&atilde;o ter fim, e o programa n&atilde;o faz o que&nbsp;deveria.</p>
+<p>Vamos ver ent&atilde;o um exemplo de como funciona o while em&nbsp;Python:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">while</span> <span class="nv">x</span> <span class="o">&gt;</span> <span class="mi">0</span>:
+    <span class="nv">print</span> <span class="s2">"</span><span class="s">x &gt; 0</span><span class="s2">"</span>
+    <span class="nv">x</span> <span class="o">=</span> <span class="nv">x</span> <span class="o">-</span> <span class="mi">1</span>
 </code></pre></div>
-<p>Este c&oacute;digo analisa o valor da vari&aacute;vel x. Se x % 2 (o resto da divis&atilde;o de x por 2) for igual a zero, ent&atilde;o o n&uacute;mero &eacute; par, sen&atilde;o, &eacute; impar. Veremos mais fun&ccedil;&otilde;es matem&aacute;ticas em posts&nbsp;futuros.</p>
-<p>Ao digitar estes comando no terminal, ficaria&nbsp;assim:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span>:
-...     <span class="nv">print</span> <span class="s2">"</span><span class="s">x e par</span><span class="s2">"</span>
-... <span class="k">else</span>:
-...     <span class="nv">print</span> <span class="s2">"</span><span class="s">x e impar</span><span class="s2">"</span> 
-...
-<span class="nv">x</span> <span class="nv">e</span> <span class="nv">impar</span>
+<p>Neste c&oacute;digo, ser&aacute; mostrada a mensagem x &gt; 0 at&eacute; que x seja igual a zero. Quando o valor de x passar para 0, a verifica&ccedil;&atilde;o x&gt;0 retornar&aacute; falso, o programa sai do&nbsp;la&ccedil;o.</p>
+<p>Vejamos agora este trecho de&nbsp;c&oacute;digo:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="nv">True</span>:
+    <span class="nv">print</span> <span class="s2">"</span><span class="s">N&atilde;o vou parar nunca!</span><span class="s2">"</span>
+    <span class="nv">i</span> <span class="o">=</span> <span class="nv">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="nv">i</span> <span class="o">&gt;</span> <span class="mi">100</span>:
+        <span class="k">break</span>
 </code></pre></div>
-<p>Recapitulando o que foi dito no texto sobre Blocos de C&oacute;digo em Python, qundo temos um bloco identado logo abaixo de um comando terminado em :, temos um bloco que est&aacute; diretamente relacionado a este&nbsp;comando.</p>
-<p>No exemplo, temos o comando if x%2==0: e logo abaixo o print &ldquo;x e par&rdquo; identado. Isto quer dizer que o c&oacute;digo identado (print &ldquo;x e par&rdquo;) somente ser&aacute; executado se o resto da divis&atilde;o de x por 2 for&nbsp;zero.</p>
-<p>Caso este resultado seja diferente de zero, x n&atilde;o &eacute; par, e o interpretador encontra o comando&nbsp;else:.</p>
-<p>Logo abaxo deste comando, temos print &ldquo;x e impar&rdquo; que est&aacute; identado, mostrando ao interpretador que este &eacute; o comando que deve ser executado caso a compara&ccedil;&atilde;o dentro do if seja&nbsp;falsa.</p>
-<p>N&atilde;o vamos esticar o assunto. Por enquanto paramos por aqui, mas espere que jaj&aacute; tem a continua&ccedil;&atilde;o pra&nbsp;voc&ecirc;!</p>
-<p>Comente!
-Assine o Feed e n&atilde;o perca nenhum posto do Programe em&nbsp;Python!</p>
+<p>Aqui temos um la&ccedil;o que seria executado eternamente (while True:). Por&eacute;m, dentro dele, fazemos uma verifica&ccedil;&atilde;o, e quando a vari&aacute;vel i estiver guardando um valor maior que 100, ser&aacute; executado o comando break. O comando break literalmente quebra o la&ccedil;o, ent&atilde;o, naquele instnte, o programa sai do&nbsp;la&ccedil;o.</p>
+<p>Se logo abaixo deste c&oacute;digo fiz&eacute;ssemos um print i, o valor impresso seria&nbsp;100.</p>
+<p>Assim, juntamente ao comando while, vimos agora o comando break que pode ser muito &uacute;til para quebrar la&ccedil;os fora da compara&ccedil;&atilde;o&nbsp;padr&atilde;o.</p>
+<p>Vejamos agora o seguinte&nbsp;trecho:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">i</span><span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="nv">i</span> <span class="o">&lt;</span> <span class="mi">100</span>:
+    <span class="k">if</span> <span class="nv">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>:
+        <span class="k">continue</span>
+    <span class="nv">print</span> <span class="nv">i</span>
+</code></pre></div>
+<p>Inicialmente, i recebe o valor 0, e &eacute; comparado com 100. Como 0 &eacute; menor que 100, o la&ccedil;o come&ccedil;a. Logo em seguida, temos uma compara&ccedil;&atilde;o: if 1%2 == 0:. aqui verificamos se i &eacute; m&uacute;ltiplo de 2. Caso i seja m&uacute;ltiplo de dois, h&aacute; um comando continue. continue faz com que esta itera&ccedil;&atilde;o do la&ccedil;o termine e o programa passe para a pr&oacute;xima itera&ccedil;&atilde;o. Desta forma, o programa ignora tudo o que est&aacute; ap&oacute;s o&nbsp;if.</p>
+<p>No caso de i n&atilde;o sei m&uacute;ltiplo de 2, o programa n&atilde;o executa o continue, e imprime o valor de i na&nbsp;tela.</p>
+<p>Se um continue estivesse fora do if, sempre o programa executaria este continue, e nunca seria executado o que h&aacute; ap&oacute;s ele. Assim, o continue controla a execuss&atilde;o do la&ccedil;o sem&nbsp;quebr&aacute;-lo.</p>
+<p>Por enquanto &eacute;&nbsp;isso.</p>
+<p>Nosso pr&oacute;ximo post vai falar sobre a constru&ccedil;&atilde;o&nbsp;for.</p>
+<p>Comentem!
+Assinem o Feed, assim voc&ecirc; n&atilde;o perde um post do Programe em&nbsp;Python!</p>
 <p>Abra&ccedil;os!
 At&eacute; a&nbsp;pr&oacute;xima!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->

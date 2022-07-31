@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Pelican" />
+    <title>Pelican tutorial com Github Pages and CircleCI - 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+    <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/css/main.css" />
+    <link rel="stylesheet" href="http://programeempython.com.br/theme/css/stork.css">
+    <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
+        href="http://programeempython.com.br/theme/css/stork-dark.css">
+    <link
+        href="http://programeempython.com.br/feeds/all.atom.xml"
+        type="application/atom+xml" rel="alternate" title="Programe em Python Atom Feed" />
+<meta name="description" content="As promised, we’ll cover how I created my blog with Pelican, Github Pages and CircleCI in a tutorial. As it is a lot of content, we will divide it..." />
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
+                '(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+
+<body class="min-h-screen flex flex-col max-w-7xl lg:max-w-none text-zinc-800 bg-neutral-100 
+    dark:bg-neutral-900 dark:text-zinc-300 container mx-auto justify-center md:px-3 ">
+    <nav class="sm:flex sm:justify-between xl:ml-32 pl-4 items-center">
+        <div class="flex pt-4">
+            <h1 class="font-semibold text-2xl"><a href="http://programeempython.com.br/">Programe em Python</a></h1>
+            <button id="theme-toggle" type="button"
+                class="text-zinc-700 dark:text-zinc-400 rounded-full focus:outline-none text-sm ml-2 p-1">
+                <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+        <ul class="flex flex-wrap lg:mr-24 md:pt-0">
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/pages/contato.html">Contato</a></li>
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/pages/sobre-mim.html">Sobre&nbsp;Mim</a></li>
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/archives.html">Aquivo</a></li>
+            <li class="mr-4 pt-6"><a                     href="http://programeempython.com.br/categories.html">Categorias</a></li>
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/tags.html">Tags</a></li>
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/search.html">Busca</a></li>
+        </ul>
+    </nav>
+    <div class="flex-grow md:max-w-screen-md md:mx-auto md:w-3/4 px-4">
+        <nav class="text-zinc-800 dark:text-zinc-300 mt-12 pb-2 md:mt-16" aria-label="Breadcrumb">
+            <ul class="p-0 inline-flex items-center">
+                <li class="flex items-center">
+                    <a href="http://programeempython.com.br/" class="text-zinc-800 dark:text-zinc-300 inline-flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                            </path>
+                        </svg>
+                        Home
+                    </a>
+                    <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
+                    </svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="http://programeempython.com.br/categories.html">Categorias</a>
+                    <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
+                    </svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
+                </li>
+                <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                        d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
+                </svg>
+            </ul>
+        </nav>
+
+<main>
+  <header>
+    <h1 class="font-semibold text-3xl my-2">Pelican tutorial com Github Pages and CircleCI -&nbsp;1</h1>
+    <footer class="flex text-sm text-zinc-800 dark:text-zinc-400">
+      <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
+        <time>July 31, 2022</time>
+        <div>
+        </div>
+        <div>
+          <span>&nbsp;·&nbsp;Julio Melanda</span>
+        </div>
+      </div>
+    </footer>
+  </header>
+  <div class="max-w-7xl container mx-auto my-8 text-zinc-800 dark:text-zinc-300  
+              prose lg:max-w-none prose-headings:text-zinc-800 prose-headings:dark:text-zinc-300 
+              prose-h1:text-3xl lg:prose-h1:text-3xl prose-headings:font-semibold 
+              prose-pre:bg-zinc-200 prose-pre:text-zinc-800
+              dark:prose-pre:bg-zinc-800 dark:prose-pre:text-zinc-200
+              prose-blockquote:text-zinc-800
+              dark:prose-blockquote:text-zinc-200
+              prose-a:text-gray-500
+              dark:prose-a:text-gray-400
+              dark:prose-strong:text-zinc-200 
+              dark:prose-code:text-zinc-200
+              dark:prose-code:bg-zinc-800
+              prose-code:bg-zinc-200
+              prose-code:font-light
+              prose-img:rounded-md
+              ">
+      Translations:
+      <a href="http://programeempython.com.br/tutorial-pelican.html" hreflang="pt_br">pt_br</a>
+
+    <p>Hi!</p>
+<p>As promised, we&rsquo;ll cover how I created my blog with Pelican, Github Pages and CircleCI in a tutorial. As it is a lot of content, we will divide it into parts and here we will see an introduction to&nbsp;Pelican.</p>
+<p>To recap, Pelican is a static site generator, that is, it generates a static <span class="caps">HTML</span> site based on content written in a Markup language, usually rich text or markdown. Pelican generates the posts using Jinja2 as the template library. So, if you have some familiarity with jinja or Django, which has a similar template library, you won&rsquo;t have any difficulties in, for example, creating or customizing themes for&nbsp;Pelican.</p>
+<p>First, to create a website with Pelican, let&rsquo;s install&nbsp;it.</p>
+<p>It can be in a virtual environment or directly in your default python installation. In the terminal,&nbsp;run:</p>
+<div class="highlight"><pre><span></span><code><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">pelican</span><span class="o">[</span><span class="n">markdown</span><span class="o">]</span><span class="w"></span>
+</code></pre></div>
+<p>This will install Pelican with Markdown support, which is my favorite markup&nbsp;language.</p>
+<p>Finishing your installation, let&rsquo;s create a Pelican&nbsp;website.</p>
+<p>Create a folder where your site will be, so we can run commands from there. On Linux it would be something like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><code>mkdir ~/projects/my_blog/ -p
+cd ~/projects/my_blog
+</code></pre></div>
+<p>So now let&rsquo;s run a Pelican command that will start our&nbsp;blog.</p>
+<div class="highlight"><pre><span></span><code>pelican-quickstart
+</code></pre></div>
+<p>This script will ask you several&nbsp;questions.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">.</span><span class="o">]</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Who</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">language</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">en</span><span class="o">]</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="k">prefix</span><span class="vm">?</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="n">pagination</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="k">zone</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">America/New_York</span><span class="o">]</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tasks</span><span class="p">.</span><span class="n">py</span><span class="o">/</span><span class="n">Makefile</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">automate</span><span class="w"> </span><span class="n">generation</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">publishing</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Let&rsquo;s keep it as simple as possible for this introductory tutorial, so&nbsp;answer</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">Just</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="n n-Quoted">`Enter`</span><span class="p">)</span><span class="w"></span>
+<span class="n">Test</span><span class="w"></span>
+<span class="n">Test</span><span class="w"></span>
+<span class="p">(</span><span class="n">Just</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="n n-Quoted">`Enter`</span><span class="p">)</span><span class="w"></span>
+<span class="k">no</span><span class="w"></span>
+<span class="k">no</span><span class="w"></span>
+<span class="p">(</span><span class="n">Just</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="n n-Quoted">`Enter`</span><span class="p">)</span><span class="w"></span>
+<span class="k">no</span><span class="w"></span>
+</code></pre></div>
+<p>So Pelican will create a very simplified project that we can use to start our blog. In a next post, we&rsquo;ll run this command again to actually create the blog we&rsquo;re going to publish, but here, as it&rsquo;s just to introduce Pelican, let&rsquo;s keep it&nbsp;simple.</p>
+<p>Now let&rsquo;s create our first example post. See that Pelican created a file structure like this in the blog&nbsp;folder:</p>
+<div class="highlight"><pre><span></span><code>content /
+pelicanconf.py
+publishconf.py
+</code></pre></div>
+<p>Inside the content folder, create a file, let&rsquo;s call it teste.md (Very creative :p). In it insert the following&nbsp;content</p>
+<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span><span class="w"> </span><span class="n">Test</span><span class="w"></span>
+<span class="n">Date</span><span class="o">:</span><span class="w"> </span><span class="mi">2022</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">31</span><span class="w"> </span><span class="mi">08</span><span class="o">:</span><span class="mi">00</span><span class="w"></span>
+<span class="n">Category</span><span class="o">:</span><span class="w"> </span><span class="n">General</span><span class="w"></span>
+
+<span class="n">Hi</span><span class="o">!</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">my</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">post</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">Pelican</span><span class="o">!</span><span class="w"></span>
+</code></pre></div>
+<p>This is enough for a post with Pelican. Title, date, category and the content&nbsp;itself.</p>
+<p>Now let&rsquo;s run a test server and see what our blog looks&nbsp;like.</p>
+<div class="highlight"><pre><span></span><code>pelican -r -l
+</code></pre></div>
+<p>The result should be something like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="o">---</span><span class="w"> </span><span class="n">AutoReload</span><span class="w"> </span><span class="k">Mode</span><span class="o">:</span><span class="w"> </span><span class="n">Monitoring</span><span class="w"> </span><span class="n n-Quoted">`content`</span><span class="p">,</span><span class="w"> </span><span class="n n-Quoted">`theme`</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n n-Quoted">`settings`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">changes</span><span class="p">.</span><span class="w"> </span><span class="o">---</span><span class="w"></span>
+<span class="n">Serving</span><span class="w"> </span><span class="n">site</span><span class="w"> </span><span class="k">at</span><span class="o">:</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="mf">127.0.0.1</span><span class="o">:</span><span class="mi">8000</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Tap</span><span class="w"> </span><span class="n">CTRL</span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">stop</span><span class="w"></span>
+<span class="err">[</span><span class="mi">22</span><span class="o">:</span><span class="mi">56</span><span class="o">:</span><span class="mi">36</span><span class="err">]</span><span class="w"> </span><span class="n">WARNING</span><span class="w"> </span><span class="n">Docutils</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">localization</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">'pt'</span><span class="p">.</span><span class="w"> </span><span class="k">Using</span><span class="w"> </span><span class="s1">'en'</span><span class="w"> </span><span class="n">instead</span><span class="p">.</span><span class="w"> </span><span class="n">log</span><span class="p">.</span><span class="n">py</span><span class="o">:</span><span class="mi">91</span><span class="w"></span>
+<span class="w">        </span><span class="n">WARNING</span><span class="w"> </span><span class="n">Watched</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">exist</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jcemelanda</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">myblog</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">images</span><span class="w"> </span><span class="n">log</span><span class="p">.</span><span class="n">py</span><span class="o">:</span><span class="mi">91</span><span class="w"></span>
+
+<span class="o">-&gt;</span><span class="w"> </span><span class="n">Modified</span><span class="o">:</span><span class="w"> </span><span class="k">set</span><span class="n">tings</span><span class="p">,</span><span class="w"> </span><span class="n">content</span><span class="p">,</span><span class="w"> </span><span class="n">theme</span><span class="p">.</span><span class="w"> </span><span class="n">re</span><span class="o">-</span><span class="n">generating</span><span class="p">...</span><span class="w"></span>
+<span class="n">Done</span><span class="o">:</span><span class="w"> </span><span class="n">Processed</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">article</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">drafts</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hidden</span><span class="w"> </span><span class="n">articles</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">pages</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hidden</span><span class="w"> </span><span class="n">pages</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">draft</span><span class="w"> </span><span class="n">pages</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mf">0.06</span><span class="w"> </span><span class="n">seconds</span><span class="p">.</span><span class="w"></span>
+</code></pre></div>
+<p>Access the indicated address <code>http://127.0.0.1:8000</code></p>
+<p><img alt="Screenshot Pelican 001" src="/images/pelican-tut-001-en.png"/></p>
+<p>This should be what your blog looks&nbsp;like.</p>
+<p>Now open your <code>pelicanconf.py</code> file. Your content should look like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">AUTHOR</span> <span class="o">=</span> <span class="s1">'</span><span class="s">test</span><span class="s1">'</span>
+<span class="nv">SITENAME</span> <span class="o">=</span> <span class="s1">'</span><span class="s">TEST</span><span class="s1">'</span>
+<span class="nv">SITEURL</span> <span class="o">=</span> <span class="s1">''</span>
+
+<span class="nv">PATH</span> <span class="o">=</span> <span class="s1">'</span><span class="s">content</span><span class="s1">'</span>
+<span class="nv">TIMEZONE</span> <span class="o">=</span> <span class="s1">'</span><span class="s">America/New_York</span><span class="s1">'</span>
+
+<span class="nv">DEFAULT_LANG</span> <span class="o">=</span> <span class="s1">'</span><span class="s">en</span><span class="s1">'</span>
+
+# <span class="nv">Feed</span> <span class="nv">generation</span> <span class="nv">is</span> <span class="nv">usually</span> <span class="nv">not</span> <span class="nv">desired</span> <span class="nv">when</span> <span class="nv">developing</span>
+<span class="nv">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="nv">None</span>
+<span class="nv">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="nv">None</span>
+<span class="nv">TRANSLATION_FEED_ATOM</span> <span class="o">=</span> <span class="nv">None</span>
+<span class="nv">AUTHOR_FEED_ATOM</span> <span class="o">=</span> <span class="nv">None</span>
+<span class="nv">AUTHOR_FEED_RSS</span> <span class="o">=</span> <span class="nv">None</span>
+
+# <span class="nv">blogroll</span>
+<span class="nv">LINKS</span> <span class="o">=</span> <span class="ss">((</span><span class="s1">'</span><span class="s">Pelican</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">https://getpelican.com/</span><span class="s1">'</span><span class="ss">)</span>,
+        <span class="ss">(</span><span class="s1">'</span><span class="s">Python.org</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">https://www.python.org/</span><span class="s1">'</span><span class="ss">)</span>,
+        <span class="ss">(</span><span class="s1">'</span><span class="s">Jinja2</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">https://palletsprojects.com/p/jinja/</span><span class="s1">'</span><span class="ss">)</span>,
+        <span class="ss">(</span><span class="s1">'</span><span class="s">You can modify those links in your config file</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">#</span><span class="s1">'</span><span class="ss">)</span>,<span class="ss">)</span>
+
+# <span class="nv">Social</span> <span class="nv">widget</span>
+<span class="nv">SOCIAL</span> <span class="o">=</span> <span class="ss">((</span><span class="s1">'</span><span class="s">You can add links in your config file</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">#</span><span class="s1">'</span><span class="ss">)</span>,
+        <span class="ss">(</span><span class="s1">'</span><span class="s">Another social link</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">#</span><span class="s1">'</span><span class="ss">)</span>,<span class="ss">)</span>
+
+<span class="nv">DEFAULT_PAGINATION</span> <span class="o">=</span> <span class="nv">False</span>
+
+# <span class="nv">Uncomment</span> <span class="nv">following</span> <span class="nv">line</span> <span class="k">if</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">document</span><span class="o">-</span><span class="nv">relative</span> <span class="nv">URLs</span> <span class="nv">when</span> <span class="nv">developing</span>
+#<span class="nv">RELATIVE_URLS</span> <span class="o">=</span> <span class="nv">True</span>
+</code></pre></div>
+<p>This file is very self explanatory. This is where we tweak most of the Pelican&nbsp;settings.</p>
+<p>Finally, open <code>publishconf.py</code>. Your content should look like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># This file is only used if you use `make publish` or</span>
+<span class="c1"># explicitly specify it as your config file.</span>
+
+<span class="kn">import</span> <span class="nn">them</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">pelicanconf</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># If your site is available via HTTPS, make sure SITEURL begins with https://</span>
+<span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">''</span>
+<span class="n">RELATIVE_URLS</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="s1">'feeds/all.atom.xml'</span>
+<span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="s1">'feeds/</span><span class="si">{slug}</span><span class="s1">.atom.xml'</span>
+
+<span class="n">DELETE_OUTPUT_DIRECTORY</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Following items are often useful when publishing</span>
+
+<span class="c1">#DISQUS_SITENAME = ""</span>
+<span class="c1">#GOOGLE_ANALYTICS = ""</span>
+</code></pre></div>
+<p>See that this file imports from pelicanconf, so here you can overwrite configurations, allowing you to have a configuration for your environment where you write posts and another for the effective publication of the&nbsp;site.</p>
+<p>For the moment, this information is enough to go on, so don&rsquo;t miss the next part of this tutorial where we&rsquo;ll talk about Github pages and then put the two together&nbsp;:D</p>
+<p>I hope you liked it and don&rsquo;t forget to leave your opinions and questions in the&nbsp;comments!</p>
+<p>See you in the next&nbsp;post!</p>
+    <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
+  </div>
+  <footer class="flex flex-col mt-10 ">
+    <ul class="flex flex-wrap">
+      <a href="http://programeempython.com.br/tag/circleci.html">
+        <li
+          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
+          CircleCI
+        </li>
+      </a>
+      <a href="http://programeempython.com.br/tag/github-pages.html">
+        <li
+          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
+          Github Pages
+        </li>
+      </a>
+      <a href="http://programeempython.com.br/tag/pelican.html">
+        <li
+          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
+          Pelican
+        </li>
+      </a>
+      <a href="http://programeempython.com.br/tag/tutorial.html">
+        <li
+          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
+          Tutorial
+        </li>
+      </a>
+    </ul>
+    <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
+      <div class="w-1/2 rounded-l-lg"></div>
+      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
+        <a class="flex flex-col" href="http://programeempython.com.br/python-101-parte-2-en.html">
+          <div class="text-right mx-4 py-2">
+            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
+            <p class="text-right py-1 hover:underline">Python 101 - Segunda&nbsp;Parte</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
+    </div>
+  </footer>
+  <div>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'http://programeempython.com.br/tutorial-pelican-en.html';
+      this.page.identifier = 'tutorial-pelican';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//programeempython.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
+  </div>
+</main>
+
+    </div>
+    <footer class="flex w-full text-xs justify-center mt-10 mb-6 text-zinc-500 dark:text-zinc-400">
+        <div class="px-4">
+            <span>©2022&nbsp;&#8226;&nbsp;</span>Powered by
+            <a class="underline" href="https://getpelican.com/">Pelican</a>&nbsp;&
+            <a class="underline" href="https://github.com/aleylara/Papyrus">&nbsp;Papyrus</a>
+        </div>
+    </footer>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CWQ34LZTCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CWQ34LZTCX');
+</script>
+
+    <script>
+        let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        let themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
+                '(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+        let themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', function () {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Pelican" />
+    <title>Python 101 - Segunda Parte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+    <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/css/main.css" />
+    <link rel="stylesheet" href="http://programeempython.com.br/theme/css/stork.css">
+    <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
+        href="http://programeempython.com.br/theme/css/stork-dark.css">
+    <link
+        href="http://programeempython.com.br/feeds/all.atom.xml"
+        type="application/atom+xml" rel="alternate" title="Programe em Python Atom Feed" />
+<meta name="description" content="As Várias Faces do Python - Programação Orientada a Objetos Olá pesoal! Agora em período de aulas tá difícil escrever. Tudo na correria. Hoje..." />
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
+                '(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+
+<body class="min-h-screen flex flex-col max-w-7xl lg:max-w-none text-zinc-800 bg-neutral-100 
+    dark:bg-neutral-900 dark:text-zinc-300 container mx-auto justify-center md:px-3 ">
+    <nav class="sm:flex sm:justify-between xl:ml-32 pl-4 items-center">
+        <div class="flex pt-4">
+            <h1 class="font-semibold text-2xl"><a href="http://programeempython.com.br/">Programe em Python</a></h1>
+            <button id="theme-toggle" type="button"
+                class="text-zinc-700 dark:text-zinc-400 rounded-full focus:outline-none text-sm ml-2 p-1">
+                <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+        <ul class="flex flex-wrap lg:mr-24 md:pt-0">
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/pages/contato.html">Contato</a></li>
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/pages/sobre-mim.html">Sobre&nbsp;Mim</a></li>
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/archives.html">Aquivo</a></li>
+            <li class="mr-4 pt-6"><a                     href="http://programeempython.com.br/categories.html">Categorias</a></li>
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/tags.html">Tags</a></li>
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/search.html">Busca</a></li>
+        </ul>
+    </nav>
+    <div class="flex-grow md:max-w-screen-md md:mx-auto md:w-3/4 px-4">
+        <nav class="text-zinc-800 dark:text-zinc-300 mt-12 pb-2 md:mt-16" aria-label="Breadcrumb">
+            <ul class="p-0 inline-flex items-center">
+                <li class="flex items-center">
+                    <a href="http://programeempython.com.br/" class="text-zinc-800 dark:text-zinc-300 inline-flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                            </path>
+                        </svg>
+                        Home
+                    </a>
+                    <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
+                    </svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="http://programeempython.com.br/categories.html">Categorias</a>
+                    <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
+                    </svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
+                </li>
+                <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                        d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
+                </svg>
+            </ul>
+        </nav>
+
+<main>
+  <header>
+    <h1 class="font-semibold text-3xl my-2">Python 101 - Segunda&nbsp;Parte</h1>
+    <footer class="flex text-sm text-zinc-800 dark:text-zinc-400">
+      <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
+        <time>July 29, 2022</time>
+        <div>
+        </div>
+        <div>
+          <span>&nbsp;·&nbsp;Julio Melanda</span>
+        </div>
+      </div>
+    </footer>
+  </header>
+  <div class="max-w-7xl container mx-auto my-8 text-zinc-800 dark:text-zinc-300  
+              prose lg:max-w-none prose-headings:text-zinc-800 prose-headings:dark:text-zinc-300 
+              prose-h1:text-3xl lg:prose-h1:text-3xl prose-headings:font-semibold 
+              prose-pre:bg-zinc-200 prose-pre:text-zinc-800
+              dark:prose-pre:bg-zinc-800 dark:prose-pre:text-zinc-200
+              prose-blockquote:text-zinc-800
+              dark:prose-blockquote:text-zinc-200
+              prose-a:text-gray-500
+              dark:prose-a:text-gray-400
+              dark:prose-strong:text-zinc-200 
+              dark:prose-code:text-zinc-200
+              dark:prose-code:bg-zinc-800
+              prose-code:bg-zinc-200
+              prose-code:font-light
+              prose-img:rounded-md
+              ">
+    
+    <p>As V&aacute;rias Faces do Python - Programa&ccedil;&atilde;o Orientada a Objetos
+Ol&aacute;&nbsp;pesoal!</p>
+<p>Agora em per&iacute;odo de aulas t&aacute; dif&iacute;cil escrever. Tudo na&nbsp;correria.</p>
+<p>Hoje vamos falar sobre mais uma das v&aacute;rias facetas do python, sendo esta a principal. E esta n&atilde;o &eacute; a principal por ser mais usada ou por ser melhor, mas pois esta &eacute; a base da&nbsp;linguagem.</p>
+<p>Vamos falar da Programa&ccedil;&atilde;o Orientada a Objetos em Python.
+Pra quem ainda n&atilde;o o viu o post anterior, confira como funciona a Programa&ccedil;&atilde;o Procedural em&nbsp;Python!</p>
+<p>Para falarmos de Orienta&ccedil;&atilde;o a Objetos em Python, primeiro precisamos entender ao menos superficialmente o que &eacute; a orienta&ccedil;&atilde;o a&nbsp;objetos.</p>
+<p>A Orienta&ccedil;&atilde;o a Objetos &eacute; um paradigma da programa&ccedil;&atilde;o que busca representar computacionalmente a forma como vemos o mundo: objetos que possuem caracter&iacute;sticas e&nbsp;comportamentos.</p>
+<p>Assim, programamos usando classes, que cont&eacute;m m&eacute;todos (que definem o comportamento) e atributos (que definem as caracter&iacute;sticas), representando os&nbsp;objetos.</p>
+<p>Por exemplo, vejamos a classe a&nbsp;seguir:</p>
+<p>class Aviao:
+    turbinas = 0
+    poltronas = 0
+    capacidade = 0
+    status_motor = &lsquo;desligado&rsquo;
+    altitude =&nbsp;0.0</p>
+<div class="highlight"><pre><span></span><code>def ligar_motor(self):
+    self.status_motor = 'ligado'
+
+def desligar_motor(self):
+    self.status_motor = 'desligado'
+
+def sobe(self, incremento):
+    self.altitude += incremento
+
+def desce(self, decremento):
+    self.altitude -= incremento
+</code></pre></div>
+<p>Inicialmente fazemos a declara&ccedil;&atilde;o da classe. Logo abaixo, s&atilde;o inicializados atributos da classe. Esta inicializa&ccedil;&atilde;o n&atilde;o &eacute; necess&aacute;ria, mas permite que voc&ecirc; especifique quais os atributos do objeto antes de us&aacute;-los nos&nbsp;m&eacute;todos.</p>
+<p>Eu recomendo para quem est&aacute; come&ccedil;ando que fa&ccedil;a esta inicializa&ccedil;&atilde;o dos atributos para controlar melhor o que h&aacute; em cada&nbsp;classe.</p>
+<p>Em seguida, s&atilde;o definidos os m&eacute;todos (fun&ccedil;&otilde;es internas de uma classe/objeto que determinam seu comportamento). Note que dentro das classe passamos um par&acirc;metro para os m&eacute;todos que n&atilde;o passamos para as fun&ccedil;&otilde;es&nbsp;comuns.</p>
+<p>Este par&acirc;metro (self) permite que os atributos da classe sejam acessados tanto para leitura quanto para escrita de dentro dos&nbsp;m&eacute;todos.</p>
+<p>Outro conceito importante da orienta&ccedil;&atilde;o a objetos &eacute; a&nbsp;heran&ccedil;a.</p>
+<p>Atrav&eacute;s dela, um objeto herda os atributos e m&eacute;todos de ser objeto pai, por assim dizer, e implementa m&eacute;todos e atributos&nbsp;pr&oacute;prios.</p>
+<p>Vejamos um&nbsp;exemplo:</p>
+<p>class&nbsp;Teco_teco(Aviao):</p>
+<div class="highlight"><pre><span></span><code>def self.__init__(self):
+    Aviao.__init__()
+
+def liga_helice(self):
+    self.status_motor = 'lagado'
+
+def desliga_helice(self):
+    self.status_motor = 'deslagado'
+</code></pre></div>
+<p>A classe acima estende a classe Aviao, definindo dois m&eacute;todos que se utilizam de atributos da classe pai. Nesta classe, encontramos um novo m&eacute;todo: <strong>init</strong>.</p>
+<p>O m&eacute;todo <strong>init</strong> &eacute; o primeiro a ser executado quando se inicializa (instancia) uma classe. O <strong>init</strong> &eacute; chamado &agrave;s vezes de construtor devido &agrave; semelhan&ccedil;a com os construtores da linguagem Java, por&nbsp;exemplo.</p>
+<p>Uma diferen&ccedil;a importante entre <strong>init</strong> e um construtor &eacute; que este &uacute;ltimo &eacute; executado antes da classe ser instanciada e o <strong>init</strong>&nbsp;depois.</p>
+<p>&Eacute; importante observar que o <strong>init</strong> nesta classe &eacute; utilizado para inicializar a classe pai, chamando o <strong>init</strong> da&nbsp;mesma.</p>
+<p>Vejamos um exemplo agora com heran&ccedil;a&nbsp;m&uacute;ltipla:</p>
+<p>class Carro_voador(Carro, Aviao):
+    posicao_asa =&nbsp;&lsquo;fechada&rsquo;</p>
+<div class="highlight"><pre><span></span><code>def __init__(self):
+    Carro.__init__()
+    Aviao.__init__()
+
+def decola(self):
+    posicao_asa = 'aberta'
+    acelera()
+    posicao_flap = 'subir'
+    transfere_tracao(roda, helice)
+
+def pousa(self):
+    posicao_asa = 'aberta'
+    acelera(reverso=True)
+    posicao_flap = 'descer'
+    transfere_tracao(helice, roda)
+    freia()
+</code></pre></div>
+<p>Veja como esta classe herda caracter&iacute;sticas de ambas classes, Carro e Aviao, assim como um carro voador herdaria as caracter&iacute;sticas de ambos&nbsp;ve&iacute;culos.</p>
+<p>Todos estes exemplos de classes s&atilde;o simplifica&ccedil;&otilde;es com fins unicamente did&aacute;ticos para exemplificar os&nbsp;conceitos.</p>
+<p>Agora. Como instanciar uma classe? e como chamar um m&eacute;todo ou usar um atributo?
+Simples,&nbsp;veja:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>aviao = Aviao()
+print(aviao.status_motor)
+desligado
+aviao.ligar_motor()
+print(aviao.status_motor)&nbsp;ligado</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Por hora, isto &eacute; suficiente para uma demonstra&ccedil;&atilde;o superficial da Programa&ccedil;&atilde;o Orientada a Objetos no&nbsp;Python</p>
+<p>Nos pr&oacute;ximos posts veremos outras facetas do Python. N&atilde;o&nbsp;Percam!</p>
+<p>Comente!
+Assine o Feed e n&atilde;o perca nenhum post do Programe em&nbsp;Python!</p>
+<p>Siga-nos no twitter @programepython e identi.ca&nbsp;@programeempython!</p>
+<p>Abra&ccedil;os!</p>
+<p>At&eacute; a&nbsp;pr&oacute;xima!</p>
+    <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
+  </div>
+  <footer class="flex flex-col mt-10 ">
+    <ul class="flex flex-wrap">
+      <a href="http://programeempython.com.br/tag/python-101.html">
+        <li
+          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
+          Python 101
+        </li>
+      </a>
+      <a href="http://programeempython.com.br/tag/tutorial.html">
+        <li
+          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
+          Tutorial
+        </li>
+      </a>
+    </ul>
+    <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
+      <div class="w-1/2 rounded-l-lg"></div>
+    </div>
+    <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
+    </div>
+  </footer>
+  <div>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'http://programeempython.com.br/drafts/python-101-parte-14.html';
+      this.page.identifier = 'python-101-parte-14';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//programeempython.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
+  </div>
+</main>
+
+    </div>
+    <footer class="flex w-full text-xs justify-center mt-10 mb-6 text-zinc-500 dark:text-zinc-400">
+        <div class="px-4">
+            <span>©2022&nbsp;&#8226;&nbsp;</span>Powered by
+            <a class="underline" href="https://getpelican.com/">Pelican</a>&nbsp;&
+            <a class="underline" href="https://github.com/aleylara/Papyrus">&nbsp;Papyrus</a>
+        </div>
+    </footer>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CWQ34LZTCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CWQ34LZTCX');
+</script>
+
+    <script>
+        let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        let themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
+                '(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+        let themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', function () {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

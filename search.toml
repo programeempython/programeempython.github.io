@@ -40,7 +40,7 @@ title = "Um novo começo"
 [[input.files]]
 path = "tutorial-pelican-en.html"
 url = "tutorial-pelican-en.html"
-title = "Pelican tutorial com Github Pages and CircleCI - 1"
+title = "Pelican tutorial with Github Pages and CircleCI - 1"
 
 [[input.files]]
 path = "python-101-parte-2-en.html"

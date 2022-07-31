@@ -5,14 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Pelican" />
-    <title>Python 101 - Primeira Parte</title>
+    <title>Python 101 - Segunda Parte</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
     <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/main.css" />
     <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
         href="http://localhost:8000/theme/css/stork-dark.css">
-<meta name="description" content="Bom, um blog com o nome Programe em Python não pode ficar sem um tutorial básico de Python, né?" />
+<meta name="description" content="Olá! Agora que já temos o Python instalado e já conhecemos a sua interface interativa, vamos aprender um pouco sobre os comandos mais básicos..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -90,21 +90,18 @@
 
 <main>
   <header>
-    <h1 class="font-semibold text-3xl my-2">Python 101 - Primeira&nbsp;Parte</h1>
+    <h1 class="font-semibold text-3xl my-2">Python 101 - Segunda&nbsp;Parte</h1>
     <footer class="flex text-sm text-zinc-800 dark:text-zinc-400">
       <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
         <time>juli 29, 2022</time>
         <div>
-          <span>&nbsp;·&nbsp;1 min read</span>
+          <span>&nbsp;·&nbsp;2 min read</span>
         </div>
         <div>
           <span>&nbsp;·&nbsp;Julio Melanda</span>
         </div>
       </div>
     </footer>
-    <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
-      <span>Last updated: juli 31, 2022</span>
-    </div>
   </header>
   <div class="max-w-7xl container mx-auto my-8 text-zinc-800 dark:text-zinc-300  
               prose lg:max-w-none prose-headings:text-zinc-800 prose-headings:dark:text-zinc-300 
@@ -123,40 +120,44 @@
               prose-img:rounded-md
               ">
       Translations:
-      <a href="http://localhost:8000/python-101-parte-1-en.html" hreflang="en">en</a>
+      <a href="http://localhost:8000/python-101-parte-2-en.html" hreflang="en">en</a>
 
-    <p>Bom, um blog com o nome Programe em Python n&atilde;o pode ficar sem um tutorial b&aacute;sico de Python,&nbsp;n&eacute;?</p>
-<p>Antes de mais nada, se voc&ecirc; usa Linux ou MacOS voc&ecirc; provavelmente j&aacute; tem o Python ent&atilde;o voc&ecirc; est&aacute; com&nbsp;sorte.</p>
-<p>No windows, v&aacute; &agrave; <a href="https://www.python.org/downloads/">p&aacute;gina de downloads do Python</a> e baixe dali a vers&atilde;o mais&nbsp;recente.</p>
-<p><img alt="Download Python" src="/images/download-python.png"/></p>
-<p>Quando terminar o download, execute o instalador e siga as instru&ccedil;&otilde;es de&nbsp;instala&ccedil;&atilde;o.</p>
-<p>Lembre-se de marcar a op&ccedil;&atilde;o para inserir Python nos caminhos do sistema (<em>Add Python to <span class="caps">PATH</span></em>), pois isto vai facilitar muito a sua&nbsp;vida.</p>
-<p>Quando o Python estiver finalmente instalado, numa janela de linha de comando, (<span class="caps">CMD</span> ou powershell no Windows) digite Python e voc&ecirc; deve ver algo semelhante a&nbsp;isto.</p>
-<p><img alt="Terminal Python" src="/images/python-terminal.png"/></p>
-<p>Veja que na primeira linha voc&ecirc; consegue ver qual a vers&atilde;o do Python, e na &uacute;ltima linha h&aacute; um prompt esperando pelos seus&nbsp;comandos. </p>
+    <p>Ol&aacute;!</p>
+<p>Agora que j&aacute; temos o Python instalado e j&aacute; conhecemos a sua interface interativa, vamos aprender um pouco sobre os comandos mais b&aacute;sicos da&nbsp;linguagem!</p>
+<p>Antes de continuarmos, se n&atilde;o leu o post anterior, acesse&nbsp;aqui:</p>
+<p><a href="http://localhost:8000/python-101-parte-1.html">Python 101 - Primeira&nbsp;Parte</a></p>
+<p>Como visto, no shell Python, temos dois&nbsp;cursores:</p>
 <div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
-</code></pre></div>
-<p>Este prompt ser&aacute; usado neste blog sempre para denotar que devemos escrever c&oacute;digo no console do&nbsp;Python.</p>
-<p>Fa&ccedil;a um teste. Digite, seguido de <code>ENTER</code>:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; print('Ol&aacute; Mundo!')
-</code></pre></div>
-<p>O resultado deve ser algo&nbsp;assim:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; print('Ol&aacute; Mundo!')
-Ol&aacute; Mundo!
-</code></pre></div>
-<p>Isto significa que o console do Python j&aacute; te retorna as respostas para os comando logo em seguida de voc&ecirc; execut&aacute;-los. Veja por&nbsp;exemplo:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; 23*256/98+3
-63.08163265306123
-</code></pre></div>
-<p>Finalmente, quando formos executar c&oacute;digos com blocos, como <code>if</code> por exemplo, ser&aacute;&nbsp;assim:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">True</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s1">'</span><span class="s">&Eacute; verdade!</span><span class="s1">'</span><span class="ss">)</span>
 ...
-&Eacute; <span class="nv">verdade</span><span class="o">!</span>
 </code></pre></div>
-<p>Assim, note que os 3 pontos <code>...</code> s&atilde;o indicadores de bloco de c&oacute;digo no terminal do Python, ou seja, indicam que um comando iniciado acima ainda n&atilde;o foi terminado. Desta forma, precisamos inserir uma linha em branco para o Python perceber que finalizamos aquele comando e ele pode ent&atilde;o&nbsp;execut&aacute;-lo.</p>
-<p>Acho que este &eacute; um bom momento para finalizarmos esta primeira parte do tutorial&nbsp;:D</p>
-<p>N&atilde;o deixem de <strong>comentar</strong> abaixo com sua opini&atilde;o e&nbsp;d&uacute;vidas!</p>
+<p>Ao fazermos um if, estrutura condicional que ser&aacute; explicada em mais detalhes num pr&oacute;ximo post, temos o seguinte no&nbsp;console:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">&lt;</span> <span class="mi">1</span>:
+...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x &eacute; menor que 1</span><span class="s2">"</span><span class="ss">)</span>
+... 
+<span class="nv">x</span> &eacute; <span class="nv">menor</span> <span class="nv">que</span> <span class="mi">1</span>
+</code></pre></div>
+<p>Agora, a explica&ccedil;&atilde;o&nbsp;=]</p>
+<p>Na primeira linha, dizemos que a vari&aacute;vel x cont&eacute;m o valor 0;
+Em seguida, comparamos o valor contido em x com 1. Ao terminarmos um comando com : o interpretador entende que este &eacute; um comando que n&atilde;o acabou no final daquela linha, e que &eacute; composto por mais comandos, ent&atilde;o surge o cursor secund&aacute;rio <code>...</code>.</p>
+<p>Ent&atilde;o, muitos programadores habituados com outras linguagens devem se perguntar onde est&atilde;o as chaves pra determinar o&nbsp;bloco.</p>
+<p>No Python, os blocos s&atilde;o determinados pela identa&ccedil;&atilde;o (ou edenta&ccedil;&atilde;o, ou endenta&ccedil;&atilde;o&hellip; j&aacute; vi v&aacute;rias formas da&nbsp;palavra).</p>
+<p>As linhas que est&atilde;o dentro do if, ou seja o que deve ser executado caso a compara&ccedil;&atilde;o seja verdadeira deve estar&nbsp;identado.</p>
+<p>Em geral &eacute; uma conven&ccedil;&atilde;o, no Python, usarmos 4 espa&ccedil;os para a&nbsp;identa&ccedil;&atilde;o.</p>
+<p>O <code>print("x &eacute; menor que 1")</code> &eacute; o comando que deve ser executado se a compara&ccedil;&atilde;o <code>x &lt; 1</code> for verdadeira. Assim, esta linha est&aacute; identada, e o interpretador sabe que s&oacute; deve execut&aacute;-la caso <em>x</em> seja menor que <em>1</em>.</p>
+<p>Quando voc&ecirc; d&aacute; um <code>ENTER</code> no final desta linha, o interpretador te mostra novamente o cursor secund&aacute;rio, pois um <code>if</code> pode ter v&aacute;rios comandos ali dentro. Como veremos mais adiante a execu&ccedil;&atilde;o de um programa todo pode estar dentro de um <strong>if</strong>.</p>
+<p>Assim, s&oacute; depois de um segundo <code>ENTER</code> &eacute; que o interpretador executa o comando e mostra o&nbsp;resultado.</p>
+<p>Ent&atilde;o,&nbsp;recapitulando:</p>
+<ul>
+<li>Blocos em Python s&atilde;o definidos pela&nbsp;identa&ccedil;&atilde;o</li>
+<li>A identa&ccedil;&atilde;o deve seguir um padr&atilde;o, preferencialmente em todos os&nbsp;programas</li>
+<li>&Eacute; conven&ccedil;&atilde;o usar 4 espa&ccedil;os para&nbsp;identa&ccedil;&atilde;o</li>
+<li>No interpretador, blocos identados s&atilde;o precedidos do cursos secund&aacute;rio&nbsp;&hellip;</li>
+<li>Um bloco indica um trecho de c&oacute;digo que est&aacute; dentro de outro&nbsp;comando</li>
+</ul>
+<p>Por enquanto &eacute;&nbsp;s&oacute;!</p>
+<p>No pr&oacute;ximo post aproveitamos a deixa, e falamos sobre estruturas condicionais em&nbsp;Python!</p>
+<p>N&atilde;o deixe de deixar d&uacute;vidas e opini&otilde;es nos coment&aacute;rios&nbsp;abaixo!</p>
 <p>At&eacute; o pr&oacute;ximo&nbsp;post!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
@@ -177,18 +178,18 @@ Ol&aacute; Mundo!
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
       <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://localhost:8000/python-101-parte-2.html">
+        <a class="flex flex-col pr-2" href="http://localhost:8000/tutorial-pelican.html">
           <div class="mx-4 py-2 text-left">
             <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline">Python 101 - Segunda&nbsp;Parte</p>
+            <p class="text-left py-1 hover:underline">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;1</p>
           </div>
         </a>
       </div>
       <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="http://localhost:8000/porque-pelican.html">
+        <a class="flex flex-col" href="http://localhost:8000/python-101-parte-1.html">
           <div class="text-right mx-4 py-2">
             <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
-            <p class="text-right py-1 hover:underline">Porque&nbsp;Pelican</p>
+            <p class="text-right py-1 hover:underline">Python 101 - Primeira&nbsp;Parte</p>
           </div>
         </a>
       </div>

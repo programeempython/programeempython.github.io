@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Pelican" />
-    <title>Tutorial de Pelican com Github Pages e CircleCI - 1</title>
+    <title>Pelican tutorial com Github Pages and CircleCI - 1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
     <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/main.css" />
     <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
         href="http://localhost:8000/theme/css/stork-dark.css">
-<meta name="description" content="Como prometido, vamos abordar como criei meu blog com Pelican, Github Pages e CircleCI num tutorial. Como é bastante conteúdo vamos dividir em..." />
+<meta name="description" content="As promised, we’ll cover how I created my blog with Pelican, Github Pages and CircleCI in a tutorial. As it is a lot of content, we will divide it..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -90,10 +90,10 @@
 
 <main>
   <header>
-    <h1 class="font-semibold text-3xl my-2">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;1</h1>
+    <h1 class="font-semibold text-3xl my-2">Pelican tutorial com Github Pages and CircleCI -&nbsp;1</h1>
     <footer class="flex text-sm text-zinc-800 dark:text-zinc-400">
       <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
-        <time>juli 25, 2022</time>
+        <time>juli 31, 2022</time>
         <div>
         </div>
         <div>
@@ -101,9 +101,6 @@
         </div>
       </div>
     </footer>
-    <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
-      <span>Last updated: juli 28, 2022</span>
-    </div>
   </header>
   <div class="max-w-7xl container mx-auto my-8 text-zinc-800 dark:text-zinc-300  
               prose lg:max-w-none prose-headings:text-zinc-800 prose-headings:dark:text-zinc-300 
@@ -121,81 +118,83 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-    
-    <p>Ol&aacute;!</p>
-<p>Como prometido, vamos abordar como criei meu blog com Pelican, Github Pages e CircleCI num tutorial. Como &eacute; bastante conte&uacute;do vamos dividir em partes e aqui veremos uma introdu&ccedil;&atilde;o ao&nbsp;Pelican.</p>
-<p>Recapitulando, Pelican &eacute; um gerador de site est&aacute;tico, ou seja, gera um site est&aacute;tico em <span class="caps">HTML</span> baseado em conte&uacute;dos escritos numa linguagem de Markup, geralmente rich text ou markdown. Pelican gera as postagens usando Jinja2 como biblioteca de template. Assim, se voc&ecirc; tem alguma familiaridade com jinja ou Django, que tem uma biblioteca de templates semelhante, voc&ecirc; n&atilde;o vai ter dificuldades em por exemplo criar ou customizar temas para o&nbsp;Pelican.</p>
-<p>Primeiro, para criar um site com Pelican, vamos&nbsp;instal&aacute;-lo.</p>
-<p>Pode ser num ambiente virtual ou diretamente na sua instala&ccedil;&atilde;o padr&atilde;o do python. No terminal,&nbsp;execute:</p>
+      Translations:
+      <a href="http://localhost:8000/tutorial-pelican.html" hreflang="pt_br">pt_br</a>
+
+    <p>Hi!</p>
+<p>As promised, we&rsquo;ll cover how I created my blog with Pelican, Github Pages and CircleCI in a tutorial. As it is a lot of content, we will divide it into parts and here we will see an introduction to&nbsp;Pelican.</p>
+<p>To recap, Pelican is a static site generator, that is, it generates a static <span class="caps">HTML</span> site based on content written in a Markup language, usually rich text or markdown. Pelican generates the posts using Jinja2 as the template library. So, if you have some familiarity with jinja or Django, which has a similar template library, you won&rsquo;t have any difficulties in, for example, creating or customizing themes for&nbsp;Pelican.</p>
+<p>First, to create a website with Pelican, let&rsquo;s install&nbsp;it.</p>
+<p>It can be in a virtual environment or directly in your default python installation. In the terminal,&nbsp;run:</p>
 <div class="highlight"><pre><span></span><code><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">pelican</span><span class="o">[</span><span class="n">markdown</span><span class="o">]</span><span class="w"></span>
 </code></pre></div>
-<p>Isto vai instalar o Pelican com suporte a Markdown, que &eacute; minha linguagem de markup&nbsp;preferida.</p>
-<p>Finalizando sua instala&ccedil;&atilde;o, vamos criar um site&nbsp;Pelican.</p>
-<p>Crie uma pasta onde ficar&aacute; seu site, para executarmos comandos l&aacute; de dentro. No Linux, seria algo&nbsp;assim:</p>
-<div class="highlight"><pre><span></span><code>mkdir ~/projetos/meu_blog/ -p
-cd ~/projetos/meu_blog
+<p>This will install Pelican with Markdown support, which is my favorite markup&nbsp;language.</p>
+<p>Finishing your installation, let&rsquo;s create a Pelican&nbsp;website.</p>
+<p>Create a folder where your site will be, so we can run commands from there. On Linux it would be something like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><code>mkdir ~/projects/my_blog/ -p
+cd ~/projects/my_blog
 </code></pre></div>
-<p>Ent&atilde;o, agora vamos executar um comando do Pelican que vai iniciar nosso&nbsp;blog.</p>
+<p>So now let&rsquo;s run a Pelican command that will start our&nbsp;blog.</p>
 <div class="highlight"><pre><span></span><code>pelican-quickstart
 </code></pre></div>
-<p>Este script vai te perguntar diversas&nbsp;coisas. </p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">.</span><span class="o">]</span><span class="w"> </span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">Who</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">language</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">pt</span><span class="o">]</span><span class="w"> </span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="k">prefix</span><span class="vm">?</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="w">   </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<p>This script will ask you several&nbsp;questions.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">.</span><span class="o">]</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Who</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">language</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">en</span><span class="o">]</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="k">prefix</span><span class="vm">?</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
 <span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="n">pagination</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="k">zone</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">America/Sao_Paulo</span><span class="o">]</span><span class="w"> </span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="k">zone</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">America/New_York</span><span class="o">]</span><span class="w"></span>
 <span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tasks</span><span class="p">.</span><span class="n">py</span><span class="o">/</span><span class="n">Makefile</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">automate</span><span class="w"> </span><span class="n">generation</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">publishing</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p>Vamos nos manter no mais simples poss&iacute;vel para este tutorial introdut&oacute;rio, ent&atilde;o&nbsp;responda</p>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">Somente</span><span class="w"> </span><span class="n">digite</span><span class="w"> </span><span class="n n-Quoted">`Enter`</span><span class="p">)</span><span class="w"></span>
-<span class="n">Teste</span><span class="w"></span>
-<span class="n">Teste</span><span class="w"></span>
-<span class="p">(</span><span class="n">Somente</span><span class="w"> </span><span class="n">digite</span><span class="w"> </span><span class="n n-Quoted">`Enter`</span><span class="p">)</span><span class="w"></span>
-<span class="n">n</span><span class="w"></span>
-<span class="n">n</span><span class="w"></span>
-<span class="p">(</span><span class="n">Somente</span><span class="w"> </span><span class="n">digite</span><span class="w"> </span><span class="n n-Quoted">`Enter`</span><span class="p">)</span><span class="w"></span>
-<span class="n">n</span><span class="w"></span>
+<p>Let&rsquo;s keep it as simple as possible for this introductory tutorial, so&nbsp;answer</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">Just</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="n n-Quoted">`Enter`</span><span class="p">)</span><span class="w"></span>
+<span class="n">Test</span><span class="w"></span>
+<span class="n">Test</span><span class="w"></span>
+<span class="p">(</span><span class="n">Just</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="n n-Quoted">`Enter`</span><span class="p">)</span><span class="w"></span>
+<span class="k">no</span><span class="w"></span>
+<span class="k">no</span><span class="w"></span>
+<span class="p">(</span><span class="n">Just</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="n n-Quoted">`Enter`</span><span class="p">)</span><span class="w"></span>
+<span class="k">no</span><span class="w"></span>
 </code></pre></div>
-<p>Assim, o Pelican vai criar um projeto bastante simplificado que podemos usar para iniciar nosso blog. Num pr&oacute;ximo post, vamos executar novamente este comando para criar realmente o blog que vamos publicar, mas aqui como &eacute; somente para introduzir o Pelican vamos manter a&nbsp;simplicidade.</p>
-<p>Agora vamos criar nosso primeiro post exemplo. Veja que o Pelican criou uma estrutura de arquivos assim na pasta do&nbsp;blog:</p>
-<div class="highlight"><pre><span></span><code>content/
+<p>So Pelican will create a very simplified project that we can use to start our blog. In a next post, we&rsquo;ll run this command again to actually create the blog we&rsquo;re going to publish, but here, as it&rsquo;s just to introduce Pelican, let&rsquo;s keep it&nbsp;simple.</p>
+<p>Now let&rsquo;s create our first example post. See that Pelican created a file structure like this in the blog&nbsp;folder:</p>
+<div class="highlight"><pre><span></span><code>content /
 pelicanconf.py
 publishconf.py
 </code></pre></div>
-<p>Dentro da pasta content, crie um arquivo, vamos cham&aacute;-lo de teste.md (Muito criativo :p). Nele insira o seguinte&nbsp;conte&uacute;do</p>
-<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span><span class="w"> </span><span class="n">Teste</span><span class="w"></span>
+<p>Inside the content folder, create a file, let&rsquo;s call it teste.md (Very creative :p). In it insert the following&nbsp;content</p>
+<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span><span class="w"> </span><span class="n">Test</span><span class="w"></span>
 <span class="n">Date</span><span class="o">:</span><span class="w"> </span><span class="mi">2022</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">31</span><span class="w"> </span><span class="mi">08</span><span class="o">:</span><span class="mi">00</span><span class="w"></span>
-<span class="n">Category</span><span class="o">:</span><span class="w"> </span><span class="n">Geral</span><span class="w"></span>
+<span class="n">Category</span><span class="o">:</span><span class="w"> </span><span class="n">General</span><span class="w"></span>
 
-<span class="n">Ol&aacute;</span><span class="o">!</span><span class="w"> </span><span class="n">Este</span><span class="w"> </span><span class="err">&eacute;</span><span class="w"> </span><span class="n">meu</span><span class="w"> </span><span class="n">primeiro</span><span class="w"> </span><span class="n">post</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="n">Pelican</span><span class="o">!</span><span class="w"></span>
+<span class="n">Hi</span><span class="o">!</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">my</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">post</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">Pelican</span><span class="o">!</span><span class="w"></span>
 </code></pre></div>
-<p>Isto &eacute; o suficiente para um post com Pelican. T&iacute;tulo, data, categoria e o conte&uacute;do em&nbsp;si.</p>
-<p>Agora vamos rodar um servidor de teste e ver o que nosso&nbsp;blog.</p>
+<p>This is enough for a post with Pelican. Title, date, category and the content&nbsp;itself.</p>
+<p>Now let&rsquo;s run a test server and see what our blog looks&nbsp;like.</p>
 <div class="highlight"><pre><span></span><code>pelican -r -l
 </code></pre></div>
-<p>O resultado deve ser algo&nbsp;assim:</p>
+<p>The result should be something like&nbsp;this:</p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="o">---</span><span class="w"> </span><span class="n">AutoReload</span><span class="w"> </span><span class="k">Mode</span><span class="o">:</span><span class="w"> </span><span class="n">Monitoring</span><span class="w"> </span><span class="n n-Quoted">`content`</span><span class="p">,</span><span class="w"> </span><span class="n n-Quoted">`theme`</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n n-Quoted">`settings`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">changes</span><span class="p">.</span><span class="w"> </span><span class="o">---</span><span class="w"></span>
 <span class="n">Serving</span><span class="w"> </span><span class="n">site</span><span class="w"> </span><span class="k">at</span><span class="o">:</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="mf">127.0.0.1</span><span class="o">:</span><span class="mi">8000</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Tap</span><span class="w"> </span><span class="n">CTRL</span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">stop</span><span class="w"></span>
-<span class="err">[</span><span class="mi">22</span><span class="o">:</span><span class="mi">56</span><span class="o">:</span><span class="mi">36</span><span class="err">]</span><span class="w"> </span><span class="n">WARNING</span><span class="w">  </span><span class="n">Docutils</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">localization</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">'pt'</span><span class="p">.</span><span class="w"> </span><span class="k">Using</span><span class="w"> </span><span class="s1">'en'</span><span class="w"> </span><span class="n">instead</span><span class="p">.</span><span class="w">                                                                                                                                                                                                                                       </span><span class="n">log</span><span class="p">.</span><span class="n">py</span><span class="o">:</span><span class="mi">91</span><span class="w"></span>
-<span class="w">        </span><span class="n">WARNING</span><span class="w">  </span><span class="n">Watched</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">exist</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jcemelanda</span><span class="o">/</span><span class="n">projetos</span><span class="o">/</span><span class="n">myblog</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">images</span><span class="w">                                                                                                                                                                                                                     </span><span class="n">log</span><span class="p">.</span><span class="n">py</span><span class="o">:</span><span class="mi">91</span><span class="w"></span>
+<span class="err">[</span><span class="mi">22</span><span class="o">:</span><span class="mi">56</span><span class="o">:</span><span class="mi">36</span><span class="err">]</span><span class="w"> </span><span class="n">WARNING</span><span class="w"> </span><span class="n">Docutils</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">localization</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">'pt'</span><span class="p">.</span><span class="w"> </span><span class="k">Using</span><span class="w"> </span><span class="s1">'en'</span><span class="w"> </span><span class="n">instead</span><span class="p">.</span><span class="w"> </span><span class="n">log</span><span class="p">.</span><span class="n">py</span><span class="o">:</span><span class="mi">91</span><span class="w"></span>
+<span class="w">        </span><span class="n">WARNING</span><span class="w"> </span><span class="n">Watched</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">exist</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jcemelanda</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">myblog</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">images</span><span class="w"> </span><span class="n">log</span><span class="p">.</span><span class="n">py</span><span class="o">:</span><span class="mi">91</span><span class="w"></span>
 
 <span class="o">-&gt;</span><span class="w"> </span><span class="n">Modified</span><span class="o">:</span><span class="w"> </span><span class="k">set</span><span class="n">tings</span><span class="p">,</span><span class="w"> </span><span class="n">content</span><span class="p">,</span><span class="w"> </span><span class="n">theme</span><span class="p">.</span><span class="w"> </span><span class="n">re</span><span class="o">-</span><span class="n">generating</span><span class="p">...</span><span class="w"></span>
 <span class="n">Done</span><span class="o">:</span><span class="w"> </span><span class="n">Processed</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">article</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">drafts</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hidden</span><span class="w"> </span><span class="n">articles</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">pages</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hidden</span><span class="w"> </span><span class="n">pages</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">draft</span><span class="w"> </span><span class="n">pages</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mf">0.06</span><span class="w"> </span><span class="n">seconds</span><span class="p">.</span><span class="w"></span>
 </code></pre></div>
-<p>Acesse o endere&ccedil;o indicado <code>http://127.0.0.1:8000</code></p>
-<p><img alt="Screenshot Pelican 001" src="/images/pelican-tut-001.png"/></p>
-<p>Esta deve ser a apar&ecirc;ncia do seu&nbsp;blog.</p>
-<p>Agora abra seu arquivo <code>pelicanconf.py</code>. Seu conte&uacute;do deve ser aproximadamente&nbsp;este:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">AUTHOR</span> <span class="o">=</span> <span class="s1">'</span><span class="s">teste</span><span class="s1">'</span>
-<span class="nv">SITENAME</span> <span class="o">=</span> <span class="s1">'</span><span class="s">TESTE</span><span class="s1">'</span>
+<p>Access the indicated address <code>http://127.0.0.1:8000</code></p>
+<p><img alt="Screenshot Pelican 001" src="/images/pelican-tut-001-en.png"/></p>
+<p>This should be what your blog looks&nbsp;like.</p>
+<p>Now open your <code>pelicanconf.py</code> file. Your content should look like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">AUTHOR</span> <span class="o">=</span> <span class="s1">'</span><span class="s">test</span><span class="s1">'</span>
+<span class="nv">SITENAME</span> <span class="o">=</span> <span class="s1">'</span><span class="s">TEST</span><span class="s1">'</span>
 <span class="nv">SITEURL</span> <span class="o">=</span> <span class="s1">''</span>
 
 <span class="nv">PATH</span> <span class="o">=</span> <span class="s1">'</span><span class="s">content</span><span class="s1">'</span>
-<span class="nv">TIMEZONE</span> <span class="o">=</span> <span class="s1">'</span><span class="s">America/Sao_Paulo</span><span class="s1">'</span>
+<span class="nv">TIMEZONE</span> <span class="o">=</span> <span class="s1">'</span><span class="s">America/New_York</span><span class="s1">'</span>
 
-<span class="nv">DEFAULT_LANG</span> <span class="o">=</span> <span class="s1">'</span><span class="s">pt</span><span class="s1">'</span>
+<span class="nv">DEFAULT_LANG</span> <span class="o">=</span> <span class="s1">'</span><span class="s">en</span><span class="s1">'</span>
 
 # <span class="nv">Feed</span> <span class="nv">generation</span> <span class="nv">is</span> <span class="nv">usually</span> <span class="nv">not</span> <span class="nv">desired</span> <span class="nv">when</span> <span class="nv">developing</span>
 <span class="nv">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="nv">None</span>
@@ -204,7 +203,7 @@ publishconf.py
 <span class="nv">AUTHOR_FEED_ATOM</span> <span class="o">=</span> <span class="nv">None</span>
 <span class="nv">AUTHOR_FEED_RSS</span> <span class="o">=</span> <span class="nv">None</span>
 
-# <span class="nv">Blogroll</span>
+# <span class="nv">blogroll</span>
 <span class="nv">LINKS</span> <span class="o">=</span> <span class="ss">((</span><span class="s1">'</span><span class="s">Pelican</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">https://getpelican.com/</span><span class="s1">'</span><span class="ss">)</span>,
         <span class="ss">(</span><span class="s1">'</span><span class="s">Python.org</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">https://www.python.org/</span><span class="s1">'</span><span class="ss">)</span>,
         <span class="ss">(</span><span class="s1">'</span><span class="s">Jinja2</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">https://palletsprojects.com/p/jinja/</span><span class="s1">'</span><span class="ss">)</span>,
@@ -219,12 +218,12 @@ publishconf.py
 # <span class="nv">Uncomment</span> <span class="nv">following</span> <span class="nv">line</span> <span class="k">if</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">document</span><span class="o">-</span><span class="nv">relative</span> <span class="nv">URLs</span> <span class="nv">when</span> <span class="nv">developing</span>
 #<span class="nv">RELATIVE_URLS</span> <span class="o">=</span> <span class="nv">True</span>
 </code></pre></div>
-<p>Este arquivo &eacute; bem autoexplicativo. Aqui &eacute; nele que mexemos para a maioria das configura&ccedil;&otilde;es do&nbsp;Pelican.</p>
-<p>Finalmente, abra o <code>publishconf.py</code>. Seu conte&uacute;do deve ser aproximadamente&nbsp;este:</p>
+<p>This file is very self explanatory. This is where we tweak most of the Pelican&nbsp;settings.</p>
+<p>Finally, open <code>publishconf.py</code>. Your content should look like&nbsp;this:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># This file is only used if you use `make publish` or</span>
 <span class="c1"># explicitly specify it as your config file.</span>
 
-<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">them</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">pelicanconf</span> <span class="kn">import</span> <span class="o">*</span>
@@ -243,10 +242,10 @@ publishconf.py
 <span class="c1">#DISQUS_SITENAME = ""</span>
 <span class="c1">#GOOGLE_ANALYTICS = ""</span>
 </code></pre></div>
-<p>Veja que este arquivo importa de pelicanconf, logo, aqui voc&ecirc; consegue sobrescrever configura&ccedil;&otilde;es, te permitindo ter uma configura&ccedil;&atilde;o para seu ambiente onde escreve os posts e outra para a efetiva publica&ccedil;&atilde;o do&nbsp;site.</p>
-<p>No momento, estas informa&ccedil;&otilde;es s&atilde;o suficientes para prosseguirmos, ent&atilde;o, n&atilde;o perca a pr&oacute;xima parte deste tutorial onde vamos falar sobre Github pages para depois juntarmos as duas coisas&nbsp;:D</p>
-<p>Espero que tenham gostado e n&atilde;o esque&ccedil;am de deixar seuas opini&otilde;es e d&uacute;vidas nos&nbsp;coment&aacute;rios!</p>
-<p>At&eacute; o pr&oacute;ximo&nbsp;post!</p>
+<p>See that this file imports from pelicanconf, so here you can overwrite configurations, allowing you to have a configuration for your environment where you write posts and another for the effective publication of the&nbsp;site.</p>
+<p>For the moment, this information is enough to go on, so don&rsquo;t miss the next part of this tutorial where we&rsquo;ll talk about Github pages and then put the two together&nbsp;:D</p>
+<p>I hope you liked it and don&rsquo;t forget to leave your opinions and questions in the&nbsp;comments!</p>
+<p>See you in the next&nbsp;post!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
@@ -278,6 +277,14 @@ publishconf.py
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
       <div class="w-1/2 rounded-l-lg"></div>
+      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
+        <a class="flex flex-col" href="http://localhost:8000/python-101-parte-2-en.html">
+          <div class="text-right mx-4 py-2">
+            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
+            <p class="text-right py-1 hover:underline">Python 101 - Segunda&nbsp;Parte</p>
+          </div>
+        </a>
+      </div>
     </div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
     </div>

@@ -1,4 +1,4 @@
-Title: Pelican tutorial com Github Pages and CircleCI - 1
+Title: Pelican tutorial with Github Pages and CircleCI - 1
 Date: 2022-07-31 22:03
 Category: Tutoriais
 Tags: Tutorial, Pelican, Github Pages, CircleCI

@@ -15,7 +15,7 @@
     <link
         href="http://programeempython.com.br/feeds/all.atom.xml"
         type="application/atom+xml" rel="alternate" title="Programe em Python Atom Feed" />
-<meta name="description" content="Estruturas Condicionais em Python Parte 1 Olá Pessoal! Hoje vou fazer um post mais feliz! Resultados na faculdade todos bons! Acabei de passar em..." />
+<meta name="description" content="Estruturas Condicionais em Python Parte 2 Continuando o post sobre Estruturas Condicionais em Python, veremos agora algumas outras fomas de usar a..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -122,41 +122,58 @@
               prose-img:rounded-md
               ">
     
-    <p>Estruturas Condicionais em Python Parte 1
-Ol&aacute;&nbsp;Pessoal!</p>
-<p>Hoje vou fazer um post mais feliz! Resultados na faculdade todos bons! Acabei de passar em mais uma mat&eacute;ria&nbsp;=]</p>
-<p>Bem&hellip; conforme prometido, vamos falar um pouco sobre as estruturas condicionais que temos em&nbsp;Python.</p>
-<p>As estruturas condicionais s&atilde;o essenciais na programa&ccedil;&atilde;o. Sem elas, os programas seriam chatos, mon&oacute;tonos, e nunca teriam a capacidade toda que temos&nbsp;atualmente.</p>
-<p><span class="caps">SEM</span> <span class="caps">ESTRUTURAS</span> <span class="caps">CONDICIONAIS</span> N&Atilde;O <span class="caps">HAVERIA</span> <span class="caps">JOGOS</span>&nbsp;ELETR&Ocirc;NICOS!!!!</p>
-<p>Ent&atilde;o, vejamos como o Python implementa suas estruturas&nbsp;condicionais.</p>
-<p>A principal estrutura condicional do Python (e mais usada tamb&eacute;m) &eacute; a constru&ccedil;&atilde;o if/else ou sua varia&ccedil;&atilde;o&nbsp;if/elif/else.</p>
-<p>if, traduzindo do ingl&ecirc;s quer dizer se, e else sen&atilde;o, logo, estas constru&ccedil;&otilde;es nos permitem orientar a execu&ccedil;&atilde;o de um trecho de c&oacute;digo. Se isso, faz aquilo, sen&atilde;o, faz aquilo&nbsp;outro&hellip;</p>
-<p>Veja abaixo um exemplo de utiliza&ccedil;&atilde;o do&nbsp;if/else:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">if</span> <span class="nv">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>:
-    <span class="nv">print</span> <span class="s2">"</span><span class="s">x e par</span><span class="s2">"</span>
+    <p>Estruturas Condicionais em Python Parte 2
+Continuando o post sobre Estruturas Condicionais em Python, veremos agora algumas outras fomas de usar a constru&ccedil;&atilde;o&nbsp;if/else.</p>
+<p>Muitas vezes, n&atilde;o &eacute; poss&iacute;vel resolver um problema computacional simplesmente com um if/else. Ent&atilde;o, usamos v&aacute;rios conjuntos de if/else aninhados (um dentro do&nbsp;outro)</p>
+<div class="highlight"><pre><span></span><code><span class="nv">caminho</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">if</span> <span class="nv">caminho</span> <span class="o">==</span> <span class="mi">0</span>:
+    <span class="nv">print</span> <span class="s2">"</span><span class="s">Volte para a posicao inicial</span><span class="s2">"</span>
 <span class="k">else</span>:
-    <span class="nv">print</span> <span class="s2">"</span><span class="s">x e impar</span><span class="s2">"</span>
+    <span class="k">if</span> <span class="nv">caminho</span> <span class="o">==</span> <span class="mi">1</span>:
+        <span class="nv">print</span> <span class="s2">"</span><span class="s">Siga em frente</span><span class="s2">"</span>
+    <span class="k">else</span>:
+        <span class="k">if</span> <span class="nv">caminho</span> <span class="o">==</span> <span class="mi">2</span>:
+            <span class="nv">print</span> <span class="s2">"</span><span class="s">Abaixe a cabeca</span><span class="s2">"</span>
+        <span class="k">else</span>:
+            <span class="k">if</span> <span class="nv">caminho</span> <span class="o">==</span> <span class="mi">3</span>:
+                <span class="nv">print</span> <span class="s2">"</span><span class="s">Voc&ecirc; caiu no buraco</span><span class="s2">"</span>
+            <span class="k">else</span>:
+                <span class="nv">print</span> <span class="s2">"</span><span class="s">Opcao invalida</span><span class="s2">"</span>
 </code></pre></div>
-<p>Este c&oacute;digo analisa o valor da vari&aacute;vel x. Se x % 2 (o resto da divis&atilde;o de x por 2) for igual a zero, ent&atilde;o o n&uacute;mero &eacute; par, sen&atilde;o, &eacute; impar. Veremos mais fun&ccedil;&otilde;es matem&aacute;ticas em posts&nbsp;futuros.</p>
-<p>Ao digitar estes comando no terminal, ficaria&nbsp;assim:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span>:
-...     <span class="nv">print</span> <span class="s2">"</span><span class="s">x e par</span><span class="s2">"</span>
-... <span class="k">else</span>:
-...     <span class="nv">print</span> <span class="s2">"</span><span class="s">x e impar</span><span class="s2">"</span> 
-...
-<span class="nv">x</span> <span class="nv">e</span> <span class="nv">impar</span>
+<p>Mas, d&aacute; pra perceber que, se voc&ecirc; tiver uma estrutura muito grade de condi&ccedil;&otilde;es, seu c&oacute;digo vai ficar bem bagun&ccedil;ado&hellip; imagina trinta if/else aninhados dessa forma? N&atilde;o&nbsp;d&aacute;!</p>
+<p>Ent&atilde;o, pra resolver este problema, temos a contru&ccedil;&atilde;o if/elif/else. O elif faz o papel das sequ&ecirc;ncias de else que cont&eacute;m if. Veja como o c&oacute;digo fica muito mais leg&iacute;vel e&nbsp;organizado!</p>
+<div class="highlight"><pre><span></span><code><span class="nv">d</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="k">if</span> <span class="nv">d</span> <span class="o">&gt;</span> <span class="mi">0</span>:
+    <span class="nv">print</span> <span class="s2">"</span><span class="s">d &eacute; positivo</span><span class="s2">"</span>
+<span class="nv">elif</span> <span class="nv">d</span> <span class="o">&lt;</span> <span class="mi">0</span>:
+    <span class="nv">print</span> <span class="s2">"</span><span class="s">d &eacute; negativo</span><span class="s2">"</span>
+<span class="k">else</span>:
+    <span class="nv">print</span> <span class="s2">"</span><span class="s">d &eacute; nulo</span><span class="s2">"</span>
 </code></pre></div>
-<p>Recapitulando o que foi dito no texto sobre Blocos de C&oacute;digo em Python, qundo temos um bloco identado logo abaixo de um comando terminado em :, temos um bloco que est&aacute; diretamente relacionado a este&nbsp;comando.</p>
-<p>No exemplo, temos o comando if x%2==0: e logo abaixo o print &ldquo;x e par&rdquo; identado. Isto quer dizer que o c&oacute;digo identado (print &ldquo;x e par&rdquo;) somente ser&aacute; executado se o resto da divis&atilde;o de x por 2 for&nbsp;zero.</p>
-<p>Caso este resultado seja diferente de zero, x n&atilde;o &eacute; par, e o interpretador encontra o comando&nbsp;else:.</p>
-<p>Logo abaxo deste comando, temos print &ldquo;x e impar&rdquo; que est&aacute; identado, mostrando ao interpretador que este &eacute; o comando que deve ser executado caso a compara&ccedil;&atilde;o dentro do if seja&nbsp;falsa.</p>
-<p>N&atilde;o vamos esticar o assunto. Por enquanto paramos por aqui, mas espere que jaj&aacute; tem a continua&ccedil;&atilde;o pra&nbsp;voc&ecirc;!</p>
-<p>Comente!
-Assine o Feed e n&atilde;o perca nenhum posto do Programe em&nbsp;Python!</p>
-<p>Abra&ccedil;os!
-At&eacute; a&nbsp;pr&oacute;xima!</p>
+<p>Voc&ecirc; pode ter quantos elif forem necess&aacute;rios entre o if e o else. Veja este&nbsp;exemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">opcao</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">if</span> <span class="nv">opcao</span> <span class="o">==</span> <span class="mi">0</span>:
+    <span class="nv">print</span> <span class="s2">"</span><span class="s">O valor escolhido foi 0</span><span class="s2">"</span>
+<span class="nv">elif</span> <span class="nv">opcao</span> <span class="o">==</span> <span class="mi">1</span>:
+    <span class="nv">print</span> <span class="s2">"</span><span class="s">O valor escolhido foi 1</span><span class="s2">"</span>
+<span class="nv">elif</span> <span class="nv">opcao</span> <span class="o">==</span> <span class="mi">2</span>:
+    <span class="nv">print</span> <span class="s2">"</span><span class="s">O valor escolhido foi 2</span><span class="s2">"</span>
+<span class="nv">elif</span> <span class="nv">opcao</span> <span class="o">==</span> <span class="mi">3</span>:
+    <span class="nv">print</span> <span class="s2">"</span><span class="s">O valor escolhido foi 3</span><span class="s2">"</span>
+<span class="k">else</span>:
+    <span class="nv">print</span> <span class="s2">"</span><span class="s">O valor escolhido n&atilde;o &eacute; v&aacute;lido</span><span class="s2">"</span>
+</code></pre></div>
+<p>O c&oacute;digo continua organizado e leg&iacute;vel, ajudando no entendimento do&nbsp;programa!</p>
+<p>Provavelmente, neste ponto, as pessoas que conhecem C, C++, java ou algumas outras linguagens devem estar se perguntando: Mas cad&ecirc; o&nbsp;switch?</p>
+<p>Na realidade, python n&atilde;o tem um switch como temos em outras linguagens, sendo que sua fun&ccedil;&atilde;o &eacute; muito bem cumprida pelas estruturas if/elif/else. Estas estruturas ainda tem vantagens sobre algumas implementa&ccedil;&otilde;es do switch que por exemplo somente fazem compara&ccedil;&otilde;es de inteiros e caracteres&nbsp;&uacute;nicos.</p>
+<p>&Eacute; poss&iacute;vel simular um switch de forma muito eficiente e elegnte no Python, mas isto ficar&aacute; para um pr&oacute;ximo post com conte&uacute;do mais&nbsp;avan&ccedil;ado.</p>
+<p>Por hoje &eacute; isso&nbsp;pessoal!</p>
+<p>Na pr&oacute;xima, falaremos de Estruturas de&nbsp;Repeti&ccedil;&atilde;o!</p>
+<p>Comentem!
+Assinem o Feed, e n&atilde;o percam nenhum post do Programe em&nbsp;Python!</p>
+<p>Abra&ccedil;o!
+At&eacute; a&nbsp;Pr&oacute;xima!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
@@ -185,8 +202,8 @@ At&eacute; a&nbsp;pr&oacute;xima!</p>
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function() {
-      this.page.url = 'http://programeempython.com.br/drafts/python-101-parte-2.html';
-      this.page.identifier = 'python-101-parte-2';
+      this.page.url = 'http://programeempython.com.br/drafts/python-101-parte-4.html';
+      this.page.identifier = 'python-101-parte-4';
     };
     (function() {
       var d = document;

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Pelican" />
-    <title>Python 101 - Segunda Parte</title>
+    <title>Python 101 - Parte 3 - Estruturas Condicionais em Python</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
     <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/css/main.css" />
@@ -15,7 +15,7 @@
     <link
         href="http://programeempython.com.br/feeds/all.atom.xml"
         type="application/atom+xml" rel="alternate" title="Programe em Python Atom Feed" />
-<meta name="description" content="Hi! Now that we have Python installed and we already know its interactive interface, let’s learn a little about the most basic commands of..." />
+<meta name="description" content="Olá! Continuando nossa série introdutória sobre Python, vamos falar um pouco sobre as estruturas condicionais. Se você não viu o post anterior,..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -93,11 +93,12 @@
 
 <main>
   <header>
-    <h1 class="font-semibold text-3xl my-2">Python 101 - Segunda&nbsp;Parte</h1>
+    <h1 class="font-semibold text-3xl my-2">Python 101 - Parte 3 - Estruturas Condicionais em&nbsp;Python</h1>
     <footer class="flex text-sm text-zinc-800 dark:text-zinc-400">
       <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
-        <time>July 29, 2022</time>
+        <time>August 01, 2022</time>
         <div>
+          <span>&nbsp;·&nbsp;2 min read</span>
         </div>
         <div>
           <span>&nbsp;·&nbsp;Julio Melanda</span>
@@ -122,49 +123,50 @@
               prose-img:rounded-md
               ">
       Translations:
-      <a href="http://programeempython.com.br/python-101-parte-2.html" hreflang="pt_br">pt_br</a>
+      <a href="http://programeempython.com.br/python-101-parte-3-condicionais-en.html" hreflang="en">en</a>
 
-    <p>Hi!</p>
-<p>Now that we have Python installed and we already know its interactive interface, let&rsquo;s learn a little about the most basic commands of the&nbsp;language!</p>
-<p>Before we continue, if you haven&rsquo;t read the previous post, go&nbsp;here:</p>
-<p><a href="http://programeempython.com.br/python-101-parte-1.html">Python 101 - Part&nbsp;One</a></p>
-<p>As seen, in the Python shell we have two&nbsp;cursors:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
-...
+    <p>Ol&aacute;!</p>
+<p>Continuando nossa s&eacute;rie introdut&oacute;ria sobre Python, vamos falar um pouco sobre as estruturas&nbsp;condicionais.</p>
+<p>Se voc&ecirc; n&atilde;o viu o post anterior, veja aqui para entender os <a href="http://programeempython.com.br/python-101-parte-1.html">Blocos de C&oacute;digo em&nbsp;Python</a></p>
+<p>As estruturas condicionais s&atilde;o essenciais na programa&ccedil;&atilde;o. Sem elas, os programas seriam chatos, mon&oacute;tonos, e nunca teriam a capacidade toda que temos&nbsp;atualmente.</p>
+<p><strong>Sem estruturas condicionais n&atilde;o haveria jogos&nbsp;eletr&ocirc;nicos!!!!</strong></p>
+<p>Ent&atilde;o, vejamos como o Python implementa suas estruturas&nbsp;condicionais.</p>
+<p>A principal estrutura condicional do Python (e mais usada tamb&eacute;m) &eacute; a constru&ccedil;&atilde;o <code>if</code>/<code>else</code> ou sua varia&ccedil;&atilde;o <code>if</code>/<code>elif</code>/<code>else</code>.</p>
+<p><code>if</code>, traduzindo do ingl&ecirc;s quer dizer se, e else sen&atilde;o, logo, estas constru&ccedil;&otilde;es nos permitem orientar a execu&ccedil;&atilde;o de um trecho de c&oacute;digo. Se isso, faz aquilo, sen&atilde;o, faz aquilo&nbsp;outro&hellip;</p>
+<p>Veja abaixo um exemplo de utiliza&ccedil;&atilde;o do&nbsp;if/else:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x &eacute; par"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x &eacute; impar"</span><span class="p">)</span>
 </code></pre></div>
-<p>When we make an if, conditional structure that will be explained in more detail in a next post, we have the following in the&nbsp;console:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">&lt;</span> <span class="mi">1</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x is less than 1</span><span class="s2">"</span><span class="ss">)</span>
+<p>Este c&oacute;digo analisa o valor da vari&aacute;vel <code>x</code>. Se <code>x % 2</code> (o resto da divis&atilde;o de <code>x</code> por <code>2</code>) for igual a zero, ent&atilde;o o n&uacute;mero &eacute; par, sen&atilde;o, &eacute; impar. Veremos mais fun&ccedil;&otilde;es matem&aacute;ticas em posts&nbsp;futuros.</p>
+<p>Ao digitar estes comando no terminal, ficaria&nbsp;assim:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>:
+...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x &eacute; par</span><span class="s2">"</span><span class="ss">)</span>
+... <span class="k">else</span>:
+...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x &eacute; impar</span><span class="s2">"</span><span class="ss">)</span> 
 ...
-<span class="nv">x</span> <span class="nv">is</span> <span class="nv">less</span> <span class="nv">than</span> <span class="mi">1</span>
+<span class="nv">x</span> <span class="nv">e</span> <span class="nv">impar</span>
 </code></pre></div>
-<p>Now the explanation&nbsp;=]</p>
-<p>In the first line, we say that the variable <em>x</em> contains the value <em>0</em>;
-Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end a command with <strong>:</strong> the interpreter understands that this is a command that did not end at the end of that line, and that it is composed of more commands, so the secondary cursor <code>...</code> gets in the&nbsp;game.</p>
-<p>So, many programmers used to other languages &ZeroWidthSpace;&ZeroWidthSpace;must ask themselves where are the curly braces to determine the&nbsp;block.</p>
-<p>In Python, blocks are determined by&nbsp;indentation.</p>
-<p>The lines that are inside the <em>if</em>, ie what must be executed if the comparison is true must be&nbsp;indented.</p>
-<p>It is generally a convention, in Python, to use 4 spaces for the&nbsp;indentation.</p>
-<p>The <code>print("x is less than 1")</code> is the command that should be executed if the comparison <code>x &lt; 1</code> is true. Thus, this line is indented, and the interpreter knows that it should only execute it if <em>x</em> is less than <em>1</em>.</p>
-<p>When you press <code>ENTER</code> at the end of this line, the interpreter shows you the secondary cursor again, because an <code>if</code> can have several commands inside. As we will see later, the execution of an entire program can be inside an <strong>if</strong>.</p>
-<p>Thus, only after a second <code>ENTER</code> does the interpreter execute the command and display the&nbsp;result.</p>
-<p>So, let&rsquo;s&nbsp;recap:</p>
-<ul>
-<li>Blocks in Python are defined by&nbsp;indentation</li>
-<li>The indentation must follow a pattern, preferably in all&nbsp;programs</li>
-<li>It is convention to use 4 spaces for&nbsp;indentation</li>
-<li>In the interpreter, indented blocks are preceded by the secondary cursor <code>...</code></li>
-<li>A block indicates a snippet of code that is inside another&nbsp;command</li>
-</ul>
-<p>That&rsquo;s all for&nbsp;now!</p>
-<p>In the next Python 101 post we take the hint, and talk about conditional structures in&nbsp;Python!</p>
-<p>Be sure to leave your questions and opinions in the comments&nbsp;below!</p>
-<p>See you in the next&nbsp;post!</p>
+<p>Recapitulando o que foi dito no texto sobre blocos de c&oacute;digo em Python, quando temos um bloco identado logo abaixo de um comando terminado em :, temos um bloco que est&aacute; diretamente relacionado a este&nbsp;comando.</p>
+<p>No exemplo, temos o comando <code>if x%2==0:</code> e logo abaixo o print <code>"x &eacute; par"</code> identado. Isto quer dizer que o c&oacute;digo identado (<code>print("x &eacute; par")</code>) somente ser&aacute; executado se o resto da divis&atilde;o de <code>x</code> por <code>2</code> for&nbsp;zero.</p>
+<p>Caso este resultado seja diferente de zero, x n&atilde;o &eacute; par, e o interpretador encontra o comando <code>else:</code>.</p>
+<p>Logo abaxo deste comando, temos <code>print("x &eacute; impar")</code> que est&aacute; identado, mostrando ao interpretador que este &eacute; o comando que deve ser executado caso a compara&ccedil;&atilde;o dentro do <code>if</code> seja&nbsp;falsa.</p>
+<p>N&atilde;o vamos esticar o assunto. Por enquanto paramos por aqui, mas espere que logo teremos a continua&ccedil;&atilde;o pra&nbsp;voc&ecirc;!</p>
+<p>N&atilde;o deixe de enviar d&uacute;vidas e opini&otilde;es nos coment&aacute;rios&nbsp;abaixo!</p>
+<p>At&eacute; o pr&oacute;ximo&nbsp;post!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
     <ul class="flex flex-wrap">
+      <a href="http://programeempython.com.br/tag/condicionais.html">
+        <li
+          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
+          Condicionais
+        </li>
+      </a>
       <a href="http://programeempython.com.br/tag/python-101.html">
         <li
           class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
@@ -179,19 +181,12 @@ Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end 
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://programeempython.com.br/tutorial-pelican-en.html">
-          <div class="mx-4 py-2 text-left">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline">Pelican tutorial with Github Pages and CircleCI -&nbsp;1</p>
-          </div>
-        </a>
-      </div>
+      <div class="w-1/2 rounded-l-lg"></div>
       <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="http://programeempython.com.br/python-101-parte-1-en.html">
+        <a class="flex flex-col" href="http://programeempython.com.br/tutorial-pelican.html">
           <div class="text-right mx-4 py-2">
             <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
-            <p class="text-right py-1 hover:underline">Python 101 - First&nbsp;Part</p>
+            <p class="text-right py-1 hover:underline">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;1</p>
           </div>
         </a>
       </div>
@@ -204,8 +199,8 @@ Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end 
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function() {
-      this.page.url = 'http://programeempython.com.br/python-101-parte-2-en.html';
-      this.page.identifier = 'python-101-parte-2';
+      this.page.url = 'http://programeempython.com.br/python-101-parte-3-condicionais.html';
+      this.page.identifier = 'python-101-parte-3-condicionais';
     };
     (function() {
       var d = document;

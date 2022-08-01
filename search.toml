@@ -13,6 +13,11 @@ url = "pages/sobre-mim.html"
 title = "Sobre Mim"
 
 [[input.files]]
+path = "python-101-parte-3-condicionais.html"
+url = "python-101-parte-3-condicionais.html"
+title = "Python 101 - Parte 3 - Estruturas Condicionais em Python"
+
+[[input.files]]
 path = "tutorial-pelican.html"
 url = "tutorial-pelican.html"
 title = "Tutorial de Pelican com Github Pages e CircleCI - 1"
@@ -36,6 +41,11 @@ title = "Porque Pelican"
 path = "um-novo-comeco.html"
 url = "um-novo-comeco.html"
 title = "Um novo começo"
+
+[[input.files]]
+path = "python-101-parte-3-condicionais-en.html"
+url = "python-101-parte-3-condicionais-en.html"
+title = "Python 101 - part 3 - Python Conditional Structures"
 
 [[input.files]]
 path = "tutorial-pelican-en.html"

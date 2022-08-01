@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Pelican" />
-    <title>Python 101 - Segunda Parte</title>
+    <title>Python 101 - part 3 - Python Conditional Structures</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
     <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/css/main.css" />
@@ -15,7 +15,7 @@
     <link
         href="http://programeempython.com.br/feeds/all.atom.xml"
         type="application/atom+xml" rel="alternate" title="Programe em Python Atom Feed" />
-<meta name="description" content="Estruturas Condicionais em Python Parte 1 Olá Pessoal! Hoje vou fazer um post mais feliz! Resultados na faculdade todos bons! Acabei de passar em..." />
+<meta name="description" content="Hi! Continuing our introductory Python series, let’s talk a little about conditional structures. If you haven’t seen the previous post, see here..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -93,10 +93,10 @@
 
 <main>
   <header>
-    <h1 class="font-semibold text-3xl my-2">Python 101 - Segunda&nbsp;Parte</h1>
+    <h1 class="font-semibold text-3xl my-2">Python 101 - part 3 - Python Conditional&nbsp;Structures</h1>
     <footer class="flex text-sm text-zinc-800 dark:text-zinc-400">
       <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
-        <time>July 29, 2022</time>
+        <time>August 01, 2022</time>
         <div>
         </div>
         <div>
@@ -121,46 +121,51 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-    
-    <p>Estruturas Condicionais em Python Parte 1
-Ol&aacute;&nbsp;Pessoal!</p>
-<p>Hoje vou fazer um post mais feliz! Resultados na faculdade todos bons! Acabei de passar em mais uma mat&eacute;ria&nbsp;=]</p>
-<p>Bem&hellip; conforme prometido, vamos falar um pouco sobre as estruturas condicionais que temos em&nbsp;Python.</p>
-<p>As estruturas condicionais s&atilde;o essenciais na programa&ccedil;&atilde;o. Sem elas, os programas seriam chatos, mon&oacute;tonos, e nunca teriam a capacidade toda que temos&nbsp;atualmente.</p>
-<p><span class="caps">SEM</span> <span class="caps">ESTRUTURAS</span> <span class="caps">CONDICIONAIS</span> N&Atilde;O <span class="caps">HAVERIA</span> <span class="caps">JOGOS</span>&nbsp;ELETR&Ocirc;NICOS!!!!</p>
-<p>Ent&atilde;o, vejamos como o Python implementa suas estruturas&nbsp;condicionais.</p>
-<p>A principal estrutura condicional do Python (e mais usada tamb&eacute;m) &eacute; a constru&ccedil;&atilde;o if/else ou sua varia&ccedil;&atilde;o&nbsp;if/elif/else.</p>
-<p>if, traduzindo do ingl&ecirc;s quer dizer se, e else sen&atilde;o, logo, estas constru&ccedil;&otilde;es nos permitem orientar a execu&ccedil;&atilde;o de um trecho de c&oacute;digo. Se isso, faz aquilo, sen&atilde;o, faz aquilo&nbsp;outro&hellip;</p>
-<p>Veja abaixo um exemplo de utiliza&ccedil;&atilde;o do&nbsp;if/else:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">if</span> <span class="nv">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>:
-    <span class="nv">print</span> <span class="s2">"</span><span class="s">x e par</span><span class="s2">"</span>
-<span class="k">else</span>:
-    <span class="nv">print</span> <span class="s2">"</span><span class="s">x e impar</span><span class="s2">"</span>
+      Translations:
+      <a href="http://programeempython.com.br/python-101-parte-3-condicionais.html" hreflang="pt_br">pt_br</a>
+
+    <p>Hi!</p>
+<p>Continuing our introductory Python series, let&rsquo;s talk a little about conditional&nbsp;structures.</p>
+<p>If you haven&rsquo;t seen the previous post, see here to understand the <a href="{filename}/Tutorials/python101.md">Python Code&nbsp;Blocks</a></p>
+<p>Conditional structures are essential in programming. Without them, programs would be boring, monotonous, and would never have been able to do what they do&nbsp;today.</p>
+<p><strong>Without conditional structures there would be no video&nbsp;games!!!!</strong></p>
+<p>So, let&rsquo;s see how Python implements its conditional&nbsp;structures.</p>
+<p>Python&rsquo;s main conditional structure (and most used as well) is the <code>if</code>/<code>else</code> construct or its <code>if</code>/<code>elif</code>/<code>else</code> variation.</p>
+<p>These constructions will guide us through the execution of a code snippet. If this, do that, if not, do that other&nbsp;thing&hellip;</p>
+<p>Below is an example of using <code>if</code>/<code>else</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x is even"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">no</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x is odd"</span><span class="p">)</span>
 </code></pre></div>
-<p>Este c&oacute;digo analisa o valor da vari&aacute;vel x. Se x % 2 (o resto da divis&atilde;o de x por 2) for igual a zero, ent&atilde;o o n&uacute;mero &eacute; par, sen&atilde;o, &eacute; impar. Veremos mais fun&ccedil;&otilde;es matem&aacute;ticas em posts&nbsp;futuros.</p>
-<p>Ao digitar estes comando no terminal, ficaria&nbsp;assim:</p>
+<p>This code parses the value of the variable <code>x</code>. If <code>x % 2</code> (the remainder of dividing <code>x</code> by <code>2</code>) is equal to zero, then the number is even, otherwise it is odd. We will see more math functions in future&nbsp;posts.</p>
+<p>When typing these commands in the terminal, it would look like&nbsp;this:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span>:
-...     <span class="nv">print</span> <span class="s2">"</span><span class="s">x e par</span><span class="s2">"</span>
-... <span class="k">else</span>:
-...     <span class="nv">print</span> <span class="s2">"</span><span class="s">x e impar</span><span class="s2">"</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>:
+... <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x is even</span><span class="s2">"</span><span class="ss">)</span>
+... <span class="k">if</span> <span class="nv">no</span>:
+... <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x is odd</span><span class="s2">"</span><span class="ss">)</span>
 ...
-<span class="nv">x</span> <span class="nv">e</span> <span class="nv">impar</span>
+<span class="nv">x</span> <span class="nv">is</span> <span class="nv">odd</span>
 </code></pre></div>
-<p>Recapitulando o que foi dito no texto sobre Blocos de C&oacute;digo em Python, qundo temos um bloco identado logo abaixo de um comando terminado em :, temos um bloco que est&aacute; diretamente relacionado a este&nbsp;comando.</p>
-<p>No exemplo, temos o comando if x%2==0: e logo abaixo o print &ldquo;x e par&rdquo; identado. Isto quer dizer que o c&oacute;digo identado (print &ldquo;x e par&rdquo;) somente ser&aacute; executado se o resto da divis&atilde;o de x por 2 for&nbsp;zero.</p>
-<p>Caso este resultado seja diferente de zero, x n&atilde;o &eacute; par, e o interpretador encontra o comando&nbsp;else:.</p>
-<p>Logo abaxo deste comando, temos print &ldquo;x e impar&rdquo; que est&aacute; identado, mostrando ao interpretador que este &eacute; o comando que deve ser executado caso a compara&ccedil;&atilde;o dentro do if seja&nbsp;falsa.</p>
-<p>N&atilde;o vamos esticar o assunto. Por enquanto paramos por aqui, mas espere que jaj&aacute; tem a continua&ccedil;&atilde;o pra&nbsp;voc&ecirc;!</p>
-<p>Comente!
-Assine o Feed e n&atilde;o perca nenhum posto do Programe em&nbsp;Python!</p>
-<p>Abra&ccedil;os!
-At&eacute; a&nbsp;pr&oacute;xima!</p>
+<p>To recap what was said in the text about blocks of code in Python, when we have a block identified just below a command ending in :, a block that is directly related to this&nbsp;command.</p>
+<p>In the example, we have the command <code>if x%2==0:</code> and just below the print <code>"x is even"</code> identified. This means that the code identified (<code>print("x is even")</code>) will only be executed if the remainder of the division <code>x</code> by <code>2</code> is&nbsp;zero.</p>
+<p>If this result is non-zero, x is not even, and the interpreter encounters the command <code>else:</code>.</p>
+<p>Below this command, <code>print which is identified as the case which is interpreted which should be executed in comparison within the</code>false&nbsp;if`).</p>
+<p>We will not cherish the matter. For now we stop here, but hope that soon we will have a sequel for&nbsp;you!</p>
+<p>Feel free to post questions and comments in the comments&nbsp;below!</p>
+<p>Until the next&nbsp;post!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
     <ul class="flex flex-wrap">
+      <a href="http://programeempython.com.br/tag/condicionais.html">
+        <li
+          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
+          Condicionais
+        </li>
+      </a>
       <a href="http://programeempython.com.br/tag/python-101.html">
         <li
           class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
@@ -176,6 +181,14 @@ At&eacute; a&nbsp;pr&oacute;xima!</p>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
       <div class="w-1/2 rounded-l-lg"></div>
+      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
+        <a class="flex flex-col" href="http://programeempython.com.br/tutorial-pelican-en.html">
+          <div class="text-right mx-4 py-2">
+            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
+            <p class="text-right py-1 hover:underline">Pelican tutorial with Github Pages and CircleCI -&nbsp;1</p>
+          </div>
+        </a>
+      </div>
     </div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
     </div>
@@ -185,8 +198,8 @@ At&eacute; a&nbsp;pr&oacute;xima!</p>
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function() {
-      this.page.url = 'http://programeempython.com.br/drafts/python-101-parte-3.html';
-      this.page.identifier = 'python-101-parte-3';
+      this.page.url = 'http://programeempython.com.br/python-101-parte-3-condicionais-en.html';
+      this.page.identifier = 'python-101-parte-3-condicionais';
     };
     (function() {
       var d = document;

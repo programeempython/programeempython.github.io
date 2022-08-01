@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="utf-8" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
         href="http://localhost:8000/theme/css/stork-dark.css">
-<meta name="description" content="Hi! Now that we have Python installed and we already know its interactive interface, let’s learn a little about the most basic commands of..." />
+<meta name="description" content="Estruturas de Dados em Python - Tuplas Olá pessoal! Vamos dar prosseguimento aos posts falando sobre Estruturas de Dados em Python. Já falamos..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -118,46 +118,54 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-      Translations:
-      <a href="http://localhost:8000/python-101-parte-2.html" hreflang="pt_br">pt_br</a>
-
-    <p>Hi!</p>
-<p>Now that we have Python installed and we already know its interactive interface, let&rsquo;s learn a little about the most basic commands of the&nbsp;language!</p>
-<p>Before we continue, if you haven&rsquo;t read the previous post, go&nbsp;here:</p>
-<p><a href="http://localhost:8000/python-101-parte-1.html">Python 101 - Part&nbsp;One</a></p>
-<p>As seen, in the Python shell we have two&nbsp;cursors:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
-...
-</code></pre></div>
-<p>When we make an if, conditional structure that will be explained in more detail in a next post, we have the following in the&nbsp;console:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">&lt;</span> <span class="mi">1</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x is less than 1</span><span class="s2">"</span><span class="ss">)</span>
-...
-<span class="nv">x</span> <span class="nv">is</span> <span class="nv">less</span> <span class="nv">than</span> <span class="mi">1</span>
-</code></pre></div>
-<p>Now the explanation&nbsp;=]</p>
-<p>In the first line, we say that the variable <em>x</em> contains the value <em>0</em>;
-Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end a command with <strong>:</strong> the interpreter understands that this is a command that did not end at the end of that line, and that it is composed of more commands, so the secondary cursor <code>...</code> gets in the&nbsp;game.</p>
-<p>So, many programmers used to other languages &ZeroWidthSpace;&ZeroWidthSpace;must ask themselves where are the curly braces to determine the&nbsp;block.</p>
-<p>In Python, blocks are determined by&nbsp;indentation.</p>
-<p>The lines that are inside the <em>if</em>, ie what must be executed if the comparison is true must be&nbsp;indented.</p>
-<p>It is generally a convention, in Python, to use 4 spaces for the&nbsp;indentation.</p>
-<p>The <code>print("x is less than 1")</code> is the command that should be executed if the comparison <code>x &lt; 1</code> is true. Thus, this line is indented, and the interpreter knows that it should only execute it if <em>x</em> is less than <em>1</em>.</p>
-<p>When you press <code>ENTER</code> at the end of this line, the interpreter shows you the secondary cursor again, because an <code>if</code> can have several commands inside. As we will see later, the execution of an entire program can be inside an <strong>if</strong>.</p>
-<p>Thus, only after a second <code>ENTER</code> does the interpreter execute the command and display the&nbsp;result.</p>
-<p>So, let&rsquo;s&nbsp;recap:</p>
-<ul>
-<li>Blocks in Python are defined by&nbsp;indentation</li>
-<li>The indentation must follow a pattern, preferably in all&nbsp;programs</li>
-<li>It is convention to use 4 spaces for&nbsp;indentation</li>
-<li>In the interpreter, indented blocks are preceded by the secondary cursor <code>...</code></li>
-<li>A block indicates a snippet of code that is inside another&nbsp;command</li>
-</ul>
-<p>That&rsquo;s all for&nbsp;now!</p>
-<p>In the next Python 101 post we take the hint, and talk about conditional structures in&nbsp;Python!</p>
-<p>Be sure to leave your questions and opinions in the comments&nbsp;below!</p>
-<p>See you in the next&nbsp;post!</p>
+    
+    <p>Estruturas de Dados em Python - Tuplas
+Ol&aacute;&nbsp;pessoal!</p>
+<p>Vamos dar prosseguimento aos posts falando sobre Estruturas de Dados em&nbsp;Python.</p>
+<p>J&aacute; falamos sobre Listas em Python e Dicion&aacute;rios em&nbsp;Python.</p>
+<p>Hoje, o tema s&atilde;o as tuplas. Tuplas s&atilde;o estruturas de dados ordenadas e que n&atilde;o permitem altera&ccedil;&atilde;o ap&oacute;s sua cria&ccedil;&atilde;o. Elas s&atilde;o usadas em muitas situa&ccedil;&otilde;es no&nbsp;Python.</p>
+<p>Vejamos ent&atilde;o formas de criar&nbsp;tuplas:</p>
+<p>t = () # uma tupla vazia
+t1 = 1, 2, 3, 4 # uma tupla com valores
+t2 = (1, 2, 3, 4) # igual a t1, mas criada usando par&ecirc;nteses
+t3 = (&lsquo;abracadabra&rsquo;, ) # tuplas de 1 elemento sempre s&atilde;o 
+                       # criadas com par&ecirc;nteses e uma virgula
+t4 = (&lsquo;casa&rsquo;,3, 4.12, t2, t1) # tupla contendo objetos&nbsp;diferentes </p>
+<p>Algo importante a se observar &eacute; que diferentemente das listas, as tuplas n&atilde;o podem ser alteradas, n&atilde;o havendo ent&atilde;o m&eacute;todos de remo&ccedil;&atilde;o, inser&ccedil;&atilde;o ou altera&ccedil;&atilde;o de elementos. Isto faz com que este seja um tipo de dados imprescind&iacute;vel para a passagem de par&acirc;metros para fun&ccedil;&otilde;es como veremos mais &agrave; frente ao falarmo das&nbsp;fun&ccedil;&otilde;es.</p>
+<p>Uma das principais formas de utilizar as tuplas (e muitas vezes fazemos sem saber que estamos fazendo) &eacute; empacotamento de&nbsp;dados.</p>
+<p>Por exemplo, se temos as coordenadas de um&nbsp;ponto:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>x = 1.0
+y =&nbsp;3.0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Podemos empacotar as coordenadas em uma&nbsp;tupla</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>ponto = x,&nbsp;y</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Se em um determinado momento precisarmos recuperar estes valores, basta fazermos o inverso, desempacotando os&nbsp;dados.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>x, y =&nbsp;ponto</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Um detalhe que deve ser comentado aqui &eacute; que empacotar dados sepre gera uma tupla, mas o inverso pode ser feito com qualquer&nbsp;sequ&ecirc;ncia.</p>
+<p>Bem&hellip; vamos deixar as utiliza&ccedil;&otilde;es mais poderosas a seu tempo&hellip; Tudo a seu&nbsp;tempo.</p>
+<p>Espero que tenham compreendido o que &eacute; e como funciona uma&nbsp;tupla.</p>
+<p>Comente!
+Assine o Feed e n&atilde;o perca nenhum post do Programe em&nbsp;Python!</p>
+<p>Siga-nos no twitter @programepython e identi.ca&nbsp;@programeempython!</p>
+<p>Abra&ccedil;os!</p>
+<p>At&eacute; a&nbsp;pr&oacute;xima!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
@@ -176,22 +184,7 @@ Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end 
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://localhost:8000/tutorial-pelican-en.html">
-          <div class="mx-4 py-2 text-left">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline">Pelican tutorial with Github Pages and CircleCI -&nbsp;1</p>
-          </div>
-        </a>
-      </div>
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="http://localhost:8000/python-101-parte-1-en.html">
-          <div class="text-right mx-4 py-2">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
-            <p class="text-right py-1 hover:underline">Python 101 - First&nbsp;Part</p>
-          </div>
-        </a>
-      </div>
+      <div class="w-1/2 rounded-l-lg"></div>
     </div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
     </div>

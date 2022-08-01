@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="utf-8" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
         href="http://localhost:8000/theme/css/stork-dark.css">
-<meta name="description" content="Hi! Now that we have Python installed and we already know its interactive interface, let’s learn a little about the most basic commands of..." />
+<meta name="description" content="Boa noite pessoal! Que tal falarmos hoje sobre como criar e chamar funções no seu código Python? Quem viu o tutorial de Como Fazer um Switch em..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -102,6 +102,12 @@
       </div>
     </footer>
   </header>
+  <details class="flex flex-col my-6 p-4 bg-zinc-200 dark:bg-zinc-800 rounded-lg">
+    <summary class="text-lg font-bold">Table of contents</summary>
+    <div class="mx-4 px-4 underline">
+      <div id="toc"><ul><li><a class="toc-href" href="#definindo-funcoes" title="definindo&nbsp;fun&ccedil;&otilde;es">definindo&nbsp;fun&ccedil;&otilde;es</a></li><li><a class="toc-href" href="#chamando-funcoes" title="chamando&nbsp;fun&ccedil;&otilde;es">chamando&nbsp;fun&ccedil;&otilde;es</a></li><li><a class="toc-href" href="#parametros-com-valores-padrao" title="par&acirc;metros com valores&nbsp;padr&atilde;o">par&acirc;metros com valores&nbsp;padr&atilde;o</a></li><li><a class="toc-href" href="#argumentos-chave" title="argumentos&nbsp;chave">argumentos&nbsp;chave</a></li></ul></div>
+    </div>
+  </details>
   <div class="max-w-7xl container mx-auto my-8 text-zinc-800 dark:text-zinc-300  
               prose lg:max-w-none prose-headings:text-zinc-800 prose-headings:dark:text-zinc-300 
               prose-h1:text-3xl lg:prose-h1:text-3xl prose-headings:font-semibold 
@@ -118,46 +124,97 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-      Translations:
-      <a href="http://localhost:8000/python-101-parte-2.html" hreflang="pt_br">pt_br</a>
-
-    <p>Hi!</p>
-<p>Now that we have Python installed and we already know its interactive interface, let&rsquo;s learn a little about the most basic commands of the&nbsp;language!</p>
-<p>Before we continue, if you haven&rsquo;t read the previous post, go&nbsp;here:</p>
-<p><a href="http://localhost:8000/python-101-parte-1.html">Python 101 - Part&nbsp;One</a></p>
-<p>As seen, in the Python shell we have two&nbsp;cursors:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
-...
-</code></pre></div>
-<p>When we make an if, conditional structure that will be explained in more detail in a next post, we have the following in the&nbsp;console:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">&lt;</span> <span class="mi">1</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x is less than 1</span><span class="s2">"</span><span class="ss">)</span>
-...
-<span class="nv">x</span> <span class="nv">is</span> <span class="nv">less</span> <span class="nv">than</span> <span class="mi">1</span>
-</code></pre></div>
-<p>Now the explanation&nbsp;=]</p>
-<p>In the first line, we say that the variable <em>x</em> contains the value <em>0</em>;
-Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end a command with <strong>:</strong> the interpreter understands that this is a command that did not end at the end of that line, and that it is composed of more commands, so the secondary cursor <code>...</code> gets in the&nbsp;game.</p>
-<p>So, many programmers used to other languages &ZeroWidthSpace;&ZeroWidthSpace;must ask themselves where are the curly braces to determine the&nbsp;block.</p>
-<p>In Python, blocks are determined by&nbsp;indentation.</p>
-<p>The lines that are inside the <em>if</em>, ie what must be executed if the comparison is true must be&nbsp;indented.</p>
-<p>It is generally a convention, in Python, to use 4 spaces for the&nbsp;indentation.</p>
-<p>The <code>print("x is less than 1")</code> is the command that should be executed if the comparison <code>x &lt; 1</code> is true. Thus, this line is indented, and the interpreter knows that it should only execute it if <em>x</em> is less than <em>1</em>.</p>
-<p>When you press <code>ENTER</code> at the end of this line, the interpreter shows you the secondary cursor again, because an <code>if</code> can have several commands inside. As we will see later, the execution of an entire program can be inside an <strong>if</strong>.</p>
-<p>Thus, only after a second <code>ENTER</code> does the interpreter execute the command and display the&nbsp;result.</p>
-<p>So, let&rsquo;s&nbsp;recap:</p>
-<ul>
-<li>Blocks in Python are defined by&nbsp;indentation</li>
-<li>The indentation must follow a pattern, preferably in all&nbsp;programs</li>
-<li>It is convention to use 4 spaces for&nbsp;indentation</li>
-<li>In the interpreter, indented blocks are preceded by the secondary cursor <code>...</code></li>
-<li>A block indicates a snippet of code that is inside another&nbsp;command</li>
-</ul>
-<p>That&rsquo;s all for&nbsp;now!</p>
-<p>In the next Python 101 post we take the hint, and talk about conditional structures in&nbsp;Python!</p>
-<p>Be sure to leave your questions and opinions in the comments&nbsp;below!</p>
-<p>See you in the next&nbsp;post!</p>
+    
+    <p>Boa noite&nbsp;pessoal!</p>
+<p>Que tal falarmos hoje sobre como criar e chamar fun&ccedil;&otilde;es no seu c&oacute;digo&nbsp;Python?</p>
+<p>Quem viu o tutorial de Como Fazer um Switch em Python viu ali como isto &eacute; feito, mas vamos analisar em mais&nbsp;detalhes.</p>
+<p>Voc&ecirc; sabe por que &eacute; importante usar fun&ccedil;&otilde;es num&nbsp;programa?</p>
+<p>Imagine um trecho de programa que tenha que ser executado v&aacute;rias vezes durante a execu&ccedil;&atilde;o. O que &eacute; melhor: reescrever v&aacute;rias vezes a mesma coisa e criar um c&oacute;digo imenso ou criar uma estrutura que execute este trecho sem necessidade de&nbsp;repeti-lo?</p>
+<p>Com certeza, a segunda op&ccedil;&atilde;o deixa o c&oacute;digo menor, mais leg&iacute;vel e mais organizado. Esta subdivis&atilde;o de um programa mais complexo em partes menores &eacute; chamada&nbsp;modulariza&ccedil;&atilde;o.</p>
+<p>Vejamos ent&atilde;o como usar as fun&ccedil;&otilde;es em&nbsp;Python!</p>
+<p>Inicialmente, devemos saber que a palavra reservada def &eacute; quem indica que ser&aacute; definida uma fun&ccedil;&atilde;o. Em seguida, damos o nome da fun&ccedil;&atilde;o e especificamos os nomes dos par&acirc;metros de&nbsp;entrada.</p>
+<p>Estes par&acirc;metros podem assumir v&aacute;rias formas como ser&aacute; visto neste post. Por&eacute;m nunca s&atilde;o usados para retornar dados para o programa principal ou para a fun&ccedil;&atilde;o&nbsp;chamante.</p>
+<p>Isto quer dizer que a &uacute;nica forma de retornar dados no Python &eacute; atrav&eacute;s da instru&ccedil;&atilde;o&nbsp;return.</p>
+<p>Na verdade, isto n&atilde;o &eacute; uma desvantagem, visto que fun&ccedil;&otilde;es podem retornar tuplas contendo qualquer&nbsp;objeto.</p>
+<h1 id="definindo-funcoes">definindo&nbsp;fun&ccedil;&otilde;es</h1>
+<p>def soma(x, y):
+    return x +&nbsp;y</p>
+<p>def quadrado(x):
+    return&nbsp;x*x</p>
+<p>def soma_quadrado(x, y):
+    x2 = quadrado(x)
+    y2 = quadrado(y)
+    return (x2, y2, soma(x2,&nbsp;y2))</p>
+<p>Na fun&ccedil;&atilde;o soma, s&atilde;o passados obrigatoriamente dois par&acirc;metros e &eacute; retornada a soma dos dois. Esta fun&ccedil;&atilde;o pode receber quaisquer objetos que suportem a opera&ccedil;&atilde;o de&nbsp;soma.</p>
+<p>A fun&ccedil;&atilde;o quadrado receba somente um par&acirc;metro e retorna seu quadrado. Esta fun&ccedil;&atilde;o se aplica somente a valores&nbsp;num&eacute;ricos.</p>
+<p>J&aacute; a fun&ccedil;&atilde;o soma_quadrado recebe duas vari&aacute;veis num&eacute;ricas e retorna uma tupla contendo os quadrados das vari&aacute;veis de entrada mais a soma desses&nbsp;quadrados.</p>
+<p>Vejamos agora como chamar estas fun&ccedil;&otilde;es dentro do seu&nbsp;programa:</p>
+<h1 id="chamando-funcoes">chamando&nbsp;fun&ccedil;&otilde;es</h1>
+<p>soma(2, 2)
+quadrado(3)
+soma_quadrado(3,&nbsp;4)</p>
+<p>A primeira chamada retorna 4, a segunda 9 e a terceira (9, 16, 25). No lugar dos n&uacute;meros poderiam ter sido usadas vari&aacute;veis que contivessem estes&nbsp;valores.</p>
+<p>Existem algumas caracter&iacute;sticas interessantes da passagem de par&acirc;metros em Python. Veremos algumas a&nbsp;seguir.</p>
+<p>Par&acirc;metros com valor&nbsp;padr&atilde;o</p>
+<p>Fun&ccedil;&otilde;es com par&acirc;metros com valor padr&atilde;o podem receber um n&uacute;mero vari&aacute;vel de par&acirc;metros na chamada, pois o valor padr&atilde;o ser&aacute; assumido para o par&acirc;metro&nbsp;omitido.</p>
+<p>Sempre deixamos o par&acirc;metro com valor padr&atilde;o para o final da tupla na defini&ccedil;&atilde;o da fun&ccedil;&atilde;o.&nbsp;Observe:</p>
+<h1 id="parametros-com-valores-padrao">par&acirc;metros com valores&nbsp;padr&atilde;o</h1>
+<p>def gosta_cachorros(op=&rsquo;sim&rsquo;):
+    if op == &lsquo;sim&rsquo;:
+ print &lsquo;Eu gosto de cachorros&rsquo;
+    elif op == &lsquo;nao&rsquo;:
+ print &lsquo;Eu nao gosto de cachorros&rsquo;
+    else:
+ print &lsquo;Responda com sim ou&nbsp;nao&rsquo;</p>
+<p>Neste caso se cham&aacute;ssemos esta fun&ccedil;&atilde;o no shell do python, ficaria&nbsp;assim:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>gosta_cachorros()
+Eu gosto de cachorros
+gosta_cachorros(&lsquo;sim&rsquo;)
+Eu gosto de cachorros
+gosta_cachorros(&lsquo;nao&rsquo;)
+Eu gosto nao de cachorros
+gosta_cachorros(&lsquo;gato&rsquo;)
+Responda com sim ou&nbsp;nao</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Assim, se o par&acirc;metro com valor padr&atilde;o for omitido, o valor padr&atilde;o ser&aacute;&nbsp;usado.</p>
+<p>Um caso particular desta propriedade da passagem de par&acirc;metros das fun&ccedil;&otilde;es &eacute; a utiliza&ccedil;&atilde;o de v&aacute;rios argumentos com valores padr&atilde;o. Estas s&atilde;o as fun&ccedil;&otilde;es com argumentos&nbsp;chave.</p>
+<p>Veja um&nbsp;exemplo:</p>
+<h1 id="argumentos-chave">argumentos&nbsp;chave</h1>
+<p>def gosta_de(acao=&rsquo;comer&rsquo;, objeto1 = &lsquo;batata frita&rsquo;, objeto2 = &lsquo;bife&rsquo;):
+    print &lsquo;Eu gosto de &lsquo;, acao, &lsquo; &lsquo;, objeto1, &lsquo; com &lsquo;,&nbsp;objeto2</p>
+<p>As chamadas a esta fun&ccedil;&atilde;o podem ocorrer da seguinte&nbsp;maneira:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>gosta_de()
+Eu gosto de comer batata frita com bife
+gosta_de(objeto1 = &lsquo;lasanha&rsquo;)
+Eu gosto de comer lasanha com bife
+gosta_de(acao = &lsquo;cozinhar&rsquo;)
+Eu gosto de cozinhar batata frita com bife
+gosta_de(&lsquo;beber&rsquo;, &lsquo;agua&rsquo;)
+Eu gosto de beber agua com bife
+gosta_de(&lsquo;beber&rsquo;, &lsquo;suco de laranja&rsquo;, &lsquo;acerola&rsquo;)
+Eu gosto de beber suco de laranja com acerola
+gosta_de(&lsquo;beber&rsquo;, objeto2 = &lsquo;agua&rsquo;)
+Eu gosto de beber batata frita com agua
+gosta_de(1, 2, 3)
+Eu gosto de 1 2 com&nbsp;3</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Os par&acirc;metros passados v&atilde;o para o argumento ao qual s&atilde;o atribu&iacute;dos. Caso n&atilde;o haja atribui&ccedil;&atilde;o, os valores ser&atilde;o atribu&iacute;dos da esquerda para a direita, por isso a diferen&ccedil;a entre gosta_de(&lsquo;beber&rsquo;, &lsquo;agua&rsquo;) e gosta_de(&lsquo;beber&rsquo;, objeto2 =&nbsp;&lsquo;agua&rsquo;).</p>
+<p>Note na &uacute;ltima chamada que esta fun&ccedil;&atilde;o aceita qualquer tipo de dado que seja imprim&iacute;vel (suporte&nbsp;print)</p>
+<p>Com estas informa&ccedil;&otilde;es, voc&ecirc; j&aacute; ser&aacute; capaz de come&ccedil;ar a fazer suas pr&oacute;prias fun&ccedil;&otilde;es! Lembre-se que se a fun&ccedil;&atilde;o n&atilde;o retorna nada o return pode ser&nbsp;omitido.</p>
+<p>Comente!
+Assine o Feed e n&atilde;o perca nenhum post do Programe em&nbsp;Python!</p>
+<p>Siga-nos no twitter @programepython e identi.ca&nbsp;@programeempython!</p>
+<p>Abra&ccedil;os!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
@@ -176,22 +233,7 @@ Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end 
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://localhost:8000/tutorial-pelican-en.html">
-          <div class="mx-4 py-2 text-left">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline">Pelican tutorial with Github Pages and CircleCI -&nbsp;1</p>
-          </div>
-        </a>
-      </div>
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="http://localhost:8000/python-101-parte-1-en.html">
-          <div class="text-right mx-4 py-2">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
-            <p class="text-right py-1 hover:underline">Python 101 - First&nbsp;Part</p>
-          </div>
-        </a>
-      </div>
+      <div class="w-1/2 rounded-l-lg"></div>
     </div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
     </div>

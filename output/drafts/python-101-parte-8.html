@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="utf-8" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
         href="http://localhost:8000/theme/css/stork-dark.css">
-<meta name="description" content="Hi! Now that we have Python installed and we already know its interactive interface, let’s learn a little about the most basic commands of..." />
+<meta name="description" content="Estruturas de Dados em Python - Listas Olá pessoal! Depois de uma longa maratona pra acertar meu Sistema Operacional, consegui acertar o Slackware..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -102,6 +102,12 @@
       </div>
     </footer>
   </header>
+  <details class="flex flex-col my-6 p-4 bg-zinc-200 dark:bg-zinc-800 rounded-lg">
+    <summary class="text-lg font-bold">Table of contents</summary>
+    <div class="mx-4 px-4 underline">
+      <div id="toc"><ul><li><a class="toc-href" href="#criando-uma-lista-vazia" title="Criando uma lista&nbsp;vazia">Criando uma lista&nbsp;vazia</a></li><li><a class="toc-href" href="#criando-uma-lista-ja-com-valores" title="Criando uma lista j&aacute; com&nbsp;valores">Criando uma lista j&aacute; com&nbsp;valores</a></li><li><a class="toc-href" href="#criando-uma-lista-de-letras-a-partir-de-uma-string" title="Criando uma lista de letras a partir de uma&nbsp;string">Criando uma lista de letras a partir de uma&nbsp;string</a></li><li><a class="toc-href" href="#vamos-acrescentar-valores-a-lista-l-criada-anteriormente" title="vamos acrescentar valores &agrave; lista l criada&nbsp;anteriormente">vamos acrescentar valores &agrave; lista l criada&nbsp;anteriormente</a></li><li><a class="toc-href" href="#appendo-insere-um-objeto-o-no-final-da-lista" title="append(o) insere um objeto o no final da&nbsp;lista">append(o) insere um objeto o no final da&nbsp;lista</a></li><li><a class="toc-href" href="#inserti-o-insere-o-objeto-o-na-posicao-i-a-primeira-posicao-e-zero" title="insert(i, o), insere o objeto o na posi&ccedil;&atilde;o i (a primeira posi&ccedil;&atilde;o &eacute;&nbsp;zero)">insert(i, o), insere o objeto o na posi&ccedil;&atilde;o i (a primeira posi&ccedil;&atilde;o &eacute;&nbsp;zero)</a></li><li><a class="toc-href" href="#removeo-remove-a-primeira-ocorrencia-do-objeto-o" title="remove(o) remove a primeira ocorr&ecirc;ncia do objeto&nbsp;o">remove(o) remove a primeira ocorr&ecirc;ncia do objeto&nbsp;o</a></li><li><a class="toc-href" href="#popi-remove-e-retorna-o-objeto-da-posicao-i" title="pop(i) remove e retorna o objeto da posi&ccedil;&atilde;o&nbsp;i">pop(i) remove e retorna o objeto da posi&ccedil;&atilde;o&nbsp;i</a></li><li><a class="toc-href" href="#pop-remove-e-retorna-o-ultimo-elemento-da-lista" title="pop() remove e retorna o &uacute;ltimo elemento da&nbsp;lista">pop() remove e retorna o &uacute;ltimo elemento da&nbsp;lista</a></li><li><a class="toc-href" href="#indexo-retorna-o-indice-do-objeto-o" title="index(o) retorna o &iacute;ndice do objeto&nbsp;o">index(o) retorna o &iacute;ndice do objeto&nbsp;o</a></li><li><a class="toc-href" href="#counto-conta-quantas-vezes-o-objeto-o-aparece-na-lista" title="count(o) conta quantas vezes o objeto o aparece na&nbsp;lista">count(o) conta quantas vezes o objeto o aparece na&nbsp;lista</a></li><li><a class="toc-href" href="#extendl-estende-a-lista-com-a-lista-l" title="extend(L) estende a lista com a lista&nbsp;L">extend(L) estende a lista com a lista&nbsp;L</a></li><li><a class="toc-href" href="#sort-organiza-os-itens-da-lista-nela-mesma" title="sort() organiza os itens da lista nela&nbsp;mesma">sort() organiza os itens da lista nela&nbsp;mesma</a></li><li><a class="toc-href" href="#reverse-inverte-os-elementos-da-lista-nela-mesma" title="reverse() inverte os elementos da lista nela&nbsp;mesma">reverse() inverte os elementos da lista nela&nbsp;mesma</a></li></ul></div>
+    </div>
+  </details>
   <div class="max-w-7xl container mx-auto my-8 text-zinc-800 dark:text-zinc-300  
               prose lg:max-w-none prose-headings:text-zinc-800 prose-headings:dark:text-zinc-300 
               prose-h1:text-3xl lg:prose-h1:text-3xl prose-headings:font-semibold 
@@ -118,46 +124,69 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-      Translations:
-      <a href="http://localhost:8000/python-101-parte-2.html" hreflang="pt_br">pt_br</a>
-
-    <p>Hi!</p>
-<p>Now that we have Python installed and we already know its interactive interface, let&rsquo;s learn a little about the most basic commands of the&nbsp;language!</p>
-<p>Before we continue, if you haven&rsquo;t read the previous post, go&nbsp;here:</p>
-<p><a href="http://localhost:8000/python-101-parte-1.html">Python 101 - Part&nbsp;One</a></p>
-<p>As seen, in the Python shell we have two&nbsp;cursors:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
-...
-</code></pre></div>
-<p>When we make an if, conditional structure that will be explained in more detail in a next post, we have the following in the&nbsp;console:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">&lt;</span> <span class="mi">1</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x is less than 1</span><span class="s2">"</span><span class="ss">)</span>
-...
-<span class="nv">x</span> <span class="nv">is</span> <span class="nv">less</span> <span class="nv">than</span> <span class="mi">1</span>
-</code></pre></div>
-<p>Now the explanation&nbsp;=]</p>
-<p>In the first line, we say that the variable <em>x</em> contains the value <em>0</em>;
-Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end a command with <strong>:</strong> the interpreter understands that this is a command that did not end at the end of that line, and that it is composed of more commands, so the secondary cursor <code>...</code> gets in the&nbsp;game.</p>
-<p>So, many programmers used to other languages &ZeroWidthSpace;&ZeroWidthSpace;must ask themselves where are the curly braces to determine the&nbsp;block.</p>
-<p>In Python, blocks are determined by&nbsp;indentation.</p>
-<p>The lines that are inside the <em>if</em>, ie what must be executed if the comparison is true must be&nbsp;indented.</p>
-<p>It is generally a convention, in Python, to use 4 spaces for the&nbsp;indentation.</p>
-<p>The <code>print("x is less than 1")</code> is the command that should be executed if the comparison <code>x &lt; 1</code> is true. Thus, this line is indented, and the interpreter knows that it should only execute it if <em>x</em> is less than <em>1</em>.</p>
-<p>When you press <code>ENTER</code> at the end of this line, the interpreter shows you the secondary cursor again, because an <code>if</code> can have several commands inside. As we will see later, the execution of an entire program can be inside an <strong>if</strong>.</p>
-<p>Thus, only after a second <code>ENTER</code> does the interpreter execute the command and display the&nbsp;result.</p>
-<p>So, let&rsquo;s&nbsp;recap:</p>
-<ul>
-<li>Blocks in Python are defined by&nbsp;indentation</li>
-<li>The indentation must follow a pattern, preferably in all&nbsp;programs</li>
-<li>It is convention to use 4 spaces for&nbsp;indentation</li>
-<li>In the interpreter, indented blocks are preceded by the secondary cursor <code>...</code></li>
-<li>A block indicates a snippet of code that is inside another&nbsp;command</li>
-</ul>
-<p>That&rsquo;s all for&nbsp;now!</p>
-<p>In the next Python 101 post we take the hint, and talk about conditional structures in&nbsp;Python!</p>
-<p>Be sure to leave your questions and opinions in the comments&nbsp;below!</p>
-<p>See you in the next&nbsp;post!</p>
+    
+    <p>Estruturas de Dados em Python - Listas
+Ol&aacute; pessoal! Depois de uma longa maratona pra acertar meu Sistema Operacional, consegui acertar o Slackware Linux, e agora t&aacute; tudo certo! Vamos Retomar as&nbsp;Postagens!</p>
+<p>Hoje, como havia falado no &uacute;ltimo post sobre estruturas de dados, vou falar hoje sobre Listas em&nbsp;Python.</p>
+<p>Listas s&atilde;o conjuntos ordenados de dados. Em python, estes conjuntos podem conter v&aacute;rios tipos de dados misturados, visto que tudo em Python &eacute;&nbsp;objeto.</p>
+<p>Assim, al&eacute;m de tipos de dados b&aacute;sicos como inteiros, decimais e caracteres, as listas podem conter qualquer outro objeto da&nbsp;linguagem.</p>
+<p>Vejamos como as listas s&atilde;o criadas em&nbsp;python:</p>
+<h1 id="criando-uma-lista-vazia">Criando uma lista&nbsp;vazia</h1>
+<p>l =&nbsp;[]</p>
+<h1 id="criando-uma-lista-ja-com-valores">Criando uma lista j&aacute; com&nbsp;valores</h1>
+<p>l1 = [1, 2, 3, &lsquo;a&rsquo;, &lsquo;d&rsquo;,&nbsp;l]</p>
+<h1 id="criando-uma-lista-de-letras-a-partir-de-uma-string">Criando uma lista de letras a partir de uma&nbsp;string</h1>
+<p>l2 =&nbsp;list(&ldquo;abracadabra&rdquo;)</p>
+<p>No primeiro comando, criamos uma lista vazia, que poder&aacute; ser preenchida futuramente. Em seguida, criamos uma lista, j&aacute; atribuindo valores no momento da&nbsp;cria&ccedil;&atilde;o.</p>
+<p>Perceba que ao criar a lista s&atilde;o passados valores inteiros, letras e a lista que foi criada vazia anteriormente. Assim, demonstramos que uma lista pode receber qualquer tipo de objeto, e que pode ter objetos de tipos diferentes ao mesmo&nbsp;tempo!</p>
+<p>Na lista tr&ecirc;s, utilizamos a fun&ccedil;&atilde;o list() para transformar uma string em uma&nbsp;lista.</p>
+<p>Mas, as listas em Python n&atilde;o s&atilde;o est&aacute;ticas. Podemos inserir e retirar valores conforme bem quisermos a qualquer hora durante a execu&ccedil;&atilde;o do programa.&nbsp;Vejamos:</p>
+<h1 id="vamos-acrescentar-valores-a-lista-l-criada-anteriormente">vamos acrescentar valores &agrave; lista l criada&nbsp;anteriormente</h1>
+<h1 id="appendo-insere-um-objeto-o-no-final-da-lista">append(o) insere um objeto o no final da&nbsp;lista</h1>
+<p>l.append(1) # a lista ficar&aacute; assim [1]
+l.append(3) # a lista ficar&aacute; assim [1,&nbsp;3] </p>
+<h1 id="inserti-o-insere-o-objeto-o-na-posicao-i-a-primeira-posicao-e-zero">insert(i, o), insere o objeto o na posi&ccedil;&atilde;o i (a primeira posi&ccedil;&atilde;o &eacute;&nbsp;zero)</h1>
+<p>l.insert(1, 2) # a lista ficar&aacute; assim [1, 2, 3]
+l.insert(0, 5) # a lista ficar&aacute; assim [5, 1, 2,&nbsp;3]</p>
+<h1 id="removeo-remove-a-primeira-ocorrencia-do-objeto-o">remove(o) remove a primeira ocorr&ecirc;ncia do objeto&nbsp;o</h1>
+<p>l.append(5) # a lista ficar&aacute; assim [5, 1, 2, 3, 5]
+l.remove(5) # a lista ficar&aacute; assim [1, 2, 3,&nbsp;5]</p>
+<h1 id="popi-remove-e-retorna-o-objeto-da-posicao-i">pop(i) remove e retorna o objeto da posi&ccedil;&atilde;o&nbsp;i</h1>
+<h1 id="pop-remove-e-retorna-o-ultimo-elemento-da-lista">pop() remove e retorna o &uacute;ltimo elemento da&nbsp;lista</h1>
+<p>l.insert(3, 6) # a lista ficar&aacute; assim [1, 2, 3, 6, 5]
+l.pop(3) # a lista ficar&aacute; assim [1, 2, 3, 5] e retornar&aacute; 6
+l.pop() # a lista ficar&aacute; assim [1, 2, 3] e retornar&aacute;&nbsp;5</p>
+<h1 id="indexo-retorna-o-indice-do-objeto-o">index(o) retorna o &iacute;ndice do objeto&nbsp;o</h1>
+<p>l.index(3) # retorna 2
+l.append(3) # a lista ficar&aacute; assim [1, 2, 3, 3]
+l.index(3) # continua retornando 2 pois &eacute; a primeira ocorr&ecirc;ncia do&nbsp;3</p>
+<h1 id="counto-conta-quantas-vezes-o-objeto-o-aparece-na-lista">count(o) conta quantas vezes o objeto o aparece na&nbsp;lista</h1>
+<p>l.count(1) # retorna 1
+l.count(3) # retorna 2
+l.pop() # a lista ficar&aacute; assim [1, 2, 3] e retorna&nbsp;3</p>
+<h1 id="extendl-estende-a-lista-com-a-lista-l">extend(L) estende a lista com a lista&nbsp;L</h1>
+<p>l.extend([0, -1, -2]) # a lista ficar&aacute; assim [1, 2, 3, 0, -1,&nbsp;-2]</p>
+<h1 id="sort-organiza-os-itens-da-lista-nela-mesma">sort() organiza os itens da lista nela&nbsp;mesma</h1>
+<p>l.sort() # a lista ficar&aacute; assim [-2, -1, 0, 1, 2,&nbsp;3]</p>
+<h1 id="reverse-inverte-os-elementos-da-lista-nela-mesma">reverse() inverte os elementos da lista nela&nbsp;mesma</h1>
+<p>l.reverse() # a lista ficar&aacute; assim [3, 2, 1, 0, -1,&nbsp;-2]</p>
+<p>Agora &eacute; hora de&nbsp;treinar!</p>
+<p>Abram o terminal, e comecem a brincar com as listas! Vejam como funcionam os&nbsp;comandos!</p>
+<p>Uma dica! o comando help mostra informa&ccedil;&otilde;es sobre um comando! Experimente, ap&oacute;s criar uma lista l, o&nbsp;comando:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>help(l.sort)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>No pr&oacute;ximo post tem muito&nbsp;mais!</p>
+<p>Um&nbsp;desafio!</p>
+<p>Quem imagina como fazer uma matriz em Python usando o que vimos&nbsp;hoje???</p>
+<p>Deixe sua resposta nos&nbsp;coment&aacute;rios!</p>
+<p>Comentem!</p>
+<p>Assinem o Feed e n&atilde;o percam nenhum Post do Programe em&nbsp;Python!</p>
+<p>Abra&ccedil;o!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
@@ -176,22 +205,7 @@ Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end 
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://localhost:8000/tutorial-pelican-en.html">
-          <div class="mx-4 py-2 text-left">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline">Pelican tutorial with Github Pages and CircleCI -&nbsp;1</p>
-          </div>
-        </a>
-      </div>
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="http://localhost:8000/python-101-parte-1-en.html">
-          <div class="text-right mx-4 py-2">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
-            <p class="text-right py-1 hover:underline">Python 101 - First&nbsp;Part</p>
-          </div>
-        </a>
-      </div>
+      <div class="w-1/2 rounded-l-lg"></div>
     </div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
     </div>

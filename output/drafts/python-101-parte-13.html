@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="utf-8" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
         href="http://localhost:8000/theme/css/stork-dark.css">
-<meta name="description" content="Hi! Now that we have Python installed and we already know its interactive interface, let’s learn a little about the most basic commands of..." />
+<meta name="description" content="Boa noite pessoal! Após uma semana sem escrever, vamos avançar mais um pouco em nossa caminhada da programação Pyhton. Aproveito para pedir..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -102,6 +102,12 @@
       </div>
     </footer>
   </header>
+  <details class="flex flex-col my-6 p-4 bg-zinc-200 dark:bg-zinc-800 rounded-lg">
+    <summary class="text-lg font-bold">Table of contents</summary>
+    <div class="mx-4 px-4 underline">
+      <div id="toc"><ul><li><a class="toc-href" href="#usrbinenv-python" title="! /usr/bin/env&nbsp;python">! /usr/bin/env&nbsp;python</a></li><li><a class="toc-href" href="#-codingutf8-" title="-- coding:utf8 --">-- coding:utf8 --</a></li></ul></div>
+    </div>
+  </details>
   <div class="max-w-7xl container mx-auto my-8 text-zinc-800 dark:text-zinc-300  
               prose lg:max-w-none prose-headings:text-zinc-800 prose-headings:dark:text-zinc-300 
               prose-h1:text-3xl lg:prose-h1:text-3xl prose-headings:font-semibold 
@@ -118,46 +124,73 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-      Translations:
-      <a href="http://localhost:8000/python-101-parte-2.html" hreflang="pt_br">pt_br</a>
-
-    <p>Hi!</p>
-<p>Now that we have Python installed and we already know its interactive interface, let&rsquo;s learn a little about the most basic commands of the&nbsp;language!</p>
-<p>Before we continue, if you haven&rsquo;t read the previous post, go&nbsp;here:</p>
-<p><a href="http://localhost:8000/python-101-parte-1.html">Python 101 - Part&nbsp;One</a></p>
-<p>As seen, in the Python shell we have two&nbsp;cursors:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
-...
-</code></pre></div>
-<p>When we make an if, conditional structure that will be explained in more detail in a next post, we have the following in the&nbsp;console:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">&lt;</span> <span class="mi">1</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x is less than 1</span><span class="s2">"</span><span class="ss">)</span>
-...
-<span class="nv">x</span> <span class="nv">is</span> <span class="nv">less</span> <span class="nv">than</span> <span class="mi">1</span>
-</code></pre></div>
-<p>Now the explanation&nbsp;=]</p>
-<p>In the first line, we say that the variable <em>x</em> contains the value <em>0</em>;
-Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end a command with <strong>:</strong> the interpreter understands that this is a command that did not end at the end of that line, and that it is composed of more commands, so the secondary cursor <code>...</code> gets in the&nbsp;game.</p>
-<p>So, many programmers used to other languages &ZeroWidthSpace;&ZeroWidthSpace;must ask themselves where are the curly braces to determine the&nbsp;block.</p>
-<p>In Python, blocks are determined by&nbsp;indentation.</p>
-<p>The lines that are inside the <em>if</em>, ie what must be executed if the comparison is true must be&nbsp;indented.</p>
-<p>It is generally a convention, in Python, to use 4 spaces for the&nbsp;indentation.</p>
-<p>The <code>print("x is less than 1")</code> is the command that should be executed if the comparison <code>x &lt; 1</code> is true. Thus, this line is indented, and the interpreter knows that it should only execute it if <em>x</em> is less than <em>1</em>.</p>
-<p>When you press <code>ENTER</code> at the end of this line, the interpreter shows you the secondary cursor again, because an <code>if</code> can have several commands inside. As we will see later, the execution of an entire program can be inside an <strong>if</strong>.</p>
-<p>Thus, only after a second <code>ENTER</code> does the interpreter execute the command and display the&nbsp;result.</p>
-<p>So, let&rsquo;s&nbsp;recap:</p>
-<ul>
-<li>Blocks in Python are defined by&nbsp;indentation</li>
-<li>The indentation must follow a pattern, preferably in all&nbsp;programs</li>
-<li>It is convention to use 4 spaces for&nbsp;indentation</li>
-<li>In the interpreter, indented blocks are preceded by the secondary cursor <code>...</code></li>
-<li>A block indicates a snippet of code that is inside another&nbsp;command</li>
-</ul>
-<p>That&rsquo;s all for&nbsp;now!</p>
-<p>In the next Python 101 post we take the hint, and talk about conditional structures in&nbsp;Python!</p>
-<p>Be sure to leave your questions and opinions in the comments&nbsp;below!</p>
-<p>See you in the next&nbsp;post!</p>
+    
+    <p>Boa noite&nbsp;pessoal!</p>
+<p>Ap&oacute;s uma semana sem escrever, vamos avan&ccedil;ar mais um pouco em nossa caminhada da programa&ccedil;&atilde;o&nbsp;Pyhton.</p>
+<p>Aproveito para pedir desculpas aos leitores pela demora, j&aacute; que twittei de tarde que o post sairia ainda no dia&nbsp;10.</p>
+<p>Hoje iniciaremos uma s&eacute;rie de posts sobre as v&aacute;rias facetas desta linguagem t&atilde;o&nbsp;vers&aacute;til.</p>
+<p>Vamos come&ccedil;ar falando da primeira e mais simples pra quem est&aacute; come&ccedil;ando: Python como Linguagem&nbsp;Procedural.</p>
+<p>Na maioria das vezes, as linguagens procedurais tamb&eacute;m s&atilde;o&nbsp;imperativas.</p>
+<p>Mas n&atilde;o, voc&ecirc; n&atilde;o precisa gritar com o computador, ou ser&nbsp;r&iacute;gido.</p>
+<p>Linguagem imperativa, significa que o computador faz o que voc&ecirc;&nbsp;manda.</p>
+<p>Voc&ecirc; n&atilde;o representa objetos, n&atilde;o declara fatos&hellip; simplesmente manda e o computador&nbsp;faz.</p>
+<p>Vamos ent&atilde;o come&ccedil;ar com a programa&ccedil;&atilde;o&nbsp;imperativa/procedural.</p>
+<p>Python se encaixa mais como linguagem procedural que imperativa, mas pode ser usado para os dois&nbsp;fins.</p>
+<p>Mas o que &eacute;  linguagem procedural&nbsp;ent&atilde;o?</p>
+<p>De forma geral uma linguagem procedural &eacute; uma linguagem imperativa que permite a cria&ccedil;&atilde;o de procedimentos, ou seja, trechos de c&oacute;digo que podem ser executados em v&aacute;rios pontos do programa sem que seja necess&aacute;rio escrever tudo todas as&nbsp;vezes.</p>
+<p>A Linguagem procedural est&aacute; bem pr&oacute;xima de tudo o que foi demostrado nos posts at&eacute;&nbsp;agora.</p>
+<p>Vejamos um pequeno&nbsp;exemplo:</p>
+<h1 id="usrbinenv-python">! /usr/bin/env&nbsp;python</h1>
+<h1 id="-codingutf8-">-<em>- coding:utf8 -</em>-</h1>
+<p>&rdquo;&rsquo;
+Programa para inverter uma matriz em python 2.x&nbsp;&rdquo;&rsquo;</p>
+<p>def le_dados():
+    dado_lido = None
+    matriz = []
+    while True:
+ dado_lido = raw_input(&lsquo;Digite uma linha da matriz. Para finalizar digite 0&rsquo;)
+ if dado_lido == &lsquo;0&rsquo;:
+     break
+ matriz.append(list(eval(dado_lido)))
+    for linha in matriz[1:]:
+ if len(linha) != len(matriz[0]):
+     return -1
+    return&nbsp;matriz</p>
+<p>def inverte_matriz(matriz):
+    return&nbsp;zip(*matriz)</p>
+<p>def mostra_matriz(matriz):
+    for linha in matriz:
+ for elemento in linha:
+     print &lsquo;%d\t&rsquo; % elemento,
+ print&nbsp;&lsquo;\n&rsquo;</p>
+<p>if <strong>name</strong> == &lsquo;<strong>main</strong>&lsquo;:
+    matriz = le_dados()
+    if matriz == -1:
+ print &lsquo;Matriz n&atilde;o contem dados v&aacute;lidos. Terminando&hellip;&rsquo;
+ exit()
+    print &lsquo;\nMatriz Orginal\n&rsquo;
+    mostra_matriz(matriz)
+    matriz = inverte_matriz(matriz)
+    print &lsquo;\nMatriz Transposta\n&rsquo;&nbsp;mostra_matriz(matriz)</p>
+<p>Este &eacute; um programa completo que l&ecirc; dados de uma matriz digitada linha a linha pelo usu&aacute;rio e retorna matriz transposta. Vejamos em detalhes o que h&aacute; neste&nbsp;programa:</p>
+<p>Inicialmente, definimos a fun&ccedil;&atilde;o que l&ecirc; dados. Usamos um la&ccedil;o infinito que ir&aacute; perguntar continuamente ao usu&aacute;rio pelos dados da matriz at&eacute; que seja passado um 0 sozinho para o&nbsp;programa.</p>
+<p>Em matriz.append(list(eval(dado_lido))) inserimos uma linha na matriz contendo uma lista resultante da avalia&ccedil;&atilde;o da string digitada. Assim, se o usu&aacute;rio n&atilde;o digitar uma sequ&ecirc;ncia de n&uacute;meros separados por v&iacute;rgulas, n&atilde;o ser&aacute; gerada a  lista, mas sim ser&aacute; levantado um&nbsp;erro.</p>
+<p>Se voc&ecirc; n&atilde;o est&aacute; entendendo algo do que foi feito neste c&oacute;digo, tente reler os posts anteriores, e voltar a este c&oacute;digo. Caso alguma d&uacute;vida persista, deixe um coment&aacute;rio ou mande uma mensagem atrav&eacute;s da p&aacute;gina de&nbsp;contato.</p>
+<p>Ap&oacute;s a aplica&ccedil;&atilde;o perceber que o usu&aacute;rio digitou todos os dados da matriz, este confere se todas as linhas da matriz cont&eacute;m o mesmo n&uacute;mero de elementos. No for &eacute; usado um recurso das listas chamado slicing, que permite fatiar a lista. neste caso, matriz[1:] significa, todas as linhas da matriz a partir da n&uacute;mero&nbsp;1.</p>
+<p>Caso os dados estejam corretos &eacute; retornada a matriz. Do contr&aacute;rio, &eacute; retornado -1 para indicar o&nbsp;erro.</p>
+<p>Passando para a outra fun&ccedil;&atilde;o, usamos a fun&ccedil;&atilde;o zip para transpor a matriz. a fun&ccedil;&atilde;o recebe a matriz decomposta em linhas *matriz e reagrupa os dados segundo suas posi&ccedil;&otilde;es nas  listas passadas, assim todos os dados da primeira coluna v&atilde;o pra primeira linha, os da segunda coluna pra segunda linha,&nbsp;etc.</p>
+<p>Finalmente, na &uacute;ltima fun&ccedil;&atilde;o, imprimimos na tela os dados da matriz. A&iacute; usei um recurso de formata&ccedil;&atilde;o de dados no print que ainda n&atilde;o havia mostrado a&nbsp;voc&ecirc;s.</p>
+<p>A seguir, encontramos um if que far&aacute; com que o c&oacute;digo que encontramos a seguir n&atilde;o seja executado ao importarmos este programa em outro&nbsp;lugar.</p>
+<p>Assim, este programa ser&aacute; executado somente como progama&nbsp;principal.</p>
+<p>No c&oacute;digo dentro do if chamamos as fun&ccedil;&otilde;es definidas acima para ler a matriz, invert&ecirc;-la e mostrar a matriz antes e ap&oacute;s a&nbsp;invers&atilde;o.</p>
+<p>Um detalhe que devemos considerar &eacute; que geralmente em Python, definimos todas as fun&ccedil;&otilde;es antes de criar o c&oacute;digo principal do&nbsp;aplicativo.</p>
+<p>Assim, espero que esta tenha sido uma boa demonstra&ccedil;&atilde;o da programa&ccedil;&atilde;o imperativa/procedural em&nbsp;Python.</p>
+<p>Nos pr&oacute;ximos posts veremos outras facetas do Python. N&atilde;o&nbsp;Percam!</p>
+<p>Comente!
+Assine o Feed e n&atilde;o perca nenhum post do Programe em&nbsp;Python!</p>
+<p>Siga-nos no twitter @programepython e identi.ca&nbsp;@programeempython!</p>
+<p>Abra&ccedil;os!</p>
+<p>At&eacute; a&nbsp;pr&oacute;xima!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
@@ -176,22 +209,7 @@ Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end 
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://localhost:8000/tutorial-pelican-en.html">
-          <div class="mx-4 py-2 text-left">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline">Pelican tutorial with Github Pages and CircleCI -&nbsp;1</p>
-          </div>
-        </a>
-      </div>
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="http://localhost:8000/python-101-parte-1-en.html">
-          <div class="text-right mx-4 py-2">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
-            <p class="text-right py-1 hover:underline">Python 101 - First&nbsp;Part</p>
-          </div>
-        </a>
-      </div>
+      <div class="w-1/2 rounded-l-lg"></div>
     </div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
     </div>

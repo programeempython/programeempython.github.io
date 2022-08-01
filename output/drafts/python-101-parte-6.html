@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="utf-8" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
         href="http://localhost:8000/theme/css/stork-dark.css">
-<meta name="description" content="Hi! Now that we have Python installed and we already know its interactive interface, let’s learn a little about the most basic commands of..." />
+<meta name="description" content="Estruturas de Repetição Parte 2 - For Ae! Pessoal! Grande Final de semana! 100% de aprovação na faculdade! Enfim “férias”! Bem vamos falar de..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -118,46 +118,56 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-      Translations:
-      <a href="http://localhost:8000/python-101-parte-2.html" hreflang="pt_br">pt_br</a>
-
-    <p>Hi!</p>
-<p>Now that we have Python installed and we already know its interactive interface, let&rsquo;s learn a little about the most basic commands of the&nbsp;language!</p>
-<p>Before we continue, if you haven&rsquo;t read the previous post, go&nbsp;here:</p>
-<p><a href="http://localhost:8000/python-101-parte-1.html">Python 101 - Part&nbsp;One</a></p>
-<p>As seen, in the Python shell we have two&nbsp;cursors:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
-...
-</code></pre></div>
-<p>When we make an if, conditional structure that will be explained in more detail in a next post, we have the following in the&nbsp;console:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">&lt;</span> <span class="mi">1</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x is less than 1</span><span class="s2">"</span><span class="ss">)</span>
-...
-<span class="nv">x</span> <span class="nv">is</span> <span class="nv">less</span> <span class="nv">than</span> <span class="mi">1</span>
-</code></pre></div>
-<p>Now the explanation&nbsp;=]</p>
-<p>In the first line, we say that the variable <em>x</em> contains the value <em>0</em>;
-Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end a command with <strong>:</strong> the interpreter understands that this is a command that did not end at the end of that line, and that it is composed of more commands, so the secondary cursor <code>...</code> gets in the&nbsp;game.</p>
-<p>So, many programmers used to other languages &ZeroWidthSpace;&ZeroWidthSpace;must ask themselves where are the curly braces to determine the&nbsp;block.</p>
-<p>In Python, blocks are determined by&nbsp;indentation.</p>
-<p>The lines that are inside the <em>if</em>, ie what must be executed if the comparison is true must be&nbsp;indented.</p>
-<p>It is generally a convention, in Python, to use 4 spaces for the&nbsp;indentation.</p>
-<p>The <code>print("x is less than 1")</code> is the command that should be executed if the comparison <code>x &lt; 1</code> is true. Thus, this line is indented, and the interpreter knows that it should only execute it if <em>x</em> is less than <em>1</em>.</p>
-<p>When you press <code>ENTER</code> at the end of this line, the interpreter shows you the secondary cursor again, because an <code>if</code> can have several commands inside. As we will see later, the execution of an entire program can be inside an <strong>if</strong>.</p>
-<p>Thus, only after a second <code>ENTER</code> does the interpreter execute the command and display the&nbsp;result.</p>
-<p>So, let&rsquo;s&nbsp;recap:</p>
-<ul>
-<li>Blocks in Python are defined by&nbsp;indentation</li>
-<li>The indentation must follow a pattern, preferably in all&nbsp;programs</li>
-<li>It is convention to use 4 spaces for&nbsp;indentation</li>
-<li>In the interpreter, indented blocks are preceded by the secondary cursor <code>...</code></li>
-<li>A block indicates a snippet of code that is inside another&nbsp;command</li>
-</ul>
-<p>That&rsquo;s all for&nbsp;now!</p>
-<p>In the next Python 101 post we take the hint, and talk about conditional structures in&nbsp;Python!</p>
-<p>Be sure to leave your questions and opinions in the comments&nbsp;below!</p>
-<p>See you in the next&nbsp;post!</p>
+    
+    <p>Estruturas de Repeti&ccedil;&atilde;o Parte 2 - For
+Ae!&nbsp;Pessoal!</p>
+<p>Grande Final de semana! 100% de aprova&ccedil;&atilde;o na faculdade! Enfim&nbsp;&ldquo;f&eacute;rias&rdquo;!</p>
+<p>Bem vamos falar de Python&nbsp;ent&atilde;o!</p>
+<p>Hoje veremos o&nbsp;for.</p>
+<p>Vamos come&ccedil;ar com um exemplo&nbsp;simples:</p>
+<p>l = [1,2,3,4,5]
+for i in l:
+    print&nbsp;i</p>
+<p>Aqui, inicialmente, come&ccedil;amos com algo que ainda n&atilde;o vimos:&nbsp;listas.</p>
+<p>Come&ccedil;amos criando l como uma lista que cont&eacute;m uma sequ&ecirc;ncia de&nbsp;n&uacute;meros.</p>
+<p>Ent&atilde;o, esta lista &eacute; usada dentro do&nbsp;for.</p>
+<p><strong><em> Nota para programadores de outra&nbsp;linguagem </em></strong></p>
+<p>Em outras linguagens, determinamos o valor inicial da vari&aacute;vel contadora, seu limite e o passo de itera&ccedil;&atilde;o. Em python isso n&atilde;o acontede. Aqui, o for somente itera sobre listas. Isto traz v&aacute;rias vantagens, como por exemplo, iterar sobre strings, ou listas de elementos&nbsp;variados.</p>
+<p>Ser&aacute; mostrado adiante porque este for n&atilde;o est&aacute; em desvantagem frente ao for das outras&nbsp;linguagens.</p>
+<p><strong><em> Fim da&nbsp;Nota </em></strong></p>
+<p>Ent&atilde;o, a cada itera&ccedil;&atilde;o, a vari&aacute;vel de itera&ccedil;&atilde;o, neste caso i, recebe uma posi&ccedil;&atilde;o da&nbsp;lista.</p>
+<p>Assim, este trecho acima imprime na tela todos os valores contidos na lista&nbsp;l.</p>
+<p>Vamos ver agora este trecho de&nbsp;c&oacute;digo:</p>
+<p>d = [&lsquo;arroz&rsquo;, &lsquo;feijao&rsquo;, &lsquo;carne&rsquo;, &lsquo;batata&rsquo;]
+for i in d:
+    print &lsquo;Estou cozinhando &lsquo;,&nbsp;i</p>
+<p>Este exemplo demonstra a utiliza&ccedil;&atilde;o do for com listas que cont&eacute;m strings, mostrando que pode-se usar listas com qualquer objeto num&nbsp;for.</p>
+<p>No for tamb&eacute;m podemos usar break e continue. Assim, podemos controlar ainda mais o comportamento do la&ccedil;o. Al&eacute;m disso, h&aacute; uma particularidade no for do Python que o deixa muito poderoso: podemos usar um else ao final do for como no exemplo a&nbsp;seguir:</p>
+<p>for i in [&lsquo;a&rsquo;, &lsquo;b&rsquo;, &lsquo;c&rsquo;, &lsquo;d&rsquo;, &lsquo;e&rsquo;, &lsquo;f&rsquo;, &lsquo;g&rsquo;]:
+    if i == &lsquo;d&rsquo;:
+        break
+    print i
+else:
+    print&nbsp;&lsquo;d&rsquo;</p>
+<p>Usando o else no final, podemos controlar o que ser&aacute; executado ao final de um execu&ccedil;&atilde;o completa do for e o que ser&aacute; executado se o la&ccedil;o for quebrado por um break. Quando o break quebra o la&ccedil;o, a execu&ccedil;&atilde;o segue pra dentro do&nbsp;else!</p>
+<p>Neste exemplo, ser&atilde;o mostradas sempre as letras a, b, c e d, mas d n&atilde;o ser&aacute; impresso dentro do for, mas dentro do&nbsp;else!</p>
+<p>Isto &eacute; muito importante, pois evita que tenhamos que fazer testes complicados para detectar quando um for for quebrado por um break que ser&aacute; chamado em condi&ccedil;&otilde;es&nbsp;complexas.</p>
+<p>Finalmente, muitos devem estar se perguntando: &ldquo;Como este for pode ser t&atilde;o poderoso se temos que definir as listas&nbsp;manualmente?&rdquo;</p>
+<p>O fato &eacute; que n&atilde;o temos que fazer manualmente se for uma lista de n&uacute;meros (assim como n&atilde;o precisamos em outras&nbsp;linguagens).</p>
+<p>Existe uma fun&ccedil;&atilde;o em Python, range, que retorna uma lista de n&uacute;meros no intervalo especificado. Veja o&nbsp;exemplo:</p>
+<p>for i in range(50):
+    if i%2 == 0:
+        print i, &lsquo;&eacute; par&rsquo;
+    else:
+        print i, &lsquo;&eacute;&nbsp;impar&rsquo;</p>
+<p>Quando fazemos range(50), teremos uma lista de inteiros de 0 a 49. (experimente no&nbsp;shell).</p>
+<p>Bem, pessoal! Por hoje &eacute;&nbsp;isso!</p>
+<p>Espero que tenhm gostado! Agora falta pouco para iniciarmos uma programa&ccedil;&atilde;o efetiva em&nbsp;Python!</p>
+<p>Nos Pr&oacute;ximos Posts, tipos de dados nativos do&nbsp;Python!</p>
+<p>Comentem!
+Assinem o Feed e n&atilde;o percam nenhum post do Programe em&nbsp;Python!</p>
+<p>Abra&ccedil;o!
+At&eacute;&nbsp;pr&oacute;xima!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
@@ -176,22 +186,7 @@ Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end 
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://localhost:8000/tutorial-pelican-en.html">
-          <div class="mx-4 py-2 text-left">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline">Pelican tutorial with Github Pages and CircleCI -&nbsp;1</p>
-          </div>
-        </a>
-      </div>
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="http://localhost:8000/python-101-parte-1-en.html">
-          <div class="text-right mx-4 py-2">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
-            <p class="text-right py-1 hover:underline">Python 101 - First&nbsp;Part</p>
-          </div>
-        </a>
-      </div>
+      <div class="w-1/2 rounded-l-lg"></div>
     </div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
     </div>

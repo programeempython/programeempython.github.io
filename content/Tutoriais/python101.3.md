@@ -1,64 +1,57 @@
-Title: Python 101 - Segunda Parte
-Date: 2022-07-29 12:06
-Slug: python-101-parte-3
+Title: Python 101 - Parte 3 - Estruturas Condicionais em Python
+Date: 2022-08-01 23:06
+Slug: python-101-parte-3-condicionais
 Category: Tutoriais
-Tags: Tutorial, Python 101
-Status: draft
+Tags: Tutorial, Python 101, Condicionais
 
-Estruturas Condicionais em Python Parte 1
-Olá Pessoal!
+Olá!
 
-Hoje vou fazer um post mais feliz! Resultados na faculdade todos bons! Acabei de passar em mais uma matéria =]
+Continuando nossa série introdutória sobre Python, vamos falar um pouco sobre as estruturas condicionais.
 
-Bem... conforme prometido, vamos falar um pouco sobre as estruturas condicionais que temos em Python.
+Se você não viu o post anterior, veja aqui para entender os [Blocos de Código em Python]({filename}/Tutoriais/python101.md)
 
 As estruturas condicionais são essenciais na programação. Sem elas, os programas seriam chatos, monótonos, e nunca teriam a capacidade toda que temos atualmente.
 
-
-
-SEM ESTRUTURAS CONDICIONAIS NÃO HAVERIA JOGOS ELETRÔNICOS!!!!
-
-
+__Sem estruturas condicionais não haveria jogos eletrônicos!!!!__
 
 Então, vejamos como o Python implementa suas estruturas condicionais.
 
-A principal estrutura condicional do Python (e mais usada também) é a construção if/else ou sua variação if/elif/else.
+A principal estrutura condicional do Python (e mais usada também) é a construção `if`/`else` ou sua variação `if`/`elif`/`else`.
 
-if, traduzindo do inglês quer dizer se, e else senão, logo, estas construções nos permitem orientar a execução de um trecho de código. Se isso, faz aquilo, senão, faz aquilo outro...
+`if`, traduzindo do inglês quer dizer se, e else senão, logo, estas construções nos permitem orientar a execução de um trecho de código. Se isso, faz aquilo, senão, faz aquilo outro...
 
 Veja abaixo um exemplo de utilização do if/else:
 
+```Python
+x = 3
+if x % 2 == 0:
+    print("x é par")
+else:
+    print("x é impar")
+```
 
-    x = 3
-    if x % 2 == 0:
-        print "x e par"
-    else:
-        print "x e impar"
-
-Este código analisa o valor da variável x. Se x % 2 (o resto da divisão de x por 2) for igual a zero, então o número é par, senão, é impar. Veremos mais funções matemáticas em posts futuros.
+Este código analisa o valor da variável `x`. Se `x % 2` (o resto da divisão de `x` por `2`) for igual a zero, então o número é par, senão, é impar. Veremos mais funções matemáticas em posts futuros.
 
 Ao digitar estes comando no terminal, ficaria assim:
 
     >>> x = 3
-    >>> if x%2==0:
-    ...     print "x e par"
+    >>> if x % 2 == 0:
+    ...     print("x é par")
     ... else:
-    ...     print "x e impar" 
+    ...     print("x é impar") 
     ...
     x e impar 
 
-Recapitulando o que foi dito no texto sobre Blocos de Código em Python, qundo temos um bloco identado logo abaixo de um comando terminado em :, temos um bloco que está diretamente relacionado a este comando.
+Recapitulando o que foi dito no texto sobre blocos de código em Python, quando temos um bloco identado logo abaixo de um comando terminado em :, temos um bloco que está diretamente relacionado a este comando.
 
-No exemplo, temos o comando if x%2==0: e logo abaixo o print "x e par" identado. Isto quer dizer que o código identado (print "x e par") somente será executado se o resto da divisão de x por 2 for zero.
+No exemplo, temos o comando `if x%2==0:` e logo abaixo o print `"x é par"` identado. Isto quer dizer que o código identado (`print("x é par")`) somente será executado se o resto da divisão de `x` por `2` for zero.
 
-Caso este resultado seja diferente de zero, x não é par, e o interpretador encontra o comando else:.
+Caso este resultado seja diferente de zero, x não é par, e o interpretador encontra o comando `else:`.
 
-Logo abaxo deste comando, temos print "x e impar" que está identado, mostrando ao interpretador que este é o comando que deve ser executado caso a comparação dentro do if seja falsa.
+Logo abaxo deste comando, temos `print("x é impar")` que está identado, mostrando ao interpretador que este é o comando que deve ser executado caso a comparação dentro do `if` seja falsa.
 
-Não vamos esticar o assunto. Por enquanto paramos por aqui, mas espere que jajá tem a continuação pra você!
+Não vamos esticar o assunto. Por enquanto paramos por aqui, mas espere que logo teremos a continuação pra você!
 
-Comente!
-Assine o Feed e não perca nenhum posto do Programe em Python!
+Não deixe de enviar dúvidas e opiniões nos comentários abaixo!
 
-Abraços!
-Até a próxima!
+Até o próximo post!

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="utf-8" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
         href="http://localhost:8000/theme/css/stork-dark.css">
-<meta name="description" content="Hi! Now that we have Python installed and we already know its interactive interface, let’s learn a little about the most basic commands of..." />
+<meta name="description" content="Estruturas de Dados em Python Olá pessoal! Hoje vamos ver uma coisa muito importante no Python: as estruturas de dados nativas. São vários os..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -118,46 +118,51 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-      Translations:
-      <a href="http://localhost:8000/python-101-parte-2.html" hreflang="pt_br">pt_br</a>
-
-    <p>Hi!</p>
-<p>Now that we have Python installed and we already know its interactive interface, let&rsquo;s learn a little about the most basic commands of the&nbsp;language!</p>
-<p>Before we continue, if you haven&rsquo;t read the previous post, go&nbsp;here:</p>
-<p><a href="http://localhost:8000/python-101-parte-1.html">Python 101 - Part&nbsp;One</a></p>
-<p>As seen, in the Python shell we have two&nbsp;cursors:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
-...
-</code></pre></div>
-<p>When we make an if, conditional structure that will be explained in more detail in a next post, we have the following in the&nbsp;console:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">&lt;</span> <span class="mi">1</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x is less than 1</span><span class="s2">"</span><span class="ss">)</span>
-...
-<span class="nv">x</span> <span class="nv">is</span> <span class="nv">less</span> <span class="nv">than</span> <span class="mi">1</span>
-</code></pre></div>
-<p>Now the explanation&nbsp;=]</p>
-<p>In the first line, we say that the variable <em>x</em> contains the value <em>0</em>;
-Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end a command with <strong>:</strong> the interpreter understands that this is a command that did not end at the end of that line, and that it is composed of more commands, so the secondary cursor <code>...</code> gets in the&nbsp;game.</p>
-<p>So, many programmers used to other languages &ZeroWidthSpace;&ZeroWidthSpace;must ask themselves where are the curly braces to determine the&nbsp;block.</p>
-<p>In Python, blocks are determined by&nbsp;indentation.</p>
-<p>The lines that are inside the <em>if</em>, ie what must be executed if the comparison is true must be&nbsp;indented.</p>
-<p>It is generally a convention, in Python, to use 4 spaces for the&nbsp;indentation.</p>
-<p>The <code>print("x is less than 1")</code> is the command that should be executed if the comparison <code>x &lt; 1</code> is true. Thus, this line is indented, and the interpreter knows that it should only execute it if <em>x</em> is less than <em>1</em>.</p>
-<p>When you press <code>ENTER</code> at the end of this line, the interpreter shows you the secondary cursor again, because an <code>if</code> can have several commands inside. As we will see later, the execution of an entire program can be inside an <strong>if</strong>.</p>
-<p>Thus, only after a second <code>ENTER</code> does the interpreter execute the command and display the&nbsp;result.</p>
-<p>So, let&rsquo;s&nbsp;recap:</p>
-<ul>
-<li>Blocks in Python are defined by&nbsp;indentation</li>
-<li>The indentation must follow a pattern, preferably in all&nbsp;programs</li>
-<li>It is convention to use 4 spaces for&nbsp;indentation</li>
-<li>In the interpreter, indented blocks are preceded by the secondary cursor <code>...</code></li>
-<li>A block indicates a snippet of code that is inside another&nbsp;command</li>
-</ul>
-<p>That&rsquo;s all for&nbsp;now!</p>
-<p>In the next Python 101 post we take the hint, and talk about conditional structures in&nbsp;Python!</p>
-<p>Be sure to leave your questions and opinions in the comments&nbsp;below!</p>
-<p>See you in the next&nbsp;post!</p>
+    
+    <p>Estruturas de Dados em Python
+Ol&aacute;&nbsp;pessoal!</p>
+<p>Hoje vamos ver uma coisa muito importante no Python: as estruturas de dados&nbsp;nativas.</p>
+<p>S&atilde;o v&aacute;rios os tipos de dados nativos do Python. Entre eles, os mais importantes, pois s&atilde;o essenciais para qualquer programa, s&atilde;o os tipos:
+inteiro
+ponto flutuante
+cadeia de&nbsp;caracteres</p>
+<p>O Inteiro representa os n&uacute;meros inteiros, o ponto flutuante &eacute; usado para representar n&uacute;meros decimais, e a cadeia de caracteres para representa&ccedil;&atilde;o de&nbsp;texto.</p>
+<p>Por&eacute;m, em Python, diferente de outras linguagens, estes tipos de dados, assim como todas as outras estruturas da linguagem s&atilde;o objetos, desta forma, o tipo b&aacute;sico de tudo em python &eacute; object. H&aacute; muito a se discutir sobre tipos de dados, mas para efeito de simplifica&ccedil;&atilde;o consideraremos&nbsp;assim.</p>
+<p>Desta forma, cada classe que se cria em Python &eacute; um novo objeto, e assim tamb&eacute;m um novo&nbsp;tipo.</p>
+<p>Voltando &agrave;s estruturas de dados nativas, veremos que estas s&atilde;o conjuntos estruturados de objetos que podem conter elementos de qualquer outro&nbsp;tipo.</p>
+<p>A primeira e talvez mais largamente usada destas estruturas &eacute; a list. Uma list implementa uma lista que pode conter virtualmente qualquer objeto, sendo composta por quantos tipos de objeto for necess&aacute;rio (diferente de algumas&nbsp;linguagens).</p>
+<p>Desta forma,  listas se tornam uma ferramenta muito poderosa dentro do Python. Teremos mais adiante um post focado especialmente nas listas e seus&nbsp;m&eacute;todos.</p>
+<p>Para criar uma lista, basta atribuir valores a ela da seguinte&nbsp;forma:</p>
+<p>l =&nbsp;[1,2,3,4,5]</p>
+<p>Assim como fizemos quando vimos como funciona o&nbsp;for.</p>
+<p>Outra estrutura de dados muito importante e largamente usada &eacute; a tuple (tupla). Tuplas cont&eacute;m conjuntos de valores assim como as listas, por&eacute;m se diferenciam destas principalmente pelo fato de as tuplas n&atilde;o poderem ser alteradas ap&oacute;s sua cria&ccedil;&atilde;o, e as listas&nbsp;sim.</p>
+<p>Vamos criar uma&nbsp;tupla:</p>
+<p>t =&nbsp;(1,2,3,4,5)</p>
+<p>As tupals s&atilde;o as estruturas que a linguagem usa para passar par&acirc;metros para fun&ccedil;&otilde;es (mais detalhes num post&nbsp;espec&iacute;fico).</p>
+<p>Por exemplo, a fun&ccedil;&atilde;o range, aceita valor inicial, valor final e passo. Est&atilde;o, ao chamar no&nbsp;shell:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>range(1, 6, 2)
+[1, 3,&nbsp;5]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Os valores (1, 6, 2) s&atilde;o enviados para a fun&ccedil;&atilde;o como uma&nbsp;tupla.</p>
+<p>Vejamos agora uma das estruturas de dados mais poderosas do Python, e que possui muitas possibilidades de utiliza&ccedil;&atilde;o. Esta estrutura &eacute; o dict (dicion&aacute;rio) que relaciona pares de chave e&nbsp;valor.</p>
+<p>Assim criamos um&nbsp;dicion&aacute;rio:</p>
+<p>d = {&lsquo;a&rsquo;:1, &lsquo;b&rsquo;:2,&rsquo;c&rsquo;:3, &lsquo;d&rsquo;:4,&nbsp;&lsquo;e&rsquo;:5}</p>
+<p>Finalmente, a &uacute;ltima estrutura de dados nativa do Python que veremos hoje &eacute; o set (conjunto). Os sets tem um uso muito especial. Este comando cria listas a partir de uma lista, onde n&atilde;o h&aacute; elementos&nbsp;repetidos.</p>
+<p>Por exemplo, ao criar este&nbsp;set:</p>
+<p>s = set([1, 1, 2, 3, 5, 7, 13,&nbsp;17])</p>
+<p>Neste caso, o conjunto ser&aacute; [1, 2, 3, 5, 7, 13, 17], pois 1 aparecia 2 vezes na lista original, e no set ele aparece somente uma&nbsp;vez.</p>
+<p>Isto &eacute; muito &uacute;til, por exemplo, para saber, numa lista de n&uacute;meros muito grande, quais s&atilde;o os n&uacute;meros que aparecem, desconsiderando as&nbsp;repeti&ccedil;&otilde;es.</p>
+<p>Nos Pr&oacute;ximos posts, apresentrei cada uma destas estruturas em&nbsp;detalhes.</p>
+<p>Comentem!
+Assinem o Feed, e n&atilde;o percam nenhum posto do Programe em&nbsp;Python!</p>
+<p>Abra&ccedil;os!
+At&eacute; a&nbsp;pr&oacute;xima!</p>
+<p><span class="caps">P.S.</span> Aten&ccedil;&atilde;o pessoal! A Partir desta semana come&ccedil;o a falar sobre assuntos mais avan&ccedil;ados da linguagem!&nbsp;Aguardem!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
@@ -176,22 +181,7 @@ Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end 
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://localhost:8000/tutorial-pelican-en.html">
-          <div class="mx-4 py-2 text-left">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline">Pelican tutorial with Github Pages and CircleCI -&nbsp;1</p>
-          </div>
-        </a>
-      </div>
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="http://localhost:8000/python-101-parte-1-en.html">
-          <div class="text-right mx-4 py-2">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
-            <p class="text-right py-1 hover:underline">Python 101 - First&nbsp;Part</p>
-          </div>
-        </a>
-      </div>
+      <div class="w-1/2 rounded-l-lg"></div>
     </div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
     </div>

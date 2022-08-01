@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="utf-8" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
         href="http://localhost:8000/theme/css/stork-dark.css">
-<meta name="description" content="Hi! Now that we have Python installed and we already know its interactive interface, let’s learn a little about the most basic commands of..." />
+<meta name="description" content="As Várias Faces do Python - Programação Orientada a Objetos Olá pesoal! Agora em período de aulas tá difícil escrever. Tudo na correria. Hoje..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -118,46 +118,98 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-      Translations:
-      <a href="http://localhost:8000/python-101-parte-2.html" hreflang="pt_br">pt_br</a>
+    
+    <p>As V&aacute;rias Faces do Python - Programa&ccedil;&atilde;o Orientada a Objetos
+Ol&aacute;&nbsp;pesoal!</p>
+<p>Agora em per&iacute;odo de aulas t&aacute; dif&iacute;cil escrever. Tudo na&nbsp;correria.</p>
+<p>Hoje vamos falar sobre mais uma das v&aacute;rias facetas do python, sendo esta a principal. E esta n&atilde;o &eacute; a principal por ser mais usada ou por ser melhor, mas pois esta &eacute; a base da&nbsp;linguagem.</p>
+<p>Vamos falar da Programa&ccedil;&atilde;o Orientada a Objetos em Python.
+Pra quem ainda n&atilde;o o viu o post anterior, confira como funciona a Programa&ccedil;&atilde;o Procedural em&nbsp;Python!</p>
+<p>Para falarmos de Orienta&ccedil;&atilde;o a Objetos em Python, primeiro precisamos entender ao menos superficialmente o que &eacute; a orienta&ccedil;&atilde;o a&nbsp;objetos.</p>
+<p>A Orienta&ccedil;&atilde;o a Objetos &eacute; um paradigma da programa&ccedil;&atilde;o que busca representar computacionalmente a forma como vemos o mundo: objetos que possuem caracter&iacute;sticas e&nbsp;comportamentos.</p>
+<p>Assim, programamos usando classes, que cont&eacute;m m&eacute;todos (que definem o comportamento) e atributos (que definem as caracter&iacute;sticas), representando os&nbsp;objetos.</p>
+<p>Por exemplo, vejamos a classe a&nbsp;seguir:</p>
+<p>class Aviao:
+    turbinas = 0
+    poltronas = 0
+    capacidade = 0
+    status_motor = &lsquo;desligado&rsquo;
+    altitude =&nbsp;0.0</p>
+<div class="highlight"><pre><span></span><code>def ligar_motor(self):
+    self.status_motor = 'ligado'
 
-    <p>Hi!</p>
-<p>Now that we have Python installed and we already know its interactive interface, let&rsquo;s learn a little about the most basic commands of the&nbsp;language!</p>
-<p>Before we continue, if you haven&rsquo;t read the previous post, go&nbsp;here:</p>
-<p><a href="http://localhost:8000/python-101-parte-1.html">Python 101 - Part&nbsp;One</a></p>
-<p>As seen, in the Python shell we have two&nbsp;cursors:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
-...
+def desligar_motor(self):
+    self.status_motor = 'desligado'
+
+def sobe(self, incremento):
+    self.altitude += incremento
+
+def desce(self, decremento):
+    self.altitude -= incremento
 </code></pre></div>
-<p>When we make an if, conditional structure that will be explained in more detail in a next post, we have the following in the&nbsp;console:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">&lt;</span> <span class="mi">1</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x is less than 1</span><span class="s2">"</span><span class="ss">)</span>
-...
-<span class="nv">x</span> <span class="nv">is</span> <span class="nv">less</span> <span class="nv">than</span> <span class="mi">1</span>
+<p>Inicialmente fazemos a declara&ccedil;&atilde;o da classe. Logo abaixo, s&atilde;o inicializados atributos da classe. Esta inicializa&ccedil;&atilde;o n&atilde;o &eacute; necess&aacute;ria, mas permite que voc&ecirc; especifique quais os atributos do objeto antes de us&aacute;-los nos&nbsp;m&eacute;todos.</p>
+<p>Eu recomendo para quem est&aacute; come&ccedil;ando que fa&ccedil;a esta inicializa&ccedil;&atilde;o dos atributos para controlar melhor o que h&aacute; em cada&nbsp;classe.</p>
+<p>Em seguida, s&atilde;o definidos os m&eacute;todos (fun&ccedil;&otilde;es internas de uma classe/objeto que determinam seu comportamento). Note que dentro das classe passamos um par&acirc;metro para os m&eacute;todos que n&atilde;o passamos para as fun&ccedil;&otilde;es&nbsp;comuns.</p>
+<p>Este par&acirc;metro (self) permite que os atributos da classe sejam acessados tanto para leitura quanto para escrita de dentro dos&nbsp;m&eacute;todos.</p>
+<p>Outro conceito importante da orienta&ccedil;&atilde;o a objetos &eacute; a&nbsp;heran&ccedil;a.</p>
+<p>Atrav&eacute;s dela, um objeto herda os atributos e m&eacute;todos de ser objeto pai, por assim dizer, e implementa m&eacute;todos e atributos&nbsp;pr&oacute;prios.</p>
+<p>Vejamos um&nbsp;exemplo:</p>
+<p>class&nbsp;Teco_teco(Aviao):</p>
+<div class="highlight"><pre><span></span><code>def self.__init__(self):
+    Aviao.__init__()
+
+def liga_helice(self):
+    self.status_motor = 'lagado'
+
+def desliga_helice(self):
+    self.status_motor = 'deslagado'
 </code></pre></div>
-<p>Now the explanation&nbsp;=]</p>
-<p>In the first line, we say that the variable <em>x</em> contains the value <em>0</em>;
-Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end a command with <strong>:</strong> the interpreter understands that this is a command that did not end at the end of that line, and that it is composed of more commands, so the secondary cursor <code>...</code> gets in the&nbsp;game.</p>
-<p>So, many programmers used to other languages &ZeroWidthSpace;&ZeroWidthSpace;must ask themselves where are the curly braces to determine the&nbsp;block.</p>
-<p>In Python, blocks are determined by&nbsp;indentation.</p>
-<p>The lines that are inside the <em>if</em>, ie what must be executed if the comparison is true must be&nbsp;indented.</p>
-<p>It is generally a convention, in Python, to use 4 spaces for the&nbsp;indentation.</p>
-<p>The <code>print("x is less than 1")</code> is the command that should be executed if the comparison <code>x &lt; 1</code> is true. Thus, this line is indented, and the interpreter knows that it should only execute it if <em>x</em> is less than <em>1</em>.</p>
-<p>When you press <code>ENTER</code> at the end of this line, the interpreter shows you the secondary cursor again, because an <code>if</code> can have several commands inside. As we will see later, the execution of an entire program can be inside an <strong>if</strong>.</p>
-<p>Thus, only after a second <code>ENTER</code> does the interpreter execute the command and display the&nbsp;result.</p>
-<p>So, let&rsquo;s&nbsp;recap:</p>
-<ul>
-<li>Blocks in Python are defined by&nbsp;indentation</li>
-<li>The indentation must follow a pattern, preferably in all&nbsp;programs</li>
-<li>It is convention to use 4 spaces for&nbsp;indentation</li>
-<li>In the interpreter, indented blocks are preceded by the secondary cursor <code>...</code></li>
-<li>A block indicates a snippet of code that is inside another&nbsp;command</li>
-</ul>
-<p>That&rsquo;s all for&nbsp;now!</p>
-<p>In the next Python 101 post we take the hint, and talk about conditional structures in&nbsp;Python!</p>
-<p>Be sure to leave your questions and opinions in the comments&nbsp;below!</p>
-<p>See you in the next&nbsp;post!</p>
+<p>A classe acima estende a classe Aviao, definindo dois m&eacute;todos que se utilizam de atributos da classe pai. Nesta classe, encontramos um novo m&eacute;todo: <strong>init</strong>.</p>
+<p>O m&eacute;todo <strong>init</strong> &eacute; o primeiro a ser executado quando se inicializa (instancia) uma classe. O <strong>init</strong> &eacute; chamado &agrave;s vezes de construtor devido &agrave; semelhan&ccedil;a com os construtores da linguagem Java, por&nbsp;exemplo.</p>
+<p>Uma diferen&ccedil;a importante entre <strong>init</strong> e um construtor &eacute; que este &uacute;ltimo &eacute; executado antes da classe ser instanciada e o <strong>init</strong>&nbsp;depois.</p>
+<p>&Eacute; importante observar que o <strong>init</strong> nesta classe &eacute; utilizado para inicializar a classe pai, chamando o <strong>init</strong> da&nbsp;mesma.</p>
+<p>Vejamos um exemplo agora com heran&ccedil;a&nbsp;m&uacute;ltipla:</p>
+<p>class Carro_voador(Carro, Aviao):
+    posicao_asa =&nbsp;&lsquo;fechada&rsquo;</p>
+<div class="highlight"><pre><span></span><code>def __init__(self):
+    Carro.__init__()
+    Aviao.__init__()
+
+def decola(self):
+    posicao_asa = 'aberta'
+    acelera()
+    posicao_flap = 'subir'
+    transfere_tracao(roda, helice)
+
+def pousa(self):
+    posicao_asa = 'aberta'
+    acelera(reverso=True)
+    posicao_flap = 'descer'
+    transfere_tracao(helice, roda)
+    freia()
+</code></pre></div>
+<p>Veja como esta classe herda caracter&iacute;sticas de ambas classes, Carro e Aviao, assim como um carro voador herdaria as caracter&iacute;sticas de ambos&nbsp;ve&iacute;culos.</p>
+<p>Todos estes exemplos de classes s&atilde;o simplifica&ccedil;&otilde;es com fins unicamente did&aacute;ticos para exemplificar os&nbsp;conceitos.</p>
+<p>Agora. Como instanciar uma classe? e como chamar um m&eacute;todo ou usar um atributo?
+Simples,&nbsp;veja:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>aviao = Aviao()
+print(aviao.status_motor)
+desligado
+aviao.ligar_motor()
+print(aviao.status_motor)&nbsp;ligado</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Por hora, isto &eacute; suficiente para uma demonstra&ccedil;&atilde;o superficial da Programa&ccedil;&atilde;o Orientada a Objetos no&nbsp;Python</p>
+<p>Nos pr&oacute;ximos posts veremos outras facetas do Python. N&atilde;o&nbsp;Percam!</p>
+<p>Comente!
+Assine o Feed e n&atilde;o perca nenhum post do Programe em&nbsp;Python!</p>
+<p>Siga-nos no twitter @programepython e identi.ca&nbsp;@programeempython!</p>
+<p>Abra&ccedil;os!</p>
+<p>At&eacute; a&nbsp;pr&oacute;xima!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
@@ -176,22 +228,7 @@ Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end 
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://localhost:8000/tutorial-pelican-en.html">
-          <div class="mx-4 py-2 text-left">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline">Pelican tutorial with Github Pages and CircleCI -&nbsp;1</p>
-          </div>
-        </a>
-      </div>
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="http://localhost:8000/python-101-parte-1-en.html">
-          <div class="text-right mx-4 py-2">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
-            <p class="text-right py-1 hover:underline">Python 101 - First&nbsp;Part</p>
-          </div>
-        </a>
-      </div>
+      <div class="w-1/2 rounded-l-lg"></div>
     </div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
     </div>

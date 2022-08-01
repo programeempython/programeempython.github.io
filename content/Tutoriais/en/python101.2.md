@@ -12,7 +12,7 @@ Now that we have Python installed and we already know its interactive interface,
 
 Before we continue, if you haven't read the previous post, go here:
 
-[Python 101 - Part One]({filename}/Tutorials/python101.md)
+[Python 101 - Part One]({filename}/Tutoriais/python101.md)
 
 As seen, in the Python shell we have two cursors:
 

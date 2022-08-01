@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="utf-8" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
         href="http://localhost:8000/theme/css/stork-dark.css">
-<meta name="description" content="Hi! Now that we have Python installed and we already know its interactive interface, let’s learn a little about the most basic commands of..." />
+<meta name="description" content="As Várias Faces do Python - Programação Funcional Olá pessoal! Não tive como postar antes do final de semana, mas aqui estamos com mais Python pra..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -102,6 +102,12 @@
       </div>
     </footer>
   </header>
+  <details class="flex flex-col my-6 p-4 bg-zinc-200 dark:bg-zinc-800 rounded-lg">
+    <summary class="text-lg font-bold">Table of contents</summary>
+    <div class="mx-4 px-4 underline">
+      <div id="toc"><ul><li><a class="toc-href" href="#retornar-os-numeros-primos-entre-4-e-25" title="retornar os n&uacute;meros primos entre 4 e&nbsp;25">retornar os n&uacute;meros primos entre 4 e&nbsp;25</a></li><li><a class="toc-href" href="#verifica-a-existencia-de-palavras-que-contem-a-letra-z" title="verifica a exist&ecirc;ncia de palavras que cont&eacute;m a letra&nbsp;z">verifica a exist&ecirc;ncia de palavras que cont&eacute;m a letra&nbsp;z</a></li></ul></div>
+    </div>
+  </details>
   <div class="max-w-7xl container mx-auto my-8 text-zinc-800 dark:text-zinc-300  
               prose lg:max-w-none prose-headings:text-zinc-800 prose-headings:dark:text-zinc-300 
               prose-h1:text-3xl lg:prose-h1:text-3xl prose-headings:font-semibold 
@@ -118,46 +124,102 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-      Translations:
-      <a href="http://localhost:8000/python-101-parte-2.html" hreflang="pt_br">pt_br</a>
-
-    <p>Hi!</p>
-<p>Now that we have Python installed and we already know its interactive interface, let&rsquo;s learn a little about the most basic commands of the&nbsp;language!</p>
-<p>Before we continue, if you haven&rsquo;t read the previous post, go&nbsp;here:</p>
-<p><a href="http://localhost:8000/python-101-parte-1.html">Python 101 - Part&nbsp;One</a></p>
-<p>As seen, in the Python shell we have two&nbsp;cursors:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
-...
-</code></pre></div>
-<p>When we make an if, conditional structure that will be explained in more detail in a next post, we have the following in the&nbsp;console:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">&lt;</span> <span class="mi">1</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x is less than 1</span><span class="s2">"</span><span class="ss">)</span>
-...
-<span class="nv">x</span> <span class="nv">is</span> <span class="nv">less</span> <span class="nv">than</span> <span class="mi">1</span>
-</code></pre></div>
-<p>Now the explanation&nbsp;=]</p>
-<p>In the first line, we say that the variable <em>x</em> contains the value <em>0</em>;
-Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end a command with <strong>:</strong> the interpreter understands that this is a command that did not end at the end of that line, and that it is composed of more commands, so the secondary cursor <code>...</code> gets in the&nbsp;game.</p>
-<p>So, many programmers used to other languages &ZeroWidthSpace;&ZeroWidthSpace;must ask themselves where are the curly braces to determine the&nbsp;block.</p>
-<p>In Python, blocks are determined by&nbsp;indentation.</p>
-<p>The lines that are inside the <em>if</em>, ie what must be executed if the comparison is true must be&nbsp;indented.</p>
-<p>It is generally a convention, in Python, to use 4 spaces for the&nbsp;indentation.</p>
-<p>The <code>print("x is less than 1")</code> is the command that should be executed if the comparison <code>x &lt; 1</code> is true. Thus, this line is indented, and the interpreter knows that it should only execute it if <em>x</em> is less than <em>1</em>.</p>
-<p>When you press <code>ENTER</code> at the end of this line, the interpreter shows you the secondary cursor again, because an <code>if</code> can have several commands inside. As we will see later, the execution of an entire program can be inside an <strong>if</strong>.</p>
-<p>Thus, only after a second <code>ENTER</code> does the interpreter execute the command and display the&nbsp;result.</p>
-<p>So, let&rsquo;s&nbsp;recap:</p>
-<ul>
-<li>Blocks in Python are defined by&nbsp;indentation</li>
-<li>The indentation must follow a pattern, preferably in all&nbsp;programs</li>
-<li>It is convention to use 4 spaces for&nbsp;indentation</li>
-<li>In the interpreter, indented blocks are preceded by the secondary cursor <code>...</code></li>
-<li>A block indicates a snippet of code that is inside another&nbsp;command</li>
-</ul>
-<p>That&rsquo;s all for&nbsp;now!</p>
-<p>In the next Python 101 post we take the hint, and talk about conditional structures in&nbsp;Python!</p>
-<p>Be sure to leave your questions and opinions in the comments&nbsp;below!</p>
-<p>See you in the next&nbsp;post!</p>
+    
+    <p>As V&aacute;rias Faces do Python - Programa&ccedil;&atilde;o Funcional
+Ol&aacute; pessoal! N&atilde;o tive como postar antes do final de semana, mas aqui estamos com mais Python pra voc&ecirc;s. Vamos falar agora sobre Programa&ccedil;&atilde;o Funcional em&nbsp;Python.</p>
+<p>Pra quem ainda n&atilde;o viu os outros posts dobres as faces do python aqui est&atilde;o:
+Programa&ccedil;&atilde;o Procedural;
+Programa&ccedil;&atilde;o Orientada a Objetos.
+ Vamos agora ent&atilde;o ao que&nbsp;interessa.</p>
+<p>A programa&ccedil;&atilde;o funcional &eacute; um paradigma de programa&ccedil;&atilde;o que divide o problema em v&aacute;rias fun&ccedil;&otilde;es, sem que estas fun&ccedil;&otilde;es possuam estados internos que permitam a gera&ccedil;&atilde;o de resultados diferentes para v&aacute;rias execu&ccedil;&otilde;es da mesma fun&ccedil;&atilde;o para os mesmos&nbsp;par&acirc;metros.</p>
+<p>Assim, para a programa&ccedil;&atilde;o funcional, os resultados retornados por uma fun&ccedil;&atilde;o devem depender unicamente dos par&acirc;metros de&nbsp;entrada.</p>
+<p>Sob certos aspectos, a programa&ccedil;&atilde;o funcional pode ser considerada o oposto da orienta&ccedil;&atilde;o a objetos, j&aacute; que a primeira evita estados internos enquanto a segunda se baseia nas modifica&ccedil;&otilde;es dos estados internos dos&nbsp;objetos.</p>
+<p>Abaixo s&atilde;o listados alguns motivos para se usar o paradigma&nbsp;funcional:</p>
+<p>Os programas podem ser testados atrav&eacute;s de prova formal para comprovar que est&atilde;o corretos;
+Voc&ecirc; &eacute; obrigado a quebrar seu problema em pequenos peda&ccedil;os, sendo assim um paradigma que gera programas modularizados;
+&Eacute; mais f&aacute;cil encontrar e corrigir erros (debugar o c&oacute;digo);
+Fun&ccedil;&otilde;es mais gerais podem ser reaproveitadas em muitas situa&ccedil;&otilde;es, como uma que receba o caminho para um arquivo e retorne seu conte&uacute;do. assim, &eacute; poss&iacute;vel escrever novos programas simplesmente reordenando algumas fun&ccedil;&otilde;es existentes e escrevendo as outras mais espec&iacute;ficas do problema&nbsp;atual.</p>
+<p>Dois grandes trunfos do Python para a programa&ccedil;&atilde;o funcional s&atilde;o os geradores e iteradores (generators e iterators), por&eacute;m, devido &agrave; sua import&acirc;ncia, estes merecem uma postagem&nbsp;espec&iacute;fica.</p>
+<p>Hoje, veremos fun&ccedil;&otilde;es que s&atilde;o &oacute;timas ferramentas para a programa&ccedil;&atilde;o funcional. Estas s&atilde;o: lambda, map(), filter() e&nbsp;reduce().</p>
+<p>lambda</p>
+<p>lambda &eacute; uma palavra chave do python que &eacute; utilizada para definir pequenas fun&ccedil;&otilde;es an&ocirc;nimas. Esta &eacute; uma das caracter&iacute;sticas que o Python emprestou das linguagens funcionais mais&nbsp;famosas.</p>
+<p>As express&otilde;es lambda somente permitem uma express&atilde;o, o que faz delas mais um recurso para deixar a sintaxe mais&nbsp;elegante.</p>
+<p>Vejamos como&nbsp;usar:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>soma = lambda x, y : x + y
+soma(1, 2)&nbsp;3</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Muito simples, mas totalmente substitu&iacute;vel por defini&ccedil;&otilde;es comuns de&nbsp;fun&ccedil;&otilde;es.</p>
+<p>Um problema em utilizar fun&ccedil;&otilde;es lambda &eacute; que estas podem se tornar pouco ou nada intelig&iacute;veis caso algu&eacute;m tente fazer algo muito complexo dentro&nbsp;delas.</p>
+<p>Geralmente o ideal &eacute; definir uma fun&ccedil;&atilde;o da forma&nbsp;tradicional.</p>
+<p>filter()</p>
+<p>Esta fun&ccedil;&atilde;o recebe com par&acirc;metros uma fun&ccedil;&atilde;o e uma sequ&ecirc;ncia (uma lista por exemplo), executando a fun&ccedil;&atilde;o para cada elemento da sequ&ecirc;ncia e retornando os elementos para os quais a fun&ccedil;&atilde;o retorna&nbsp;verdadeiro.</p>
+<p>Vejamos o seguinte&nbsp;exemplo</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<h1 id="retornar-os-numeros-primos-entre-4-e-25">retornar os n&uacute;meros primos entre 4 e&nbsp;25</h1>
+<p>filter(lambda x : x % 2 != 0 and x % 3 != 0, range(4, 25))
+[5, 7, 11, 13, 17, 19,&nbsp;23]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Como dito acima, uma fun&ccedil;&atilde;o lambda maior pode se ternar dif&iacute;cil de entender, mas esta ainda &eacute; bem simples: retorna veradeiro se o n&uacute;mero n&atilde;o for divis&iacute;vel por 2 nem por&nbsp;3.</p>
+<p>Assim, os n&uacute;meros retornados s&atilde;o os primos entre 4 e&nbsp;25.</p>
+<p>Uma forma bastante &uacute;til de utilizar a fun&ccedil;&atilde;o filter &eacute; para verificar a pertin&ecirc;ncia dos elementos de um grupo. Por&nbsp;exemplo:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<h1 id="verifica-a-existencia-de-palavras-que-contem-a-letra-z">verifica a exist&ecirc;ncia de palavras que cont&eacute;m a letra&nbsp;z</h1>
+<p>lista_sem_z = [&lsquo;alface&rsquo;, &lsquo;camar&atilde;o&rsquo;, &lsquo;ameixa&rsquo;, &lsquo;zebra&rsquo;]
+result = filter(lambda x : &lsquo;z&rsquo; in x, lista_sem_z)
+if len(result) &gt; 0:
+&hellip;    print &lsquo;A(s) palavra(s)&rsquo;, reult, &lsquo;n&atilde;o deveria(m) estar aqui&rsquo;
+&hellip;
+A(s) palavra(s) [&lsquo;zebra&rsquo;] n&atilde;o deveria(m) estar&nbsp;aqui</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>map()</p>
+<p>Esta fun&ccedil;&atilde;o recebe como par&acirc;metros uma fun&ccedil;&atilde;o e uma sequ&ecirc;ncia assim como a filter(), por&eacute;m, esta retorna uma lista com o resultado da fun&ccedil;&atilde;o calculada sobre cada elemento da&nbsp;sequ&ecirc;ncia.</p>
+<p>Veja as seguintes&nbsp;situa&ccedil;&otilde;es:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>cubo = lambda x : x<em>x</em>x
+map(cubo, range(7))
+[0, 1, 8, 27, 64, 125, 216]
+soma = lambda x, y : x + y
+map(soma, range(3), range(1, 4))
+[1, 3,&nbsp;5]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>reduce()</p>
+<p>Esta fun&ccedil;&atilde;o, por sua vez, recebe os mesmos par&acirc;metros que as duas anteriores, por&eacute;m retorna um &uacute;nico valor, calculado a partir de uma fun&ccedil;&atilde;o de dois argumentos da seguinte forma:
+Calcula a fun&ccedil;&atilde;o sobre os dois primeiros elementos da sequ&ecirc;ncia;
+Calcula a fun&ccedil;&atilde;o sobre o resultado e o valor seguinte, assim, sucessivamente.
+Vejamos&nbsp;exemplos:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>reduce(lambda x, y : x + y, range(11))
+55
+reduce(lambda x, y : x * y, range(1, 4))&nbsp;6</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Isto conclui a apresenta&ccedil;&atilde;o destas ferramentas de programa&ccedil;&atilde;o funcional da linguagem&nbsp;Python.</p>
+<p>Espero que tenha&nbsp;gostado!</p>
+<p>Comente!
+Assine o Feed e n&atilde;o perca nenhum post do Programe em&nbsp;Python!</p>
+<p>Siga-nos no twitter @programepython e identi.ca&nbsp;@programeempython!</p>
+<p>Abra&ccedil;os!</p>
+<p>At&eacute; a&nbsp;pr&oacute;xima!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
@@ -176,22 +238,7 @@ Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end 
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://localhost:8000/tutorial-pelican-en.html">
-          <div class="mx-4 py-2 text-left">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline">Pelican tutorial with Github Pages and CircleCI -&nbsp;1</p>
-          </div>
-        </a>
-      </div>
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="http://localhost:8000/python-101-parte-1-en.html">
-          <div class="text-right mx-4 py-2">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
-            <p class="text-right py-1 hover:underline">Python 101 - First&nbsp;Part</p>
-          </div>
-        </a>
-      </div>
+      <div class="w-1/2 rounded-l-lg"></div>
     </div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
     </div>

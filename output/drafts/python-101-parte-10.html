@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="utf-8" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
         href="http://localhost:8000/theme/css/stork-dark.css">
-<meta name="description" content="Hi! Now that we have Python installed and we already know its interactive interface, let’s learn a little about the most basic commands of..." />
+<meta name="description" content="Estruturas de Dados em Python - Dicionários Boa Noite Pessoal! Hoje vamos falar de uma estrutura de dados que não está presente em todas as..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -118,46 +118,91 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-      Translations:
-      <a href="http://localhost:8000/python-101-parte-2.html" hreflang="pt_br">pt_br</a>
-
-    <p>Hi!</p>
-<p>Now that we have Python installed and we already know its interactive interface, let&rsquo;s learn a little about the most basic commands of the&nbsp;language!</p>
-<p>Before we continue, if you haven&rsquo;t read the previous post, go&nbsp;here:</p>
-<p><a href="http://localhost:8000/python-101-parte-1.html">Python 101 - Part&nbsp;One</a></p>
-<p>As seen, in the Python shell we have two&nbsp;cursors:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
-...
-</code></pre></div>
-<p>When we make an if, conditional structure that will be explained in more detail in a next post, we have the following in the&nbsp;console:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">&lt;</span> <span class="mi">1</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x is less than 1</span><span class="s2">"</span><span class="ss">)</span>
-...
-<span class="nv">x</span> <span class="nv">is</span> <span class="nv">less</span> <span class="nv">than</span> <span class="mi">1</span>
-</code></pre></div>
-<p>Now the explanation&nbsp;=]</p>
-<p>In the first line, we say that the variable <em>x</em> contains the value <em>0</em>;
-Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end a command with <strong>:</strong> the interpreter understands that this is a command that did not end at the end of that line, and that it is composed of more commands, so the secondary cursor <code>...</code> gets in the&nbsp;game.</p>
-<p>So, many programmers used to other languages &ZeroWidthSpace;&ZeroWidthSpace;must ask themselves where are the curly braces to determine the&nbsp;block.</p>
-<p>In Python, blocks are determined by&nbsp;indentation.</p>
-<p>The lines that are inside the <em>if</em>, ie what must be executed if the comparison is true must be&nbsp;indented.</p>
-<p>It is generally a convention, in Python, to use 4 spaces for the&nbsp;indentation.</p>
-<p>The <code>print("x is less than 1")</code> is the command that should be executed if the comparison <code>x &lt; 1</code> is true. Thus, this line is indented, and the interpreter knows that it should only execute it if <em>x</em> is less than <em>1</em>.</p>
-<p>When you press <code>ENTER</code> at the end of this line, the interpreter shows you the secondary cursor again, because an <code>if</code> can have several commands inside. As we will see later, the execution of an entire program can be inside an <strong>if</strong>.</p>
-<p>Thus, only after a second <code>ENTER</code> does the interpreter execute the command and display the&nbsp;result.</p>
-<p>So, let&rsquo;s&nbsp;recap:</p>
-<ul>
-<li>Blocks in Python are defined by&nbsp;indentation</li>
-<li>The indentation must follow a pattern, preferably in all&nbsp;programs</li>
-<li>It is convention to use 4 spaces for&nbsp;indentation</li>
-<li>In the interpreter, indented blocks are preceded by the secondary cursor <code>...</code></li>
-<li>A block indicates a snippet of code that is inside another&nbsp;command</li>
-</ul>
-<p>That&rsquo;s all for&nbsp;now!</p>
-<p>In the next Python 101 post we take the hint, and talk about conditional structures in&nbsp;Python!</p>
-<p>Be sure to leave your questions and opinions in the comments&nbsp;below!</p>
-<p>See you in the next&nbsp;post!</p>
+    
+    <p>Estruturas de Dados em Python - Dicion&aacute;rios
+Boa Noite&nbsp;Pessoal!</p>
+<p>Hoje vamos falar de uma estrutura de dados que n&atilde;o est&aacute; presente em todas as linguagens. Esta estrutura &eacute; chamada de&nbsp;dicion&aacute;rio.</p>
+<p>Os dicion&aacute;rios em Python s&atilde;o estruturas de dados que cont&eacute;m pares de&nbsp;chave-valor.</p>
+<p>S&atilde;o parecidos com as listas, mas o acesso a cada posi&ccedil;&atilde;o da lista &eacute; feito de forma&nbsp;diferente.</p>
+<p>Vejamos ent&atilde;o como trabalhar com Dicion&aacute;rios em&nbsp;Python!</p>
+<p>Para come&ccedil;ar, vamos ver as maneiras de definir um&nbsp;dicion&aacute;rio.</p>
+<p>Primeiro definimos um dicion&aacute;rio vazio:
+dicionario = {}
+Este dicion&aacute;rio pode receber valores futuramente durante a execu&ccedil;&atilde;o do&nbsp;programa.</p>
+<p>Agora, imaginemos como seira montar um dicion&aacute;rio que relacionasse strings para os dias da semana, como &lsquo;seg&rsquo; e &lsquo;ter&rsquo; com n&uacute;meros. Indispens&aacute;vel se voc&ecirc; for fazer um calend&aacute;rio, n&atilde;o acha?
+dias_semana = {&lsquo;dom&rsquo; : 0, &lsquo;seg&rsquo; : 1, &lsquo;ter&rsquo; : 2, &lsquo;qua&rsquo; : 3,\
+              &lsquo;qui&rsquo; : 4, &lsquo;sex&rsquo; : 5, &lsquo;sab&rsquo; : 6}
+Ao criarmos um dicion&aacute;rio, ele ter&aacute; esta estrutura. Antes do &lsquo;:&rsquo; temos a chave do par chave-valor, e logo ap&oacute;s, o valor&nbsp;correspondente.</p>
+<p>Mas, e se f&ocirc;ssemos criar um dicion&aacute;rio que relacionasse as letras N, L, S, O dos pontos cardeais com&nbsp;n&uacute;meros?</p>
+<p>Aposto que voc&ecirc; j&aacute; sabe a resposta! Mas, existe uma outra forma, tamb&eacute;m muito &uacute;til de gerar dicion&aacute;rios, e que pode ser muito importante para gera&ccedil;&atilde;o destes dicion&aacute;rios em tempo de&nbsp;execu&ccedil;&atilde;o.</p>
+<p>Este m&eacute;todo (dict()) permite transformar listas de tuplas em dicion&aacute;rios.
+<strong><em> se voc&ecirc; n&atilde;o lembra o que &eacute; uma tupla, confira&nbsp;aqui </em></strong></p>
+<p>Veja como funciona o m&eacute;todo dict():
+pontos_cardeais = dict([(&lsquo;N&rsquo;, 0), (&lsquo;L&rsquo;, 1), (&lsquo;S&rsquo;, 2), (&lsquo;O&rsquo;, 3)])
+Voc&ecirc; se lembra da List Comprehension que vimos no &uacute;ltimo&nbsp;post?</p>
+<p>Pois bem, que tal us&aacute;-la para montar um dicion&aacute;rio que relaciona os inteiros de zero a dez e seus respectivos quadrados?
+quadrados = dict([x, x**2 for x in range(11)])
+&Eacute; muito simples criar dicion&aacute;rio,&nbsp;n&atilde;o?</p>
+<p>Mas&hellip; simplesmente criar os dicion&aacute;rios n&atilde;o tem utilidade nenhuma,&nbsp;certo?</p>
+<p>Vejamos como acessar um valor a partir de sua chave. vamos usar o dicion&aacute;rio dos dias da semana. Experimente os comandos no Shell do&nbsp;Python!</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>dias_semana[&lsquo;ter&rsquo;]
+2
+dias_semana[&lsquo;sab&rsquo;]
+6
+F&aacute;cil, n&atilde;o&nbsp;&eacute;?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Vamos inserir alguns valores neste&nbsp;dicion&aacute;rio?</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>dias_semana
+{&lsquo;qua&rsquo;: 3, &lsquo;dom&rsquo;: 0, &lsquo;sab&rsquo;: 6, &lsquo;sex&rsquo;: 5, &lsquo;seg&rsquo;: 1, &lsquo;qui&rsquo;: 4, &lsquo;ter&rsquo;: 2}
+dias_semana[&lsquo;Dom&rsquo;] = 0
+dias_semana[&lsquo;Seg&rsquo;] = 1
+dias_semana[&lsquo;Ter&rsquo;] = 2
+dias_semana[&lsquo;Qua&rsquo;] = 3
+dias_semana[&lsquo;Qui&rsquo;] = 4
+dias_semana[&lsquo;Sex&rsquo;] = 5
+dias_semana[&lsquo;Sab&rsquo;] = 6
+dias_semana
+{&lsquo;qua&rsquo;: 3, &lsquo;dom&rsquo;: 0, &lsquo;sab&rsquo;: 6, &lsquo;Dom&rsquo;: 0, &lsquo;Seg&rsquo;: 1, &lsquo;sex&rsquo;: 5, &lsquo;seg&rsquo;: 1, 
+&lsquo;Qui&rsquo;: 4, &lsquo;Qua&rsquo;: 3, &lsquo;Sab&rsquo;: 6, &lsquo;qui&rsquo;: 4, &lsquo;ter&rsquo;: 2, &lsquo;Sex&rsquo;: 5, &lsquo;Ter&rsquo;: 2}
+Num dicion&aacute;rio, a ordem em que os elementos aparecem n&atilde;o &eacute; importante, pois os valores s&atilde;o acessados somente atrav&eacute;s de suas respectivas chaves, e n&atilde;o de suas&nbsp;posi&ccedil;&otilde;es.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Caso seja necess&aacute;rio verificar se uma chave j&aacute; se encontra no dicion&aacute;rio, basta fazer o&nbsp;seguinte</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><span class="quo">&lsquo;</span>seg&rsquo; in dias_semana
+True
+&lsquo;bla&rsquo; in dias_semana
+False
+Bem, digamos agora que n&atilde;o quero mais que o dicion&aacute;rio tenha a vers&atilde;o mai&uacute;scula para o domingo.
+del dias_semana[&lsquo;Dom]
+Tamb&eacute;m &eacute; poss&iacute;vel saber quais as chaves que j&aacute; foram inseridas:
+dias_semana.keys()
+[&lsquo;sab&rsquo;, &lsquo;seg&rsquo;, &lsquo;sex&rsquo;, &lsquo;qua&rsquo;, &lsquo;qui&rsquo;, &lsquo;ter&rsquo;, &lsquo;Qua&rsquo;, &lsquo;dom&rsquo;, &lsquo;Sab&rsquo;, &lsquo;Sex&rsquo;,
+&lsquo;Seg&rsquo;, &lsquo;Qui&rsquo;, &lsquo;Ter&rsquo;]
+E quais os valores que h&aacute; no dicion&aacute;rio:
+dias_semana.values()
+[6, 1, 5, 3, 4, 2, 3, 0, 6, 5, 1, 4, 2]
+Agora, voc&ecirc; j&aacute; conhece os Dicion&aacute;rios do Python, esta estrutura de dados que tem tantas aplica&ccedil;&atilde;oes&nbsp;importantes.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Veja a seguir o primeiro  post de n&iacute;vel mais avan&ccedil;ado do Programe em Python e aprenda a fazer um switch com&nbsp;dicion&aacute;rios!</p>
+<p>Comente!
+Assine o Feed e n&atilde;o perca nenhum post do Programe em&nbsp;Python!</p>
+<p>Siga-nos no twitter @programepython e identi.ca&nbsp;@programeempython!</p>
+<p>Abra&ccedil;os!</p>
+<p>At&eacute; a&nbsp;pr&oacute;xima!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
@@ -176,22 +221,7 @@ Next, we compare the value contained in <em>x</em> with <em>1</em>. When we end 
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://localhost:8000/tutorial-pelican-en.html">
-          <div class="mx-4 py-2 text-left">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline">Pelican tutorial with Github Pages and CircleCI -&nbsp;1</p>
-          </div>
-        </a>
-      </div>
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="http://localhost:8000/python-101-parte-1-en.html">
-          <div class="text-right mx-4 py-2">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
-            <p class="text-right py-1 hover:underline">Python 101 - First&nbsp;Part</p>
-          </div>
-        </a>
-      </div>
+      <div class="w-1/2 rounded-l-lg"></div>
     </div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
     </div>

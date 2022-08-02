@@ -8,13 +8,10 @@
     <title>Pelican tutorial with Github Pages and CircleCI - 1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
-    <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/css/main.css" />
-    <link rel="stylesheet" href="http://programeempython.com.br/theme/css/stork.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/main.css" />
+    <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
-        href="http://programeempython.com.br/theme/css/stork-dark.css">
-    <link
-        href="http://programeempython.com.br/feeds/all.atom.xml"
-        type="application/atom+xml" rel="alternate" title="Programe em Python Atom Feed" />
+        href="http://localhost:8000/theme/css/stork-dark.css">
 <meta name="description" content="As promised, we’ll cover how I created my blog with Pelican, Github Pages and CircleCI in a tutorial. As it is a lot of content, we will divide it..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
@@ -30,7 +27,7 @@
     dark:bg-neutral-900 dark:text-zinc-300 container mx-auto justify-center md:px-3 ">
     <nav class="sm:flex sm:justify-between xl:ml-32 pl-4 items-center">
         <div class="flex pt-4">
-            <h1 class="font-semibold text-2xl"><a href="http://programeempython.com.br/">Programe em Python</a></h1>
+            <h1 class="font-semibold text-2xl"><a href="http://localhost:8000/">Programe em Python</a></h1>
             <button id="theme-toggle" type="button"
                 class="text-zinc-700 dark:text-zinc-400 rounded-full focus:outline-none text-sm ml-2 p-1">
                 <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
@@ -46,19 +43,19 @@
             </button>
         </div>
         <ul class="flex flex-wrap lg:mr-24 md:pt-0">
-            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/pages/contato.html">Contato</a></li>
-            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/pages/sobre-mim.html">Sobre&nbsp;Mim</a></li>
-            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/archives.html">Aquivo</a></li>
-            <li class="mr-4 pt-6"><a                     href="http://programeempython.com.br/categories.html">Categorias</a></li>
-            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/tags.html">Tags</a></li>
-            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/search.html">Busca</a></li>
+            <li class="mr-4 pt-6"><a  href="http://localhost:8000/pages/contato.html">Contato</a></li>
+            <li class="mr-4 pt-6"><a  href="http://localhost:8000/pages/sobre-mim.html">Sobre&nbsp;Mim</a></li>
+            <li class="mr-4 pt-6"><a  href="http://localhost:8000/archives.html">Aquivo</a></li>
+            <li class="mr-4 pt-6"><a                     href="http://localhost:8000/categories.html">Categorias</a></li>
+            <li class="mr-4 pt-6"><a  href="http://localhost:8000/tags.html">Tags</a></li>
+            <li class="mr-4 pt-6"><a  href="http://localhost:8000/search.html">Busca</a></li>
         </ul>
     </nav>
     <div class="flex-grow md:max-w-screen-md md:mx-auto md:w-3/4 px-4">
         <nav class="text-zinc-800 dark:text-zinc-300 mt-12 pb-2 md:mt-16" aria-label="Breadcrumb">
             <ul class="p-0 inline-flex items-center">
                 <li class="flex items-center">
-                    <a href="http://programeempython.com.br/" class="text-zinc-800 dark:text-zinc-300 inline-flex items-center">
+                    <a href="http://localhost:8000/" class="text-zinc-800 dark:text-zinc-300 inline-flex items-center">
                         <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -74,7 +71,7 @@
                     </svg>
                 </li>
                 <li class="flex items-center">
-                    <a href="http://programeempython.com.br/categories.html">Categorias</a>
+                    <a href="http://localhost:8000/categories.html">Categorias</a>
                     <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 320 512">
                         <path
@@ -82,7 +79,7 @@
                     </svg>
                 </li>
                 <li class="flex items-center">
-                    <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
+                    <a href="http://localhost:8000/category/tutoriais.html">Tutoriais</a>
                 </li>
                 <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                     <path
@@ -122,7 +119,7 @@
               prose-img:rounded-md
               ">
       Translations:
-      <a href="http://programeempython.com.br/tutorial-pelican.html" hreflang="pt_br">pt_br</a>
+      <a href="http://localhost:8000/tutorial-pelican.html" hreflang="pt_br">pt_br</a>
 
     <p>Hi!</p>
 <p>As promised, we&rsquo;ll cover how I created my blog with Pelican, Github Pages and CircleCI in a tutorial. As it is a lot of content, we will divide it into parts and here we will see an introduction to&nbsp;Pelican.</p>
@@ -253,25 +250,25 @@ publishconf.py
   </div>
   <footer class="flex flex-col mt-10 ">
     <ul class="flex flex-wrap">
-      <a href="http://programeempython.com.br/tag/circleci.html">
+      <a href="http://localhost:8000/tag/circleci.html">
         <li
           class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
           CircleCI
         </li>
       </a>
-      <a href="http://programeempython.com.br/tag/github-pages.html">
+      <a href="http://localhost:8000/tag/github-pages.html">
         <li
           class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
           Github Pages
         </li>
       </a>
-      <a href="http://programeempython.com.br/tag/pelican.html">
+      <a href="http://localhost:8000/tag/pelican.html">
         <li
           class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
           Pelican
         </li>
       </a>
-      <a href="http://programeempython.com.br/tag/tutorial.html">
+      <a href="http://localhost:8000/tag/tutorial.html">
         <li
           class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
           Tutorial
@@ -280,7 +277,7 @@ publishconf.py
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
       <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://programeempython.com.br/python-101-parte-3-condicionais-en.html">
+        <a class="flex flex-col pr-2" href="http://localhost:8000/python-101-parte-3-condicionais-en.html">
           <div class="mx-4 py-2 text-left">
             <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
             <p class="text-left py-1 hover:underline">Python 101 - part 3 - Python Conditional&nbsp;Structures</p>
@@ -288,7 +285,7 @@ publishconf.py
         </a>
       </div>
       <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="http://programeempython.com.br/python-101-parte-2-en.html">
+        <a class="flex flex-col" href="http://localhost:8000/python-101-parte-2-en.html">
           <div class="text-right mx-4 py-2">
             <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
             <p class="text-right py-1 hover:underline">Python 101 - Segunda&nbsp;Parte</p>
@@ -300,24 +297,6 @@ publishconf.py
     </div>
   </footer>
   <div>
-  <hr>
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function() {
-      this.page.url = 'http://programeempython.com.br/tutorial-pelican-en.html';
-      this.page.identifier = 'tutorial-pelican';
-    };
-    (function() {
-      var d = document;
-      var s = d.createElement('script');
-      s.src = '//programeempython.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript class="text-muted">
-    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
-  </noscript>
   </div>
 </main>
 
@@ -330,15 +309,6 @@ publishconf.py
         </div>
     </footer>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CWQ34LZTCX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CWQ34LZTCX');
-</script>
 
     <script>
         let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');

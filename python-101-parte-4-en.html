@@ -127,7 +127,20 @@
     <p>Continuing the article series on Conditional Structures in Python, we will now look at some other ways to use the <code>if</code>/<code>else</code> instructions.</p>
 <p>If you haven&rsquo;t seen the previous post, here&rsquo;s the introduction to <a href="({filename}/Tutorials/python101.3.md)">Conditionals in&nbsp;Python</a></p>
 <p>It is often not possible to solve a computational problem simply with an <code>if</code>/<code>else</code>. So we use multiple nested <code>if</code>/<code>else</code> sets (one inside the&nbsp;other)</p>
-<div class="highlight"><pre><span></span><code><span class="n">path</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">path</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="k">if</span> <span class="n">path</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Go back to the starting position"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
@@ -141,10 +154,17 @@
                 <span class="nb">print</span><span class="p">(</span><span class="s2">"You fell in the hole"</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid option"</span><span class="p">)</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 <p>But, you can see that if you have a very nested structure of conditions, your code will be very messy&hellip; imagine thirty <code>if</code>/<code>else</code> instructions nested like that? It gets&nbsp;crazy!</p>
 <p>So, to solve this problem, we have the <code>if</code>/<code>elif</code>/<code>else</code> construct. The <code>elif</code> plays the role of the <code>else</code> sequences that contain an <code>if</code>. See how the code is much more readable and&nbsp;organized!</p>
-<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="mi">4</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="mi">4</span>
 
 <span class="k">if</span> <span class="n">d</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"d is positive"</span><span class="p">)</span>
@@ -152,9 +172,19 @@
     <span class="nb">print</span><span class="p">(</span><span class="s2">"d is negative"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"d is null"</span><span class="p">)</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 <p>You can have as many <code>elif</code> as needed between <code>if</code> and <code>else</code>. See this&nbsp;example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">option</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">option</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span> <span class="s2">"The value chosen was 0"</span>
 <span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -165,7 +195,7 @@
     <span class="nb">print</span> <span class="s2">"The value chosen was 3"</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span> <span class="s2">"The chosen value is not valid"</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 <p>The code remains organized and readable, helping you to understand the&nbsp;code!</p>
 <p>Probably, at this point, people who know C, C++, java or some other languages &ZeroWidthSpace;&ZeroWidthSpace;must be asking themselves: But where&rsquo;s the&nbsp;switch?</p>
 <p>Actually, python doesn&rsquo;t have a switch like we have in other languages, and its function is very well fulfilled by the &lsquo;if&rsquo;/&rsquo;elif&rsquo;/&rsquo;else&rsquo; structures. These structures still have advantages over some switch implementations that for example only do integer and single character&nbsp;comparisons.</p>

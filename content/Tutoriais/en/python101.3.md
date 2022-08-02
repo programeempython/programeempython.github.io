@@ -10,7 +10,7 @@ Hi!
 
 Continuing our introductory Python series, let's talk a little about conditional structures.
 
-If you haven't seen the previous post, see here to understand the [Python Code Blocks]({filename}/Tutorials/python101.md)
+If you haven't seen the previous post, see here to understand the [Python Code Blocks]({filename}/Tutoriais/python101.2.md)
 
 Conditional structures are essential in programming. Without them, programs would be boring, monotonous, and would never have been able to do what they do today.
 

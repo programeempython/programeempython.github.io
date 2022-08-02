@@ -8,7 +8,7 @@ Translation: true
 
 Continuing the article series on Conditional Structures in Python, we will now look at some other ways to use the `if`/`else` instructions.
 
-If you haven't seen the previous post, here's the introduction to [Conditionals in Python](({filename}/Tutorials/python101.3.md))
+If you haven't seen the previous post, here's the introduction to [Conditionals in Python](({filename}/Tutoriais/python101.3.md))
 
 It is often not possible to solve a computational problem simply with an `if`/`else`. So we use multiple nested `if`/`else` sets (one inside the other)
 

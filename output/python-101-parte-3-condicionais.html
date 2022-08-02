@@ -5,14 +5,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Pelican" />
-    <title>Python 101 - Segunda Parte</title>
+    <title>Python 101 - Parte 3 - Estruturas Condicionais em Python</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
-    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/main.css" />
-    <link rel="stylesheet" href="http://localhost:8000/theme/css/stork.css">
+    <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/css/main.css" />
+    <link rel="stylesheet" href="http://programeempython.com.br/theme/css/stork.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
-        href="http://localhost:8000/theme/css/stork-dark.css">
-<meta name="description" content="Estruturas Condicionais em Python Parte 1 Olá Pessoal! Hoje vou fazer um post mais feliz! Resultados na faculdade todos bons! Acabei de passar em..." />
+        href="http://programeempython.com.br/theme/css/stork-dark.css">
+    <link
+        href="http://programeempython.com.br/feeds/all.atom.xml"
+        type="application/atom+xml" rel="alternate" title="Programe em Python Atom Feed" />
+<meta name="description" content="Olá! Continuando nossa série introdutória sobre Python, vamos falar um pouco sobre as estruturas condicionais. Se você não viu o post anterior,..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -27,7 +30,7 @@
     dark:bg-neutral-900 dark:text-zinc-300 container mx-auto justify-center md:px-3 ">
     <nav class="sm:flex sm:justify-between xl:ml-32 pl-4 items-center">
         <div class="flex pt-4">
-            <h1 class="font-semibold text-2xl"><a href="http://localhost:8000/">Programe em Python</a></h1>
+            <h1 class="font-semibold text-2xl"><a href="http://programeempython.com.br/">Programe em Python</a></h1>
             <button id="theme-toggle" type="button"
                 class="text-zinc-700 dark:text-zinc-400 rounded-full focus:outline-none text-sm ml-2 p-1">
                 <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
@@ -43,19 +46,19 @@
             </button>
         </div>
         <ul class="flex flex-wrap lg:mr-24 md:pt-0">
-            <li class="mr-4 pt-6"><a  href="http://localhost:8000/pages/contato.html">Contato</a></li>
-            <li class="mr-4 pt-6"><a  href="http://localhost:8000/pages/sobre-mim.html">Sobre&nbsp;Mim</a></li>
-            <li class="mr-4 pt-6"><a  href="http://localhost:8000/archives.html">Aquivo</a></li>
-            <li class="mr-4 pt-6"><a                     href="http://localhost:8000/categories.html">Categorias</a></li>
-            <li class="mr-4 pt-6"><a  href="http://localhost:8000/tags.html">Tags</a></li>
-            <li class="mr-4 pt-6"><a  href="http://localhost:8000/search.html">Busca</a></li>
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/pages/contato.html">Contato</a></li>
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/pages/sobre-mim.html">Sobre&nbsp;Mim</a></li>
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/archives.html">Aquivo</a></li>
+            <li class="mr-4 pt-6"><a                     href="http://programeempython.com.br/categories.html">Categorias</a></li>
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/tags.html">Tags</a></li>
+            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/search.html">Busca</a></li>
         </ul>
     </nav>
     <div class="flex-grow md:max-w-screen-md md:mx-auto md:w-3/4 px-4">
         <nav class="text-zinc-800 dark:text-zinc-300 mt-12 pb-2 md:mt-16" aria-label="Breadcrumb">
             <ul class="p-0 inline-flex items-center">
                 <li class="flex items-center">
-                    <a href="http://localhost:8000/" class="text-zinc-800 dark:text-zinc-300 inline-flex items-center">
+                    <a href="http://programeempython.com.br/" class="text-zinc-800 dark:text-zinc-300 inline-flex items-center">
                         <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -71,7 +74,7 @@
                     </svg>
                 </li>
                 <li class="flex items-center">
-                    <a href="http://localhost:8000/categories.html">Categorias</a>
+                    <a href="http://programeempython.com.br/categories.html">Categorias</a>
                     <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 320 512">
                         <path
@@ -79,7 +82,7 @@
                     </svg>
                 </li>
                 <li class="flex items-center">
-                    <a href="http://localhost:8000/category/tutoriais.html">Tutoriais</a>
+                    <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
                 </li>
                 <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                     <path
@@ -90,11 +93,12 @@
 
 <main>
   <header>
-    <h1 class="font-semibold text-3xl my-2">Python 101 - Segunda&nbsp;Parte</h1>
+    <h1 class="font-semibold text-3xl my-2">Python 101 - Parte 3 - Estruturas Condicionais em&nbsp;Python</h1>
     <footer class="flex text-sm text-zinc-800 dark:text-zinc-400">
       <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
-        <time>juli 29, 2022</time>
+        <time>august 01, 2022</time>
         <div>
+          <span>&nbsp;·&nbsp;2 min read</span>
         </div>
         <div>
           <span>&nbsp;·&nbsp;Julio Melanda</span>
@@ -118,53 +122,62 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-    
-    <p>Estruturas Condicionais em Python Parte 1
-Ol&aacute;&nbsp;Pessoal!</p>
-<p>Hoje vou fazer um post mais feliz! Resultados na faculdade todos bons! Acabei de passar em mais uma mat&eacute;ria&nbsp;=]</p>
-<p>Bem&hellip; conforme prometido, vamos falar um pouco sobre as estruturas condicionais que temos em&nbsp;Python.</p>
+      Translations:
+      <a href="http://programeempython.com.br/python-101-parte-3-condicionais-en.html" hreflang="en">en</a>
+
+    <p>Ol&aacute;!</p>
+<p>Continuando nossa s&eacute;rie introdut&oacute;ria sobre Python, vamos falar um pouco sobre as estruturas&nbsp;condicionais.</p>
+<p>Se voc&ecirc; n&atilde;o viu o post anterior, veja aqui para entender os <a href="http://programeempython.com.br/python-101-parte-1.html">Blocos de C&oacute;digo em&nbsp;Python</a></p>
 <p>As estruturas condicionais s&atilde;o essenciais na programa&ccedil;&atilde;o. Sem elas, os programas seriam chatos, mon&oacute;tonos, e nunca teriam a capacidade toda que temos&nbsp;atualmente.</p>
-<p><span class="caps">SEM</span> <span class="caps">ESTRUTURAS</span> <span class="caps">CONDICIONAIS</span> N&Atilde;O <span class="caps">HAVERIA</span> <span class="caps">JOGOS</span>&nbsp;ELETR&Ocirc;NICOS!!!!</p>
+<p><strong>Sem estruturas condicionais n&atilde;o haveria jogos&nbsp;eletr&ocirc;nicos!!!!</strong></p>
 <p>Ent&atilde;o, vejamos como o Python implementa suas estruturas&nbsp;condicionais.</p>
-<p>A principal estrutura condicional do Python (e mais usada tamb&eacute;m) &eacute; a constru&ccedil;&atilde;o if/else ou sua varia&ccedil;&atilde;o&nbsp;if/elif/else.</p>
-<p>if, traduzindo do ingl&ecirc;s quer dizer se, e else sen&atilde;o, logo, estas constru&ccedil;&otilde;es nos permitem orientar a execu&ccedil;&atilde;o de um trecho de c&oacute;digo. Se isso, faz aquilo, sen&atilde;o, faz aquilo&nbsp;outro&hellip;</p>
+<p>A principal estrutura condicional do Python (e mais usada tamb&eacute;m) &eacute; a constru&ccedil;&atilde;o <code>if</code>/<code>else</code> ou sua varia&ccedil;&atilde;o <code>if</code>/<code>elif</code>/<code>else</code>.</p>
+<p><code>if</code>, traduzindo do ingl&ecirc;s quer dizer se, e else sen&atilde;o, logo, estas constru&ccedil;&otilde;es nos permitem orientar a execu&ccedil;&atilde;o de um trecho de c&oacute;digo. Se isso, faz aquilo, sen&atilde;o, faz aquilo&nbsp;outro&hellip;</p>
 <p>Veja abaixo um exemplo de utiliza&ccedil;&atilde;o do&nbsp;if/else:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">if</span> <span class="nv">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>:
-    <span class="nv">print</span> <span class="s2">"</span><span class="s">x e par</span><span class="s2">"</span>
-<span class="k">else</span>:
-    <span class="nv">print</span> <span class="s2">"</span><span class="s">x e impar</span><span class="s2">"</span>
-</code></pre></div>
-<p>Este c&oacute;digo analisa o valor da vari&aacute;vel x. Se x % 2 (o resto da divis&atilde;o de x por 2) for igual a zero, ent&atilde;o o n&uacute;mero &eacute; par, sen&atilde;o, &eacute; impar. Veremos mais fun&ccedil;&otilde;es matem&aacute;ticas em posts&nbsp;futuros.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x &eacute; par"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x &eacute; impar"</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Este c&oacute;digo analisa o valor da vari&aacute;vel <code>x</code>. Se <code>x % 2</code> (o resto da divis&atilde;o de <code>x</code> por <code>2</code>) for igual a zero, ent&atilde;o o n&uacute;mero &eacute; par, sen&atilde;o, &eacute; impar. Veremos mais fun&ccedil;&otilde;es matem&aacute;ticas em posts&nbsp;futuros.</p>
 <p>Ao digitar estes comando no terminal, ficaria&nbsp;assim:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span>:
-...     <span class="nv">print</span> <span class="s2">"</span><span class="s">x e par</span><span class="s2">"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>:
+...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x &eacute; par</span><span class="s2">"</span><span class="ss">)</span>
 ... <span class="k">else</span>:
-...     <span class="nv">print</span> <span class="s2">"</span><span class="s">x e impar</span><span class="s2">"</span> 
+...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x &eacute; impar</span><span class="s2">"</span><span class="ss">)</span> 
 ...
 <span class="nv">x</span> <span class="nv">e</span> <span class="nv">impar</span>
 </code></pre></div>
-<p>Recapitulando o que foi dito no texto sobre Blocos de C&oacute;digo em Python, qundo temos um bloco identado logo abaixo de um comando terminado em :, temos um bloco que est&aacute; diretamente relacionado a este&nbsp;comando.</p>
-<p>No exemplo, temos o comando if x%2==0: e logo abaixo o print &ldquo;x e par&rdquo; identado. Isto quer dizer que o c&oacute;digo identado (print &ldquo;x e par&rdquo;) somente ser&aacute; executado se o resto da divis&atilde;o de x por 2 for&nbsp;zero.</p>
-<p>Caso este resultado seja diferente de zero, x n&atilde;o &eacute; par, e o interpretador encontra o comando&nbsp;else:.</p>
-<p>Logo abaxo deste comando, temos print &ldquo;x e impar&rdquo; que est&aacute; identado, mostrando ao interpretador que este &eacute; o comando que deve ser executado caso a compara&ccedil;&atilde;o dentro do if seja&nbsp;falsa.</p>
-<p>N&atilde;o vamos esticar o assunto. Por enquanto paramos por aqui, mas espere que jaj&aacute; tem a continua&ccedil;&atilde;o pra&nbsp;voc&ecirc;!</p>
-<p>Comente!
-Assine o Feed e n&atilde;o perca nenhum posto do Programe em&nbsp;Python!</p>
-<p>Abra&ccedil;os!
-At&eacute; a&nbsp;pr&oacute;xima!</p>
+<p>Recapitulando o que foi dito no texto sobre blocos de c&oacute;digo em Python, quando temos um bloco identado logo abaixo de um comando terminado em :, temos um bloco que est&aacute; diretamente relacionado a este&nbsp;comando.</p>
+<p>No exemplo, temos o comando <code>if x%2==0:</code> e logo abaixo o print <code>"x &eacute; par"</code> identado. Isto quer dizer que o c&oacute;digo identado (<code>print("x &eacute; par")</code>) somente ser&aacute; executado se o resto da divis&atilde;o de <code>x</code> por <code>2</code> for&nbsp;zero.</p>
+<p>Caso este resultado seja diferente de zero, x n&atilde;o &eacute; par, e o interpretador encontra o comando <code>else:</code>.</p>
+<p>Logo abaxo deste comando, temos <code>print("x &eacute; impar")</code> que est&aacute; identado, mostrando ao interpretador que este &eacute; o comando que deve ser executado caso a compara&ccedil;&atilde;o dentro do <code>if</code> seja&nbsp;falsa.</p>
+<p>N&atilde;o vamos esticar o assunto. Por enquanto paramos por aqui, mas espere que logo teremos a continua&ccedil;&atilde;o pra&nbsp;voc&ecirc;!</p>
+<p>N&atilde;o deixe de enviar d&uacute;vidas e opini&otilde;es nos coment&aacute;rios&nbsp;abaixo!</p>
+<p>At&eacute; o pr&oacute;ximo&nbsp;post!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
     <ul class="flex flex-wrap">
-      <a href="http://localhost:8000/tag/python-101.html">
+      <a href="http://programeempython.com.br/tag/condicionais.html">
+        <li
+          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
+          Condicionais
+        </li>
+      </a>
+      <a href="http://programeempython.com.br/tag/python-101.html">
         <li
           class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
           Python 101
         </li>
       </a>
-      <a href="http://localhost:8000/tag/tutorial.html">
+      <a href="http://programeempython.com.br/tag/tutorial.html">
         <li
           class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
           Tutorial
@@ -172,12 +185,45 @@ At&eacute; a&nbsp;pr&oacute;xima!</p>
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 rounded-l-lg"></div>
+      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
+        <a class="flex flex-col pr-2" href="http://programeempython.com.br/python-101-parte-4.html">
+          <div class="mx-4 py-2 text-left">
+            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
+            <p class="text-left py-1 hover:underline">Python 101 - Parte 4 - Estruturas Condicionais em Python, o&nbsp;Retorno</p>
+          </div>
+        </a>
+      </div>
+      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
+        <a class="flex flex-col" href="http://programeempython.com.br/tutorial-pelican.html">
+          <div class="text-right mx-4 py-2">
+            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
+            <p class="text-right py-1 hover:underline">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;1</p>
+          </div>
+        </a>
+      </div>
     </div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
     </div>
   </footer>
   <div>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'http://programeempython.com.br/python-101-parte-3-condicionais.html';
+      this.page.identifier = 'python-101-parte-3-condicionais';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//programeempython.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
   </div>
 </main>
 
@@ -190,6 +236,15 @@ At&eacute; a&nbsp;pr&oacute;xima!</p>
         </div>
     </footer>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CWQ34LZTCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CWQ34LZTCX');
+</script>
 
     <script>
         let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');

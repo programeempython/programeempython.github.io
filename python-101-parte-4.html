@@ -128,7 +128,20 @@
     <p>Continuando o artigo sobre Estruturas Condicionais em Python, veremos agora algumas outras fomas de usar a constru&ccedil;&atilde;o <code>if</code>/<code>else</code>.</p>
 <p>Se voc&ecirc; ainda n&atilde;o viu o post anterior, veja aqui a introdu&ccedil;&atilde;o aos <a href="({filename}/Tutoriais/python101.3.md)">Condicionais em&nbsp;Python</a></p>
 <p>Muitas vezes, n&atilde;o &eacute; poss&iacute;vel resolver um problema computacional simplesmente com um if/else. Ent&atilde;o, usamos v&aacute;rios conjuntos de if/else aninhados (um dentro do&nbsp;outro)</p>
-<div class="highlight"><pre><span></span><code><span class="n">caminho</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">caminho</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="k">if</span> <span class="n">caminho</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Volte para a posicao inicial"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
@@ -142,10 +155,17 @@
                 <span class="nb">print</span><span class="p">(</span><span class="s2">"Voc&ecirc; caiu no buraco"</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s2">"Opcao invalida"</span><span class="p">)</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 <p>Mas, d&aacute; pra perceber que, se voc&ecirc; tiver uma estrutura muito grade de condi&ccedil;&otilde;es, seu c&oacute;digo vai ficar bem bagun&ccedil;ado&hellip; imagina trinta <code>if</code>/<code>else</code> aninhados dessa forma? N&atilde;o&nbsp;d&aacute;!</p>
 <p>Ent&atilde;o, pra resolver este problema, temos a constru&ccedil;&atilde;o <code>if</code>/<code>elif</code>/<code>else</code>. O <code>elif</code> faz o papel das sequ&ecirc;ncias de <code>else</code> que cont&eacute;m <code>if</code>. Veja como o c&oacute;digo fica muito mais leg&iacute;vel e&nbsp;organizado!</p>
-<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="mi">4</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="mi">4</span>
 
 <span class="k">if</span> <span class="n">d</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"d &eacute; positivo"</span><span class="p">)</span>
@@ -153,9 +173,19 @@
     <span class="nb">print</span><span class="p">(</span><span class="s2">"d &eacute; negativo"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"d &eacute; nulo"</span><span class="p">)</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 <p>Voc&ecirc; pode ter quantos <code>elif</code> forem necess&aacute;rios entre o <code>if</code> e o <code>else</code>. Veja este&nbsp;exemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="n">opcao</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">opcao</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="k">if</span> <span class="n">opcao</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span> <span class="s2">"O valor escolhido foi 0"</span>
 <span class="k">elif</span> <span class="n">opcao</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -166,7 +196,7 @@
     <span class="nb">print</span> <span class="s2">"O valor escolhido foi 3"</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span> <span class="s2">"O valor escolhido n&atilde;o &eacute; v&aacute;lido"</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 <p>O c&oacute;digo continua organizado e leg&iacute;vel, ajudando no entendimento do&nbsp;programa!</p>
 <p>Provavelmente, neste ponto, as pessoas que conhecem C, C++, java ou algumas outras linguagens devem estar se perguntando: Mas cad&ecirc; o&nbsp;switch?</p>
 <p>Na realidade, python n&atilde;o tem um switch como temos em outras linguagens, sendo que sua fun&ccedil;&atilde;o &eacute; muito bem cumprida pelas estruturas &lsquo;if&rsquo;/&rsquo;elif&rsquo;/&rsquo;else&rsquo;. Estas estruturas ainda tem vantagens sobre algumas implementa&ccedil;&otilde;es do switch que por exemplo somente fazem compara&ccedil;&otilde;es de inteiros e caracteres&nbsp;&uacute;nicos.</p>

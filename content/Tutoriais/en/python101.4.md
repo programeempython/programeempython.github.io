@@ -1,5 +1,5 @@
 Title: Python 101 - Part 4 - Conditionals in Python, the Return
-Date: 2022-07-29 12:06
+Date: 2022-08-02 22:06
 Slug: python-101-parte-4
 Category: Tutoriais
 Tags: Tutorial, Python 101

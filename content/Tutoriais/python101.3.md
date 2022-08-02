@@ -22,13 +22,12 @@ A principal estrutura condicional do Python (e mais usada também) é a constru�
 
 Veja abaixo um exemplo de utilização do if/else:
 
-```Python
-x = 3
-if x % 2 == 0:
-    print("x é par")
-else:
-    print("x é impar")
-```
+    #!python
+    x = 3
+    if x % 2 == 0:
+        print("x é par")
+    else:
+        print("x é impar")
 
 Este código analisa o valor da variável `x`. Se `x % 2` (o resto da divisão de `x` por `2`) for igual a zero, então o número é par, senão, é impar. Veremos mais funções matemáticas em posts futuros.
 

@@ -12,53 +12,51 @@ If you haven't seen the previous post, here's the introduction to [Conditionals 
 
 It is often not possible to solve a computational problem simply with an `if`/`else`. So we use multiple nested `if`/`else` sets (one inside the other)
 
-```Python
-path = 3
-if path == 0:
-    print("Go back to the starting position")
-else:
-    if path == 1:
-        print("Go ahead")
+    #!python
+    path = 3
+    if path == 0:
+        print("Go back to the starting position")
     else:
-        if path == 2:
-            print("Lower your head")
+        if path == 1:
+            print("Go ahead")
         else:
-            if path == 3:
-                print("You fell in the hole")
+            if path == 2:
+                print("Lower your head")
             else:
-                print("Invalid option")
-```
+                if path == 3:
+                    print("You fell in the hole")
+                else:
+                    print("Invalid option")
 
 But, you can see that if you have a very nested structure of conditions, your code will be very messy... imagine thirty `if`/`else` instructions nested like that? It gets crazy!
 
 So, to solve this problem, we have the `if`/`elif`/`else` construct. The `elif` plays the role of the `else` sequences that contain an `if`. See how the code is much more readable and organized!
 
-```Python
-d = 4
+    #!python
+    d = 4
 
-if d > 0:
-    print("d is positive")
-elif d < 0:
-    print("d is negative")
-else:
-    print("d is null")
-```
+    if d > 0:
+        print("d is positive")
+    elif d < 0:
+        print("d is negative")
+    else:
+        print("d is null")
 
 You can have as many `elif` as needed between `if` and `else`. See this example:
 
-```Python
-option = 2
-if option == 0:
-    print "The value chosen was 0"
-elif option == 1:
-    print "The value chosen was 1"
-elif option == 2:
-    print "The value chosen was 2"
-elif option == 3:
-    print "The value chosen was 3"
-else:
-    print "The chosen value is not valid"
-```
+    #!python
+    option = 2
+    if option == 0:
+        print "The value chosen was 0"
+    elif option == 1:
+        print "The value chosen was 1"
+    elif option == 2:
+        print "The value chosen was 2"
+    elif option == 3:
+        print "The value chosen was 3"
+    else:
+        print "The chosen value is not valid"
+
 
 The code remains organized and readable, helping you to understand the code!
 

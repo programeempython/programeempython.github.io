@@ -24,13 +24,13 @@ These constructions will guide us through the execution of a code snippet. If th
 
 Below is an example of using `if`/`else`:
 
-``` Python
-x = 3
-if x % 2 == 0:
-    print("x is even")
-if no:
-    print("x is odd")
-```
+    #!python
+    x = 3
+    if x % 2 == 0:
+        print("x is even")
+    if no:
+        print("x is odd")
+
 
 This code parses the value of the variable `x`. If `x % 2` (the remainder of dividing `x` by `2`) is equal to zero, then the number is even, otherwise it is odd. We will see more math functions in future posts.
 

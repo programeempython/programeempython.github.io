@@ -3,7 +3,6 @@ Date: 2022-07-29 12:06
 Slug: python-101-parte-4
 Category: Tutoriais
 Tags: Tutorial, Python 101
-Status: draft
 Lang: en
 Translation: true
 

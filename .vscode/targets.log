@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.3
 # Built for x86_64-redhat-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug  2 19:18:50 2022
+# Make data base, printed on Tue Aug  2 23:45:16 2022
 
 # Variables
 
@@ -121,7 +119,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 31622
+VSCODE_PID = 3860
 # environment
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS = 0
 # environment
@@ -129,7 +127,7 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/2256,unix/unix:/tmp/.ICE-unix/2256
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/2209,unix/unix:/tmp/.ICE-unix/2209
 # automatic
 *F = $(notdir $*)
 # environment
@@ -190,7 +188,7 @@ LC_TIME = da_DK.UTF-8
 # makefile (from 'Makefile', line 5)
 BASEDIR = $(CURDIR)
 # environment
-INVOCATION_ID = 98cc255993cb49d6b9d87314bb83fcf8
+INVOCATION_ID = 21cef79f290b4383bfeaddf6f31c6c79
 # environment
 VIRTUALENVWRAPPER_SCRIPT = /usr/bin/virtualenvwrapper.sh
 # makefile (from 'Makefile', line 24)
@@ -226,7 +224,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := help
 # environment
-SYSTEMD_EXEC_PID = 2309
+SYSTEMD_EXEC_PID = 2264
 # makefile (from 'Makefile', line 3)
 PELICANOPTS = 
 # environment
@@ -240,7 +238,7 @@ USER = jcemelanda
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 1894
+MANAGERPID = 1882
 # environment
 which_declare = declare -f
 # environment
@@ -248,9 +246,9 @@ LC_MEASUREMENT = da_DK.UTF-8
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 31622
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3860
 # environment
-SSH_AGENT_PID = 2174
+SSH_AGENT_PID = 2128
 # environment
 _ = /usr/bin/make
 # environment
@@ -260,7 +258,7 @@ XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from 'Makefile', line 7)
 OUTPUTDIR = $(BASEDIR)/output
 # environment
-JOURNAL_STREAM = 8:28494
+JOURNAL_STREAM = 8:19266
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -322,6 +320,9 @@ devserver-global:
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -b 0.0.0.0
 
 devserver:
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -448,6 +449,6 @@ serve:
 # strcache performance: lookups = 59 / hit rate = 42%
 # hash-table stats:
 # Load=34/8192=0%, Rehash=0, Collisions=0/59=0%
-# Finished Make data base on Tue Aug  2 19:18:50 2022
+# Finished Make data base on Tue Aug  2 23:45:16 2022
 
  

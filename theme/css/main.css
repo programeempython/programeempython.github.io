@@ -1637,6 +1637,7 @@ html {
 .highlight .vi { color: #00cdcd } /* Name.Variable.Instance */
 .highlight .vm { color: #00cdcd } /* Name.Variable.Magic */
 .highlight .il { color: #cd00cd } /* Literal.Number.Integer.Long */
+.highlight .linenos { padding-right: 20px; } /* line number padding */
 
 @media (min-width: 1024px) {
 

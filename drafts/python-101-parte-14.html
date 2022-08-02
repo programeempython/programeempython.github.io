@@ -138,7 +138,7 @@ Pra quem ainda n&atilde;o o viu o post anterior, confira como funciona a Program
     capacidade = 0
     status_motor = &lsquo;desligado&rsquo;
     altitude =&nbsp;0.0</p>
-<div class="highlight"><pre><span></span><code>def ligar_motor(self):
+<div class="highlight not-prose"><pre><span></span><code>def ligar_motor(self):
     self.status_motor = 'ligado'
 
 def desligar_motor(self):
@@ -158,7 +158,7 @@ def desce(self, decremento):
 <p>Atrav&eacute;s dela, um objeto herda os atributos e m&eacute;todos de ser objeto pai, por assim dizer, e implementa m&eacute;todos e atributos&nbsp;pr&oacute;prios.</p>
 <p>Vejamos um&nbsp;exemplo:</p>
 <p>class&nbsp;Teco_teco(Aviao):</p>
-<div class="highlight"><pre><span></span><code>def self.__init__(self):
+<div class="highlight not-prose"><pre><span></span><code>def self.__init__(self):
     Aviao.__init__()
 
 def liga_helice(self):
@@ -174,7 +174,7 @@ def desliga_helice(self):
 <p>Vejamos um exemplo agora com heran&ccedil;a&nbsp;m&uacute;ltipla:</p>
 <p>class Carro_voador(Carro, Aviao):
     posicao_asa =&nbsp;&lsquo;fechada&rsquo;</p>
-<div class="highlight"><pre><span></span><code>def __init__(self):
+<div class="highlight not-prose"><pre><span></span><code>def __init__(self):
     Carro.__init__()
     Aviao.__init__()
 

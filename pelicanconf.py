@@ -79,7 +79,7 @@ PAGINATED_TEMPLATES = {'index':None,'tag':None,'category':None,'author':None,'ar
 
 MARKDOWN = {
     'extension_configs': {
-        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.codehilite': {'css_class': 'highlight not-prose '},
         'markdown.extensions.extra': {},
         'markdown.extensions.meta': {},
     },

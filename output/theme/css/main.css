@@ -1625,7 +1625,10 @@ html {
 .highlight .vg { color: #cc6666 !important; } /* Name.Variable.Global */
 .highlight .vi { color: #cc6666 !important; } /* Name.Variable.Instance */
 .highlight .il { color: #de935f !important; } /* Literal.Number.Integer.Long */
-.highlight .linenos { padding-right: 20px; } /* line number padding */
+.highlight .linenos { 
+  padding-right: 20px;
+  background-color: #505050;
+} /* line number padding */
 
 @media (min-width: 1024px) {
 

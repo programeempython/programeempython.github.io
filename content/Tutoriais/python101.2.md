@@ -3,6 +3,7 @@ Date: 2022-07-29 12:06
 Slug: python-101-parte-2
 Category: Tutoriais
 Tags: Tutorial, Python 101
+Summary: Agora que já temos o Python instalado e já conhecemos a sua interface interativa, vamos aprender um pouco sobre os comandos mais básicos da linguagem!
 
 Olá!
 

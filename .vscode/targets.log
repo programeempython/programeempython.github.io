@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-redhat-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug  2 23:45:16 2022
+# Make data base, printed on Wed Aug  3 00:00:20 2022
 
 # Variables
 
@@ -119,7 +121,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 3860
+VSCODE_PID = 7016
 # environment
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS = 0
 # environment
@@ -246,7 +248,7 @@ LC_MEASUREMENT = da_DK.UTF-8
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3860
+GIO_LAUNCHED_DESKTOP_FILE_PID = 7016
 # environment
 SSH_AGENT_PID = 2128
 # environment
@@ -309,6 +311,7 @@ GDMSESSION = gnome-xorg
 # Implicit Rules
 
 # No implicit rules.
+ 
 
 # Files
 
@@ -320,9 +323,6 @@ devserver-global:
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -b 0.0.0.0
 
 devserver:
- 
-make: *** No rule to make target 'all'.  Stop.
-
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -449,6 +449,6 @@ serve:
 # strcache performance: lookups = 59 / hit rate = 42%
 # hash-table stats:
 # Load=34/8192=0%, Rehash=0, Collisions=0/59=0%
-# Finished Make data base on Tue Aug  2 23:45:16 2022
+# Finished Make data base on Wed Aug  3 00:00:20 2022
 
  

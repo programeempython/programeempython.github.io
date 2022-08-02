@@ -3,6 +3,9 @@ Date: 2022-08-02 22:06
 Slug: python-101-parte-4
 Category: Tutoriais
 Tags: Tutorial, Python 101
+Summary: Continuando o artigo sobre Estruturas Condicionais em Python, veremos agora algumas outras fomas de usar a construção `if`/`else`.
+
+Olá!
 
 Continuando o artigo sobre Estruturas Condicionais em Python, veremos agora algumas outras fomas de usar a construção `if`/`else`.
 

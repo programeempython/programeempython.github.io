@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Pelican" />
-    <title>Python 101 - Part 4 - Conditionals in Python, the Return</title>
+    <title>Python 101 - Parte 4 - Estruturas Condicionais em Python, o Retorno</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
     <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/css/main.css" />
@@ -15,7 +15,7 @@
     <link
         href="http://programeempython.com.br/feeds/all.atom.xml"
         type="application/atom+xml" rel="alternate" title="Programe em Python Atom Feed" />
-<meta name="description" content="Continuing the article series on Conditional Structures in Python, we will now look at some other ways to use the if/else instructions. If you..." />
+<meta name="description" content="Continuando o artigo sobre Estruturas Condicionais em Python, veremos agora algumas outras fomas de usar a construção if/else. Se você ainda não..." />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -93,11 +93,12 @@
 
 <main>
   <header>
-    <h1 class="font-semibold text-3xl my-2">Python 101 - Part 4 - Conditionals in Python, the&nbsp;Return</h1>
+    <h1 class="font-semibold text-3xl my-2">Python 101 - Parte 4 - Estruturas Condicionais em Python, o&nbsp;Retorno</h1>
     <footer class="flex text-sm text-zinc-800 dark:text-zinc-400">
       <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
         <time>July 29, 2022</time>
         <div>
+          <span>&nbsp;·&nbsp;2 min read</span>
         </div>
         <div>
           <span>&nbsp;·&nbsp;Julio Melanda</span>
@@ -122,57 +123,58 @@
               prose-img:rounded-md
               ">
       Translations:
-      <a href="http://programeempython.com.br/drafts/python-101-parte-4.html" hreflang="pt_br">pt_br</a>
+      <a href="http://programeempython.com.br/python-101-parte-4-en.html" hreflang="en">en</a>
 
-    <p>Continuing the article series on Conditional Structures in Python, we will now look at some other ways to use the <code>if</code>/<code>else</code> instructions.</p>
-<p>If you haven&rsquo;t seen the previous post, here&rsquo;s the introduction to <a href="({filename}/Tutorials/python101.3.md)">Conditionals in&nbsp;Python</a></p>
-<p>It is often not possible to solve a computational problem simply with an <code>if</code>/<code>else</code>. So we use multiple nested <code>if</code>/<code>else</code> sets (one inside the&nbsp;other)</p>
-<div class="highlight"><pre><span></span><code><span class="n">path</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">if</span> <span class="n">path</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Go back to the starting position"</span><span class="p">)</span>
+    <p>Continuando o artigo sobre Estruturas Condicionais em Python, veremos agora algumas outras fomas de usar a constru&ccedil;&atilde;o <code>if</code>/<code>else</code>.</p>
+<p>Se voc&ecirc; ainda n&atilde;o viu o post anterior, veja aqui a introdu&ccedil;&atilde;o aos <a href="({filename}/Tutoriais/python101.3.md)">Condicionais em&nbsp;Python</a></p>
+<p>Muitas vezes, n&atilde;o &eacute; poss&iacute;vel resolver um problema computacional simplesmente com um if/else. Ent&atilde;o, usamos v&aacute;rios conjuntos de if/else aninhados (um dentro do&nbsp;outro)</p>
+<div class="highlight"><pre><span></span><code><span class="n">caminho</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">if</span> <span class="n">caminho</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Volte para a posicao inicial"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">path</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Go ahead"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">caminho</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Siga em frente"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">path</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"Lower your head"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">caminho</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Abaixe a cabeca"</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">path</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">"You fell in the hole"</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">caminho</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Voc&ecirc; caiu no buraco"</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid option"</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Opcao invalida"</span><span class="p">)</span>
 </code></pre></div>
-<p>But, you can see that if you have a very nested structure of conditions, your code will be very messy&hellip; imagine thirty <code>if</code>/<code>else</code> instructions nested like that? It gets&nbsp;crazy!</p>
-<p>So, to solve this problem, we have the <code>if</code>/<code>elif</code>/<code>else</code> construct. The <code>elif</code> plays the role of the <code>else</code> sequences that contain an <code>if</code>. See how the code is much more readable and&nbsp;organized!</p>
+<p>Mas, d&aacute; pra perceber que, se voc&ecirc; tiver uma estrutura muito grade de condi&ccedil;&otilde;es, seu c&oacute;digo vai ficar bem bagun&ccedil;ado&hellip; imagina trinta <code>if</code>/<code>else</code> aninhados dessa forma? N&atilde;o&nbsp;d&aacute;!</p>
+<p>Ent&atilde;o, pra resolver este problema, temos a constru&ccedil;&atilde;o <code>if</code>/<code>elif</code>/<code>else</code>. O <code>elif</code> faz o papel das sequ&ecirc;ncias de <code>else</code> que cont&eacute;m <code>if</code>. Veja como o c&oacute;digo fica muito mais leg&iacute;vel e&nbsp;organizado!</p>
 <div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="mi">4</span>
 
 <span class="k">if</span> <span class="n">d</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"d is positive"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"d &eacute; positivo"</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"d is negative"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"d &eacute; negativo"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"d is null"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"d &eacute; nulo"</span><span class="p">)</span>
 </code></pre></div>
-<p>You can have as many <code>elif</code> as needed between <code>if</code> and <code>else</code>. See this&nbsp;example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">option</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s2">"The value chosen was 0"</span>
-<span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s2">"The value chosen was 1"</span>
-<span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s2">"The value chosen was 2"</span>
-<span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s2">"The value chosen was 3"</span>
+<p>Voc&ecirc; pode ter quantos <code>elif</code> forem necess&aacute;rios entre o <code>if</code> e o <code>else</code>. Veja este&nbsp;exemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">opcao</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">if</span> <span class="n">opcao</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s2">"O valor escolhido foi 0"</span>
+<span class="k">elif</span> <span class="n">opcao</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s2">"O valor escolhido foi 1"</span>
+<span class="k">elif</span> <span class="n">opcao</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s2">"O valor escolhido foi 2"</span>
+<span class="k">elif</span> <span class="n">opcao</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s2">"O valor escolhido foi 3"</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s2">"The chosen value is not valid"</span>
+    <span class="nb">print</span> <span class="s2">"O valor escolhido n&atilde;o &eacute; v&aacute;lido"</span>
 </code></pre></div>
-<p>The code remains organized and readable, helping you to understand the&nbsp;code!</p>
-<p>Probably, at this point, people who know C, C++, java or some other languages &ZeroWidthSpace;&ZeroWidthSpace;must be asking themselves: But where&rsquo;s the&nbsp;switch?</p>
-<p>Actually, python doesn&rsquo;t have a switch like we have in other languages, and its function is very well fulfilled by the &lsquo;if&rsquo;/&rsquo;elif&rsquo;/&rsquo;else&rsquo; structures. These structures still have advantages over some switch implementations that for example only do integer and single character&nbsp;comparisons.</p>
-<p>It is possible to simulate a switch very efficiently and elegantly in Python, but that will be left for a next post with more advanced&nbsp;content.</p>
-<p>In the next topic, we&rsquo;ll talk about Repetition&nbsp;Structures!</p>
-<p>Don&rsquo;t forget to send your questions and opinions in the comments&nbsp;below!</p>
-<p>See you in the next&nbsp;post!</p>
+<p>O c&oacute;digo continua organizado e leg&iacute;vel, ajudando no entendimento do&nbsp;programa!</p>
+<p>Provavelmente, neste ponto, as pessoas que conhecem C, C++, java ou algumas outras linguagens devem estar se perguntando: Mas cad&ecirc; o&nbsp;switch?</p>
+<p>Na realidade, python n&atilde;o tem um switch como temos em outras linguagens, sendo que sua fun&ccedil;&atilde;o &eacute; muito bem cumprida pelas estruturas &lsquo;if&rsquo;/&rsquo;elif&rsquo;/&rsquo;else&rsquo;. Estas estruturas ainda tem vantagens sobre algumas implementa&ccedil;&otilde;es do switch que por exemplo somente fazem compara&ccedil;&otilde;es de inteiros e caracteres&nbsp;&uacute;nicos.</p>
+<p>&Eacute; poss&iacute;vel simular um switch de forma muito eficiente e elegnte no Python, mas isto ficar&aacute; para um pr&oacute;ximo post com conte&uacute;do mais&nbsp;avan&ccedil;ado.</p>
+<p>Vamos ficando por&nbsp;aqui.</p>
+<p>No pr&oacute;ximo t&oacute;pico, falaremos de Estruturas de&nbsp;Repeti&ccedil;&atilde;o!</p>
+<p>&atilde;o deixe de enviar d&uacute;vidas e opini&otilde;es nos coment&aacute;rios&nbsp;abaixo!</p>
+<p>At&eacute; o pr&oacute;ximo&nbsp;post!</p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
@@ -191,7 +193,22 @@
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 rounded-l-lg"></div>
+      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
+        <a class="flex flex-col pr-2" href="http://programeempython.com.br/python-101-parte-2.html">
+          <div class="mx-4 py-2 text-left">
+            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
+            <p class="text-left py-1 hover:underline">Python 101 - Segunda&nbsp;Parte</p>
+          </div>
+        </a>
+      </div>
+      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
+        <a class="flex flex-col" href="http://programeempython.com.br/python-101-parte-1.html">
+          <div class="text-right mx-4 py-2">
+            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
+            <p class="text-right py-1 hover:underline">Python 101 - Primeira&nbsp;Parte</p>
+          </div>
+        </a>
+      </div>
     </div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
     </div>
@@ -201,7 +218,7 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function() {
-      this.page.url = 'http://programeempython.com.br/drafts/python-101-parte-4-en.html';
+      this.page.url = 'http://programeempython.com.br/python-101-parte-4.html';
       this.page.identifier = 'python-101-parte-4';
     };
     (function() {

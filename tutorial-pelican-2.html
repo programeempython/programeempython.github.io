@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/stylesheet/style.min.css">
+
+  <link id="dark-theme-style" rel="stylesheet" type="text/css"  disabled="disabled"     href="http://programeempython.com.br/theme/stylesheet/dark-theme.min.css">
+
+  <link id="pygments-dark-theme" rel="stylesheet" type="text/css"  disabled="disabled"     href="http://programeempython.com.br/theme/pygments/one-dark.min.css">
+  <link id="pygments-light-theme" rel="stylesheet" type="text/css"     href="http://programeempython.com.br/theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/font-awesome/css/solid.css">
+
+
+  <link href="http://programeempython.com.br/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+    title="Programe em Python Atom">
+
+
+
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#666666">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#666666">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#666666">
+
+<meta name="author" content="Julio Melanda" />
+<meta name="description" content="" />
+<meta name="keywords" content="Tutorial, Pelican, Github Pages, CircleCI">
+
+
+<meta property="og:site_name" content="Programe em Python"/>
+<meta property="og:title" content="Tutorial de Pelican com Github Pages e CircleCI - 2"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://programeempython.com.br/tutorial-pelican-2.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-08-03 19:30:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://programeempython.com.br/author/julio-melanda.html">
+<meta property="article:section" content="Tutoriais"/>
+<meta property="article:tag" content="Tutorial"/>
+<meta property="article:tag" content="Pelican"/>
+<meta property="article:tag" content="Github Pages"/>
+<meta property="article:tag" content="CircleCI"/>
+<meta property="og:image" content="images/logo.png">
+
+  <title>Programe em Python &ndash; Tutorial de Pelican com Github Pages e CircleCI - 2</title>
+
+</head>
+
+<body class="light-theme" >
+  <aside>
+    <div>
+      <a href="http://programeempython.com.br">
+        <img src="images/logo.png" alt="Programe em Python" title="Programe em Python">
+      </a>
+
+      <h1>
+        <a href="http://programeempython.com.br">Programe em Python</a>
+      </h1>
+
+<p>Um pouco de tudo sobre programação em Python</p>
+
+      <nav>
+        <ul class="list">
+
+
+          <li>
+            <a target="_self"
+              href="http://programeempython.com.br/pages/contato.html#contato">
+              Contato
+            </a>
+          </li>
+          <li>
+            <a target="_self"
+              href="http://programeempython.com.br/pages/sobre-mim.html#sobre-mim">
+              Sobre&nbsp;Mim
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li>
+          <a  class="sc-github" href="https://github.com/jcemelanda" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a  class="sc-linkedin" href="https://www.linkedin.com/in/jcemelanda" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a  class="sc-twitter" href="https://twitter.com/jcemelanda" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://programeempython.com.br">Home</a>
+
+      <a href="/archives.html">Arquivo</a>
+      <a href="/categories.html">Categorias</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://programeempython.com.br/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="tutorial-pelican-2">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;2</h1>
+    <p>
+      Posted on Wed 03 August 2022 in <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
+
+        &#8226; 1 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>Ol&aacute;!</p>
+<p>Chegou a hora de continuarmos o tutorial de como publicar seu blog com Pelican, Github Pages e Circle <span class="caps">CI</span> como eu fiz, e caso voc&ecirc; esteja chegando por aqui agora, confira nosso <a href="http://programeempython.com.br/tutorial-pelican-2.html">Tutorial Inicial de Pelican</a>.</p>
+<p>Hoje vamos falar sobre Github&nbsp;Pages.</p>
+<p>Github Pages &eacute; uma funcionalidade gratuita do Github que te permite criar um site est&aacute;tico para seu perfil ou para seus projetos. Geralmente estes sites ter&atilde;o uma <span class="caps">URL</span> do tipo <code>usuario.github.io</code> ou <code>projeto.github.io</code>. Por&eacute;m, &eacute; poss&iacute;vel tamb&eacute;m colocar seu pr&oacute;prio dom&iacute;nio, como fiz&nbsp;aqui.</p>
+<p>Para este tutorial, vamos usar o github pages para seu usu&aacute;rio, assim, crie um reposit&oacute;rio chamado <code>username.github.io</code> </p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://programeempython.com.br/tag/tutorial.html">Tutorial</a>
+      <a href="http://programeempython.com.br/tag/pelican.html">Pelican</a>
+      <a href="http://programeempython.com.br/tag/github-pages.html">Github Pages</a>
+      <a href="http://programeempython.com.br/tag/circleci.html">CircleCI</a>
+    </p>
+  </div>
+
+
+
+  <div class="related-posts">
+    <h4>You might enjoy</h4>
+    <ul class="related-posts">
+      <li><a href="http://programeempython.com.br/tutorial-pelican.html">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;1</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-4.html">Python 101 - Parte 4 - Estruturas Condicionais em Python, o&nbsp;Retorno</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-3-condicionais.html">Python 101 - Parte 3 - Estruturas Condicionais em&nbsp;Python</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-2.html">Python 101 - Segunda&nbsp;Parte</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-1.html">Python 101 - Primeira&nbsp;Parte</a></li>
+    </ul>
+  </div>
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'programeempython';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy; 2022 </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="http://programeempython.com.br/theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="false"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Programe em Python ",
+  "url" : "http://programeempython.com.br",
+  "image": "images/logo.png",
+  "description": ""
+}
+</script>
+
+
+</body>
+
+</html>

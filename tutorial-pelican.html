@@ -2,147 +2,173 @@
 <html lang="pt_br">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="Pelican" />
-    <title>Tutorial de Pelican com Github Pages e CircleCI - 1</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
-    <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/css/main.css" />
-    <link rel="stylesheet" href="http://programeempython.com.br/theme/css/stork.css">
-    <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)"
-        href="http://programeempython.com.br/theme/css/stork-dark.css">
-    <link
-        href="http://programeempython.com.br/feeds/all.atom.xml"
-        type="application/atom+xml" rel="alternate" title="Programe em Python Atom Feed" />
-<meta name="description" content="Como prometido, vamos abordar como criei meu blog com Pelican, Github Pages e CircleCI num tutorial. Como é bastante conteúdo vamos dividir em..." />
-    <script>
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
-                '(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/stylesheet/style.min.css">
+
+  <link id="dark-theme-style" rel="stylesheet" type="text/css"  disabled="disabled"     href="http://programeempython.com.br/theme/stylesheet/dark-theme.min.css">
+
+  <link id="pygments-dark-theme" rel="stylesheet" type="text/css"  disabled="disabled"     href="http://programeempython.com.br/theme/pygments/one-dark.min.css">
+  <link id="pygments-light-theme" rel="stylesheet" type="text/css"     href="http://programeempython.com.br/theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/font-awesome/css/solid.css">
+
+
+  <link href="http://programeempython.com.br/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+    title="Programe em Python Atom">
+
+
+
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#666666">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#666666">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#666666">
+
+<meta name="author" content="Julio Melanda" />
+<meta name="description" content="Como prometido, vamos abordar como criei meu blog com Pelican, Github Pages e CircleCI num tutorial. Como é bastante conteúdo vamos dividir em partes e aqui veremos uma introdução ao Pelican." />
+<meta name="keywords" content="Tutorial, Pelican, Github Pages, CircleCI">
+
+<link rel="alternate" href="http://programeempython.com.br/tutorial-pelican.html" hreflang="pt_br" />
+<link rel="alternate" href="http://programeempython.com.br/tutorial-pelican-en.html" hreflang="en" />
+
+<meta property="og:site_name" content="Programe em Python"/>
+<meta property="og:title" content="Tutorial de Pelican com Github Pages e CircleCI - 1"/>
+<meta property="og:description" content="Como prometido, vamos abordar como criei meu blog com Pelican, Github Pages e CircleCI num tutorial. Como é bastante conteúdo vamos dividir em partes e aqui veremos uma introdução ao Pelican."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://programeempython.com.br/tutorial-pelican.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-07-31 22:03:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://programeempython.com.br/author/julio-melanda.html">
+<meta property="article:section" content="Tutoriais"/>
+<meta property="article:tag" content="Tutorial"/>
+<meta property="article:tag" content="Pelican"/>
+<meta property="article:tag" content="Github Pages"/>
+<meta property="article:tag" content="CircleCI"/>
+<meta property="og:image" content="images/logo.png">
+
+  <title>Programe em Python &ndash; Tutorial de Pelican com Github Pages e CircleCI - 1</title>
+
 </head>
 
-<body class="min-h-screen flex flex-col max-w-7xl lg:max-w-none text-zinc-800 bg-neutral-100 
-    dark:bg-neutral-900 dark:text-zinc-300 container mx-auto justify-center md:px-3 ">
-    <nav class="sm:flex sm:justify-between xl:ml-32 pl-4 items-center">
-        <div class="flex pt-4">
-            <h1 class="font-semibold text-2xl"><a href="http://programeempython.com.br/">Programe em Python</a></h1>
-            <button id="theme-toggle" type="button"
-                class="text-zinc-700 dark:text-zinc-400 rounded-full focus:outline-none text-sm ml-2 p-1">
-                <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                </svg>
-                <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                        fill-rule="evenodd" clip-rule="evenodd"></path>
-                </svg>
-            </button>
-        </div>
-        <ul class="flex flex-wrap lg:mr-24 md:pt-0">
-            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/pages/contato.html">Contato</a></li>
-            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/pages/sobre-mim.html">Sobre&nbsp;Mim</a></li>
-            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/archives.html">Aquivo</a></li>
-            <li class="mr-4 pt-6"><a                     href="http://programeempython.com.br/categories.html">Categorias</a></li>
-            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/tags.html">Tags</a></li>
-            <li class="mr-4 pt-6"><a  href="http://programeempython.com.br/search.html">Busca</a></li>
+<body class="light-theme" >
+  <aside>
+    <div>
+      <a href="http://programeempython.com.br">
+        <img src="images/logo.png" alt="Programe em Python" title="Programe em Python">
+      </a>
+
+      <h1>
+        <a href="http://programeempython.com.br">Programe em Python</a>
+      </h1>
+
+<p>Um pouco de tudo sobre programação em Python</p>
+
+      <nav>
+        <ul class="list">
+
+
+          <li>
+            <a target="_self"
+              href="http://programeempython.com.br/pages/contato.html#contato">
+              Contato
+            </a>
+          </li>
+          <li>
+            <a target="_self"
+              href="http://programeempython.com.br/pages/sobre-mim.html#sobre-mim">
+              Sobre&nbsp;Mim
+            </a>
+          </li>
+
         </ul>
+      </nav>
+
+      <ul class="social">
+        <li>
+          <a  class="sc-github" href="https://github.com/jcemelanda" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a  class="sc-linkedin" href="https://www.linkedin.com/in/jcemelanda" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a  class="sc-twitter" href="https://twitter.com/jcemelanda" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://programeempython.com.br">Home</a>
+
+      <a href="/archives.html">Arquivo</a>
+      <a href="/categories.html">Categorias</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://programeempython.com.br/feeds/all.atom.xml">Atom</a>
+
     </nav>
-    <div class="flex-grow md:max-w-screen-md md:mx-auto md:w-3/4 px-4">
-        <nav class="text-zinc-800 dark:text-zinc-300 mt-12 pb-2 md:mt-16" aria-label="Breadcrumb">
-            <ul class="p-0 inline-flex items-center">
-                <li class="flex items-center">
-                    <a href="http://programeempython.com.br/" class="text-zinc-800 dark:text-zinc-300 inline-flex items-center">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
-                            </path>
-                        </svg>
-                        Home
-                    </a>
-                    <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 320 512">
-                        <path
-                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
-                    </svg>
-                </li>
-                <li class="flex items-center">
-                    <a href="http://programeempython.com.br/categories.html">Categorias</a>
-                    <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 320 512">
-                        <path
-                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
-                    </svg>
-                </li>
-                <li class="flex items-center">
-                    <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
-                </li>
-                <svg class="fill-current w-3 h-3 mr-2 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                    <path
-                        d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
-                </svg>
-            </ul>
-        </nav>
 
-<main>
+<article class="single">
   <header>
-    <h1 class="font-semibold text-3xl my-2">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;1</h1>
-    <footer class="flex text-sm text-zinc-800 dark:text-zinc-400">
-      <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
-        <time>July 31, 2022</time>
-        <div>
-          <span>&nbsp;·&nbsp;7 min read</span>
-        </div>
-        <div>
-          <span>&nbsp;·&nbsp;Julio Melanda</span>
-        </div>
-      </div>
-    </footer>
-  </header>
-  <div class="max-w-7xl container mx-auto my-8 text-zinc-800 dark:text-zinc-300  
-              prose lg:max-w-none prose-headings:text-zinc-800 prose-headings:dark:text-zinc-300 
-              prose-h1:text-3xl lg:prose-h1:text-3xl prose-headings:font-semibold 
-              prose-pre:bg-zinc-200 prose-pre:text-zinc-800
-              dark:prose-pre:bg-zinc-800 dark:prose-pre:text-zinc-200
-              prose-blockquote:text-zinc-800
-              dark:prose-blockquote:text-zinc-200
-              prose-a:text-gray-500
-              dark:prose-a:text-gray-400
-              dark:prose-strong:text-zinc-200 
-              dark:prose-code:text-zinc-200
-              dark:prose-code:bg-zinc-800
-              prose-code:bg-zinc-200
-              prose-code:font-light
-              prose-img:rounded-md
-              ">
-      Translations:
-      <a href="http://programeempython.com.br/tutorial-pelican-en.html" hreflang="en">en</a>
+          <div class="translations">
+    <a class="active" href="http://programeempython.com.br/tutorial-pelican.html">pt_br</a>
+        <a href="http://programeempython.com.br/tutorial-pelican-en.html">en</a>
+    </div>
 
+    <h1 id="tutorial-pelican">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;1</h1>
+    <p>
+      Posted on Sun 31 July 2022 in <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
+
+        &#8226; 4 min read
+    </p>
+  </header>
+
+
+  <div>
     <p>Ol&aacute;!</p>
 <p>Como prometido, vamos abordar como criei meu blog com Pelican, Github Pages e CircleCI num tutorial. Como &eacute; bastante conte&uacute;do vamos dividir em partes e aqui veremos uma introdu&ccedil;&atilde;o ao&nbsp;Pelican.</p>
 <p>Recapitulando, Pelican &eacute; um gerador de site est&aacute;tico, ou seja, gera um site est&aacute;tico em <span class="caps">HTML</span> baseado em conte&uacute;dos escritos numa linguagem de Markup, geralmente rich text ou markdown. Pelican gera as postagens usando Jinja2 como biblioteca de template. Assim, se voc&ecirc; tem alguma familiaridade com jinja ou Django, que tem uma biblioteca de templates semelhante, voc&ecirc; n&atilde;o vai ter dificuldades em por exemplo criar ou customizar temas para o&nbsp;Pelican.</p>
 <p>Primeiro, para criar um site com Pelican, vamos&nbsp;instal&aacute;-lo.</p>
 <p>Pode ser num ambiente virtual ou diretamente na sua instala&ccedil;&atilde;o padr&atilde;o do python. No terminal,&nbsp;execute:</p>
-<div class="highlight not-prose"><pre><span></span><code><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">pelican</span><span class="o">[</span><span class="n">markdown</span><span class="o">]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">pelican</span><span class="o">[</span><span class="n">markdown</span><span class="o">]</span><span class="w"></span>
 </code></pre></div>
 <p>Isto vai instalar o Pelican com suporte a Markdown, que &eacute; minha linguagem de markup&nbsp;preferida.</p>
 <p>Finalizando sua instala&ccedil;&atilde;o, vamos criar um site&nbsp;Pelican.</p>
 <p>Crie uma pasta onde ficar&aacute; seu site, para executarmos comandos l&aacute; de dentro. No Linux, seria algo&nbsp;assim:</p>
-<div class="highlight not-prose"><pre><span></span><code>mkdir ~/projetos/meu_blog/ -p
+<div class="highlight"><pre><span></span><code>mkdir ~/projetos/meu_blog/ -p
 cd ~/projetos/meu_blog
 </code></pre></div>
 <p>Ent&atilde;o, agora vamos executar um comando do Pelican que vai iniciar nosso&nbsp;blog.</p>
-<div class="highlight not-prose"><pre><span></span><code>pelican-quickstart
+<div class="highlight"><pre><span></span><code>pelican-quickstart
 </code></pre></div>
 <p>Este script vai te perguntar diversas&nbsp;coisas. </p>
-<div class="highlight not-prose"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">.</span><span class="o">]</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">.</span><span class="o">]</span><span class="w"> </span>
 <span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span>
 <span class="o">&gt;</span><span class="w"> </span><span class="n">Who</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span>
 <span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">language</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">pt</span><span class="o">]</span><span class="w"> </span>
@@ -152,7 +178,7 @@ cd ~/projetos/meu_blog
 <span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tasks</span><span class="p">.</span><span class="n">py</span><span class="o">/</span><span class="n">Makefile</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">automate</span><span class="w"> </span><span class="n">generation</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">publishing</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>Vamos nos manter no mais simples poss&iacute;vel para este tutorial introdut&oacute;rio, ent&atilde;o&nbsp;responda</p>
-<div class="highlight not-prose"><pre><span></span><code><span class="p">(</span><span class="n">Somente</span><span class="w"> </span><span class="n">digite</span><span class="w"> </span><span class="n n-Quoted">`Enter`</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">Somente</span><span class="w"> </span><span class="n">digite</span><span class="w"> </span><span class="n n-Quoted">`Enter`</span><span class="p">)</span><span class="w"></span>
 <span class="n">Teste</span><span class="w"></span>
 <span class="n">Teste</span><span class="w"></span>
 <span class="p">(</span><span class="n">Somente</span><span class="w"> </span><span class="n">digite</span><span class="w"> </span><span class="n n-Quoted">`Enter`</span><span class="p">)</span><span class="w"></span>
@@ -163,12 +189,12 @@ cd ~/projetos/meu_blog
 </code></pre></div>
 <p>Assim, o Pelican vai criar um projeto bastante simplificado que podemos usar para iniciar nosso blog. Num pr&oacute;ximo post, vamos executar novamente este comando para criar realmente o blog que vamos publicar, mas aqui como &eacute; somente para introduzir o Pelican vamos manter a&nbsp;simplicidade.</p>
 <p>Agora vamos criar nosso primeiro post exemplo. Veja que o Pelican criou uma estrutura de arquivos assim na pasta do&nbsp;blog:</p>
-<div class="highlight not-prose"><pre><span></span><code>content/
+<div class="highlight"><pre><span></span><code>content/
 pelicanconf.py
 publishconf.py
 </code></pre></div>
 <p>Dentro da pasta content, crie um arquivo, vamos cham&aacute;-lo de teste.md (Muito criativo :p). Nele insira o seguinte&nbsp;conte&uacute;do</p>
-<div class="highlight not-prose"><pre><span></span><code><span class="n">Title</span><span class="o">:</span><span class="w"> </span><span class="n">Teste</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span><span class="w"> </span><span class="n">Teste</span><span class="w"></span>
 <span class="n">Date</span><span class="o">:</span><span class="w"> </span><span class="mi">2022</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">31</span><span class="w"> </span><span class="mi">08</span><span class="o">:</span><span class="mi">00</span><span class="w"></span>
 <span class="n">Category</span><span class="o">:</span><span class="w"> </span><span class="n">Geral</span><span class="w"></span>
 
@@ -176,10 +202,10 @@ publishconf.py
 </code></pre></div>
 <p>Isto &eacute; o suficiente para um post com Pelican. T&iacute;tulo, data, categoria e o conte&uacute;do em&nbsp;si.</p>
 <p>Agora vamos rodar um servidor de teste e ver o que nosso&nbsp;blog.</p>
-<div class="highlight not-prose"><pre><span></span><code>pelican -r -l
+<div class="highlight"><pre><span></span><code>pelican -r -l
 </code></pre></div>
 <p>O resultado deve ser algo&nbsp;assim:</p>
-<div class="highlight not-prose"><pre><span></span><code><span class="w">  </span><span class="o">---</span><span class="w"> </span><span class="n">AutoReload</span><span class="w"> </span><span class="k">Mode</span><span class="o">:</span><span class="w"> </span><span class="n">Monitoring</span><span class="w"> </span><span class="n n-Quoted">`content`</span><span class="p">,</span><span class="w"> </span><span class="n n-Quoted">`theme`</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n n-Quoted">`settings`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">changes</span><span class="p">.</span><span class="w"> </span><span class="o">---</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="o">---</span><span class="w"> </span><span class="n">AutoReload</span><span class="w"> </span><span class="k">Mode</span><span class="o">:</span><span class="w"> </span><span class="n">Monitoring</span><span class="w"> </span><span class="n n-Quoted">`content`</span><span class="p">,</span><span class="w"> </span><span class="n n-Quoted">`theme`</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n n-Quoted">`settings`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">changes</span><span class="p">.</span><span class="w"> </span><span class="o">---</span><span class="w"></span>
 <span class="n">Serving</span><span class="w"> </span><span class="n">site</span><span class="w"> </span><span class="k">at</span><span class="o">:</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="mf">127.0.0.1</span><span class="o">:</span><span class="mi">8000</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Tap</span><span class="w"> </span><span class="n">CTRL</span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">stop</span><span class="w"></span>
 <span class="err">[</span><span class="mi">22</span><span class="o">:</span><span class="mi">56</span><span class="o">:</span><span class="mi">36</span><span class="err">]</span><span class="w"> </span><span class="n">WARNING</span><span class="w">  </span><span class="n">Docutils</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">localization</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">'pt'</span><span class="p">.</span><span class="w"> </span><span class="k">Using</span><span class="w"> </span><span class="s1">'en'</span><span class="w"> </span><span class="n">instead</span><span class="p">.</span><span class="w">                                                                                                                                                                                                                                       </span><span class="n">log</span><span class="p">.</span><span class="n">py</span><span class="o">:</span><span class="mi">91</span><span class="w"></span>
 <span class="w">        </span><span class="n">WARNING</span><span class="w">  </span><span class="n">Watched</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">exist</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jcemelanda</span><span class="o">/</span><span class="n">projetos</span><span class="o">/</span><span class="n">myblog</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">images</span><span class="w">                                                                                                                                                                                                                     </span><span class="n">log</span><span class="p">.</span><span class="n">py</span><span class="o">:</span><span class="mi">91</span><span class="w"></span>
@@ -191,7 +217,7 @@ publishconf.py
 <p><img alt="Screenshot Pelican 001" src="/images/pelican-tut-001.png"/></p>
 <p>Esta deve ser a apar&ecirc;ncia do seu&nbsp;blog.</p>
 <p>Agora abra seu arquivo <code>pelicanconf.py</code>. Seu conte&uacute;do deve ser aproximadamente&nbsp;este:</p>
-<div class="highlight not-prose"><pre><span></span><code><span class="nv">AUTHOR</span> <span class="o">=</span> <span class="s1">'</span><span class="s">teste</span><span class="s1">'</span>
+<div class="highlight"><pre><span></span><code><span class="nv">AUTHOR</span> <span class="o">=</span> <span class="s1">'</span><span class="s">teste</span><span class="s1">'</span>
 <span class="nv">SITENAME</span> <span class="o">=</span> <span class="s1">'</span><span class="s">TESTE</span><span class="s1">'</span>
 <span class="nv">SITEURL</span> <span class="o">=</span> <span class="s1">''</span>
 
@@ -224,7 +250,7 @@ publishconf.py
 </code></pre></div>
 <p>Este arquivo &eacute; bem autoexplicativo. Aqui &eacute; nele que mexemos para a maioria das configura&ccedil;&otilde;es do&nbsp;Pelican.</p>
 <p>Finalmente, abra o <code>publishconf.py</code>. Seu conte&uacute;do deve ser aproximadamente&nbsp;este:</p>
-<div class="highlight not-prose"><pre><span></span><code><span class="c1"># This file is only used if you use `make publish` or</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># This file is only used if you use `make publish` or</span>
 <span class="c1"># explicitly specify it as your config file.</span>
 
 <span class="kn">import</span> <span class="nn">os</span>
@@ -250,129 +276,76 @@ publishconf.py
 <p>No momento, estas informa&ccedil;&otilde;es s&atilde;o suficientes para prosseguirmos, ent&atilde;o, n&atilde;o perca a pr&oacute;xima parte deste tutorial onde vamos falar sobre Github pages para depois juntarmos as duas coisas&nbsp;:D</p>
 <p>Espero que tenham gostado e n&atilde;o esque&ccedil;am de deixar seuas opini&otilde;es e d&uacute;vidas nos&nbsp;coment&aacute;rios!</p>
 <p>At&eacute; o pr&oacute;ximo&nbsp;post!</p>
-    <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
-  <footer class="flex flex-col mt-10 ">
-    <ul class="flex flex-wrap">
-      <a href="http://programeempython.com.br/tag/circleci.html">
-        <li
-          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
-          CircleCI
-        </li>
-      </a>
-      <a href="http://programeempython.com.br/tag/github-pages.html">
-        <li
-          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
-          Github Pages
-        </li>
-      </a>
-      <a href="http://programeempython.com.br/tag/pelican.html">
-        <li
-          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
-          Pelican
-        </li>
-      </a>
-      <a href="http://programeempython.com.br/tag/tutorial.html">
-        <li
-          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
-          Tutorial
-        </li>
-      </a>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://programeempython.com.br/tag/tutorial.html">Tutorial</a>
+      <a href="http://programeempython.com.br/tag/pelican.html">Pelican</a>
+      <a href="http://programeempython.com.br/tag/github-pages.html">Github Pages</a>
+      <a href="http://programeempython.com.br/tag/circleci.html">CircleCI</a>
+    </p>
+  </div>
+
+
+
+  <div class="related-posts">
+    <h4>You might enjoy</h4>
+    <ul class="related-posts">
+      <li><a href="http://programeempython.com.br/tutorial-pelican-2.html">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;2</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-4.html">Python 101 - Parte 4 - Estruturas Condicionais em Python, o&nbsp;Retorno</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-3-condicionais.html">Python 101 - Parte 3 - Estruturas Condicionais em&nbsp;Python</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-2.html">Python 101 - Segunda&nbsp;Parte</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-1.html">Python 101 - Primeira&nbsp;Parte</a></li>
     </ul>
-    <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="http://programeempython.com.br/python-101-parte-3-condicionais.html">
-          <div class="mx-4 py-2 text-left">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline">Python 101 - Parte 3 - Estruturas Condicionais em&nbsp;Python</p>
-          </div>
-        </a>
-      </div>
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="http://programeempython.com.br/python-101-parte-2.html">
-          <div class="text-right mx-4 py-2">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
-            <p class="text-right py-1 hover:underline">Python 101 - Segunda&nbsp;Parte</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
-    </div>
-  </footer>
-  <div>
-  <hr>
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function() {
-      this.page.url = 'http://programeempython.com.br/tutorial-pelican.html';
-      this.page.identifier = 'tutorial-pelican';
-    };
-    (function() {
-      var d = document;
-      var s = d.createElement('script');
-      s.src = '//programeempython.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript class="text-muted">
-    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
-  </noscript>
   </div>
-</main>
 
-    </div>
-    <footer class="flex w-full text-xs justify-center mt-10 mb-6 text-zinc-500 dark:text-zinc-400">
-        <div class="px-4">
-            <span>©2022&nbsp;&#8226;&nbsp;</span>Powered by
-            <a class="underline" href="https://getpelican.com/">Pelican</a>&nbsp;&
-            <a class="underline" href="https://github.com/aleylara/Papyrus">&nbsp;Papyrus</a>
-        </div>
-    </footer>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CWQ34LZTCX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'programeempython';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
 
-  gtag('config', 'G-CWQ34LZTCX');
+    <footer>
+<p>&copy; 2022 </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="http://programeempython.com.br/theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="false"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Programe em Python ",
+  "url" : "http://programeempython.com.br",
+  "image": "images/logo.png",
+  "description": ""
+}
 </script>
 
-    <script>
-        let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-        let themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
-                '(prefers-color-scheme: dark)').matches)) {
-            themeToggleLightIcon.classList.remove('hidden');
-        } else {
-            themeToggleDarkIcon.classList.remove('hidden');
-        }
-        let themeToggleBtn = document.getElementById('theme-toggle');
-        themeToggleBtn.addEventListener('click', function () {
-            themeToggleDarkIcon.classList.toggle('hidden');
-            themeToggleLightIcon.classList.toggle('hidden');
-            if (localStorage.getItem('color-theme')) {
-                if (localStorage.getItem('color-theme') === 'light') {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                }
-            } else {
-                if (document.documentElement.classList.contains('dark')) {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                } else {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                }
-            }
-        });
-    </script>
+
 </body>
 
 </html>

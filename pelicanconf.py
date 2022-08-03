@@ -1,16 +1,17 @@
+from datetime import datetime
+
 AUTHOR = 'Julio Melanda'
 SITENAME = 'Programe em Python'
 SITEURL = 'http://localhost:8000'
+SITELOGO = 'images/logo.png'
 
 SUBTITLE = 'Um pouco de tudo sobre programação em Python'
-
-COPYRIGHT = '©2022'
 
 PATH = 'content'
 
 TIMEZONE = 'Europe/Copenhagen'
 
-DEFAULT_LANG = 'pt_br'
+DEFAULT_LANG = 'pt_BR'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -20,14 +21,23 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),
-         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = []
 
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+ROBOTS = "index, follow"
+
+COPYRIGHT_YEAR = datetime.today().year
+COPYRIGHT = f'©{COPYRIGHT_YEAR} {AUTHOR}'
+
+USE_FOLDER_AS_CATEGORY = False
+MAIN_MENU = True
+HOME_HIDE_TAGS = True
+
+
+MENUITEMS = (
+    ("Arquivo", "/archives.html"),
+    ("Categorias", "/categories.html"),
+    ("Tags", "/tags.html"),
+)
 
 DEFAULT_PAGINATION = 10
 
@@ -36,7 +46,6 @@ DEFAULT_PAGINATION = 10
 
 TYPOGRIFY = True
 
-TWITTER_USERNAME = 'jcemelanda'
 
 # path-specific metadata
 EXTRA_PATH_METADATA = {
@@ -53,10 +62,10 @@ STATIC_PATHS = [
     'extra/favicon.ico',
     ]
 
-THEME = 'themes/Papyrus'
+THEME = 'themes/Flex'
 THEME_STATIC_PATHS = ['static']
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['readtime', 'search', 'neighbors', 'pelican-toc']
+PLUGINS = ['post_stats', 'search', 'related_posts', 'pelican-toc']
 
 # Site search plugin
 SEARCH_MODE = "output"
@@ -77,11 +86,20 @@ DISPLAY_PAGES_ON_MENU = True
 DIRECT_TEMPLATES = (('index', 'search', 'tags', 'categories', 'archives',))
 PAGINATED_TEMPLATES = {'index':None,'tag':None,'category':None,'author':None,'archives':24,}
 
-MARKDOWN = {
-    'extension_configs': {
-        'markdown.extensions.codehilite': {'css_class': 'highlight not-prose '},
-        'markdown.extensions.extra': {},
-        'markdown.extensions.meta': {},
-    },
-    'output_format': 'html5',
+
+THEME_COLOR_ENABLE_USER_OVERRIDE = True
+
+DATE_FORMATS = {
+    "en": "%m-%d-%Y",
+    "pt_BR": "%d-%m-%Y",
 }
+BROWSER_COLOR = "#666666"
+PYGMENTS_STYLE = "github"
+PYGMENTS_STYLE_DARK = "one-dark"
+
+
+SOCIAL = (
+    ("github", "https://github.com/jcemelanda"),
+    ("linkedin", "https://www.linkedin.com/in/jcemelanda"),
+    ("twitter", "https://twitter.com/jcemelanda"),
+)

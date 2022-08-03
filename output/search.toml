@@ -13,6 +13,11 @@ url = "pages/sobre-mim.html"
 title = "Sobre Mim"
 
 [[input.files]]
+path = "tutorial-pelican-2.html"
+url = "tutorial-pelican-2.html"
+title = "Tutorial de Pelican com Github Pages e CircleCI - 2"
+
+[[input.files]]
 path = "python-101-parte-4.html"
 url = "python-101-parte-4.html"
 title = "Python 101 - Parte 4 - Estruturas Condicionais em Python, o Retorno"

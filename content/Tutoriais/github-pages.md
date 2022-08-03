@@ -3,7 +3,8 @@ Date: 2022-08-03 19:30
 Category: Tutoriais
 Tags: Tutorial, Pelican, Github Pages, CircleCI
 Slug: tutorial-pelican-2
-Summary: 
+Summary: Github Pages é uma funcionalidade gratuita do Github que te permite criar um site estático para seu perfil ou para seus projetos. Geralmente estes sites terão uma URL do tipo `usuario.github.io` ou `projeto.github.io`. Porém, é possível também colocar seu próprio domínio, como fiz aqui.
+Status: draft
 
 Olá!
 

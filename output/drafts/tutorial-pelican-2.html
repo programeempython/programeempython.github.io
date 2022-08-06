@@ -40,25 +40,27 @@
   <meta name="msapplication-TileColor" content="#666666">
 
 <meta name="author" content="Julio Melanda" />
-<meta name="description" content="Estruturas de Dados em Python - Listas: List Comprehention Boa noite pessoal! Como prometido, hoje vamos continuar o post de ontem, falando sobre listas em Python, pois este é uma assunto bastante extenso. O assunto de hoje é List Comprehension, ou em português, abrangência de listas. Como o termo em português …" />
-<meta name="keywords" content="Tutorial, Python 101">
+<meta name="description" content="Github Pages é uma funcionalidade gratuita do Github que te permite criar um site estático para seu perfil ou para seus projetos. Geralmente estes sites terão uma URL do tipo usuario.github.io ou projeto.github.io. Porém, é possível também colocar seu próprio domínio, como fiz aqui." />
+<meta name="keywords" content="Tutorial, Pelican, Github Pages, CircleCI">
 
 
 <meta property="og:site_name" content="Programe em Python"/>
-<meta property="og:title" content="Python 101 - Segunda Parte"/>
-<meta property="og:description" content="Estruturas de Dados em Python - Listas: List Comprehention Boa noite pessoal! Como prometido, hoje vamos continuar o post de ontem, falando sobre listas em Python, pois este é uma assunto bastante extenso. O assunto de hoje é List Comprehension, ou em português, abrangência de listas. Como o termo em português …"/>
+<meta property="og:title" content="Tutorial de Pelican com Github Pages e CircleCI - 2"/>
+<meta property="og:description" content="Github Pages é uma funcionalidade gratuita do Github que te permite criar um site estático para seu perfil ou para seus projetos. Geralmente estes sites terão uma URL do tipo usuario.github.io ou projeto.github.io. Porém, é possível também colocar seu próprio domínio, como fiz aqui."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="http://localhost:8000/drafts/python-101-parte-9.html"/>
+<meta property="og:url" content="http://localhost:8000/drafts/tutorial-pelican-2.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2022-07-29 12:06:00+02:00"/>
+<meta property="article:published_time" content="2022-08-03 19:30:00+02:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="http://localhost:8000/author/julio-melanda.html">
 <meta property="article:section" content="Tutoriais"/>
 <meta property="article:tag" content="Tutorial"/>
-<meta property="article:tag" content="Python 101"/>
+<meta property="article:tag" content="Pelican"/>
+<meta property="article:tag" content="Github Pages"/>
+<meta property="article:tag" content="CircleCI"/>
 <meta property="og:image" content="images/logo.png">
 
-  <title>Programe em Python &ndash; Python 101 - Segunda Parte</title>
+  <title>Programe em Python &ndash; Tutorial de Pelican com Github Pages e CircleCI - 2</title>
 
 </head>
 
@@ -130,9 +132,9 @@
 <article class="single">
   <header>
       
-    <h1 id="python-101-parte-9">Python 101 - Segunda&nbsp;Parte</h1>
+    <h1 id="tutorial-pelican-2">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;2</h1>
     <p>
-      Posted on fre 29 juli 2022 in <a href="http://localhost:8000/category/tutoriais.html">Tutoriais</a>
+      Posted on ons 03 august 2022 in <a href="http://localhost:8000/category/tutoriais.html">Tutoriais</a>
 
         &#8226; 2 min read
     </p>
@@ -140,86 +142,36 @@
 
 
   <div>
-    <p>Estruturas de Dados em Python - Listas: List Comprehention
-Boa noite&nbsp;pessoal!</p>
-<p>Como prometido, hoje vamos continuar o post de ontem, falando sobre listas em Python, pois este &eacute; uma assunto bastante&nbsp;extenso.</p>
-<p>O assunto de hoje &eacute; List Comprehension, ou em portugu&ecirc;s, abrang&ecirc;ncia de listas. Como o termo em portugu&ecirc;s n&atilde;o retrata bem o que este recurso faz, vamos usar o termo em ingl&ecirc;s&nbsp;mesmo.</p>
-<p>List Comprehension &eacute; um recurso do Python que permite a cria&ccedil;&atilde;o de listas de forma simples, usando simplesmente uma express&atilde;o seguida de um for que pode conter outros for e/ou if dentro&nbsp;dele.</p>
-<p>Tudo ficar&aacute; mais claro ao partirmos para os&nbsp;exemplos.</p>
-<p>Ent&atilde;o, vamos colocar a m&atilde;o na massa! Abra o shell do&nbsp;Python.</p>
-<p>Lembre-seque o que deve ser digitado estar&aacute; precedido de &gt;&gt;&gt; ou &hellip;, assim como aparecer&aacute; no shell do&nbsp;python.</p>
-<p>Se por acaso voc&ecirc; n&atilde;o entendeu do que estou falando, &eacute; aconselh&aacute;vel que voc&ecirc; leia antes os posts anteriores que te deixar&atilde;o em dia com tudo que vimos at&eacute;&nbsp;agora.</p>
-<p>Procure entender exatamente o que acontece em cada exemplo. Vamos&nbsp;l&aacute;!</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>l = [1, 2, 4] 
-[3 * x for x in l]
-[3, 6, 12]
-[2 * x for x in l if x &gt; 3]
-[12]
-5 * x for x in l if x &lt; 0] 
-[]
-[[x, 2<em>x] for x in l]
-[[1, 2], [2, 4], [4, 8]]
-[(x, 2</em>x) for x in l]
-[(1, 2), (2, 4), (4, 8)]
-l1 = [0, 1, 2]
-l2 = [1, 2, 3]
-[x * y for x in l1 for y in l2] 
-[0, 0, 0, 1, 2, 3, 2, 4, 6]
-[l1[i] * l2[i] for i in range(len(l1))]
-[0, 2,&nbsp;6]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>As instru&ccedil;&otilde;es s&atilde;o sempre dadas no mesmo padr&atilde;o:
-[<expressao> for <variável> in <lista> [if <condição>] [for&hellip;]]
-<strong><em> As estruturas entre [] s&atilde;o&nbsp;opcionais. </em></strong></condição></lista></variável></expressao></p>
-<p>Agora chegamos ao ponto em que devemos responder o desafio de ontem para&nbsp;prosseguir.</p>
-<p>No &uacute;ltimo post, ficou um desafio: &ldquo;Quem imagina como fazer uma matriz em Python usando o que vimos&nbsp;hoje???&rdquo;</p>
-<p>A resposta &eacute;: Criar listas de&nbsp;listas!</p>
-<p>Ent&atilde;o, se&nbsp;fizermos:</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>m = [[1, 2, 3],[2, 3,&nbsp;4]]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>Teremos a matriz m com 2 linhas e 3 colunas, contendo na primeira linha os valores 1, 2, 3 e na segunda os valores 2, 3 e&nbsp;4.</p>
-<p>Assim, podemo usar list comprehention tamb&eacute;m para criarmos matrizes. Chamamos este recurso de Nested List Comprehention (nested =&nbsp;aninhado).</p>
-<p>Vejamos o seguinte&nbsp;exemplo:</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>m = [
-&hellip;         [1, 2, 3],
-&hellip;         [4, 5, 6],
-&hellip;         [7, 8, 9],
-&hellip;&nbsp;]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>Aqui, criamos uma matriz 3x3 com os valores de 1 a 9.
-Agora, veja uma forma de trocar as linhas com as colunas da matriz&nbsp;m:</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>[[linha[i] for linha in m] for i in [0, 1, 2]]
-[[1, 4, 7], [2, 5, 8], [3, 6,&nbsp;9]]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>Acho que por hoje, este recurso est&aacute; bem ilustrado. Qualquer d&uacute;vida, postem nos coment&aacute;rios que a resposta ser&aacute;&nbsp;r&aacute;pida!</p>
-<p>Comentem!</p>
-<p>Assinem o Feed e n&atilde;o percam nenhum Post do Programe em&nbsp;Python!</p>
-<p>Abra&ccedil;os!</p>
+    <p>Ol&aacute;!</p>
+<p>Chegou a hora de continuarmos o tutorial de como publicar seu blog com Pelican, Github Pages e Circle <span class="caps">CI</span> como eu fiz, e caso voc&ecirc; esteja chegando por aqui agora, confira nosso <a href="http://localhost:8000/drafts/tutorial-pelican-2.html">Tutorial Inicial de Pelican</a>.</p>
+<p>Hoje vamos falar sobre Github&nbsp;Pages.</p>
+<p>Github Pages &eacute; uma funcionalidade gratuita do Github que te permite criar um site est&aacute;tico para seu perfil ou para seus projetos. Geralmente estes sites ter&atilde;o uma <span class="caps">URL</span> do tipo <code>usuario.github.io</code> ou <code>projeto.github.io</code>. Por&eacute;m, &eacute; poss&iacute;vel tamb&eacute;m colocar seu pr&oacute;prio dom&iacute;nio, como fiz&nbsp;aqui.</p>
+<p>Para este tutorial, vamos usar o github pages para seu usu&aacute;rio, assim, crie um reposit&oacute;rio chamado <code>username.github.io</code>, onde username &eacute; seu nome de&nbsp;usu&aacute;rio.</p>
+<p>No canto superior direito do site clique no <code>+</code> e selecione <code>New Repository</code>. O nome deve ser <code>username.github.io</code>, como disse&nbsp;acima. </p>
+<p>Agora, vamos clonar o reposit&oacute;rio. Para isto, precisamos ter instalado o <code>git</code>.</p>
+<p>Se voc&ecirc; n&atilde;o tem <span class="caps">GIT</span> instalado, voc&ecirc; precisar&aacute; instal&aacute;-lo&nbsp;agora.</p>
+<p>Para isto, recomendo este <a href="https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git">Tutorial de Instala&ccedil;&atilde;o do <span class="caps">GIT</span></a>.</p>
+<p>Ap&oacute;s instalar o <code>git</code>, abra um terminal para podermos clonar o&nbsp;projeto.</p>
+<p>Se voc&ecirc; j&aacute; est&aacute; habituado com isto ser&aacute; bem simples, sen&atilde;o, recomendo que utilize o link https para clonar, j&aacute; que implica em menos complexidade de configura&ccedil;&atilde;o no&nbsp;momento.</p>
+<p>Escolha uma pasta onde ficar&aacute; seu projeto e execute dentro dela o seguinte&nbsp;comando:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/jcempython/jcempython.github.io.git
+</code></pre></div>
+<p>O git vai pedir seu usu&aacute;rio e sua senha do github para clonar o reposit&oacute;rio. Quando clonado, vamos criar um arquivo na pasta clonada chamado index.html, e este ter&aacute; o seguinte&nbsp;conte&uacute;do:</p>
+<div class="highlight"><pre><span></span><code>!#html
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        Ol&aacute;! Github Pages &eacute; muito legal!
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+<p>Com seu reposit&oacute;rio criado, clique em Settings para podermos configurar o site. No menu lateral, na sess&atilde;o <code>Code and Automation</code> selecione <code>Pages</code>. </p>
   </div>
   <div class="tag-cloud">
     <p>
       <a href="http://localhost:8000/tag/tutorial.html">Tutorial</a>
-      <a href="http://localhost:8000/tag/python-101.html">Python 101</a>
+      <a href="http://localhost:8000/tag/pelican.html">Pelican</a>
+      <a href="http://localhost:8000/tag/github-pages.html">Github Pages</a>
+      <a href="http://localhost:8000/tag/circleci.html">CircleCI</a>
     </p>
   </div>
 
@@ -228,11 +180,11 @@ Agora, veja uma forma de trocar as linhas com as colunas da matriz&nbsp;m:</p>
   <div class="related-posts">
     <h4>You might enjoy</h4>
     <ul class="related-posts">
+      <li><a href="http://localhost:8000/tutorial-pelican.html">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;1</a></li>
       <li><a href="http://localhost:8000/python-101-parte-4.html">Python 101 - Parte 4 - Estruturas Condicionais em Python, o&nbsp;Retorno</a></li>
       <li><a href="http://localhost:8000/python-101-parte-3-condicionais.html">Python 101 - Parte 3 - Estruturas Condicionais em&nbsp;Python</a></li>
       <li><a href="http://localhost:8000/python-101-parte-2.html">Python 101 - Segunda&nbsp;Parte</a></li>
       <li><a href="http://localhost:8000/python-101-parte-1.html">Python 101 - Primeira&nbsp;Parte</a></li>
-      <li><a href="http://localhost:8000/tutorial-pelican.html">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;1</a></li>
     </ul>
   </div>
 

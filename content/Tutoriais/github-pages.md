@@ -32,6 +32,13 @@ Escolha uma pasta onde ficará seu projeto e execute dentro dela o seguinte coma
 
     git clone https://github.com/jcempython/jcempython.github.io.git
 
-O git vai pedir seu usuário e sua senha do github para clonar o repositório.
+O git vai pedir seu usuário e sua senha do github para clonar o repositório. Quando clonado, vamos criar um arquivo na pasta clonada chamado index.html, e este terá o seguinte conteúdo:
+
+    !#html
+    <html>
+        <body>
+            Olá! Github Pages é muito legal!
+        </body>
+    </html>
 
 Com seu repositório criado, clique em Settings para podermos configurar o site. No menu lateral, na sessão `Code and Automation` selecione `Pages`. 

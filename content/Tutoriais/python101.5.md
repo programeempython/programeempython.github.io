@@ -1,16 +1,19 @@
-Title: Python 101 - Segunda Parte
+Title: Python 101 - Estruturas de Repetição - 1 - While
 Date: 2022-07-29 12:06
+Modified: 2022-08-07 13:25
 Slug: python-101-parte-5
 Category: Tutoriais
 Tags: Tutorial, Python 101
 Status: draft
 
-Estruturas de Repetição Parte 1 - While
-Olá Pessoal!
+Olá!
 
-Ontem não tava muito legal não deu pra postar nada...
+Vamos continuar falando sobre Programação Básica no Python! Caso não tenha visto os tutoriais anteriores, já temos:
 
-Mas vamos continuar falando sobre Programação Básica no Python!
+* [Introdução ao Python]({filename}/Tutoriais/python101.md)
+* [Blocos de Código em Python]({filename}/Tutoriais/python101.2.md)
+* [Estruturas Condicionais em Python - 1]({filename}/Tutoriais/python101.3.md)
+* [Estruturas Condicionais em Python - 2]({filename}/Tutoriais/python101.4.md)
 
 Hoje vamos falar de uma das estruturas mais importantes: o while.
 

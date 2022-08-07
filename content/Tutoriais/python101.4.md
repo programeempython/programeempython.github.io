@@ -1,5 +1,6 @@
 Title: Python 101 - Parte 4 - Estruturas Condicionais em Python, o Retorno
 Date: 2022-08-02 22:06
+Modified: 2022-08-07 13:25
 Slug: python-101-parte-4
 Category: Tutoriais
 Tags: Tutorial, Python 101
@@ -9,7 +10,11 @@ Olá!
 
 Continuando o artigo sobre Estruturas Condicionais em Python, veremos agora algumas outras fomas de usar a construção `if`/`else`.
 
-Se você ainda não viu o post anterior, veja aqui a introdução aos [Condicionais em Python](({filename}/Tutoriais/python101.3.md))
+Caso não tenha visto os tutoriais anteriores, já temos:
+
+* [Introdução ao Python]({filename}/Tutoriais/python101.md)
+* [Blocos de Código em Python]({filename}/Tutoriais/python101.2.md)
+* [Estruturas Condicionais em Python - 1]({filename}/Tutoriais/python101.3.md)
 
 Muitas vezes, não é possível resolver um problema computacional simplesmente com um if/else. Então, usamos vários conjuntos de if/else aninhados (um dentro do outro)
 

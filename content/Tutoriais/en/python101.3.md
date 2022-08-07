@@ -1,5 +1,6 @@
 Title: Python 101 - part 3 - Python Conditional Structures
 Date: 2022-08-01 23:06
+Modified: 2022-08-07 13:25
 Slug: python-101-parte-3-condicionais
 Category: Tutoriais
 Tags: Tutorial, Python 101, Condicionais
@@ -10,7 +11,11 @@ Hi!
 
 Continuing our introductory Python series, let's talk a little about conditional structures.
 
-If you haven't seen the previous post, see here to understand the [Python Code Blocks]({filename}/Tutoriais/python101.2.md)
+
+I you haven't seen our previous tutorials, check here:
+
+* [Introdution to Python]({filename}/Tutoriais/en/python101.md)
+* [Code Blocks in Python]({filename}/Tutoriais/en/python101.2.md)
 
 Conditional structures are essential in programming. Without them, programs would be boring, monotonous, and would never have been able to do what they do today.
 

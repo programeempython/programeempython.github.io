@@ -1,5 +1,6 @@
 Title: Python 101 - Segunda Parte
 Date: 2022-07-29 12:06
+Modified: 2022-08-07 13:25
 Slug: python-101-parte-2
 Category: Tutoriais
 Tags: Tutorial, Python 101
@@ -10,9 +11,10 @@ Hi!
 
 Now that we have Python installed and we already know its interactive interface, let's learn a little about the most basic commands of the language!
 
-Before we continue, if you haven't read the previous post, go here:
 
-[Python 101 - Part One]({filename}/Tutoriais/python101.md)
+I you haven't seen our previous tutorials, check here:
+
+* [Introdution to Python]({filename}/Tutoriais/en/python101.md)
 
 As seen, in the Python shell we have two cursors:
 

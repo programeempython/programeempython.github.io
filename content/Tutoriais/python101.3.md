@@ -1,5 +1,6 @@
 Title: Python 101 - Parte 3 - Estruturas Condicionais em Python
 Date: 2022-08-01 23:06
+Modified: 2022-08-07 13:25
 Slug: python-101-parte-3-condicionais
 Category: Tutoriais
 Tags: Tutorial, Python 101, Condicionais
@@ -9,7 +10,10 @@ Olá!
 
 Continuando nossa série introdutória sobre Python, vamos falar um pouco sobre as estruturas condicionais.
 
-Se você não viu o post anterior, veja aqui para entender os [Blocos de Código em Python]({filename}/Tutoriais/python101.md)
+Caso não tenha visto os tutoriais anteriores, já temos:
+
+* [Introdução ao Python]({filename}/Tutoriais/python101.md)
+* [Blocos de Código em Python]({filename}/Tutoriais/python101.2.md)
 
 As estruturas condicionais são essenciais na programação. Sem elas, os programas seriam chatos, monótonos, e nunca teriam a capacidade toda que temos atualmente.
 

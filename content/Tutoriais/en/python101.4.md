@@ -1,5 +1,6 @@
 Title: Python 101 - Part 4 - Conditionals in Python, the Return
 Date: 2022-08-02 22:06
+Modified: 2022-08-07 13:25
 Slug: python-101-parte-4
 Category: Tutoriais
 Tags: Tutorial, Python 101
@@ -8,7 +9,11 @@ Translation: true
 
 Continuing the article series on Conditional Structures in Python, we will now look at some other ways to use the `if`/`else` instructions.
 
-If you haven't seen the previous post, here's the introduction to [Conditionals in Python](({filename}/Tutoriais/python101.3.md))
+I you haven't seen our previous tutorials, check here:
+
+* [Introdution to Python]({filename}/Tutoriais/en/python101.md)
+* [Code Blocks in Python]({filename}/Tutoriais/en/python101.2.md)
+* [Conditional Structures in Python - 1]({filename}/Tutoriais/en/python101.3.md)
 
 It is often not possible to solve a computational problem simply with an `if`/`else`. So we use multiple nested `if`/`else` sets (one inside the other)
 

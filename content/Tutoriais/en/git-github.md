@@ -67,7 +67,7 @@ Now you need to tell git that it should save changes in this repository, so type
 
 Now let's push this file to github with a `push` command.
 
-    git push origin master
+    git push origin main
 
 Done! You've taken your first steps with Git and Gihub!
 

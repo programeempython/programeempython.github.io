@@ -65,7 +65,7 @@ Agora você precisa informar ao git que ele deve guardar as mudanças deste repo
 
 Agora vamos enviar este arquivo para o github com um comando de `push`.
 
-    git push origin master
+    git push origin main
 
 Pronto! Você deu seus primeiros passos com Git e Gihub!
 

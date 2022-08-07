@@ -1,4 +1,5 @@
 from datetime import datetime
+from re import LOCALE
 
 AUTHOR = 'Julio Melanda'
 SITENAME = 'Programe em Python'
@@ -42,7 +43,7 @@ MENUITEMS = (
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 TYPOGRIFY = True
 
@@ -93,6 +94,7 @@ DATE_FORMATS = {
     "en": "%m-%d-%Y",
     "pt_BR": "%d-%m-%Y",
 }
+LOCALE = {'pt_BR', 'en'}
 BROWSER_COLOR = "#666666"
 PYGMENTS_STYLE = "github"
 PYGMENTS_STYLE_DARK = "one-dark"

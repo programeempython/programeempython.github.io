@@ -8,6 +8,8 @@ from pelicanconf import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
 SITEURL = 'http://programeempython.com.br'
+TIMEZONE = 'Europe/Copenhagen'
+
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
@@ -34,3 +36,4 @@ GOOGLE_ADSENSE = {
 }
 
 DISQUS_SITENAME = "programeempython"
+WITH_FUTURE_DATES = False

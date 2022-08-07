@@ -10,10 +10,10 @@ Hi!
 
 Let's keep talking about Basic Programming in Python! In case you haven't seen the previous tutorials, we already have:
 
-* [Introduction to Python]({filename}/Tutorials/python101.md)
-* [Python Code Blocks]({filename}/Tutorials/python101.2.md)
-* [Conditional Frameworks in Python - 1]({filename}/Tutorials/python101.3.md)
-* [Conditional Frameworks in Python - 2]({filename}/Tutorials/python101.4.md)
+* [Introduction to Python]({filename}/Tutoriais/en/python101.md)
+* [Python Code Blocks]({filename}/Tutoriais/en/python101.2.md)
+* [Conditional Frameworks in Python - 1]({filename}/Tutoriais/en/python101.3.md)
+* [Conditional Frameworks in Python - 2]({filename}/Tutoriais/en/python101.4.md)
 
 Today we are going to talk about one of the most important structures: the `while`.
 

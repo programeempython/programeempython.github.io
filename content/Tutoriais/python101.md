@@ -4,8 +4,6 @@ Modified: 2022-07-31 01:44
 Slug: python-101-parte-1
 Category: Tutoriais
 Tags: Tutorial, Python 101
-Summary: Bom, um blog com o nome Programe em Python não pode ficar sem um tutorial básico de Python, né?
-
 
 Bom, um blog com o nome Programe em Python não pode ficar sem um tutorial básico de Python, né?
 

@@ -3,7 +3,6 @@ Date: 2022-07-31 22:03
 Category: Tutoriais
 Tags: Tutorial, Pelican, Github Pages, CircleCI
 Slug: tutorial-pelican
-Summary: Como prometido, vamos abordar como criei meu blog com Pelican, Github Pages e CircleCI num tutorial. Como é bastante conteúdo vamos dividir em partes e aqui veremos uma introdução ao Pelican.
 
 Olá!
 

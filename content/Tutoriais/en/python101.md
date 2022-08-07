@@ -5,7 +5,6 @@ Category: Tutoriais
 Tags: Tutorial, Python 101
 Lang: en
 Translation: true
-Summary: Well, a blog with the name Programe em Python can'e exist without a basic Python Tutorial, right?
 
 
 Well, a blog with the name Programe em Python can'e exist without a basic Python Tutorial, right?

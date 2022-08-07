@@ -4,7 +4,6 @@ Modified: 2022-08-07 13:25
 Slug: python-101-parte-3-condicionais
 Category: Tutoriais
 Tags: Tutorial, Python 101, Condicionais
-Summary: Continuando nossa série introdutória sobre Python, vamos falar um pouco sobre as estruturas condicionais.
 
 Olá!
 

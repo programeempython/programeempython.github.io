@@ -3,7 +3,6 @@ Date: 2022-08-07 10:02
 Category: Tutoriais
 Tags: Tutorial, Pelican, Github Pages, CircleCI, Git, Github
 Slug: tutorial-git-1
-Summary: I was writing the next post to the pelican tutorial when I realized that in order to talk about github pages, it's important to first talk about git and github to make sure we're all on the same page later on.
 Lang: en
 Translation: true
 

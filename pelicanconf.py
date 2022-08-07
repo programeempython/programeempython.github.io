@@ -3,7 +3,7 @@ from datetime import datetime
 AUTHOR = 'Julio Melanda'
 SITENAME = 'Programe em Python'
 SITEURL = 'http://localhost:8000'
-SITELOGO = 'images/logo.png'
+SITELOGO = '/images/logo.png'
 
 SUBTITLE = 'Um pouco de tudo sobre programação em Python'
 

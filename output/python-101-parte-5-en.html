@@ -64,27 +64,27 @@
   <meta name="msapplication-TileColor" content="#666666">
 
 <meta name="author" content="Julio Melanda" />
-<meta name="description" content="Bom, um blog com o nome Programe em Python não pode ficar sem um tutorial básico de Python, né?" />
+<meta name="description" content="Hi! Let’s keep talking about Basic Programming in Python! In case you haven’t seen the previous tutorials, we already have: Introduction to Python Python Code Blocks Conditional Frameworks in Python - 1 Conditional Frameworks in Python - 2 Today we are going to talk about one of the most important …" />
 <meta name="keywords" content="Tutorial, Python 101">
 
-<link rel="alternate" href="http://programeempython.com.br/python-101-parte-1.html" hreflang="pt_br" />
-<link rel="alternate" href="http://programeempython.com.br/python-101-parte-1-en.html" hreflang="en" />
+<link rel="alternate" href="http://programeempython.com.br/python-101-parte-5-en.html" hreflang="en" />
+<link rel="alternate" href="http://programeempython.com.br/python-101-parte-5.html" hreflang="pt_br" />
 
 <meta property="og:site_name" content="Programe em Python"/>
-<meta property="og:title" content="Python 101 - Primeira Parte"/>
-<meta property="og:description" content="Bom, um blog com o nome Programe em Python não pode ficar sem um tutorial básico de Python, né?"/>
+<meta property="og:title" content="Python 101 - Estruturas de Repetição - 1 - While"/>
+<meta property="og:description" content="Hi! Let’s keep talking about Basic Programming in Python! In case you haven’t seen the previous tutorials, we already have: Introduction to Python Python Code Blocks Conditional Frameworks in Python - 1 Conditional Frameworks in Python - 2 Today we are going to talk about one of the most important …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="http://programeempython.com.br/python-101-parte-1.html"/>
+<meta property="og:url" content="http://programeempython.com.br/python-101-parte-5-en.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2022-07-29 01:06:00+02:00"/>
-<meta property="article:modified_time" content="2022-07-31 01:44:00+02:00"/>
+<meta property="article:published_time" content="2022-07-29 12:06:00+02:00"/>
+<meta property="article:modified_time" content="2022-08-07 22:11:00+02:00"/>
 <meta property="article:author" content="http://programeempython.com.br/author/julio-melanda.html">
 <meta property="article:section" content="Tutoriais"/>
 <meta property="article:tag" content="Tutorial"/>
 <meta property="article:tag" content="Python 101"/>
 <meta property="og:image" content="/images/logo.png">
 
-  <title>Programe em Python &ndash; Python 101 - Primeira Parte</title>
+  <title>Programe em Python &ndash; Python 101 - Estruturas de Repetição - 1 - While</title>
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
@@ -176,13 +176,13 @@
 <article class="single">
   <header>
           <div class="translations">
-    <a class="active" href="http://programeempython.com.br/python-101-parte-1.html">pt_br</a>
-        <a href="http://programeempython.com.br/python-101-parte-1-en.html">en</a>
+    <a class="active" href="http://programeempython.com.br/python-101-parte-5-en.html">en</a>
+        <a href="http://programeempython.com.br/python-101-parte-5.html">pt_br</a>
     </div>
 
-    <h1 id="python-101-parte-1">Python 101 - Primeira&nbsp;Parte</h1>
+    <h1 id="python-101-parte-5">Python 101 - Estruturas de Repetição - 1 -&nbsp;While</h1>
     <p>
-      Posted on fre 29 juli 2022 in <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
+      Posted on 07-29-2022 in <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
 
         &#8226; 2 min read
     </p>
@@ -197,39 +197,63 @@
     </script>
 
   <div>
-    <p>Bom, um blog com o nome Programe em Python n&atilde;o pode ficar sem um tutorial b&aacute;sico de Python,&nbsp;n&eacute;?</p>
-<p>Antes de mais nada, se voc&ecirc; usa Linux ou MacOS voc&ecirc; provavelmente j&aacute; tem o Python ent&atilde;o voc&ecirc; est&aacute; com&nbsp;sorte.</p>
-<p>No windows, v&aacute; &agrave; <a href="https://www.python.org/downloads/">p&aacute;gina de downloads do Python</a> e baixe dali a vers&atilde;o mais&nbsp;recente.</p>
-<p><img alt="Download Python" src="/images/download-python.png"/></p>
-<p>Quando terminar o download, execute o instalador e siga as instru&ccedil;&otilde;es de&nbsp;instala&ccedil;&atilde;o.</p>
-<p>Lembre-se de marcar a op&ccedil;&atilde;o para inserir Python nos caminhos do sistema (<em>Add Python to <span class="caps">PATH</span></em>), pois isto vai facilitar muito a sua&nbsp;vida.</p>
-<p>Quando o Python estiver finalmente instalado, numa janela de linha de comando, (<span class="caps">CMD</span> ou powershell no Windows) digite Python e voc&ecirc; deve ver algo semelhante a&nbsp;isto.</p>
-<p><img alt="Terminal Python" src="/images/python-terminal.png"/></p>
-<p>Veja que na primeira linha voc&ecirc; consegue ver qual a vers&atilde;o do Python, e na &uacute;ltima linha h&aacute; um prompt esperando pelos seus&nbsp;comandos. </p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
-</code></pre></div>
-<p>Este prompt ser&aacute; usado neste blog sempre para denotar que devemos escrever c&oacute;digo no console do&nbsp;Python.</p>
-<p>Fa&ccedil;a um teste. Digite, seguido de <code>ENTER</code>:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; print('Ol&aacute; Mundo!')
-</code></pre></div>
-<p>O resultado deve ser algo&nbsp;assim:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; print('Ol&aacute; Mundo!')
-Ol&aacute; Mundo!
-</code></pre></div>
-<p>Isto significa que o console do Python j&aacute; te retorna as respostas para os comando logo em seguida de voc&ecirc; execut&aacute;-los. Veja por&nbsp;exemplo:</p>
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; 23*256/98+3
-63.08163265306123
-</code></pre></div>
-<p>Finalmente, quando formos executar c&oacute;digos com blocos, como <code>if</code> por exemplo, ser&aacute;&nbsp;assim:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">True</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s1">'</span><span class="s">&Eacute; verdade!</span><span class="s1">'</span><span class="ss">)</span>
-...
-&Eacute; <span class="nv">verdade</span><span class="o">!</span>
-</code></pre></div>
-<p>Assim, note que os 3 pontos <code>...</code> s&atilde;o indicadores de bloco de c&oacute;digo no terminal do Python, ou seja, indicam que um comando iniciado acima ainda n&atilde;o foi terminado. Desta forma, precisamos inserir uma linha em branco para o Python perceber que finalizamos aquele comando e ele pode ent&atilde;o&nbsp;execut&aacute;-lo.</p>
-<p>Acho que este &eacute; um bom momento para finalizarmos esta primeira parte do tutorial&nbsp;:D</p>
-<p>N&atilde;o deixem de <strong>comentar</strong> abaixo com sua opini&atilde;o e&nbsp;d&uacute;vidas!</p>
-<p>At&eacute; o pr&oacute;ximo&nbsp;post!</p>
+    <p>Hi!</p>
+<p>Let&rsquo;s keep talking about Basic Programming in Python! In case you haven&rsquo;t seen the previous tutorials, we already&nbsp;have:</p>
+<ul>
+<li><a href="{filename}/Tutorials/python101.md">Introduction to&nbsp;Python</a></li>
+<li><a href="{filename}/Tutorials/python101.2.md">Python Code&nbsp;Blocks</a></li>
+<li><a href="{filename}/Tutorials/python101.3.md">Conditional Frameworks in Python -&nbsp;1</a></li>
+<li><a href="{filename}/Tutorials/python101.4.md">Conditional Frameworks in Python -&nbsp;2</a></li>
+</ul>
+<p>Today we are going to talk about one of the most important structures: the <code>while</code>.</p>
+<p>The <code>while</code> is a statement that tells a block of code to be executed while a condition is satisfied. Thus, it allows execution loops to be created, as we have in games and applications with graphical&nbsp;interfaces.</p>
+<p><code>while</code> is a very useful statement, but it can be dangerous, because if we don&rsquo;t handle the stopping criterion correctly, the loop may never end, and the program doesn&rsquo;t do what it&nbsp;should.</p>
+<p>Let&rsquo;s see an example of how <code>while</code> works in&nbsp;Python:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x &gt; 0"</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+<p>In this code, the message <code>x &gt; 0</code> will be displayed until x is equal to zero. When the value of <code>x</code> goes to <code>0</code>, the check <code>x&gt;0</code> will return false, the program exits the&nbsp;loop.</p>
+<p>Now let&rsquo;s look at this code&nbsp;snippet:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"I will never stop!"</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="k">break</span>
+</code></pre></div></td></tr></table></div>
+<p>Here we have a loop that would run forever (<code>while True:</code>). However, inside it, we do a check, and when the <code>i</code> variable is storing a value greater than <code>100</code>, the <code>break</code> command will be executed. The <code>break</code> command literally breaks the loop, so at that instant, the program exits the&nbsp;loop.</p>
+<p>If just below this code we did a <code>print(i)</code>, the value displayed would be <code>100</code>.</p>
+<p>So, along with the <code>while</code> command, we have now seen the <code>break</code> command which can be very useful for breaking loops outside the standard&nbsp;comparison.</p>
+<p>Now let&rsquo;s look at the following&nbsp;snippet:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">continues</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Initially, <code>i</code> is assigned the value <code>0</code>, and is compared to <code>100</code>. As <code>0</code> is less than <code>100</code>, the loop starts. Soon after, after incrementing the value of <code>i</code>, we have a comparison: if <code>1%2 == 0:</code>. here we check if <code>i</code> is a multiple of <code>2</code>. If <code>i</code> is a multiple of two, there is a <code>continue</code> command. <code>continue</code> causes this iteration of the loop to end and the program moves on to the next iteration. This way, the program ignores everything after <code>continue</code>.</p>
+<p>In case <code>i</code> is not a multiple of <code>2</code>, the program does not execute <code>continue</code>, and prints the value of <code>i</code> on the&nbsp;screen.</p>
+<p>If a <code>continue</code> were outside the <code>if</code>, the program would always execute this <code>continue</code>, and the one after it would never be executed. Thus, <code>continue</code> controls the execution of the loop without breaking&nbsp;it.</p>
+<p>That&rsquo;s it for&nbsp;now.</p>
+<p>Our next post will talk about the for&nbsp;statement.</p>
+<p>Be sure to post questions and opinions in the comments&nbsp;below!</p>
+<p>See you in the next&nbsp;post!</p>
   </div>
   <div class="tag-cloud">
     <p>
@@ -240,16 +264,6 @@ Ol&aacute; Mundo!
 
 
 
-  <div class="related-posts">
-    <h4>You might enjoy</h4>
-    <ul class="related-posts">
-      <li><a href="http://programeempython.com.br/python-101-parte-4.html">Python 101 - Parte 4 - Estruturas Condicionais em Python, o&nbsp;Retorno</a></li>
-      <li><a href="http://programeempython.com.br/python-101-parte-3-condicionais.html">Python 101 - Parte 3 - Estruturas Condicionais em&nbsp;Python</a></li>
-      <li><a href="http://programeempython.com.br/python-101-parte-2.html">Python 101 - Segunda&nbsp;Parte</a></li>
-      <li><a href="http://programeempython.com.br/python-101-parte-5.html">Python 101 - Estruturas de Repetição - 1 -&nbsp;While</a></li>
-      <li><a href="http://programeempython.com.br/tutorial-git-1.html">Tutorial de Git e&nbsp;Github</a></li>
-    </ul>
-  </div>
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle ads-responsive"

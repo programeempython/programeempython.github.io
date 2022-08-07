@@ -38,6 +38,11 @@ url = "python-101-parte-2.html"
 title = "Python 101 - Segunda Parte"
 
 [[input.files]]
+path = "python-101-parte-5.html"
+url = "python-101-parte-5.html"
+title = "Python 101 - Estruturas de Repetição - 1 - While"
+
+[[input.files]]
 path = "python-101-parte-1.html"
 url = "python-101-parte-1.html"
 title = "Python 101 - Primeira Parte"
@@ -76,6 +81,11 @@ title = "Pelican tutorial with Github Pages and CircleCI - 1"
 path = "python-101-parte-2-en.html"
 url = "python-101-parte-2-en.html"
 title = "Python 101 - Segunda Parte"
+
+[[input.files]]
+path = "python-101-parte-5-en.html"
+url = "python-101-parte-5-en.html"
+title = "Python 101 - Estruturas de Repetição - 1 - While"
 
 [[input.files]]
 path = "python-101-parte-1-en.html"

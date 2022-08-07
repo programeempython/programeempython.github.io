@@ -64,28 +64,27 @@
   <meta name="msapplication-TileColor" content="#666666">
 
 <meta name="author" content="Julio Melanda" />
-<meta name="description" content="Continuando nossa série introdutória sobre Python, vamos falar um pouco sobre as estruturas condicionais." />
-<meta name="keywords" content="Tutorial, Python 101, Condicionais">
+<meta name="description" content="Olá! Vamos continuar falando sobre Programação Básica no Python! Caso não tenha visto os tutoriais anteriores, já temos: Introdução ao Python Blocos de Código em Python Estruturas Condicionais em Python - 1 Estruturas Condicionais em Python - 2 Hoje vamos falar de uma das estruturas mais importantes: o while. O while é …" />
+<meta name="keywords" content="Tutorial, Python 101">
 
-<link rel="alternate" href="http://programeempython.com.br/python-101-parte-3-condicionais.html" hreflang="pt_br" />
-<link rel="alternate" href="http://programeempython.com.br/python-101-parte-3-condicionais-en.html" hreflang="en" />
+<link rel="alternate" href="http://programeempython.com.br/python-101-parte-5.html" hreflang="pt_br" />
+<link rel="alternate" href="http://programeempython.com.br/python-101-parte-5-en.html" hreflang="en" />
 
 <meta property="og:site_name" content="Programe em Python"/>
-<meta property="og:title" content="Python 101 - Parte 3 - Estruturas Condicionais em Python"/>
-<meta property="og:description" content="Continuando nossa série introdutória sobre Python, vamos falar um pouco sobre as estruturas condicionais."/>
+<meta property="og:title" content="Python 101 - Estruturas de Repetição - 1 - While"/>
+<meta property="og:description" content="Olá! Vamos continuar falando sobre Programação Básica no Python! Caso não tenha visto os tutoriais anteriores, já temos: Introdução ao Python Blocos de Código em Python Estruturas Condicionais em Python - 1 Estruturas Condicionais em Python - 2 Hoje vamos falar de uma das estruturas mais importantes: o while. O while é …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="http://programeempython.com.br/python-101-parte-3-condicionais.html"/>
+<meta property="og:url" content="http://programeempython.com.br/python-101-parte-5.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2022-08-01 23:06:00+02:00"/>
-<meta property="article:modified_time" content="2022-08-07 13:25:00+02:00"/>
+<meta property="article:published_time" content="2022-07-29 12:06:00+02:00"/>
+<meta property="article:modified_time" content="2022-08-07 22:11:00+02:00"/>
 <meta property="article:author" content="http://programeempython.com.br/author/julio-melanda.html">
 <meta property="article:section" content="Tutoriais"/>
 <meta property="article:tag" content="Tutorial"/>
 <meta property="article:tag" content="Python 101"/>
-<meta property="article:tag" content="Condicionais"/>
 <meta property="og:image" content="/images/logo.png">
 
-  <title>Programe em Python &ndash; Python 101 - Parte 3 - Estruturas Condicionais em Python</title>
+  <title>Programe em Python &ndash; Python 101 - Estruturas de Repetição - 1 - While</title>
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
@@ -177,13 +176,13 @@
 <article class="single">
   <header>
           <div class="translations">
-    <a class="active" href="http://programeempython.com.br/python-101-parte-3-condicionais.html">pt_br</a>
-        <a href="http://programeempython.com.br/python-101-parte-3-condicionais-en.html">en</a>
+    <a class="active" href="http://programeempython.com.br/python-101-parte-5.html">pt_br</a>
+        <a href="http://programeempython.com.br/python-101-parte-5-en.html">en</a>
     </div>
 
-    <h1 id="python-101-parte-3-condicionais">Python 101 - Parte 3 - Estruturas Condicionais em&nbsp;Python</h1>
+    <h1 id="python-101-parte-5">Python 101 - Estruturas de Repetição - 1 -&nbsp;While</h1>
     <p>
-      Posted on Mon 01 August 2022 in <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
+      Posted on Fri 29 July 2022 in <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
 
         &#8226; 2 min read
     </p>
@@ -199,43 +198,60 @@
 
   <div>
     <p>Ol&aacute;!</p>
-<p>Continuando nossa s&eacute;rie introdut&oacute;ria sobre Python, vamos falar um pouco sobre as estruturas&nbsp;condicionais.</p>
-<p>Caso n&atilde;o tenha visto os tutoriais anteriores, j&aacute;&nbsp;temos:</p>
+<p>Vamos continuar falando sobre Programa&ccedil;&atilde;o B&aacute;sica no Python! Caso n&atilde;o tenha visto os tutoriais anteriores, j&aacute;&nbsp;temos:</p>
 <ul>
 <li><a href="http://programeempython.com.br/python-101-parte-1.html">Introdu&ccedil;&atilde;o ao&nbsp;Python</a></li>
 <li><a href="http://programeempython.com.br/python-101-parte-2.html">Blocos de C&oacute;digo em&nbsp;Python</a></li>
+<li><a href="http://programeempython.com.br/python-101-parte-3-condicionais.html">Estruturas Condicionais em Python -&nbsp;1</a></li>
+<li><a href="http://programeempython.com.br/python-101-parte-4.html">Estruturas Condicionais em Python -&nbsp;2</a></li>
 </ul>
-<p>As estruturas condicionais s&atilde;o essenciais na programa&ccedil;&atilde;o. Sem elas, os programas seriam chatos, mon&oacute;tonos, e nunca teriam a capacidade toda que temos&nbsp;atualmente.</p>
-<p><strong>Sem estruturas condicionais n&atilde;o haveria jogos&nbsp;eletr&ocirc;nicos!!!!</strong></p>
-<p>Ent&atilde;o, vejamos como o Python implementa suas estruturas&nbsp;condicionais.</p>
-<p>A principal estrutura condicional do Python (e mais usada tamb&eacute;m) &eacute; a constru&ccedil;&atilde;o <code>if</code>/<code>else</code> ou sua varia&ccedil;&atilde;o <code>if</code>/<code>elif</code>/<code>else</code>.</p>
-<p><code>if</code>, traduzindo do ingl&ecirc;s quer dizer se, e else sen&atilde;o, logo, estas constru&ccedil;&otilde;es nos permitem orientar a execu&ccedil;&atilde;o de um trecho de c&oacute;digo. Se isso, faz aquilo, sen&atilde;o, faz aquilo&nbsp;outro&hellip;</p>
-<p>Veja abaixo um exemplo de utiliza&ccedil;&atilde;o do&nbsp;if/else:</p>
+<p>Hoje vamos falar de uma das estruturas mais importantes: o <code>while</code>.</p>
+<p>O <code>while</code> &eacute; um comando que manda um bloco de c&oacute;digo ser executado enquanto uma condi&ccedil;&atilde;o for satisfeita. Assim, permite que sejam criados loops de execu&ccedil;&atilde;o, assim como temos em jogos e aplicativos com interfaces&nbsp;gr&aacute;ficas.</p>
+<p>O <code>while</code> &eacute; um comando muito &uacute;til, mas pode ser perigoso, pois se n&atilde;o tratarmos corretamente o crit&eacute;rio de parada, o la&ccedil;o pode n&atilde;o ter fim, e o programa n&atilde;o faz o que&nbsp;deveria.</p>
+<p>Vamos ver ent&atilde;o um exemplo de como funciona o <code>while</code> em&nbsp;Python:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x &gt; 0"</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+<p>Neste c&oacute;digo, ser&aacute; mostrada a mensagem <code>x &gt; 0</code> at&eacute; que x seja igual a zero. Quando o valor de <code>x</code> passar para <code>0</code>, a verifica&ccedil;&atilde;o <code>x&gt;0</code> retornar&aacute; falso, o programa sai do&nbsp;la&ccedil;o.</p>
+<p>Vejamos agora este trecho de&nbsp;c&oacute;digo:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"x &eacute; par"</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"x &eacute; impar"</span><span class="p">)</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"N&atilde;o vou parar nunca!"</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="k">break</span>
 </code></pre></div></td></tr></table></div>
-<p>Este c&oacute;digo analisa o valor da vari&aacute;vel <code>x</code>. Se <code>x % 2</code> (o resto da divis&atilde;o de <code>x</code> por <code>2</code>) for igual a zero, ent&atilde;o o n&uacute;mero &eacute; par, sen&atilde;o, &eacute; impar. Veremos mais fun&ccedil;&otilde;es matem&aacute;ticas em posts&nbsp;futuros.</p>
-<p>Ao digitar estes comando no terminal, ficaria&nbsp;assim:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="nv">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x &eacute; par</span><span class="s2">"</span><span class="ss">)</span>
-... <span class="k">else</span>:
-...     <span class="nv">print</span><span class="ss">(</span><span class="s2">"</span><span class="s">x &eacute; impar</span><span class="s2">"</span><span class="ss">)</span> 
-...
-<span class="nv">x</span> <span class="nv">e</span> <span class="nv">impar</span>
-</code></pre></div>
-<p>Recapitulando o que foi dito no texto sobre blocos de c&oacute;digo em Python, quando temos um bloco identado logo abaixo de um comando terminado em :, temos um bloco que est&aacute; diretamente relacionado a este&nbsp;comando.</p>
-<p>No exemplo, temos o comando <code>if x%2==0:</code> e logo abaixo o print <code>"x &eacute; par"</code> identado. Isto quer dizer que o c&oacute;digo identado (<code>print("x &eacute; par")</code>) somente ser&aacute; executado se o resto da divis&atilde;o de <code>x</code> por <code>2</code> for&nbsp;zero.</p>
-<p>Caso este resultado seja diferente de zero, x n&atilde;o &eacute; par, e o interpretador encontra o comando <code>else:</code>.</p>
-<p>Logo abaxo deste comando, temos <code>print("x &eacute; impar")</code> que est&aacute; identado, mostrando ao interpretador que este &eacute; o comando que deve ser executado caso a compara&ccedil;&atilde;o dentro do <code>if</code> seja&nbsp;falsa.</p>
-<p>N&atilde;o vamos esticar o assunto. Por enquanto paramos por aqui, mas espere que logo teremos a continua&ccedil;&atilde;o pra&nbsp;voc&ecirc;!</p>
+<p>Aqui temos um la&ccedil;o que seria executado eternamente (<code>while True:</code>). Por&eacute;m, dentro dele, fazemos uma verifica&ccedil;&atilde;o, e quando a vari&aacute;vel <code>i</code> estiver guardando um valor maior que <code>100</code>, ser&aacute; executado o comando <code>break</code>. O comando <code>break</code> literalmente quebra o la&ccedil;o, ent&atilde;o, naquele instante, o programa sai do&nbsp;la&ccedil;o.</p>
+<p>Se logo abaixo deste c&oacute;digo fiz&eacute;ssemos um <code>print(i)</code>, o valor mostrado seria <code>100</code>.</p>
+<p>Assim, juntamente ao comando <code>while</code>, vimos agora o comando <code>break</code> que pode ser muito &uacute;til para quebrar la&ccedil;os fora da compara&ccedil;&atilde;o&nbsp;padr&atilde;o.</p>
+<p>Vejamos agora o seguinte&nbsp;trecho:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">i</span><span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Inicialmente, <code>i</code> recebe o valor <code>0</code>, e &eacute; comparado com <code>100</code>. Como <code>0</code> &eacute; menor que <code>100</code>, o la&ccedil;o come&ccedil;a. Logo em seguida, ap&oacute;s incrementarmos o valor de <code>i</code>, temos uma compara&ccedil;&atilde;o: if <code>1%2 == 0:</code>. aqui verificamos se <code>i</code> &eacute; m&uacute;ltiplo de <code>2</code>. Caso <code>i</code> seja m&uacute;ltiplo de dois, h&aacute; um comando <code>continue</code>. <code>continue</code> faz com que esta itera&ccedil;&atilde;o do la&ccedil;o termine e o programa passe para a pr&oacute;xima itera&ccedil;&atilde;o. Desta forma, o programa ignora tudo o que est&aacute; ap&oacute;s o <code>continue</code>.</p>
+<p>No caso de <code>i</code> n&atilde;o ser m&uacute;ltiplo de <code>2</code>, o programa n&atilde;o executa o <code>continue</code>, e imprime o valor de <code>i</code> na&nbsp;tela.</p>
+<p>Se um <code>continue</code> estivesse fora do <code>if</code>, sempre o programa executaria este <code>continue</code>, e nunca seria executado o que h&aacute; ap&oacute;s ele. Assim, o <code>continue</code> controla a execu&ccedil;&atilde;o do la&ccedil;o sem&nbsp;quebr&aacute;-lo.</p>
+<p>Por enquanto &eacute;&nbsp;isso.</p>
+<p>Nosso pr&oacute;ximo post vai falar sobre a instru&ccedil;&atilde;o&nbsp;for.</p>
 <p>N&atilde;o deixe de enviar d&uacute;vidas e opini&otilde;es nos coment&aacute;rios&nbsp;abaixo!</p>
 <p>At&eacute; o pr&oacute;ximo&nbsp;post!</p>
   </div>
@@ -243,7 +259,6 @@
     <p>
       <a href="http://programeempython.com.br/tag/tutorial.html">Tutorial</a>
       <a href="http://programeempython.com.br/tag/python-101.html">Python 101</a>
-      <a href="http://programeempython.com.br/tag/condicionais.html">Condicionais</a>
     </p>
   </div>
 
@@ -253,8 +268,8 @@
     <h4>You might enjoy</h4>
     <ul class="related-posts">
       <li><a href="http://programeempython.com.br/python-101-parte-4.html">Python 101 - Parte 4 - Estruturas Condicionais em Python, o&nbsp;Retorno</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-3-condicionais.html">Python 101 - Parte 3 - Estruturas Condicionais em&nbsp;Python</a></li>
       <li><a href="http://programeempython.com.br/python-101-parte-2.html">Python 101 - Segunda&nbsp;Parte</a></li>
-      <li><a href="http://programeempython.com.br/python-101-parte-5.html">Python 101 - Estruturas de Repetição - 1 -&nbsp;While</a></li>
       <li><a href="http://programeempython.com.br/python-101-parte-1.html">Python 101 - Primeira&nbsp;Parte</a></li>
       <li><a href="http://programeempython.com.br/tutorial-git-1.html">Tutorial de Git e&nbsp;Github</a></li>
     </ul>

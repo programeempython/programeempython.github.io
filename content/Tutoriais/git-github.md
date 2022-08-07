@@ -1,7 +1,7 @@
 Title: Tutorial de Git e Github
-Date: 2022-08-03 19:30
+Date: 2022-08-07 10:02
 Category: Tutoriais
-Tags: Tutorial, Pelican, Github Pages, CircleCI
+Tags: Tutorial, Pelican, Github Pages, CircleCI, Git, GIthub
 Slug: tutorial-git-1
 Summary: Eu estava escrevendo a continuação do tutorial de pelican quando percebi que para falar de github pages, primeiro é importante falar de git e github para ter certeza que estamos todos alinhados mais adiante.
 

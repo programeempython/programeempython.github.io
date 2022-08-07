@@ -1,10 +1,8 @@
 Title: Tutorial de Pelican com Github Pages e CircleCI - 2
-Date: 2022-08-03 19:30
+Date: 2022-08-08 9:30
 Category: Tutoriais
 Tags: Tutorial, Pelican, Github Pages, CircleCI
 Slug: tutorial-pelican-2
-Summary: Github Pages é uma funcionalidade gratuita do Github que te permite criar um site estático para seu perfil ou para seus projetos. Geralmente estes sites terão uma URL do tipo `usuario.github.io` ou `projeto.github.io`. Porém, é possível também colocar seu próprio domínio, como fiz aqui.
-Status: draft
 
 Olá!
 
@@ -22,27 +20,46 @@ Para este tutorial, vamos usar o github pages para seu usuário, assim, crie um 
 No canto superior direito do site clique no `+` e selecione `New Repository`. O nome deve ser na forma `username.github.io`, como disse acima. 
 
 ![New Repository Github](/images/githubAddRepo.png)
-Agora, vamos clonar o repositório. Para isto, precisamos ter instalado o `git`.
 
-Se você não tem GIT instalado, você precisará instalá-lo agora.
+Agora, vamos clonar o repositório. Se você nunca usou git ou github antes, o [tutorial listado acima](({filename}/Tutoriais/git-github.md)) é essencial para continuar.
 
-Para isto, recomendo este [Tutorial de Instalação do GIT](https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git).
+Copie o link SSH para clonar seu repositório, e execute o comando:
 
-Após instalar o `git`, abra um terminal para podermos clonar o projeto.
+    git clone git@github.com:username/username.github.io
 
-Se você já está habituado com isto será bem simples, senão, recomendo que utilize o link https para clonar, já que implica em menos complexidade de configuração no momento.
+Isto vai criar uma pasta chamada `username.github.io`.
 
-Escolha uma pasta onde ficará seu projeto e execute dentro dela o seguinte comando:
+Entre na pasta, e vamos criar um arquivo chamado index.html, e este terá o seguinte conteúdo:
 
-    git clone https://github.com/jcempython/jcempython.github.io.git
-
-O git vai pedir seu usuário e sua senha do github para clonar o repositório. Quando clonado, vamos criar um arquivo na pasta clonada chamado index.html, e este terá o seguinte conteúdo:
-
-    !#html
+    #!html
     <html>
         <body>
-            Olá! Github Pages é muito legal!
+            <h1>Olá! Github Pages é muito legal!</h1>
         </body>
     </html>
 
-Com seu repositório criado, clique em Settings para podermos configurar o site. No menu lateral, na sessão `Code and Automation` selecione `Pages`. 
+Em seguida vamos fazer commit e push deste arquivo para nosso repositório.
+
+    git add .
+    git commit -m "primeiro commit"
+    git push origin main
+
+Agora no github, na página do seu repositório, vamos clicar em `Settings`.
+
+![Github Repository Settings](/images/gitHubRepoSetting.png)
+
+No menu lateral, na sessão `Code and Automation` selecione `Pages`. Então, em `Branch` selecione `main`.
+
+![Github repo settings pages](/images/githubsettingsbranch.png)
+
+Clique no botão `Save`.
+
+Aguarde um tempo, geralmente menos de 1 minuto, e sua página do Github Pages estará no ar! Muito fácil, não?
+
+![Primeira página do Github Pages](/images/githubPagesFirst.png)
+
+No próximo post vamos juntar Pelican e Github Pages e estaremos mais próximos de ter nosso blog pronto para publicar :D
+
+Espero que tenham gostado e não esqueçam de deixar suas opiniões e dúvidas nos comentários!
+
+Até o próximo post!

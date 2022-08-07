@@ -152,6 +152,6 @@ Veja que este arquivo importa de pelicanconf, logo, aqui você consegue sobrescr
 
 No momento, estas informações são suficientes para prosseguirmos, então, não perca a próxima parte deste tutorial onde vamos falar sobre Github pages para depois juntarmos as duas coisas :D
 
-Espero que tenham gostado e não esqueçam de deixar seuas opiniões e dúvidas nos comentários!
+Espero que tenham gostado e não esqueçam de deixar suas opiniões e dúvidas nos comentários!
 
 Até o próximo post!

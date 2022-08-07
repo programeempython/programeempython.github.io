@@ -65,7 +65,7 @@ STATIC_PATHS = [
 THEME = 'themes/Flex'
 THEME_STATIC_PATHS = ['static']
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['post_stats', 'search', 'related_posts', 'pelican-toc']
+PLUGINS = ['post_stats', 'related_posts', 'pelican-toc']
 
 # Site search plugin
 SEARCH_MODE = "output"

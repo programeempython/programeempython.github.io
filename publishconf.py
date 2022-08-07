@@ -18,5 +18,11 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-GOOGLE_ANALYTICS = "G-CWQ34LZTCX"
+GOOGLE_TAG = "G-CWQ34LZTCX"
+
+GOOGLE_ADSENSE = {
+    'ca_id': 'ca-pub-5019623326305470',
+    'page_level_ads': True,
+}
+
 DISQUS_SITENAME = "programeempython"

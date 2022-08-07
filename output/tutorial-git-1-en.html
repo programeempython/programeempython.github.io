@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/stylesheet/style.min.css">
+
+  <link id="dark-theme-style" rel="stylesheet" type="text/css"  disabled="disabled"     href="http://localhost:8000/theme/stylesheet/dark-theme.min.css">
+
+  <link id="pygments-dark-theme" rel="stylesheet" type="text/css"  disabled="disabled"     href="http://localhost:8000/theme/pygments/one-dark.min.css">
+  <link id="pygments-light-theme" rel="stylesheet" type="text/css"     href="http://localhost:8000/theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#666666">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#666666">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#666666">
+
+<meta name="author" content="Julio Melanda" />
+<meta name="description" content="I was writing the next post to the pelican tutorial when I realized that in order to talk about github pages, it’s important to first talk about git and github to make sure we’re all on the same page later on." />
+<meta name="keywords" content="Tutorial, Pelican, Github Pages, CircleCI, Git, Github">
+
+<link rel="alternate" href="http://localhost:8000/tutorial-git-1-en.html" hreflang="en" />
+<link rel="alternate" href="http://localhost:8000/tutorial-git-1.html" hreflang="pt_br" />
+
+<meta property="og:site_name" content="Programe em Python"/>
+<meta property="og:title" content="Tutorial de Git e Github"/>
+<meta property="og:description" content="I was writing the next post to the pelican tutorial when I realized that in order to talk about github pages, it’s important to first talk about git and github to make sure we’re all on the same page later on."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://localhost:8000/tutorial-git-1-en.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-08-07 10:02:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://localhost:8000/author/julio-melanda.html">
+<meta property="article:section" content="Tutoriais"/>
+<meta property="article:tag" content="Tutorial"/>
+<meta property="article:tag" content="Pelican"/>
+<meta property="article:tag" content="Github Pages"/>
+<meta property="article:tag" content="CircleCI"/>
+<meta property="article:tag" content="Git"/>
+<meta property="article:tag" content="Github"/>
+<meta property="og:image" content="/images/logo.png">
+
+  <title>Programe em Python &ndash; Tutorial de Git e Github</title>
+
+</head>
+
+<body class="light-theme" >
+  <aside>
+    <div>
+      <a href="http://localhost:8000">
+        <img src="/images/logo.png" alt="Programe em Python" title="Programe em Python">
+      </a>
+
+      <h1>
+        <a href="http://localhost:8000">Programe em Python</a>
+      </h1>
+
+<p>Um pouco de tudo sobre programação em Python</p>
+
+      <nav>
+        <ul class="list">
+
+
+          <li>
+            <a target="_self"
+              href="http://localhost:8000/pages/contato.html#contato">
+              Contato
+            </a>
+          </li>
+          <li>
+            <a target="_self"
+              href="http://localhost:8000/pages/sobre-mim.html#sobre-mim">
+              Sobre&nbsp;Mim
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li>
+          <a  class="sc-github" href="https://github.com/jcemelanda" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a  class="sc-linkedin" href="https://www.linkedin.com/in/jcemelanda" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a  class="sc-twitter" href="https://twitter.com/jcemelanda" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://localhost:8000">Home</a>
+
+      <a href="/archives.html">Arquivo</a>
+      <a href="/categories.html">Categorias</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+          <div class="translations">
+    <a class="active" href="http://localhost:8000/tutorial-git-1-en.html">en</a>
+        <a href="http://localhost:8000/tutorial-git-1.html">pt_br</a>
+    </div>
+
+    <h1 id="tutorial-git-1">Tutorial de Git e&nbsp;Github</h1>
+    <p>
+      Posted on 08-07-2022 in <a href="http://localhost:8000/category/tutoriais.html">Tutoriais</a>
+
+        &#8226; 2 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>Hi!</p>
+<p>I was writing the next post to the pelican tutorial when I realized that in order to talk about github pages, it&rsquo;s important to first talk about git and github to make sure we&rsquo;re all on the same page later&nbsp;on.</p>
+<p>So what is <span class="caps">GIT</span>?</p>
+<p>Git is a code version management system, that means, it is used to control code changes and is especially useful when we work in collaboration, either in a centralized team or in a distributed way as with open source projects, for&nbsp;example.</p>
+<p>I&rsquo;ll leave here the official page where you can see how to <a href="https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git">install <span class="caps">GIT</span></a>. If you use Windows, I recommend using <code>Git Bash</code>, which is part of the official package, to interact with <span class="caps">GIT</span>&nbsp;repositories.</p>
+<p>Since you now have git installed on your computer, let&rsquo;s configure your&nbsp;github.</p>
+<p>Create your account on <a href="https://github.com">github</a> if you still don&rsquo;t have&nbsp;it.</p>
+<p>On your computer open the terminal where you use git. Here we will generate an <span class="caps">SSH</span> key to authenticate to github securely. Enter the&nbsp;command:</p>
+<div class="highlight"><pre><span></span><code>ssh-keygen
+</code></pre></div>
+<p>You can just use the default options. They are not the safest but I believe they are good enough to start using it. If you provide a password for your <span class="caps">SSH</span> key, you will have to use it whenever you use github access on the terminal, for&nbsp;example.</p>
+<p>After running this command, you will have created a couple of files in the <code>.ssh</code> folder in your home folder. These are <code>id_rsa</code> and <code>id_rsa.pub</code>.</p>
+<p>We will need the contents of the <code>id_rsa.pub</code> file.</p>
+<p>Now, on your gihub page, click on your user icon (top right of the page) and from the options select <code>Settings</code>.</p>
+<p><img alt="Github User Settings" src="/images/githubUserMenu.png"/></p>
+<p>There, under <code>Access</code> select <code>SSH and GPG keys</code>. Click on the <code>New SSH Key</code> button.</p>
+<p><img alt="Github Add SSH" src="/images/githubAddSSH.png"/></p>
+<p>Copy the contents of the <code>id_rsa.pub</code> file and paste it in <code>Key</code>, Give it some relevant name and&nbsp;save.</p>
+<p><img alt="Github Save SSH" src="/images/githubSaveKey.png"/></p>
+<p>Now your github is set&nbsp;up.</p>
+<p>Then create a repository on github via the <code>+</code> button in the upper right corner next to the user&nbsp;menu.</p>
+<p><img alt="Github creates repository" src="/images/githubCriaRepo.png"/></p>
+<p>You will see a page with instructions on how to clone your repository. Select the <span class="caps">SSH</span> option and copy the&nbsp;link.</p>
+<p><img alt="Github clones Repo" src="/images/githubCloneRepo.png"/></p>
+<p>In the terminal,&nbsp;type:</p>
+<div class="highlight"><pre><span></span><code><span class="n">git</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="nl">com</span><span class="p">:</span><span class="n">username</span><span class="o">/</span><span class="n">repositorui</span><span class="p">.</span><span class="n">git</span><span class="w"></span>
+</code></pre></div>
+<p>Where you will replace <code>git@github.com:username/repositorui.git</code> with the <span class="caps">URL</span> you copied from github. It should have this format as well, starting with <code>git@github.com</code>.</p>
+<p>Enter the created folder and create a file, it can have any name, like <span class="caps">README</span>.md for example and write something in&nbsp;it.</p>
+<p>Now you need to tell git that it should save changes in this repository, so&nbsp;type.</p>
+<div class="highlight"><pre><span></span><code>git add .
+git commit -m "first commit"
+</code></pre></div>
+<p>Now let&rsquo;s push this file to github with a <code>push</code> command.</p>
+<div class="highlight"><pre><span></span><code>git push origin master
+</code></pre></div>
+<p>Done! You&rsquo;ve taken your first steps with Git and&nbsp;Gihub!</p>
+<p>I hope you liked it and don&rsquo;t forget to leave your opinions and questions in the&nbsp;comments!</p>
+<p>See you in the next&nbsp;post!</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://localhost:8000/tag/tutorial.html">Tutorial</a>
+      <a href="http://localhost:8000/tag/pelican.html">Pelican</a>
+      <a href="http://localhost:8000/tag/github-pages.html">Github Pages</a>
+      <a href="http://localhost:8000/tag/circleci.html">CircleCI</a>
+      <a href="http://localhost:8000/tag/git.html">Git</a>
+      <a href="http://localhost:8000/tag/github.html">Github</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy; 2022 </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="http://localhost:8000/theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="false"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Programe em Python ",
+  "url" : "http://localhost:8000",
+  "image": "/images/logo.png",
+  "description": ""
+}
+</script>
+
+
+</body>
+
+</html>

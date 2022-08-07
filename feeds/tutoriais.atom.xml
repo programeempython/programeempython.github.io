@@ -101,7 +101,7 @@
 git commit -m "primeiro commit"
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Agora vamos enviar este arquivo para o github com um comando de &lt;code&gt;push&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git push origin master
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git push origin main
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Pronto! Voc&amp;ecirc; deu seus primeiros passos com Git e&amp;nbsp;Gihub!&lt;/p&gt;
 &lt;p&gt;Espero que tenham gostado e n&amp;atilde;o esque&amp;ccedil;am de deixar seuas opini&amp;otilde;es e d&amp;uacute;vidas nos&amp;nbsp;coment&amp;aacute;rios!&lt;/p&gt;

@@ -1,6 +1,5 @@
-Title: Python 101 - Estruturas de Repetição - 1 - While
-Date: 2022-07-29 12:06
-Modified: 2022-08-07 22:11
+Title: Python 101 - Parte 5 - Estruturas de Repetição - While
+Date: 2022-08-07 22:11
 Slug: python-101-parte-5
 Category: Tutoriais
 Tags: Tutorial, Python 101

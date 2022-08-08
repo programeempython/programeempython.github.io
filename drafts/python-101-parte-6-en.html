@@ -64,17 +64,17 @@
   <meta name="msapplication-TileColor" content="#666666">
 
 <meta name="author" content="Julio Melanda" />
-<meta name="description" content="Olá! Mais um post aqui ensinando Python para vocês e hoje veremos o for. Caso não tenha visto os tutoriais anteriores, já temos: Introdução ao Python Blocos de Código em Python Estruturas Condicionais em Python - 1 Estruturas Condicionais em Python - 2 Estruturas de Repetição - while Vamos começar com um exemplo …" />
+<meta name="description" content="Hi! One more post here teaching you Python and today we will talk about for. In case you haven’t seen the previous tutorials, we already have: Introduction to Python Python Code Blocks Conditional Structures in Python - 1 Conditional Structures in Python - 2 Repeat Structures - while Let’s start with …" />
 <meta name="keywords" content="Tutorial, Python 101">
 
-<link rel="alternate" href="http://programeempython.com.br/drafts/python-101-parte-6.html" hreflang="pt_br" />
 <link rel="alternate" href="http://programeempython.com.br/drafts/python-101-parte-6-en.html" hreflang="en" />
+<link rel="alternate" href="http://programeempython.com.br/drafts/python-101-parte-6.html" hreflang="pt_br" />
 
 <meta property="og:site_name" content="Programe em Python"/>
 <meta property="og:title" content="Python 101 - Parte 6 - Estruturas de Repetição - For"/>
-<meta property="og:description" content="Olá! Mais um post aqui ensinando Python para vocês e hoje veremos o for. Caso não tenha visto os tutoriais anteriores, já temos: Introdução ao Python Blocos de Código em Python Estruturas Condicionais em Python - 1 Estruturas Condicionais em Python - 2 Estruturas de Repetição - while Vamos começar com um exemplo …"/>
+<meta property="og:description" content="Hi! One more post here teaching you Python and today we will talk about for. In case you haven’t seen the previous tutorials, we already have: Introduction to Python Python Code Blocks Conditional Structures in Python - 1 Conditional Structures in Python - 2 Repeat Structures - while Let’s start with …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="http://programeempython.com.br/drafts/python-101-parte-6.html"/>
+<meta property="og:url" content="http://programeempython.com.br/drafts/python-101-parte-6-en.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-08-09 12:06:00+02:00"/>
 <meta property="article:modified_time" content=""/>
@@ -176,13 +176,13 @@
 <article class="single">
   <header>
           <div class="translations">
-    <a class="active" href="http://programeempython.com.br/drafts/python-101-parte-6.html">pt_br</a>
-        <a href="http://programeempython.com.br/drafts/python-101-parte-6-en.html">en</a>
+    <a class="active" href="http://programeempython.com.br/drafts/python-101-parte-6-en.html">en</a>
+        <a href="http://programeempython.com.br/drafts/python-101-parte-6.html">pt_br</a>
     </div>
 
     <h1 id="python-101-parte-6">Python 101 - Parte 6 - Estruturas de Repetição -&nbsp;For</h1>
     <p>
-      Posted on Tue 09 August 2022 in <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
+      Posted on 08-09-2022 in <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
 
         &#8226; 3 min read
     </p>
@@ -197,53 +197,53 @@
     </script>
 
   <div>
-    <p>Ol&aacute;!</p>
-<p>Mais um post aqui ensinando Python para voc&ecirc;s e hoje veremos o <code>for</code>.</p>
-<p>Caso n&atilde;o tenha visto os tutoriais anteriores, j&aacute;&nbsp;temos:</p>
+    <p>Hi!</p>
+<p>One more post here teaching you Python and today we will talk about <code>for</code>.</p>
+<p>In case you haven&rsquo;t seen the previous tutorials, we already&nbsp;have:</p>
 <ul>
-<li><a href="http://programeempython.com.br/python-101-parte-1.html">Introdu&ccedil;&atilde;o ao&nbsp;Python</a></li>
-<li><a href="http://programeempython.com.br/python-101-parte-2.html">Blocos de C&oacute;digo em&nbsp;Python</a></li>
-<li><a href="http://programeempython.com.br/python-101-parte-3-condicionais.html">Estruturas Condicionais em Python -&nbsp;1</a></li>
-<li><a href="http://programeempython.com.br/python-101-parte-4.html">Estruturas Condicionais em Python -&nbsp;2</a></li>
-<li><a href="http://programeempython.com.br/python-101-parte-5.html">Estruturas de Repeti&ccedil;&atilde;o -&nbsp;while</a></li>
+<li><a href="{filename}/Tutpriais/en/python101.md">Introduction to&nbsp;Python</a></li>
+<li><a href="{filename}/Tutpriais/en/python101.2.md">Python Code&nbsp;Blocks</a></li>
+<li><a href="{filename}/Tutpriais/en/python101.3.md">Conditional Structures in Python -&nbsp;1</a></li>
+<li><a href="{filename}/Tutpriais/en/python101.4.md">Conditional Structures in Python -&nbsp;2</a></li>
+<li><a href="{filename}/Tutpriais/en/python101.5.md">Repeat Structures -&nbsp;while</a></li>
 </ul>
-<p>Vamos come&ccedil;ar com um exemplo&nbsp;simples:</p>
+<p>Let&rsquo;s start with a simple&nbsp;example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Aqui, inicialmente, come&ccedil;amos com algo que ainda n&atilde;o vimos: <strong>listas</strong>.</p>
-<p>Come&ccedil;amos criando <code>l</code> como uma lista que cont&eacute;m uma sequ&ecirc;ncia de&nbsp;n&uacute;meros.</p>
-<p>Ent&atilde;o, esta lista &eacute; usada dentro do <code>for</code>.</p>
-<p><em>Em outras linguagens, determinamos o valor inicial da vari&aacute;vel contadora, seu limite e o passo de itera&ccedil;&atilde;o. Em python isso n&atilde;o acontece. Aqui, o for somente itera sobre sequ&ecirc;ncias. Isto traz v&aacute;rias vantagens, como por exemplo, iterar sobre strings, ou listas de elementos&nbsp;variados.</em></p>
-<p><em>Ser&aacute; mostrado adiante porque este for n&atilde;o est&aacute; em desvantagem frente ao for das outras&nbsp;linguagens.</em></p>
-<p>Ent&atilde;o, a cada itera&ccedil;&atilde;o, a vari&aacute;vel de itera&ccedil;&atilde;o, neste caso <code>i</code>, recebe o elemento de uma posi&ccedil;&atilde;o da&nbsp;lista.</p>
-<p>Assim, este trecho acima imprime na tela todos os valores contidos na lista <code>l</code>.</p>
-<p>Vamos ver agora este trecho de&nbsp;c&oacute;digo:</p>
+<p>Here, initially, we start with something we haven&rsquo;t seen yet: <strong>lists</strong>.</p>
+<p>We start by creating <code>l</code> as a list that contains a sequence of&nbsp;numbers.</p>
+<p>So this list is used inside the <code>for</code>.</p>
+<p><em>In other languages, we determine the initial value of the counter variable, its limit and the iteration step. In python this does not happen. Here, for only iterates over sequences. This has several advantages, such as iterating over strings, or lists of different&nbsp;elements.</em></p>
+<p><em>It will be shown later because this for is not at a disadvantage compared to the for of other&nbsp;languages.</em></p>
+<p>Then, at each iteration, the iteration variable, in this case <code>i</code>, receives the element of a position in the&nbsp;list.</p>
+<p>Thus, this snippet above prints on the screen all the values &ZeroWidthSpace;&ZeroWidthSpace;contained in the list <code>l</code>.</p>
+<p>Now let&rsquo;s see this code&nbsp;snippet:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'arroz'</span><span class="p">,</span> <span class="s1">'feij&atilde;o'</span><span class="p">,</span> <span class="s1">'carne'</span><span class="p">,</span> <span class="s1">'batata'</span><span class="p">]</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'rice'</span><span class="p">,</span> <span class="s1">'beans'</span><span class="p">,</span> <span class="s1">'meat'</span><span class="p">,</span> <span class="s1">'potato'</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'Estou cozinhando '</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'I'</span><span class="n">m</span> <span class="n">cooking</span> <span class="s1">', i)</span>
 </code></pre></div></td></tr></table></div>
-<p>Este exemplo demonstra a utiliza&ccedil;&atilde;o do <code>for</code> com listas que cont&eacute;m <em>strings</em>, mostrando que pode-se usar listas com qualquer objeto num <code>for</code>.</p>
-<p>No <code>for</code> tamb&eacute;m podemos usar <code>break</code> e <code>continue</code>. Assim, podemos controlar ainda mais o comportamento do la&ccedil;o. Al&eacute;m disso, h&aacute; uma caracter&iacute;stica no <code>for</code> do Python que o deixa muito poderoso: podemos usar um <code>else</code> ao final do <code>for</code> como no exemplo a&nbsp;seguir:</p>
+<p>This example demonstrates the use of <code>for</code> with lists that contain <em>strings</em>, showing that you can use lists with any object in a <code>for</code>.</p>
+<p>In <code>for</code> we can also use <code>break</code> and <code>continue</code>. Thus, we can further control the behavior of the loop. Also, there is a feature in Python&rsquo;s <code>for</code> that makes it very powerful: we can use an <code>else</code> at the end of the <code>for</code> as in the following&nbsp;example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">,</span> <span class="s1">'e'</span><span class="p">,</span> <span class="s1">'f'</span><span class="p">,</span> <span class="s1">'g'</span><span class="p">]:</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">,</span> <span class="s1">'e'</span><span class="p">,</span> <span class="err">&ZeroWidthSpace;&ZeroWidthSpace;</span><span class="s1">'f'</span><span class="p">,</span> <span class="s1">'g'</span><span class="p">]:</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="s1">'h'</span><span class="p">:</span>
         <span class="k">break</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'"h" n&atilde;o est&aacute; na lista mas eu printo mesmo assim'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'"h" is not in the list but I print anyway'</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Usando o <code>else</code> no final, podemos controlar o que ser&aacute; executado ao final de um execu&ccedil;&atilde;o completa do <code>for</code> e o que ser&aacute; executado se o la&ccedil;o for quebrado por um <code>break</code>. Quando o la&ccedil;o &eacute; completamente percorrido sem uma quebra, a execu&ccedil;&atilde;o segue pra dentro do <code>else</code>!</p>
-<p>Neste exemplo, a sa&iacute;da ser&aacute; algo&nbsp;assim:</p>
+<p>Using <code>else</code> at the end, we can control what will be executed at the end of a complete <code>for</code> execution and what will be executed if the loop is broken by a <code>break</code>. When the loop is completely traversed without a break, execution proceeds into <code>else</code>!</p>
+<p>In this example, the output will look something like&nbsp;this:</p>
 <div class="highlight"><pre><span></span><code>a
 b
 c
@@ -251,28 +251,28 @@ d
 e
 f
 g
-"h" n&atilde;o est&aacute; na lista mas eu printo mesmo assim
+"h" is not in the list but I print it anyway
 </code></pre></div>
-<p>Isto &eacute; muito importante, pois evita que tenhamos que fazer testes complicados para detectar quando um <code>for</code> for quebrado por um <code>break</code> que ser&aacute; chamado em condi&ccedil;&otilde;es&nbsp;complexas.</p>
-<p>Finalmente, muitos devem estar se perguntando: &ldquo;Como este <code>for</code> pode ser t&atilde;o poderoso se temos que definir as listas&nbsp;manualmente?&rdquo;</p>
-<p>O fato &eacute; que n&atilde;o temos que fazer manualmente se for uma lista de n&uacute;meros (assim como n&atilde;o precisamos em outras&nbsp;linguagens).</p>
-<p>Existe uma fun&ccedil;&atilde;o em Python, range, que retorna uma <em>generator</em> (objeto que pode ser iterado como uma lista, mas gera os valores durante a execu&ccedil;&atilde;o) de n&uacute;meros no intervalo especificado. Veja o&nbsp;exemplo:</p>
+<p>This is very important, as it avoids having to do complicated tests to detect when a <code>for</code> is broken by a <code>break</code> that will be called under complex&nbsp;conditions.</p>
+<p>Finally, many may be wondering: &ldquo;How can this <code>for</code> be so powerful if we have to define the lists&nbsp;manually?&rdquo;</p>
+<p>The fact is that we don&rsquo;t have to do it manually if it&rsquo;s a list of numbers (just like we don&rsquo;t need to in other&nbsp;languages).</p>
+<p>There is a Python function, range, which returns a <em>generator</em> (object that can be iterated over like a list, but generates the values &ZeroWidthSpace;&ZeroWidthSpace;at runtime) of numbers in the specified range. See the&nbsp;example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">'&eacute; par'</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">'is even'</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">'&eacute; impar'</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">'is odd'</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Quando fazemos range(50), teremos uma <em>generator</em> que funcionar&aacute; como uma lista de inteiros de 0 a 49. (experimente no&nbsp;shell).</p>
-<p>Bem, pessoal! Por hoje &eacute;&nbsp;isso!</p>
-<p>Agora falta pouco para iniciarmos uma programa&ccedil;&atilde;o efetiva em&nbsp;Python!</p>
-<p>Nos Pr&oacute;ximos Posts, tipos de dados nativos do&nbsp;Python!</p>
-<p>N&atilde;o deixe de enviar d&uacute;vidas e opini&otilde;es nos coment&aacute;rios&nbsp;abaixo!</p>
-<p>At&eacute; o pr&oacute;ximo&nbsp;post!</p>
+<p>When we do range(50), we will have a <em>generator</em> that will work as a list of integers from 0 to 49. (try it in the&nbsp;shell).</p>
+<p>Well folks! That&rsquo;s it for&nbsp;today!</p>
+<p>Now it&rsquo;s not long before we start effective programming in&nbsp;Python!</p>
+<p>In the next posts, native Python data&nbsp;types!</p>
+<p>Be sure to post questions and opinions in the comments&nbsp;below!</p>
+<p>See you in the next&nbsp;post!</p>
   </div>
   <div class="tag-cloud">
     <p>
@@ -283,16 +283,6 @@ g
 
 
 
-  <div class="related-posts">
-    <h4>You might enjoy</h4>
-    <ul class="related-posts">
-      <li><a href="http://programeempython.com.br/python-101-parte-5.html">Python 101 - Parte 5 - Estruturas de Repetição -&nbsp;While</a></li>
-      <li><a href="http://programeempython.com.br/python-101-parte-4.html">Python 101 - Parte 4 - Estruturas Condicionais em Python, o&nbsp;Retorno</a></li>
-      <li><a href="http://programeempython.com.br/python-101-parte-3-condicionais.html">Python 101 - Parte 3 - Estruturas Condicionais em&nbsp;Python</a></li>
-      <li><a href="http://programeempython.com.br/python-101-parte-2.html">Python 101 - Segunda&nbsp;Parte</a></li>
-      <li><a href="http://programeempython.com.br/python-101-parte-1.html">Python 101 - Primeira&nbsp;Parte</a></li>
-    </ul>
-  </div>
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle ads-responsive"

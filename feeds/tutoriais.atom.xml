@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python - Tutoriais</title><link href="http://programeempython.com.br/" rel="alternate"></link><link href="http://programeempython.com.br/feeds/tutoriais.atom.xml" rel="self"></link><id>http://programeempython.com.br/</id><updated>2022-08-07T22:11:00+02:00</updated><entry><title>Python 101 - Parte 5 - Estruturas de Repetição - While</title><link href="http://programeempython.com.br/python-101-parte-5.html" rel="alternate"></link><published>2022-08-07T22:11:00+02:00</published><updated>2022-08-07T22:11:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-08-07:/python-101-parte-5.html</id><summary type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python - Tutoriais</title><link href="http://programeempython.com.br/" rel="alternate"></link><link href="http://programeempython.com.br/feeds/tutoriais.atom.xml" rel="self"></link><id>http://programeempython.com.br/</id><updated>2022-08-08T09:30:00+02:00</updated><entry><title>Tutorial de Pelican com Github Pages e CircleCI - 2</title><link href="http://programeempython.com.br/tutorial-pelican-2.html" rel="alternate"></link><published>2022-08-08T09:30:00+02:00</published><updated>2022-08-08T09:30:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-08-08:/tutorial-pelican-2.html</id><summary type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
+&lt;p&gt;Chegou a hora de continuarmos o tutorial de como publicar seu blog com Pelican, Github Pages e Circle &lt;span class="caps"&gt;CI&lt;/span&gt; como eu fiz, e caso voc&amp;ecirc; esteja chegando por aqui agora, confira nossos tutoriais&amp;nbsp;anteriores&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/tutorial-pelican.html"&gt;Tutorial Inicial de Pelican&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/tutorial-git-1.html"&gt;Tutorial b&amp;aacute;sico de &lt;span class="caps"&gt;GIT&lt;/span&gt; e&amp;nbsp;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hoje vamos falar sobre Github …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
+&lt;p&gt;Chegou a hora de continuarmos o tutorial de como publicar seu blog com Pelican, Github Pages e Circle &lt;span class="caps"&gt;CI&lt;/span&gt; como eu fiz, e caso voc&amp;ecirc; esteja chegando por aqui agora, confira nossos tutoriais&amp;nbsp;anteriores&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/tutorial-pelican.html"&gt;Tutorial Inicial de Pelican&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/tutorial-git-1.html"&gt;Tutorial b&amp;aacute;sico de &lt;span class="caps"&gt;GIT&lt;/span&gt; e&amp;nbsp;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hoje vamos falar sobre Github&amp;nbsp;Pages.&lt;/p&gt;
+&lt;p&gt;Github Pages &amp;eacute; uma funcionalidade gratuita do Github que te permite criar um site est&amp;aacute;tico para seu perfil ou para seus projetos. Geralmente estes sites ter&amp;atilde;o uma &lt;span class="caps"&gt;URL&lt;/span&gt; do tipo &lt;code&gt;usuario.github.io&lt;/code&gt; ou &lt;code&gt;projeto.github.io&lt;/code&gt;. Por&amp;eacute;m, &amp;eacute; poss&amp;iacute;vel tamb&amp;eacute;m colocar seu pr&amp;oacute;prio dom&amp;iacute;nio, como fiz&amp;nbsp;aqui.&lt;/p&gt;
+&lt;p&gt;Para este tutorial, vamos usar o github pages para seu usu&amp;aacute;rio, assim, crie um reposit&amp;oacute;rio chamado &lt;code&gt;username.github.io&lt;/code&gt;, onde username &amp;eacute; seu nome de&amp;nbsp;usu&amp;aacute;rio.&lt;/p&gt;
+&lt;p&gt;No canto superior direito do site clique no &lt;code&gt;+&lt;/code&gt; e selecione &lt;code&gt;New Repository&lt;/code&gt;. O nome deve ser na forma &lt;code&gt;username.github.io&lt;/code&gt;, como disse&amp;nbsp;acima. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="New Repository Github" src="/images/githubAddRepo.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Agora, vamos clonar o reposit&amp;oacute;rio. Se voc&amp;ecirc; nunca usou git ou github antes, o &lt;a href="({filename}/Tutoriais/git-github.md)"&gt;tutorial listado acima&lt;/a&gt; &amp;eacute; essencial para&amp;nbsp;continuar.&lt;/p&gt;
+&lt;p&gt;Copie o link &lt;span class="caps"&gt;SSH&lt;/span&gt; para clonar seu reposit&amp;oacute;rio, e execute o&amp;nbsp;comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;clone&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="nv"&gt;@github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;com&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Isto vai criar uma pasta chamada &lt;code&gt;username.github.io&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Entre na pasta, e vamos criar um arquivo chamado index.html, e este ter&amp;aacute; o seguinte&amp;nbsp;conte&amp;uacute;do:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Ol&amp;aacute;! Github Pages &amp;eacute; muito legal!&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;Em seguida vamos fazer commit e push deste arquivo para nosso&amp;nbsp;reposit&amp;oacute;rio.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add .
+git commit -m "primeiro commit"
+git push origin main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Agora no github, na p&amp;aacute;gina do seu reposit&amp;oacute;rio, vamos clicar em &lt;code&gt;Settings&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Github Repository Settings" src="/images/gitHubRepoSetting.png"/&gt;&lt;/p&gt;
+&lt;p&gt;No menu lateral, na sess&amp;atilde;o &lt;code&gt;Code and Automation&lt;/code&gt; selecione &lt;code&gt;Pages&lt;/code&gt;. Ent&amp;atilde;o, em &lt;code&gt;Branch&lt;/code&gt; selecione &lt;code&gt;main&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Github repo settings pages" src="/images/githubsettingsbranch.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Clique no bot&amp;atilde;o &lt;code&gt;Save&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Aguarde um tempo, geralmente menos de 1 minuto, e sua p&amp;aacute;gina do Github Pages estar&amp;aacute; no ar! Muito f&amp;aacute;cil,&amp;nbsp;n&amp;atilde;o?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Primeira p&amp;aacute;gina do Github Pages" src="/images/githubPagesFirst.png"/&gt;&lt;/p&gt;
+&lt;p&gt;No pr&amp;oacute;ximo post vamos juntar Pelican e Github Pages e estaremos mais pr&amp;oacute;ximos de ter nosso blog pronto para publicar&amp;nbsp;:D&lt;/p&gt;
+&lt;p&gt;Espero que tenham gostado e n&amp;atilde;o esque&amp;ccedil;am de deixar suas opini&amp;otilde;es e d&amp;uacute;vidas nos&amp;nbsp;coment&amp;aacute;rios!&lt;/p&gt;
+&lt;p&gt;At&amp;eacute; o pr&amp;oacute;ximo&amp;nbsp;post!&lt;/p&gt;</content><category term="Tutoriais"></category><category term="Tutorial"></category><category term="Pelican"></category><category term="Github Pages"></category><category term="CircleCI"></category></entry><entry><title>Python 101 - Parte 5 - Estruturas de Repetição - While</title><link href="http://programeempython.com.br/python-101-parte-5.html" rel="alternate"></link><published>2022-08-07T22:11:00+02:00</published><updated>2022-08-07T22:11:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-08-07:/python-101-parte-5.html</id><summary type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
 &lt;p&gt;Vamos continuar falando sobre Programa&amp;ccedil;&amp;atilde;o B&amp;aacute;sica no Python! Caso n&amp;atilde;o tenha visto os tutoriais anteriores, j&amp;aacute;&amp;nbsp;temos:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-1.html"&gt;Introdu&amp;ccedil;&amp;atilde;o ao&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;

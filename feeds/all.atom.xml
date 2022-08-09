@@ -1,5 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python</title><link href="http://programeempython.com.br/" rel="alternate"></link><link href="http://programeempython.com.br/feeds/all.atom.xml" rel="self"></link><id>http://programeempython.com.br/</id><updated>2022-08-08T09:30:00+02:00</updated><entry><title>Tutorial de Pelican com Github Pages e CircleCI - 2</title><link href="http://programeempython.com.br/tutorial-pelican-2.html" rel="alternate"></link><published>2022-08-08T09:30:00+02:00</published><updated>2022-08-08T09:30:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-08-08:/tutorial-pelican-2.html</id><summary type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python</title><link href="http://programeempython.com.br/" rel="alternate"></link><link href="http://programeempython.com.br/feeds/all.atom.xml" rel="self"></link><id>http://programeempython.com.br/</id><updated>2022-08-09T12:06:00+02:00</updated><entry><title>Python 101 - Parte 6 - Estruturas de Repetição - For</title><link href="http://programeempython.com.br/python-101-parte-6.html" rel="alternate"></link><published>2022-08-09T12:06:00+02:00</published><updated>2022-08-09T12:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-08-09:/python-101-parte-6.html</id><summary type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
+&lt;p&gt;Mais um post aqui ensinando Python para voc&amp;ecirc;s e hoje veremos o &lt;code&gt;for&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Caso n&amp;atilde;o tenha visto os tutoriais anteriores, j&amp;aacute;&amp;nbsp;temos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-1.html"&gt;Introdu&amp;ccedil;&amp;atilde;o ao&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-2.html"&gt;Blocos de C&amp;oacute;digo em&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-3-condicionais.html"&gt;Estruturas Condicionais em Python -&amp;nbsp;1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-4.html"&gt;Estruturas Condicionais em Python -&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-5.html"&gt;Estruturas de Repeti&amp;ccedil;&amp;atilde;o -&amp;nbsp;while&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vamos come&amp;ccedil;ar com um exemplo …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
+&lt;p&gt;Mais um post aqui ensinando Python para voc&amp;ecirc;s e hoje veremos o &lt;code&gt;for&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Caso n&amp;atilde;o tenha visto os tutoriais anteriores, j&amp;aacute;&amp;nbsp;temos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-1.html"&gt;Introdu&amp;ccedil;&amp;atilde;o ao&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-2.html"&gt;Blocos de C&amp;oacute;digo em&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-3-condicionais.html"&gt;Estruturas Condicionais em Python -&amp;nbsp;1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-4.html"&gt;Estruturas Condicionais em Python -&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-5.html"&gt;Estruturas de Repeti&amp;ccedil;&amp;atilde;o -&amp;nbsp;while&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vamos come&amp;ccedil;ar com um exemplo&amp;nbsp;simples:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;Aqui, inicialmente, come&amp;ccedil;amos com algo que ainda n&amp;atilde;o vimos: &lt;strong&gt;listas&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Come&amp;ccedil;amos criando &lt;code&gt;l&lt;/code&gt; como uma lista que cont&amp;eacute;m uma sequ&amp;ecirc;ncia de&amp;nbsp;n&amp;uacute;meros.&lt;/p&gt;
+&lt;p&gt;Ent&amp;atilde;o, esta lista &amp;eacute; usada dentro do &lt;code&gt;for&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Em outras linguagens, determinamos o valor inicial da vari&amp;aacute;vel contadora, seu limite e o passo de itera&amp;ccedil;&amp;atilde;o. Em python isso n&amp;atilde;o acontece. Aqui, o for somente itera sobre sequ&amp;ecirc;ncias. Isto traz v&amp;aacute;rias vantagens, como por exemplo, iterar sobre strings, ou listas de elementos&amp;nbsp;variados.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Ser&amp;aacute; mostrado adiante porque este for n&amp;atilde;o est&amp;aacute; em desvantagem frente ao for das outras&amp;nbsp;linguagens.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Ent&amp;atilde;o, a cada itera&amp;ccedil;&amp;atilde;o, a vari&amp;aacute;vel de itera&amp;ccedil;&amp;atilde;o, neste caso &lt;code&gt;i&lt;/code&gt;, recebe o elemento de uma posi&amp;ccedil;&amp;atilde;o da&amp;nbsp;lista.&lt;/p&gt;
+&lt;p&gt;Assim, este trecho acima imprime na tela todos os valores contidos na lista &lt;code&gt;l&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Vamos ver agora este trecho de&amp;nbsp;c&amp;oacute;digo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'arroz'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'feij&amp;atilde;o'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'carne'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'batata'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Estou cozinhando '&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;Este exemplo demonstra a utiliza&amp;ccedil;&amp;atilde;o do &lt;code&gt;for&lt;/code&gt; com listas que cont&amp;eacute;m &lt;em&gt;strings&lt;/em&gt;, mostrando que pode-se usar listas com qualquer objeto num &lt;code&gt;for&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;No &lt;code&gt;for&lt;/code&gt; tamb&amp;eacute;m podemos usar &lt;code&gt;break&lt;/code&gt; e &lt;code&gt;continue&lt;/code&gt;. Assim, podemos controlar ainda mais o comportamento do la&amp;ccedil;o. Al&amp;eacute;m disso, h&amp;aacute; uma caracter&amp;iacute;stica no &lt;code&gt;for&lt;/code&gt; do Python que o deixa muito poderoso: podemos usar um &lt;code&gt;else&lt;/code&gt; ao final do &lt;code&gt;for&lt;/code&gt; como no exemplo a&amp;nbsp;seguir:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'b'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'c'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'d'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'e'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'f'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'g'&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'h'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'"h" n&amp;atilde;o est&amp;aacute; na lista mas eu printo mesmo assim'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;Usando o &lt;code&gt;else&lt;/code&gt; no final, podemos controlar o que ser&amp;aacute; executado ao final de um execu&amp;ccedil;&amp;atilde;o completa do &lt;code&gt;for&lt;/code&gt; e o que ser&amp;aacute; executado se o la&amp;ccedil;o for quebrado por um &lt;code&gt;break&lt;/code&gt;. Quando o la&amp;ccedil;o &amp;eacute; completamente percorrido sem uma quebra, a execu&amp;ccedil;&amp;atilde;o segue pra dentro do &lt;code&gt;else&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;Neste exemplo, a sa&amp;iacute;da ser&amp;aacute; algo&amp;nbsp;assim:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;a
+b
+c
+d
+e
+f
+g
+"h" n&amp;atilde;o est&amp;aacute; na lista mas eu printo mesmo assim
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Isto &amp;eacute; muito importante, pois evita que tenhamos que fazer testes complicados para detectar quando um &lt;code&gt;for&lt;/code&gt; for quebrado por um &lt;code&gt;break&lt;/code&gt; que ser&amp;aacute; chamado em condi&amp;ccedil;&amp;otilde;es&amp;nbsp;complexas.&lt;/p&gt;
+&lt;p&gt;Finalmente, muitos devem estar se perguntando: &amp;ldquo;Como este &lt;code&gt;for&lt;/code&gt; pode ser t&amp;atilde;o poderoso se temos que definir as listas&amp;nbsp;manualmente?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;O fato &amp;eacute; que n&amp;atilde;o temos que fazer manualmente se for uma lista de n&amp;uacute;meros (assim como n&amp;atilde;o precisamos em outras&amp;nbsp;linguagens).&lt;/p&gt;
+&lt;p&gt;Existe uma fun&amp;ccedil;&amp;atilde;o em Python, range, que retorna uma &lt;em&gt;generator&lt;/em&gt; (objeto que pode ser iterado como uma lista, mas gera os valores durante a execu&amp;ccedil;&amp;atilde;o) de n&amp;uacute;meros no intervalo especificado. Veja o&amp;nbsp;exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'&amp;eacute; par'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'&amp;eacute; impar'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;Quando fazemos range(50), teremos uma &lt;em&gt;generator&lt;/em&gt; que funcionar&amp;aacute; como uma lista de inteiros de 0 a 49. (experimente no&amp;nbsp;shell).&lt;/p&gt;
+&lt;p&gt;Bem, pessoal! Por hoje &amp;eacute;&amp;nbsp;isso!&lt;/p&gt;
+&lt;p&gt;Agora falta pouco para iniciarmos uma programa&amp;ccedil;&amp;atilde;o efetiva em&amp;nbsp;Python!&lt;/p&gt;
+&lt;p&gt;Nos Pr&amp;oacute;ximos Posts, tipos de dados nativos do&amp;nbsp;Python!&lt;/p&gt;
+&lt;p&gt;N&amp;atilde;o deixe de enviar d&amp;uacute;vidas e opini&amp;otilde;es nos coment&amp;aacute;rios&amp;nbsp;abaixo!&lt;/p&gt;
+&lt;p&gt;At&amp;eacute; o pr&amp;oacute;ximo&amp;nbsp;post!&lt;/p&gt;</content><category term="Tutoriais"></category><category term="Tutorial"></category><category term="Python 101"></category></entry><entry><title>Python 101 - Parte 6 - Estruturas de Repetição - For</title><link href="http://programeempython.com.br/python-101-parte-6-en.html" rel="alternate"></link><published>2022-08-09T12:06:00+02:00</published><updated>2022-08-09T12:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-08-09:/python-101-parte-6-en.html</id><summary type="html">&lt;p&gt;Hi!&lt;/p&gt;
+&lt;p&gt;One more post here teaching you Python and today we will talk about &lt;code&gt;for&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In case you haven&amp;rsquo;t seen the previous tutorials, we already&amp;nbsp;have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="{filename}/Tutpriais/en/python101.md"&gt;Introduction to&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/Tutpriais/en/python101.2.md"&gt;Python Code&amp;nbsp;Blocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/Tutpriais/en/python101.3.md"&gt;Conditional Structures in Python -&amp;nbsp;1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/Tutpriais/en/python101.4.md"&gt;Conditional Structures in Python -&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/Tutpriais/en/python101.5.md"&gt;Repeat Structures -&amp;nbsp;while&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let&amp;rsquo;s start with …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hi!&lt;/p&gt;
+&lt;p&gt;One more post here teaching you Python and today we will talk about &lt;code&gt;for&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In case you haven&amp;rsquo;t seen the previous tutorials, we already&amp;nbsp;have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="{filename}/Tutpriais/en/python101.md"&gt;Introduction to&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/Tutpriais/en/python101.2.md"&gt;Python Code&amp;nbsp;Blocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/Tutpriais/en/python101.3.md"&gt;Conditional Structures in Python -&amp;nbsp;1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/Tutpriais/en/python101.4.md"&gt;Conditional Structures in Python -&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/Tutpriais/en/python101.5.md"&gt;Repeat Structures -&amp;nbsp;while&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let&amp;rsquo;s start with a simple&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;Here, initially, we start with something we haven&amp;rsquo;t seen yet: &lt;strong&gt;lists&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;We start by creating &lt;code&gt;l&lt;/code&gt; as a list that contains a sequence of&amp;nbsp;numbers.&lt;/p&gt;
+&lt;p&gt;So this list is used inside the &lt;code&gt;for&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In other languages, we determine the initial value of the counter variable, its limit and the iteration step. In python this does not happen. Here, for only iterates over sequences. This has several advantages, such as iterating over strings, or lists of different&amp;nbsp;elements.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;It will be shown later because this for is not at a disadvantage compared to the for of other&amp;nbsp;languages.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Then, at each iteration, the iteration variable, in this case &lt;code&gt;i&lt;/code&gt;, receives the element of a position in the&amp;nbsp;list.&lt;/p&gt;
+&lt;p&gt;Thus, this snippet above prints on the screen all the values &amp;ZeroWidthSpace;&amp;ZeroWidthSpace;contained in the list &lt;code&gt;l&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now let&amp;rsquo;s see this code&amp;nbsp;snippet:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'rice'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'beans'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'meat'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'potato'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'I'&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;cooking&lt;/span&gt; &lt;span class="s1"&gt;', i)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;This example demonstrates the use of &lt;code&gt;for&lt;/code&gt; with lists that contain &lt;em&gt;strings&lt;/em&gt;, showing that you can use lists with any object in a &lt;code&gt;for&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In &lt;code&gt;for&lt;/code&gt; we can also use &lt;code&gt;break&lt;/code&gt; and &lt;code&gt;continue&lt;/code&gt;. Thus, we can further control the behavior of the loop. Also, there is a feature in Python&amp;rsquo;s &lt;code&gt;for&lt;/code&gt; that makes it very powerful: we can use an &lt;code&gt;else&lt;/code&gt; at the end of the &lt;code&gt;for&lt;/code&gt; as in the following&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'b'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'c'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'d'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'e'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;ZeroWidthSpace;&amp;ZeroWidthSpace;&lt;/span&gt;&lt;span class="s1"&gt;'f'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'g'&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'h'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'"h" is not in the list but I print anyway'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;Using &lt;code&gt;else&lt;/code&gt; at the end, we can control what will be executed at the end of a complete &lt;code&gt;for&lt;/code&gt; execution and what will be executed if the loop is broken by a &lt;code&gt;break&lt;/code&gt;. When the loop is completely traversed without a break, execution proceeds into &lt;code&gt;else&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;In this example, the output will look something like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;a
+b
+c
+d
+e
+f
+g
+"h" is not in the list but I print it anyway
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This is very important, as it avoids having to do complicated tests to detect when a &lt;code&gt;for&lt;/code&gt; is broken by a &lt;code&gt;break&lt;/code&gt; that will be called under complex&amp;nbsp;conditions.&lt;/p&gt;
+&lt;p&gt;Finally, many may be wondering: &amp;ldquo;How can this &lt;code&gt;for&lt;/code&gt; be so powerful if we have to define the lists&amp;nbsp;manually?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;The fact is that we don&amp;rsquo;t have to do it manually if it&amp;rsquo;s a list of numbers (just like we don&amp;rsquo;t need to in other&amp;nbsp;languages).&lt;/p&gt;
+&lt;p&gt;There is a Python function, range, which returns a &lt;em&gt;generator&lt;/em&gt; (object that can be iterated over like a list, but generates the values &amp;ZeroWidthSpace;&amp;ZeroWidthSpace;at runtime) of numbers in the specified range. See the&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'is even'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'is odd'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;When we do range(50), we will have a &lt;em&gt;generator&lt;/em&gt; that will work as a list of integers from 0 to 49. (try it in the&amp;nbsp;shell).&lt;/p&gt;
+&lt;p&gt;Well folks! That&amp;rsquo;s it for&amp;nbsp;today!&lt;/p&gt;
+&lt;p&gt;Now it&amp;rsquo;s not long before we start effective programming in&amp;nbsp;Python!&lt;/p&gt;
+&lt;p&gt;In the next posts, native Python data&amp;nbsp;types!&lt;/p&gt;
+&lt;p&gt;Be sure to post questions and opinions in the comments&amp;nbsp;below!&lt;/p&gt;
+&lt;p&gt;See you in the next&amp;nbsp;post!&lt;/p&gt;</content><category term="Tutoriais"></category><category term="Tutorial"></category><category term="Python 101"></category></entry><entry><title>Tutorial de Pelican com Github Pages e CircleCI - 2</title><link href="http://programeempython.com.br/tutorial-pelican-2.html" rel="alternate"></link><published>2022-08-08T09:30:00+02:00</published><updated>2022-08-08T09:30:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-08-08:/tutorial-pelican-2.html</id><summary type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
 &lt;p&gt;Chegou a hora de continuarmos o tutorial de como publicar seu blog com Pelican, Github Pages e Circle &lt;span class="caps"&gt;CI&lt;/span&gt; como eu fiz, e caso voc&amp;ecirc; esteja chegando por aqui agora, confira nossos tutoriais&amp;nbsp;anteriores&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://programeempython.com.br/tutorial-pelican.html"&gt;Tutorial Inicial de Pelican&lt;/a&gt;.&lt;/li&gt;

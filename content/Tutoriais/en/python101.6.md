@@ -1,4 +1,4 @@
-Title: Python 101 - Parte 6 - Estruturas de Repetição - For
+Title: Python 101 - Part 6 - Repetition Structures - For
 Date: 2022-08-09 12:06
 Slug: python-101-parte-6
 Category: Tutoriais

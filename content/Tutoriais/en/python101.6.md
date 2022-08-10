@@ -12,11 +12,11 @@ One more post here teaching you Python and today we will talk about `for`.
 
 In case you haven't seen the previous tutorials, we already have:
 
-* [Introduction to Python]({filename}/Tutpriais/en/python101.md)
-* [Python Code Blocks]({filename}/Tutpriais/en/python101.2.md)
-* [Conditional Structures in Python - 1]({filename}/Tutpriais/en/python101.3.md)
-* [Conditional Structures in Python - 2]({filename}/Tutpriais/en/python101.4.md)
-* [Repeat Structures - while]({filename}/Tutpriais/en/python101.5.md)
+* [Introduction to Python]({filename}/Tutoriais/en/python101.md)
+* [Python Code Blocks]({filename}/Tutoriais/en/python101.2.md)
+* [Conditional Structures in Python - 1]({filename}/Tutoriais/en/python101.3.md)
+* [Conditional Structures in Python - 2]({filename}/Tutoriais/en/python101.4.md)
+* [Repetition Structures - while]({filename}/Tutoriais/en/python101.5.md)
 
 
 Let's start with a simple example:

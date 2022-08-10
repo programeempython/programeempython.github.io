@@ -1,4 +1,4 @@
-Title: Python 101 - Data Structures - 1
+Title: Python 101 - Part 7 - Data Structures - 1
 Date: 2022-08-11 00:29
 Slug: python-101-parte-7
 Category: Tutoriais

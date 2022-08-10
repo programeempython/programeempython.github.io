@@ -1,4 +1,4 @@
-Title: Python 101 - Estruturas de Dados - 1
+Title: Python 101 - Parte 7 - Estruturas de Dados - 1
 Date: 2022-08-11 00:29
 Slug: python-101-parte-7
 Category: Tutoriais

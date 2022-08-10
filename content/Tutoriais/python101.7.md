@@ -34,7 +34,7 @@ Desta forma, listas se tornam uma ferramenta muito poderosa dentro do Python. Te
 Para criar uma lista, basta atribuir valores a ela da seguinte forma:
 
     #!python
-    l = [1,2,3,4,5]
+    l = [1, 2, 3, 4, 5]
 
 Assim como fizemos quando vimos como funciona o `for`.
 
@@ -43,14 +43,14 @@ Outra estrutura de dados muito importante e largamente usada é a `tuple` (tupla
 Vamos criar uma tupla:
 
     #!python
-    t = (1,2,3,4,5)
+    t = (1, 2, 3, 4, 5)
 
 Vejamos agora uma das estruturas de dados mais poderosas do Python, e que possui muitas possibilidades de utilização. Esta estrutura é o `dict` (dicionário) que relaciona pares de chave e valor.
 
 Assim criamos um dicionário:
 
     #!python
-    d = {'a':1, 'b':2,'c':3, 'd':4, 'e':5}
+    d = {'a': 1, 'b': 2,'c': 3, 'd': 4, 'e': 5}
 
 Finalmente, a última estrutura de dados nativa do Python que veremos hoje é o set (conjunto). Os sets representam conjuntos matemáticos. Assim, são sequências e uma característica interessante é que não possuem elementos repetidos.
 

@@ -36,7 +36,7 @@ In this way, lists become a very powerful tool within Python. We will have a pos
 To create a list, simply assign values ​​to it as follows:
 
     #!python
-    l = [1,2,3,4,5]
+    l = [1, 2, 3, 4, 5]
 
 Just like we did when we saw how `for` works.
 
@@ -45,14 +45,14 @@ Another very important and widely used data structure is the `tuple`. Tuples con
 Let's create a tuple:
 
     #!python
-    t = (1,2,3,4,5)
+    t = (1, 2, 3, 4, 5)
 
 Now let's look at one of Python's most powerful data structures, and one that has many possibilities for use. This structure is the `dict` (dictionary) that relates key and value pairs.
 
 So we create a dictionary:
 
     #!python
-    d = {'a':1, 'b':2,'c':3, 'd':4, 'e':5}
+    d = {'a': 1, 'b': 2,'c': 3, 'd': 4, 'e': 5}
 
 Finally, the last native Python data structure we'll look at today is the set. The sets represent mathematical sets. Thus, they are sequences and an interesting feature is that they do not have repeated elements.
 

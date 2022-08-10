@@ -13,6 +13,11 @@ url = "pages/sobre-mim.html"
 title = "Sobre Mim"
 
 [[input.files]]
+path = "python-101-parte-7.html"
+url = "python-101-parte-7.html"
+title = "Python 101 - Estruturas de Dados - 1"
+
+[[input.files]]
 path = "python-101-parte-6.html"
 url = "python-101-parte-6.html"
 title = "Python 101 - Parte 6 - Estruturas de Repetição - For"
@@ -66,6 +71,11 @@ title = "Porque Pelican"
 path = "um-novo-comeco.html"
 url = "um-novo-comeco.html"
 title = "Um novo começo"
+
+[[input.files]]
+path = "python-101-parte-7-en.html"
+url = "python-101-parte-7-en.html"
+title = "Python 101 - Data Structures - 1"
 
 [[input.files]]
 path = "python-101-parte-6-en.html"

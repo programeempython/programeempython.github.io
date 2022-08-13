@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+  <link id="dark-theme-style" rel="stylesheet" type="text/css"  disabled="disabled"     href="./theme/stylesheet/dark-theme.min.css">
+
+  <link id="pygments-dark-theme" rel="stylesheet" type="text/css"  disabled="disabled"     href="./theme/pygments/one-dark.min.css">
+  <link id="pygments-light-theme" rel="stylesheet" type="text/css"     href="./theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#666666">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#666666">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#666666">
+
+<meta name="author" content="Julio Melanda" />
+<meta name="description" content="Olá! Hoje vamos ver uma coisa muito importante no Python: as estruturas de dados nativas. Caso não tenha visto os tutoriais anteriores, já temos: Introdução ao Python Blocos de Código em Python Estruturas Condicionais em Python - 1 Estruturas Condicionais em Python - 2 Estruturas de Repetição - while Estruturas de Repetição - for …" />
+<meta name="keywords" content="Tutorial, Python 101">
+
+<link rel="alternate" href="./python-101-parte-7.html" hreflang="pt_br" />
+<link rel="alternate" href="./python-101-parte-7-en.html" hreflang="en" />
+
+<meta property="og:site_name" content="Programe em Python"/>
+<meta property="og:title" content="Python 101 - Parte 7 - Estruturas de Dados - 1"/>
+<meta property="og:description" content="Olá! Hoje vamos ver uma coisa muito importante no Python: as estruturas de dados nativas. Caso não tenha visto os tutoriais anteriores, já temos: Introdução ao Python Blocos de Código em Python Estruturas Condicionais em Python - 1 Estruturas Condicionais em Python - 2 Estruturas de Repetição - while Estruturas de Repetição - for …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./python-101-parte-7.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-08-11 00:29:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/julio-melanda.html">
+<meta property="article:section" content="Tutoriais"/>
+<meta property="article:tag" content="Tutorial"/>
+<meta property="article:tag" content="Python 101"/>
+<meta property="og:image" content="/images/logo.png">
+
+  <title>Programe em Python &ndash; Python 101 - Parte 7 - Estruturas de Dados - 1</title>
+
+</head>
+
+<body class="light-theme" >
+  <aside>
+    <div>
+      <a href=".">
+        <img src="/images/logo.png" alt="Programe em Python" title="Programe em Python">
+      </a>
+
+      <h1>
+        <a href=".">Programe em Python</a>
+      </h1>
+
+<p>Um pouco de tudo sobre programação em Python</p>
+
+      <nav>
+        <ul class="list">
+
+
+          <li>
+            <a target="_self"
+              href="./pages/contato.html#contato">
+              Contato
+            </a>
+          </li>
+          <li>
+            <a target="_self"
+              href="./pages/sobre-mim.html#sobre-mim">
+              Sobre&nbsp;Mim
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li>
+          <a  class="sc-github" href="https://github.com/jcemelanda" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a  class="sc-linkedin" href="https://www.linkedin.com/in/jcemelanda" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a  class="sc-twitter" href="https://twitter.com/jcemelanda" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href=".">Home</a>
+
+      <a href="/archives.html">Arquivo</a>
+      <a href="/categories.html">Categorias</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+          <div class="translations">
+    <a class="active" href="./python-101-parte-7.html">pt_br</a>
+        <a href="./python-101-parte-7-en.html">en</a>
+    </div>
+
+    <h1 id="python-101-parte-7">Python 101 - Parte 7 - Estruturas de Dados -&nbsp;1</h1>
+    <p>
+      Posted on tor 11 august 2022 in <a href="./category/tutoriais.html">Tutoriais</a>
+
+        &#8226; 2 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>Ol&aacute;!</p>
+<p>Hoje vamos ver uma coisa muito importante no Python: as estruturas de dados&nbsp;nativas.</p>
+<p>Caso n&atilde;o tenha visto os tutoriais anteriores, j&aacute;&nbsp;temos:</p>
+<ul>
+<li><a href="./python-101-parte-1.html">Introdu&ccedil;&atilde;o ao&nbsp;Python</a></li>
+<li><a href="./python-101-parte-2.html">Blocos de C&oacute;digo em&nbsp;Python</a></li>
+<li><a href="./python-101-parte-3-condicionais.html">Estruturas Condicionais em Python -&nbsp;1</a></li>
+<li><a href="./python-101-parte-4.html">Estruturas Condicionais em Python -&nbsp;2</a></li>
+<li><a href="./python-101-parte-5.html">Estruturas de Repeti&ccedil;&atilde;o -&nbsp;while</a></li>
+<li><a href="./python-101-parte-6.html">Estruturas de Repeti&ccedil;&atilde;o -&nbsp;for</a></li>
+</ul>
+<p>S&atilde;o v&aacute;rios os tipos de dados nativos do Python. Entre eles, os mais importantes, pois s&atilde;o essenciais para qualquer programa, s&atilde;o os&nbsp;tipos:</p>
+<ul>
+<li><code>int</code> - n&uacute;meros&nbsp;inteiro</li>
+<li><code>float</code> - ponto flutuante, representando os n&uacute;meros reais,&nbsp;basicamente</li>
+<li><code>string</code> - cadeia de caracteres, ou basicamente,&nbsp;texto</li>
+</ul>
+<p>Por&eacute;m, em Python, diferente de outras linguagens, estes tipos de dados, assim como todas as outras estruturas da linguagem s&atilde;o objetos, desta forma, o tipo b&aacute;sico de tudo em python &eacute; <code>object</code>. H&aacute; muito a se discutir sobre tipos de dados, mas para simplificar consideraremos&nbsp;assim.</p>
+<p>Voltando &agrave;s estruturas de dados nativas, veremos que estas s&atilde;o conjuntos estruturados de objetos que podem conter elementos de qualquer outro&nbsp;tipo.</p>
+<p>A primeira e talvez mais largamente usada destas estruturas &eacute; a <code>list</code>. Uma <code>list</code> implementa uma lista que pode conter virtualmente qualquer objeto, sendo composta por quantos tipos de objeto for necess&aacute;rio (diferente de algumas&nbsp;linguagens).</p>
+<p>Desta forma, listas se tornam uma ferramenta muito poderosa dentro do Python. Teremos mais adiante um post focado especialmente nas listas e seus&nbsp;m&eacute;todos.</p>
+<p>Para criar uma lista, basta atribuir valores a ela da seguinte&nbsp;forma:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>Assim como fizemos quando vimos como funciona o <code>for</code>.</p>
+<p>Outra estrutura de dados muito importante e largamente usada &eacute; a <code>tuple</code> (tupla). Tuplas cont&eacute;m conjuntos de valores assim como as listas, por&eacute;m se diferenciam destas principalmente pelo fato de as tuplas n&atilde;o poderem ser alteradas ap&oacute;s sua cria&ccedil;&atilde;o, e as listas&nbsp;sim.</p>
+<p>Vamos criar uma&nbsp;tupla:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Vejamos agora uma das estruturas de dados mais poderosas do Python, e que possui muitas possibilidades de utiliza&ccedil;&atilde;o. Esta estrutura &eacute; o <code>dict</code> (dicion&aacute;rio) que relaciona pares de chave e&nbsp;valor.</p>
+<p>Assim criamos um&nbsp;dicion&aacute;rio:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'a'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span><span class="s1">'c'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">'e'</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Finalmente, a &uacute;ltima estrutura de dados nativa do Python que veremos hoje &eacute; o set (conjunto). Os sets representam conjuntos matem&aacute;ticos. Assim, s&atilde;o sequ&ecirc;ncias e uma caracter&iacute;stica interessante &eacute; que n&atilde;o possuem elementos&nbsp;repetidos.</p>
+<p>Por exemplo, ao criar este&nbsp;set:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<p>O conjunto ser&aacute; <code>[1, 2, 3, 5, 7, 13, 17]</code>, pois <code>1</code> aparecia 2 vezes na lista original, e no set ele aparece somente uma&nbsp;vez.</p>
+<p>Nos Pr&oacute;ximos posts, vamos ver em mais detalhes estas estruturas de dados&nbsp;:D</p>
+<p>N&atilde;o deixe de enviar d&uacute;vidas e opini&otilde;es nos coment&aacute;rios&nbsp;abaixo!</p>
+<p>At&eacute; o pr&oacute;ximo&nbsp;post!</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/tutorial.html">Tutorial</a>
+      <a href="./tag/python-101.html">Python 101</a>
+    </p>
+  </div>
+
+
+
+  <div class="related-posts">
+    <h4>You might enjoy</h4>
+    <ul class="related-posts">
+      <li><a href="./python-101-parte-8.html">Python 101 - Parte 8 - Estruturas de Dados -&nbsp;Listas</a></li>
+      <li><a href="./python-101-parte-6.html">Python 101 - Parte 6 - Estruturas de Repetição -&nbsp;For</a></li>
+      <li><a href="./python-101-parte-5.html">Python 101 - Parte 5 - Estruturas de Repetição -&nbsp;While</a></li>
+      <li><a href="./python-101-parte-4.html">Python 101 - Parte 4 - Estruturas Condicionais em Python, o&nbsp;Retorno</a></li>
+      <li><a href="./python-101-parte-3-condicionais.html">Python 101 - Parte 3 - Estruturas Condicionais em&nbsp;Python</a></li>
+    </ul>
+  </div>
+
+
+</article>
+
+    <footer>
+<p>&copy; 2022 </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="./theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="false"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Programe em Python ",
+  "url" : ".",
+  "image": "/images/logo.png",
+  "description": ""
+}
+</script>
+
+
+</body>
+
+</html>

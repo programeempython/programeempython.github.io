@@ -1,5 +1,5 @@
 Title: Pelican Tutorial with Github Pages and CircleCI - 3
-Date: 2022-08-08 9:30
+Date: 2022-08-15 9:30
 Category: Tutoriais
 Tags: Tutorial, Pelican, Github Pages, CircleCI
 Slug: tutorial-pelican-3
@@ -219,7 +219,7 @@ However, before we upload our project to github pages, let's check the configura
     #DISQUS_SITENAME = ""
     #GOOGLE_ANALYTICS = ""
 
-In a few moments you will be able to access your site `usuario.github.io` and see your blog live!
+In a few moments you will be able to access your site `username.github.io` and see your blog live!
 
 When writing new posts, simply run `make publish` and `make github` and in a few moments your post will be live!
 

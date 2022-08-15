@@ -1,5 +1,5 @@
 Title: Tutorial de Pelican com Github Pages e CircleCI - 3
-Date: 2022-08-08 9:30
+Date: 2022-08-15 9:30
 Category: Tutoriais
 Tags: Tutorial, Pelican, Github Pages, CircleCI
 Slug: tutorial-pelican-3

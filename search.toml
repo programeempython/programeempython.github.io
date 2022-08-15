@@ -13,6 +13,11 @@ url = "pages/sobre-mim.html"
 title = "Sobre Mim"
 
 [[input.files]]
+path = "tutorial-pelican-3.html"
+url = "tutorial-pelican-3.html"
+title = "Tutorial de Pelican com Github Pages e CircleCI - 3"
+
+[[input.files]]
 path = "python-101-parte-8.html"
 url = "python-101-parte-8.html"
 title = "Python 101 - Parte 8 - Estruturas de Dados - Listas"
@@ -31,11 +36,6 @@ title = "Python 101 - Parte 6 - Estruturas de Repetição - For"
 path = "tutorial-pelican-2.html"
 url = "tutorial-pelican-2.html"
 title = "Tutorial de Pelican com Github Pages e CircleCI - 2"
-
-[[input.files]]
-path = "tutorial-pelican-3.html"
-url = "tutorial-pelican-3.html"
-title = "Tutorial de Pelican com Github Pages e CircleCI - 3"
 
 [[input.files]]
 path = "python-101-parte-5.html"
@@ -83,6 +83,11 @@ url = "um-novo-comeco.html"
 title = "Um novo começo"
 
 [[input.files]]
+path = "tutorial-pelican-3-en.html"
+url = "tutorial-pelican-3-en.html"
+title = "Pelican Tutorial with Github Pages and CircleCI - 3"
+
+[[input.files]]
 path = "python-101-parte-8-en.html"
 url = "python-101-parte-8-en.html"
 title = "Python 101 - Parte 8 - Data Structures - Lists"
@@ -101,11 +106,6 @@ title = "Python 101 - Part 6 - Repetition Structures - For"
 path = "tutorial-pelican-2-en.html"
 url = "tutorial-pelican-2-en.html"
 title = "Pelican Tutorial with Github Pages and CircleCI - 2"
-
-[[input.files]]
-path = "tutorial-pelican-3-en.html"
-url = "tutorial-pelican-3-en.html"
-title = "Pelican Tutorial with Github Pages and CircleCI - 3"
 
 [[input.files]]
 path = "python-101-parte-5-en.html"

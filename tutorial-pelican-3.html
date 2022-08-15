@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/stylesheet/style.min.css">
+
+  <link id="dark-theme-style" rel="stylesheet" type="text/css"  disabled="disabled"     href="http://programeempython.com.br/theme/stylesheet/dark-theme.min.css">
+
+  <link id="pygments-dark-theme" rel="stylesheet" type="text/css"  disabled="disabled"     href="http://programeempython.com.br/theme/pygments/one-dark.min.css">
+  <link id="pygments-light-theme" rel="stylesheet" type="text/css"     href="http://programeempython.com.br/theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/font-awesome/css/solid.css">
+
+
+  <link href="http://programeempython.com.br/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+    title="Programe em Python Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CWQ34LZTCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-CWQ34LZTCX');
+</script>
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#666666">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#666666">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#666666">
+
+<meta name="author" content="Julio Melanda" />
+<meta name="description" content="Olá! Hora de continuar nosso tutorial e colocarmos nosso blog Pelican no github pages! Caso você ainda não tenha visto os posts anteriores, veja aqui para podermos seguir do mesmo ponto. Tutorial Inicial de Pelican. Tutorial básico de GIT e GitHub Tutorial de Github Pages Recapitulando rapidamente, no primeiro tutorial …" />
+<meta name="keywords" content="Tutorial, Pelican, Github Pages, CircleCI">
+
+<link rel="alternate" href="http://programeempython.com.br/tutorial-pelican-3.html" hreflang="pt_br" />
+<link rel="alternate" href="http://programeempython.com.br/tutorial-pelican-3-en.html" hreflang="en" />
+
+<meta property="og:site_name" content="Programe em Python"/>
+<meta property="og:title" content="Tutorial de Pelican com Github Pages e CircleCI - 3"/>
+<meta property="og:description" content="Olá! Hora de continuar nosso tutorial e colocarmos nosso blog Pelican no github pages! Caso você ainda não tenha visto os posts anteriores, veja aqui para podermos seguir do mesmo ponto. Tutorial Inicial de Pelican. Tutorial básico de GIT e GitHub Tutorial de Github Pages Recapitulando rapidamente, no primeiro tutorial …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://programeempython.com.br/tutorial-pelican-3.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-08-08 09:30:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://programeempython.com.br/author/julio-melanda.html">
+<meta property="article:section" content="Tutoriais"/>
+<meta property="article:tag" content="Tutorial"/>
+<meta property="article:tag" content="Pelican"/>
+<meta property="article:tag" content="Github Pages"/>
+<meta property="article:tag" content="CircleCI"/>
+<meta property="og:image" content="/images/logo.png">
+
+  <title>Programe em Python &ndash; Tutorial de Pelican com Github Pages e CircleCI - 3</title>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5019623326305470"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="light-theme" >
+  <aside>
+    <div>
+      <a href="http://programeempython.com.br">
+        <img src="/images/logo.png" alt="Programe em Python" title="Programe em Python">
+      </a>
+
+      <h1>
+        <a href="http://programeempython.com.br">Programe em Python</a>
+      </h1>
+
+<p>Um pouco de tudo sobre programação em Python</p>
+
+      <nav>
+        <ul class="list">
+
+
+          <li>
+            <a target="_self"
+              href="http://programeempython.com.br/pages/contato.html#contato">
+              Contato
+            </a>
+          </li>
+          <li>
+            <a target="_self"
+              href="http://programeempython.com.br/pages/sobre-mim.html#sobre-mim">
+              Sobre&nbsp;Mim
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li>
+          <a  class="sc-github" href="https://github.com/jcemelanda" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a  class="sc-linkedin" href="https://www.linkedin.com/in/jcemelanda" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a  class="sc-twitter" href="https://twitter.com/jcemelanda" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-aside" data-ad-client="ca-pub-5019623326305470"
+      data-ad-slot="1234561"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </aside>
+  <main>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive" data-ad-client="ca-pub-5019623326305470"
+      data-ad-slot="1234562"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <nav>
+      <a href="http://programeempython.com.br">Home</a>
+
+      <a href="/archives.html">Arquivo</a>
+      <a href="/categories.html">Categorias</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://programeempython.com.br/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+          <div class="translations">
+    <a class="active" href="http://programeempython.com.br/tutorial-pelican-3.html">pt_br</a>
+        <a href="http://programeempython.com.br/tutorial-pelican-3-en.html">en</a>
+    </div>
+
+    <h1 id="tutorial-pelican-3">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;3</h1>
+    <p>
+      Posted on Mon 08 August 2022 in <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
+
+        &#8226; 5 min read
+    </p>
+  </header>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-5019623326305470"
+         data-ad-slot="1234565"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+  <div>
+    <p>Ol&aacute;!</p>
+<p>Hora de continuar nosso tutorial e colocarmos nosso blog Pelican no github&nbsp;pages!</p>
+<p>Caso voc&ecirc; ainda n&atilde;o tenha visto os posts anteriores, veja aqui para podermos seguir do mesmo&nbsp;ponto.</p>
+<ul>
+<li><a href="http://programeempython.com.br/tutorial-pelican.html">Tutorial Inicial de Pelican</a>.</li>
+<li><a href="http://programeempython.com.br/tutorial-git-1.html">Tutorial b&aacute;sico de <span class="caps">GIT</span> e&nbsp;GitHub</a></li>
+<li><a href="http://programeempython.com.br/tutorial-pelican-2.html">Tutorial de Github&nbsp;Pages</a></li>
+</ul>
+<p>Recapitulando rapidamente, no primeiro tutorial n&oacute;s criamos um site bem simples com Pelican e no terceiro n&oacute;s criamos uma p&aacute;gina bastante simples no github&nbsp;pages.</p>
+<p>A estrutura atual do seu diret&oacute;rio do github pages deve ser algo&nbsp;como</p>
+<div class="highlight"><pre><span></span><code>usuario.github.io/
+    index.html
+</code></pre></div>
+<p>Bom, n&atilde;o vamos usar este arquivo&nbsp;html.</p>
+<p>No terminal, vamos criar uma nova branch, que ser&aacute; nossa branch principal para criarmos todos os textos do&nbsp;blog. </p>
+<div class="highlight"><pre><span></span><code>git checkout -b pelican
+</code></pre></div>
+<p>Este comando criar&aacute; uma nova branch no seu reposit&oacute;rio git local e vai automaticamente mudar a branch atual para <code>pelican</code>.</p>
+<p>Vamos apagar o arquivo&nbsp;html.</p>
+<div class="highlight"><pre><span></span><code>rm index.html
+</code></pre></div>
+<p>E agora vamos criar nosso blog. Precisamos ter acesso aqui ao comando <code>pelican-quickstart</code> que usamos no tutorial de pelican, ent&atilde;o, num ambiente que contenha o pelican (pode ser o mesmo que usamos no tutorial de pelican), digite o&nbsp;comando:</p>
+<div class="highlight"><pre><span></span><code>pelican-quickstart
+</code></pre></div>
+<p>Desta vez n&atilde;o vamos ficar nos par&acirc;metros padr&atilde;o. Adapte as escolhas que eu mostrar a seguir ao seu&nbsp;projeto.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="nv">?</span><span class="w"> </span><span class="err">[</span><span class="p">.</span><span class="err">]</span><span class="w"></span>
+<span class="c1"># Simplesmente aperte `Enter` para usar a op&ccedil;&atilde;o padr&atilde;o.</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="nv">?</span><span class="w"> </span>
+<span class="c1"># Caso tenha um nome para o blog, ele vai aqui, sen&atilde;o, usuario.github.io pode ser uma boa</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Who</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="nv">?</span><span class="w"></span>
+<span class="c1"># Aqui, ser&aacute; seu nome</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">language</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="nv">?</span><span class="w"> </span><span class="err">[</span><span class="n">pt</span><span class="err">]</span><span class="w"></span>
+<span class="c1"># `pt` n&atilde;o &eacute; uma op&ccedil;&atilde;o v&aacute;lida, ent&atilde;o use `pt_BR`</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="n">prefix</span><span class="nv">?</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="w">   </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="c1"># Aqui responda `y` e depois a url do seu blog (https://usuario.github.io por exemplo</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">enable</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="n">pagination</span><span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="c1"># Sempre acho uma boa ideia ter pagina&ccedil;&atilde;o, ent&atilde;o, `Y`</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">How</span><span class="w"> </span><span class="n">many</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="n">per</span><span class="w"> </span><span class="k">page</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="nv">?</span><span class="w"> </span><span class="err">[</span><span class="mi">10</span><span class="err">]</span><span class="w"></span>
+<span class="c1"># Aqui tamb&eacute;m recomendo o padro, `Enter`</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="kt">time</span><span class="w"> </span><span class="k">zone</span><span class="nv">?</span><span class="w"> </span><span class="err">[</span><span class="n">America</span><span class="o">/</span><span class="n">Sao_Paulo</span><span class="err">]</span><span class="w"> </span>
+<span class="c1"># Use aqui o que fizer mais sentido pra voc&ecirc;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tasks</span><span class="p">.</span><span class="n">py</span><span class="o">/</span><span class="n">Makefile</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">automate</span><span class="w"> </span><span class="n">generation</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">publishing</span><span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="c1"># Esta &eacute; a parte mais importante. A resposta aqui &eacute; SIM! `Y`</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">FTP</span><span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span>
+<span class="c1"># N&oacute;s n&atilde;o queremos, ent&atilde;o `n`</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">SSH</span><span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span>
+<span class="c1"># Mesmo aqui, `n`</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">Dropbox</span><span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span>
+<span class="c1"># Aqui, `n`</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">S3</span><span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"></span>
+<span class="c1"># Aqui, `n'</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">Rackspace</span><span class="w"> </span><span class="n">Cloud</span><span class="w"> </span><span class="n">Files</span><span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"></span>
+<span class="c1">#E aqui, `n`</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">GitHub</span><span class="w"> </span><span class="n">Pages</span><span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"></span>
+<span class="c1"># N&oacute;s queremos usar github pages ent&atilde;o a resposta aqui &eacute; `y`</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">Is</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">personal</span><span class="w"> </span><span class="k">page</span><span class="w"> </span><span class="p">(</span><span class="n">username</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="k">io</span><span class="p">)</span><span class="nv">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span>
+<span class="c1"># E sim, &eacute; a p&aacute;gina pessoal, ent&atilde;o, `y`</span><span class="w"></span>
+</code></pre></div>
+<p>Vamos precisar da lib de Python que interage com github pages ent&atilde;o vamos&nbsp;instal&aacute;-la:</p>
+<div class="highlight"><pre><span></span><code>pip install ghp-import
+</code></pre></div>
+<p>Para o caso de precisarmos editar este reposit&oacute;rio em outro local, outro ambiente, vamos criar um arquivo <code>requirements.txt</code> que vai&nbsp;conter</p>
+<div class="highlight"><pre><span></span><code><span class="n">ghp</span><span class="o">-</span><span class="n">import</span><span class="w"></span>
+<span class="n">pelican</span><span class="o">[</span><span class="n">markdown</span><span class="o">]</span><span class="w"></span>
+</code></pre></div>
+<p>Isto nos permite instalar facilmente as depend&ecirc;ncias no futuro com o&nbsp;comando</p>
+<div class="highlight"><pre><span></span><code>pip install -r requirements.txt
+</code></pre></div>
+<p>Mais uma vez voc&ecirc; deve ter uma estrutura de arquivos dentro do seu reposit&oacute;rio parecida com&nbsp;isto:</p>
+<div class="highlight"><pre><span></span><code>content/
+pelicanconf.py
+publishconf.py
+requirements.txt
+</code></pre></div>
+<p>Vamos dar uma olhada no arquivo&nbsp;pelicanconf.py</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">AUTHOR</span> <span class="o">=</span> <span class="s1">'Author Name'</span>
+<span class="n">SITENAME</span> <span class="o">=</span> <span class="s1">'My Blog'</span>
+<span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">''</span>
+
+<span class="n">PATH</span> <span class="o">=</span> <span class="s1">'content'</span>
+
+<span class="n">TIMEZONE</span> <span class="o">=</span> <span class="s1">'America/Sao_Paulo'</span>
+
+<span class="n">DEFAULT_LANG</span> <span class="o">=</span> <span class="s1">'pt'</span>
+
+<span class="c1"># Feed generation is usually not desired when developing</span>
+<span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">TRANSLATION_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">AUTHOR_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">AUTHOR_FEED_RSS</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># Blogroll</span>
+<span class="n">LINKS</span> <span class="o">=</span> <span class="p">((</span><span class="s1">'Pelican'</span><span class="p">,</span> <span class="s1">'https://getpelican.com/'</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">'Python.org'</span><span class="p">,</span> <span class="s1">'https://www.python.org/'</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">'Jinja2'</span><span class="p">,</span> <span class="s1">'https://palletsprojects.com/p/jinja/'</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">'You can modify those links in your config file'</span><span class="p">,</span> <span class="s1">'#'</span><span class="p">),)</span>
+
+<span class="c1"># Social widget</span>
+<span class="n">SOCIAL</span> <span class="o">=</span> <span class="p">((</span><span class="s1">'You can add links in your config file'</span><span class="p">,</span> <span class="s1">'#'</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">'Another social link'</span><span class="p">,</span> <span class="s1">'#'</span><span class="p">),)</span>
+
+<span class="n">DEFAULT_PAGINATION</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># Uncomment following line if you want document-relative URLs when developing</span>
+<span class="c1">#RELATIVE_URLS = True</span>
+</code></pre></div></td></tr></table></div>
+<p>Podemos remover os links e acrescentar links mais relevantes. Tamb&eacute;m podemos acrescentar links para redes&nbsp;sociais.</p>
+<p>Vamos acrescentar uma <span class="caps">URL</span> para quando estivermos rodando o blog em modo de desenvolvimento para vermos como est&aacute; o post, por&nbsp;exemplo.</p>
+<p>Em <code>SITEURL</code> insira <code>'http://localhost:8000'</code>.</p>
+<p>Agora vamos criar um post em content e podemos chamar por exemplo de <code>primeiro-post.md</code></p>
+<p>Sua estrutura de arquivos&nbsp;ficar&aacute;</p>
+<div class="highlight"><pre><span></span><code>content/
+    primeiro-post.md
+pelicanconf.py
+publishconf.py
+requirements.txt
+</code></pre></div>
+<p>Em <code>primeiro-post.md</code> escreva:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Title</span><span class="p">:</span><span class="w"> </span><span class="n">Primeiro</span><span class="w"> </span><span class="n">Post</span><span class="w"></span>
+<span class="nc">Date</span><span class="err">:</span><span class="w"> </span><span class="mi">2022</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">14</span><span class="w"> </span><span class="mi">12</span><span class="err">:</span><span class="mi">30</span><span class="w"></span>
+<span class="nl">Category</span><span class="p">:</span><span class="w"> </span><span class="n">Geral</span><span class="w"></span>
+<span class="nl">Tags</span><span class="p">:</span><span class="w"> </span><span class="n">Geral</span><span class="w"></span>
+<span class="nl">Slug</span><span class="p">:</span><span class="w"> </span><span class="n">primeiro</span><span class="o">-</span><span class="n">post</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">Ol&aacute;</span><span class="err">!</span><span class="w"></span>
+
+<span class="n">Este</span><span class="w"> </span><span class="n">&eacute;</span><span class="w"> </span><span class="n">meu</span><span class="w"> </span><span class="n">primeiro</span><span class="w"> </span><span class="n">post</span><span class="w"></span>
+
+<span class="n">Isto</span><span class="w"> </span><span class="n">&eacute;</span><span class="w"> </span><span class="n">um</span><span class="w"> </span><span class="o">[</span><span class="n">link</span><span class="o">]</span><span class="p">(</span><span class="err">#</span><span class="p">)</span><span class="w"></span>
+
+<span class="n">&Eacute;</span><span class="w"> </span><span class="n">muito</span><span class="w"> </span><span class="n">__f&aacute;cil__</span><span class="w"> </span><span class="n">criar</span><span class="w"> </span><span class="n">posts</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="n">_Pelican_</span><span class="err">!</span><span class="w"></span>
+</code></pre></div>
+<p>Aqui temos a estrutura de um post bem simples, com metadados b&aacute;sicos e um exemplo de texto que exemplifica algumas marca&ccedil;&otilde;es do&nbsp;Markdown.</p>
+<p>Vamos test&aacute;-lo no servidor de&nbsp;testes.</p>
+<div class="highlight"><pre><span></span><code><span class="n">pelican</span><span class="w"> </span><span class="o">-</span><span class="n">l</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"></span>
+<span class="o">---</span><span class="w"> </span><span class="n">AutoReload</span><span class="w"> </span><span class="k">Mode</span><span class="o">:</span><span class="w"> </span><span class="n">Monitoring</span><span class="w"> </span><span class="n n-Quoted">`content`</span><span class="p">,</span><span class="w"> </span><span class="n n-Quoted">`theme`</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n n-Quoted">`settings`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">changes</span><span class="p">.</span><span class="w"> </span><span class="o">---</span><span class="w"></span>
+<span class="n">Serving</span><span class="w"> </span><span class="n">site</span><span class="w"> </span><span class="k">at</span><span class="o">:</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="mf">127.0.0.1</span><span class="o">:</span><span class="mi">8000</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Tap</span><span class="w"> </span><span class="n">CTRL</span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">stop</span><span class="w"></span>
+<span class="err">[</span><span class="mi">04</span><span class="o">:</span><span class="mi">22</span><span class="o">:</span><span class="mi">41</span><span class="err">]</span><span class="w"> </span><span class="n">WARNING</span><span class="w">  </span><span class="n">Watched</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">exist</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="k">path</span><span class="o">/</span><span class="k">to</span><span class="o">/</span><span class="n">username</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="k">io</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">images</span><span class="w"></span>
+
+
+<span class="o">-&gt;</span><span class="w"> </span><span class="n">Modified</span><span class="o">:</span><span class="w"> </span><span class="k">set</span><span class="n">tings</span><span class="p">,</span><span class="w"> </span><span class="n">content</span><span class="p">,</span><span class="w"> </span><span class="n">theme</span><span class="p">.</span><span class="w"> </span><span class="n">re</span><span class="o">-</span><span class="n">generating</span><span class="p">...</span><span class="w"></span>
+<span class="n">Done</span><span class="o">:</span><span class="w"> </span><span class="n">Processed</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">article</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">drafts</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hidden</span><span class="w"> </span><span class="n">articles</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">pages</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hidden</span><span class="w"> </span><span class="n">pages</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">draft</span><span class="w"> </span><span class="n">pages</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mf">0.06</span><span class="w"> </span><span class="n">seconds</span><span class="p">.</span><span class="w"></span>
+</code></pre></div>
+<p>Acesse <a href="http://localhost:8000">o servidor local</a> e voc&ecirc; deve ver algo&nbsp;assim:</p>
+<p><img alt="Server local" src="/images/pelican-blog-first.png"/></p>
+<p>Para continuarmos, voc&ecirc; precisa ter instalado o <code>make</code>. Como no Windows a instala&ccedil;&atilde;o do make &eacute; mais chatinha, segue um <a href="https://coffops.com/usando-comando-make-projetos-windows/">tutorial de make no Windows</a>.</p>
+<p>Podemos usar o make para v&aacute;rias&nbsp;tarefas.</p>
+<p>Para executar um servidor de desenvolvimento, podemos&nbsp;usar</p>
+<div class="highlight"><pre><span></span><code>make devserver
+</code></pre></div>
+<p>Podemos simplesmente gerar os arquivos para deploy&nbsp;com</p>
+<div class="highlight"><pre><span></span><code>make publish
+</code></pre></div>
+<p>E para enviarmos para o github, vamos&nbsp;usar:</p>
+<div class="highlight"><pre><span></span><code>make github
+</code></pre></div>
+<p>Por&eacute;m, antes de enviarmos nosso projeto para o github pages vamos conferir a configura&ccedil;&atilde;o do blog para publica&ccedil;&atilde;o. Abra o arquivo <code>publishconf.py</code>. Ele deve ter aproximadamente este&nbsp;conte&uacute;do:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># This file is only used if you use `make publish` or</span>
+<span class="c1"># explicitly specify it as your config file.</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">pelicanconf</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># If your site is available via HTTPS, make sure SITEURL begins with https://</span>
+<span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">'https://jcempython.github.io'</span>
+<span class="n">RELATIVE_URLS</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="s1">'feeds/all.atom.xml'</span>
+<span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="s1">'feeds/</span><span class="si">{slug}</span><span class="s1">.atom.xml'</span>
+
+<span class="n">DELETE_OUTPUT_DIRECTORY</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Following items are often useful when publishing</span>
+
+<span class="c1">#DISQUS_SITENAME = ""</span>
+<span class="c1">#GOOGLE_ANALYTICS = ""</span>
+</code></pre></div></td></tr></table></div>
+<p>Em alguns instantes voc&ecirc; poder&aacute; acessar seu site <code>usuario.github.io</code> e ver seu blog no&nbsp;ar!</p>
+<p>Quando escrever novos posts, simplesmente execute <code>make publish</code> e <code>make github</code> e em alguns instantes seu post estar&aacute; no&nbsp;ar!</p>
+<p>Por hora &eacute; isto! Tenho certeza que voc&ecirc; j&aacute; vai se divertir muito com seu blog e j&aacute; vai poder come&ccedil;ar a postar tudo que&nbsp;quiser!</p>
+<p>N&atilde;o se esque&ccedil;a, quando terminar de fazer altera&ccedil;&otilde;es no seu blog, de fazer um commit das altera&ccedil;&otilde;es para a branch pelican&nbsp;tamb&eacute;m.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">git</span> <span class="nv">add</span> .
+<span class="nv">git</span> <span class="nv">commit</span> <span class="o">-</span><span class="nv">m</span> <span class="s2">"</span><span class="s">uma mensagem do que foi feito</span><span class="s2">"</span>
+<span class="nv">git</span> <span class="nv">push</span> <span class="nv">origin</span> <span class="nv">pelican</span>
+</code></pre></div>
+<p>Assim voc&ecirc; n&atilde;o corre o risco de perder suas altera&ccedil;&otilde;es e tem sempre controle sobre as vers&otilde;es dos textos que vau&nbsp;publicar!</p>
+<p>No pr&oacute;ximo post vamos dar um tapa neste blog para termos mais fun&ccedil;&otilde;es, como coment&aacute;rios, por&nbsp;exemplo.</p>
+<p>Espero que tenham gostado e n&atilde;o esque&ccedil;am de deixar suas opini&otilde;es e d&uacute;vidas nos&nbsp;coment&aacute;rios!</p>
+<p>At&eacute; o pr&oacute;ximo&nbsp;post!</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://programeempython.com.br/tag/tutorial.html">Tutorial</a>
+      <a href="http://programeempython.com.br/tag/pelican.html">Pelican</a>
+      <a href="http://programeempython.com.br/tag/github-pages.html">Github Pages</a>
+      <a href="http://programeempython.com.br/tag/circleci.html">CircleCI</a>
+    </p>
+  </div>
+
+
+
+  <div class="related-posts">
+    <h4>You might enjoy</h4>
+    <ul class="related-posts">
+      <li><a href="http://programeempython.com.br/tutorial-pelican-2.html">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;2</a></li>
+      <li><a href="http://programeempython.com.br/tutorial-git-1.html">Tutorial de Git e&nbsp;Github</a></li>
+      <li><a href="http://programeempython.com.br/tutorial-pelican.html">Tutorial de Pelican com Github Pages e CircleCI -&nbsp;1</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-8.html">Python 101 - Parte 8 - Estruturas de Dados -&nbsp;Listas</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-7.html">Python 101 - Parte 7 - Estruturas de Dados -&nbsp;1</a></li>
+    </ul>
+  </div>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-5019623326305470"
+         data-ad-slot="1234566"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'programeempython';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy; 2022 </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="http://programeempython.com.br/theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="false"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Programe em Python ",
+  "url" : "http://programeempython.com.br",
+  "image": "/images/logo.png",
+  "description": ""
+}
+</script>
+
+
+</body>
+
+</html>

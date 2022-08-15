@@ -33,6 +33,11 @@ url = "tutorial-pelican-2.html"
 title = "Tutorial de Pelican com Github Pages e CircleCI - 2"
 
 [[input.files]]
+path = "tutorial-pelican-3.html"
+url = "tutorial-pelican-3.html"
+title = "Tutorial de Pelican com Github Pages e CircleCI - 3"
+
+[[input.files]]
 path = "python-101-parte-5.html"
 url = "python-101-parte-5.html"
 title = "Python 101 - Parte 5 - Estruturas de Repetição - While"
@@ -96,6 +101,11 @@ title = "Python 101 - Part 6 - Repetition Structures - For"
 path = "tutorial-pelican-2-en.html"
 url = "tutorial-pelican-2-en.html"
 title = "Pelican Tutorial with Github Pages and CircleCI - 2"
+
+[[input.files]]
+path = "tutorial-pelican-3-en.html"
+url = "tutorial-pelican-3-en.html"
+title = "Pelican Tutorial with Github Pages and CircleCI - 3"
 
 [[input.files]]
 path = "python-101-parte-5-en.html"

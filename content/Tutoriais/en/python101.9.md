@@ -3,8 +3,8 @@ Date: 2022-08-22 23:06
 Slug: python-101-parte-9
 Category: Tutoriais
 Tags: Tutorial, Python 101
-Language: en
-Translation: True
+Lang: en
+Translation: true
 
 Hello!
 

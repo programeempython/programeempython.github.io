@@ -13,6 +13,11 @@ url = "pages/sobre-mim.html"
 title = "Sobre Mim"
 
 [[input.files]]
+path = "python-101-parte-9.html"
+url = "python-101-parte-9.html"
+title = "Python 101 - Parte 9 - Estruturas de Dados - List Comprehention"
+
+[[input.files]]
 path = "tutorial-pelican-3.html"
 url = "tutorial-pelican-3.html"
 title = "Tutorial de Pelican com Github Pages e CircleCI - 3"
@@ -81,6 +86,11 @@ title = "Porque Pelican"
 path = "um-novo-comeco.html"
 url = "um-novo-comeco.html"
 title = "Um novo começo"
+
+[[input.files]]
+path = "python-101-parte-9-en.html"
+url = "python-101-parte-9-en.html"
+title = "Python 101 - Parte 9 - Data Structures - List Comprehention"
 
 [[input.files]]
 path = "tutorial-pelican-3-en.html"

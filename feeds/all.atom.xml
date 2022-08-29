@@ -1,5 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python</title><link href="http://programeempython.com.br/" rel="alternate"></link><link href="http://programeempython.com.br/feeds/all.atom.xml" rel="self"></link><id>http://programeempython.com.br/</id><updated>2022-08-22T23:06:00+02:00</updated><entry><title>Python 101 - Parte 9 - Estruturas de Dados - List Comprehention</title><link href="http://programeempython.com.br/python-101-parte-9.html" rel="alternate"></link><published>2022-08-22T23:06:00+02:00</published><updated>2022-08-22T23:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-08-22:/python-101-parte-9.html</id><summary type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Programe em Python</title><link href="http://programeempython.com.br/" rel="alternate"></link><link href="http://programeempython.com.br/feeds/all.atom.xml" rel="self"></link><id>http://programeempython.com.br/</id><updated>2022-08-30T00:06:00+02:00</updated><entry><title>Python 101 - Parte 10 - Dicionários</title><link href="http://programeempython.com.br/python-101-parte-10.html" rel="alternate"></link><published>2022-08-30T00:06:00+02:00</published><updated>2022-08-30T00:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-08-30:/python-101-parte-10.html</id><summary type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
+&lt;p&gt;Hoje vamos falar de uma estrutura de dados que n&amp;atilde;o est&amp;aacute; presente em todas as linguagens. Esta estrutura &amp;eacute; chamada de&amp;nbsp;dicion&amp;aacute;rio.&lt;/p&gt;
+&lt;p&gt;Os dicion&amp;aacute;rios em Python s&amp;atilde;o estruturas de dados que cont&amp;eacute;m pares de&amp;nbsp;chave-valor.&lt;/p&gt;
+&lt;p&gt;S&amp;atilde;o parecidos com as listas, considerando que ambos s&amp;atilde;o sequencias de elementos, mas o …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
+&lt;p&gt;Hoje vamos falar de uma estrutura de dados que n&amp;atilde;o est&amp;aacute; presente em todas as linguagens. Esta estrutura &amp;eacute; chamada de&amp;nbsp;dicion&amp;aacute;rio.&lt;/p&gt;
+&lt;p&gt;Os dicion&amp;aacute;rios em Python s&amp;atilde;o estruturas de dados que cont&amp;eacute;m pares de&amp;nbsp;chave-valor.&lt;/p&gt;
+&lt;p&gt;S&amp;atilde;o parecidos com as listas, considerando que ambos s&amp;atilde;o sequencias de elementos, mas o acesso a cada posi&amp;ccedil;&amp;atilde;o da lista &amp;eacute; feito de forma&amp;nbsp;diferente.&lt;/p&gt;
+&lt;p&gt;Caso voc&amp;ecirc; ainda n&amp;atilde;o tenha visto os outros artigos da s&amp;eacute;rie Python 101, aqui&amp;nbsp;est&amp;atilde;o:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-1.html"&gt;Introdu&amp;ccedil;&amp;atilde;o ao&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-2.html"&gt;Blocos de C&amp;oacute;digo em&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-3-condicionais.html"&gt;Estruturas Condicionais em Python -&amp;nbsp;1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-4.html"&gt;Estruturas Condicionais em Python -&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-5.html"&gt;Estruturas de Repeti&amp;ccedil;&amp;atilde;o -&amp;nbsp;while&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-6.html"&gt;Estruturas de Repeti&amp;ccedil;&amp;atilde;o -&amp;nbsp;for&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-7.html"&gt;Estruturas de Dados do Python -&amp;nbsp;1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-8.html"&gt;Estruturas de Dados do Python -&amp;nbsp;Listas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-9.html"&gt;Estruturas de Dados do Python - Lista&amp;nbsp;Comprehentions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vejamos ent&amp;atilde;o como trabalhar com Dicion&amp;aacute;rios em&amp;nbsp;Python!&lt;/p&gt;
+&lt;p&gt;Para come&amp;ccedil;ar, vamos ver as maneiras de definir um&amp;nbsp;dicion&amp;aacute;rio.&lt;/p&gt;
+&lt;p&gt;Primeiro definimos um dicion&amp;aacute;rio&amp;nbsp;vazio:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;dicionario&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;Este dicion&amp;aacute;rio pode receber valores futuramente durante a execu&amp;ccedil;&amp;atilde;o do&amp;nbsp;programa.&lt;/p&gt;
+&lt;p&gt;Agora, imaginemos como seria montar um dicion&amp;aacute;rio que relacionasse strings para os dias da semana, como &amp;lsquo;seg&amp;rsquo; e &amp;lsquo;ter&amp;rsquo; com n&amp;uacute;meros. Indispens&amp;aacute;vel se voc&amp;ecirc; for fazer um calend&amp;aacute;rio, n&amp;atilde;o&amp;nbsp;acha?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;dias_semana&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'dom'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'seg'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'ter'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'qua'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s1"&gt;'qui'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'sex'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'sab'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;Ao criarmos um dicion&amp;aacute;rio, ele ter&amp;aacute; esta estrutura. Antes do &amp;lsquo;:&amp;rsquo; temos a chave do par chave-valor, e logo ap&amp;oacute;s, o valor&amp;nbsp;correspondente.&lt;/p&gt;
+&lt;p&gt;Mas, e se f&amp;ocirc;ssemos criar um dicion&amp;aacute;rio que relacionasse as letras N, L, S, O dos pontos cardeais com&amp;nbsp;n&amp;uacute;meros?&lt;/p&gt;
+&lt;p&gt;Aposto que voc&amp;ecirc; j&amp;aacute; sabe a resposta! Mas, existe uma outra forma, tamb&amp;eacute;m muito &amp;uacute;til de gerar dicion&amp;aacute;rios, e que pode ser muito importante para gera&amp;ccedil;&amp;atilde;o destes dicion&amp;aacute;rios em tempo de&amp;nbsp;execu&amp;ccedil;&amp;atilde;o.&lt;/p&gt;
+&lt;p&gt;Usando &lt;code&gt;dict()&lt;/code&gt; podemos transformar listas de tuplas em dicion&amp;aacute;rios. Tecnicamente seriam sequencias de sequencias, mas para o exemplo vamos usar listas de&amp;nbsp;tuplas.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Se voc&amp;ecirc; n&amp;atilde;o lembra o que &amp;eacute; uma tupla, confira nosso &lt;a href="http://programeempython.com.br/python-101-parte-7.html"&gt;post de introdu&amp;ccedil;&amp;atilde;o &amp;agrave;s estruturas de&amp;nbsp;dados&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Veja como funciona o &lt;code&gt;dict()&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;pontos_cardeais&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;([(&lt;/span&gt;&lt;span class="s1"&gt;'N'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'L'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'S'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'O'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;Voc&amp;ecirc; se lembra da &lt;a href="http://programeempython.com.br/python-101-parte-9.html"&gt;List Comprehension&lt;/a&gt; que vimos no &amp;uacute;ltimo&amp;nbsp;post?&lt;/p&gt;
+&lt;p&gt;Pois bem, que tal us&amp;aacute;-la para montar um dicion&amp;aacute;rio que relaciona os inteiros de zero a dez e seus respectivos&amp;nbsp;quadrados?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;quadrados&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;)])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;&amp;Eacute; muito simples criar dicion&amp;aacute;rio,&amp;nbsp;n&amp;atilde;o?&lt;/p&gt;
+&lt;p&gt;Mas&amp;hellip; simplesmente criar os dicion&amp;aacute;rios n&amp;atilde;o tem utilidade nenhuma,&amp;nbsp;certo?&lt;/p&gt;
+&lt;p&gt;Vejamos como acessar um valor a partir de sua chave. vamos usar o dicion&amp;aacute;rio dos dias da semana. Experimente os comandos no Shell do&amp;nbsp;Python!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; dias_semana['ter']
+2
+&amp;gt;&amp;gt;&amp;gt; dias_semana['sab']
+6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;F&amp;aacute;cil, n&amp;atilde;o&amp;nbsp;&amp;eacute;?&lt;/p&gt;
+&lt;p&gt;Vamos inserir alguns valores neste&amp;nbsp;dicion&amp;aacute;rio?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; dias_semana
+{'qua': 3, 'dom': 0, 'sab': 6, 'sex': 5, 'seg': 1, 'qui': 4, 'ter': 2}
+&amp;gt;&amp;gt;&amp;gt; dias_semana['Dom'] = 0
+&amp;gt;&amp;gt;&amp;gt; dias_semana['Seg'] = 1
+&amp;gt;&amp;gt;&amp;gt; dias_semana['Ter'] = 2
+&amp;gt;&amp;gt;&amp;gt; dias_semana['Qua'] = 3
+&amp;gt;&amp;gt;&amp;gt; dias_semana['Qui'] = 4
+&amp;gt;&amp;gt;&amp;gt; dias_semana['Sex'] = 5
+&amp;gt;&amp;gt;&amp;gt; dias_semana['Sab'] = 6
+&amp;gt;&amp;gt;&amp;gt; dias_semana
+{'qua': 3, 'dom': 0, 'sab': 6, 'Dom': 0, 'Seg': 1, 'sex': 5, 'seg': 1, 
+'Qui': 4, 'Qua': 3, 'Sab': 6, 'qui': 4, 'ter': 2, 'Sex': 5, 'Ter': 2}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Num dicion&amp;aacute;rio, a ordem em que os elementos aparecem n&amp;atilde;o &amp;eacute; t&amp;atilde;o importante, pois os valores s&amp;atilde;o acessados principalmente atrav&amp;eacute;s de suas respectivas chaves, e n&amp;atilde;o de suas posi&amp;ccedil;&amp;otilde;es. Al&amp;eacute;m disso, dicion&amp;aacute;rios n&amp;atilde;o guardam a ordem dos elementos, logo, o elemento que aparece em primeiro lugar numa execu&amp;ccedil;&amp;atilde;o pode n&amp;atilde;o ser o primeiro em outra mesmo que a inser&amp;ccedil;&amp;atilde;o tenha sido feita da mesma&amp;nbsp;forma.&lt;/p&gt;
+&lt;p&gt;Caso seja necess&amp;aacute;rio verificar se uma chave j&amp;aacute; se encontra no dicion&amp;aacute;rio, basta fazer o&amp;nbsp;seguinte&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 'seg' in dias_semana
+True
+&amp;gt;&amp;gt;&amp;gt; 'bla' in dias_semana
+False
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Bem, digamos agora que n&amp;atilde;o quero mais que o dicion&amp;aacute;rio tenha a vers&amp;atilde;o mai&amp;uacute;scula para o&amp;nbsp;domingo.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; del(dias_semana['Dom])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Tamb&amp;eacute;m &amp;eacute; poss&amp;iacute;vel saber quais as chaves que j&amp;aacute; foram&amp;nbsp;inseridas:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; dias_semana.keys()
+['sab', 'seg', 'sex', 'qua', 'qui', 'ter', 'Qua', 'dom', 'Sab', 'Sex',
+'Seg', 'Qui', 'Ter']
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;E quais os valores que h&amp;aacute; no dicion&amp;aacute;rio:
+    &amp;gt;&amp;gt;&amp;gt; dias_semana.values()
+    [6, 1, 5, 3, 4, 2, 3, 0, 6, 5, 1, 4,&amp;nbsp;2]&lt;/p&gt;
+&lt;p&gt;Algo importante a se notar &amp;eacute; que as chaves e elementos de dicion&amp;aacute;rios podem ser de virtualmente qualquer tipo, com exce&amp;ccedil;&amp;atilde;o das chaves que tem uma restri&amp;ccedil;&amp;atilde;o. Os objetos tem que ser&amp;nbsp;imut&amp;aacute;veis.&lt;/p&gt;
+&lt;p&gt;Isto quer dizer que a lista &lt;code&gt;[1, 2, 3]&lt;/code&gt; n&amp;atilde;o pode ser uma chave de dicion&amp;aacute;rio j&amp;aacute; que podemos no meio da execu&amp;ccedil;&amp;atilde;o alterar valores da lista. J&amp;aacute; a tupla &lt;code&gt;(1, 2, 3)&lt;/code&gt; que &amp;eacute; imut&amp;aacute;vel pode ser uma chave de dicion&amp;aacute;rios sem&amp;nbsp;problemas.&lt;/p&gt;
+&lt;p&gt;Agora, voc&amp;ecirc; j&amp;aacute; conhece os Dicion&amp;aacute;rios do Python, esta estrutura de dados que tem tantas aplica&amp;ccedil;&amp;otilde;es&amp;nbsp;importantes.&lt;/p&gt;
+&lt;p&gt;N&amp;atilde;o deixe de enviar d&amp;uacute;vidas e opini&amp;otilde;es nos coment&amp;aacute;rios&amp;nbsp;abaixo!&lt;/p&gt;
+&lt;p&gt;At&amp;eacute; o pr&amp;oacute;ximo&amp;nbsp;post!&lt;/p&gt;</content><category term="Tutoriais"></category><category term="Tutorial"></category><category term="Python 101"></category></entry><entry><title>Python 101 - Part 10 - Dictionaries</title><link href="http://programeempython.com.br/python-101-parte-10-en.html" rel="alternate"></link><published>2022-08-30T00:06:00+02:00</published><updated>2022-08-30T00:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-08-30:/python-101-parte-10-en.html</id><summary type="html">&lt;p&gt;Hi!&lt;/p&gt;
+&lt;p&gt;Today we are going to talk about a data structure that is not present in all languages. This structure is called a&amp;nbsp;dictionary.&lt;/p&gt;
+&lt;p&gt;Python dictionaries are data structures that contain key-value&amp;nbsp;pairs.&lt;/p&gt;
+&lt;p&gt;They are similar to lists, considering that both are sequences of elements, but accessing each position in …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hi!&lt;/p&gt;
+&lt;p&gt;Today we are going to talk about a data structure that is not present in all languages. This structure is called a&amp;nbsp;dictionary.&lt;/p&gt;
+&lt;p&gt;Python dictionaries are data structures that contain key-value&amp;nbsp;pairs.&lt;/p&gt;
+&lt;p&gt;They are similar to lists, considering that both are sequences of elements, but accessing each position in the list is done&amp;nbsp;differently.&lt;/p&gt;
+&lt;p&gt;In case you haven&amp;rsquo;t seen the other articles in the Python 101 series, here they&amp;nbsp;are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-1-en.html"&gt;Introduction to&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-2-en.html"&gt;Python Code&amp;nbsp;Blocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-3-condicionais-en.html"&gt;Conditional Structures in Python -&amp;nbsp;1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-4-en.html"&gt;Conditional Structures in Python -&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-5-en.html"&gt;Repeat Structures -&amp;nbsp;while&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-6-en.html"&gt;Repeat Structures -&amp;nbsp;for&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-7-en.html"&gt;Python Data Structures -&amp;nbsp;1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-8-en.html"&gt;Python Data Structures -&amp;nbsp;Lists&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://programeempython.com.br/python-101-parte-9-en.html"&gt;Python Data Structures - Comprehentions&amp;nbsp;List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So let&amp;rsquo;s see how to work with Dictionaries in&amp;nbsp;Python!&lt;/p&gt;
+&lt;p&gt;To get started, let&amp;rsquo;s look at ways to define a&amp;nbsp;dictionary.&lt;/p&gt;
+&lt;p&gt;First we define an empty&amp;nbsp;dictionary:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;dictionary&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;This dictionary can receive values &amp;ZeroWidthSpace;&amp;ZeroWidthSpace;in the future during the execution of the&amp;nbsp;program.&lt;/p&gt;
+&lt;p&gt;Now, let&amp;rsquo;s imagine what it would be like to build a dictionary that listed strings for the days of the week, such as &amp;lsquo;mon&amp;rsquo; and &amp;lsquo;ter&amp;rsquo; with numbers. Indispensable if you&amp;rsquo;re going to make a calendar, don&amp;rsquo;t you&amp;nbsp;think?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;weekdays&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'sun'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'mon'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'tue'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'wed'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s1"&gt;'thu'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'sex'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'sat'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;When we create a dictionary, it will have this structure. Before the &lt;code&gt;:&lt;/code&gt; we have the key of the key-value pair, and after that, the corresponding&amp;nbsp;value.&lt;/p&gt;
+&lt;p&gt;But, what if we were to create a dictionary that related the letters N, E, S, W of the cardinal points with&amp;nbsp;numbers?&lt;/p&gt;
+&lt;p&gt;I bet you already know the answer! But, there is another way, also very useful to generate dictionaries, and that can be very important for generating these dictionaries at&amp;nbsp;runtime.&lt;/p&gt;
+&lt;p&gt;Using &lt;code&gt;dict()&lt;/code&gt; we can turn tuple lists into dictionaries. Technically it should be a sequence of sequences, but we&amp;rsquo;ll use a list of tuples to illustrate&amp;nbsp;that.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you don&amp;rsquo;t remember what a tuple is, check out our &lt;a href="http://programeempython.com.br/python-101-parte-7-en.html"&gt;Introduction to Data Structures&amp;nbsp;post&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here&amp;rsquo;s how &lt;code&gt;dict()&lt;/code&gt; works:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;cardinal&lt;/span&gt; &lt;span class="n"&gt;points&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;([(&lt;/span&gt;&lt;span class="s1"&gt;'N'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'E'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'S'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'W'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;Do you remember the &lt;a href="http://programeempython.com.br/python-101-parte-9-en.html"&gt;List Comprehension&lt;/a&gt; we saw in the last&amp;nbsp;post?&lt;/p&gt;
+&lt;p&gt;Well, how about using it to build a dictionary that lists the integers from zero to ten and their respective&amp;nbsp;squares?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;squares&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;)])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;It&amp;rsquo;s very simple to create a dictionary, isn&amp;rsquo;t&amp;nbsp;it?&lt;/p&gt;
+&lt;p&gt;But&amp;hellip; just creating the dictionaries is useless,&amp;nbsp;right?&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s see how to access a value from its key. let&amp;rsquo;s use the days of the week dictionary. Try the commands in the Python&amp;nbsp;Shell!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; weekdays['tue']
+two
+&amp;gt;&amp;gt;&amp;gt; weekdays['sat']
+6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Easy, isn&amp;rsquo;t&amp;nbsp;it?&lt;/p&gt;
+&lt;p&gt;Shall we insert some values &amp;ZeroWidthSpace;&amp;ZeroWidthSpace;into this&amp;nbsp;dictionary?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; weekdays
+{'wed': 3, 'sun': 0, 'sat': 6, 'fri': 5, 'mon': 1, 'thu': 4, 'tue': 2}
+&amp;gt;&amp;gt;&amp;gt; weekdays['Sun'] = 0
+&amp;gt;&amp;gt;&amp;gt; weekdays['Mon'] = 1
+&amp;gt;&amp;gt;&amp;gt; weekdays['Tue'] = 2
+&amp;gt;&amp;gt;&amp;gt; weekdays['Wed'] = 3
+&amp;gt;&amp;gt;&amp;gt; weekdays['Thu'] = 4
+&amp;gt;&amp;gt;&amp;gt; weekdays['Fri'] = 5
+&amp;gt;&amp;gt;&amp;gt; weekdays['Sat'] = 6
+&amp;gt;&amp;gt;&amp;gt; weekdays
+{'wed': 3, 'sun': 0, 'sat': 6, 'Sun': 0, 'mon': 1, 'fri': 5, 'Mon': 1,
+'thu': 4, 'Wed': 3, 'Sat': 6, 'Thu': 4, 'tue': 2, 'Fri': 5, 'Tue': 2}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In a dictionary, the order in which the elements appear is not so important, as the values &amp;ZeroWidthSpace;&amp;ZeroWidthSpace;are accessed mainly through their respective keys, not their positions. In addition, dictionaries do not keep the order of elements, so the element that appears first in one execution may not be the first in another, even if the insertion was done in the same&amp;nbsp;way.&lt;/p&gt;
+&lt;p&gt;If you need to check if a key is already in the dictionary, just do the&amp;nbsp;following&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 'mon' in weekdays
+true
+&amp;gt;&amp;gt;&amp;gt; 'bla' in weekdays
+false
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Well, let&amp;rsquo;s say now that I no longer want the dictionary to have the capitalized version for&amp;nbsp;Sunday.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; del(weekdays['Sun])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It is also possible to know which keys have already been&amp;nbsp;inserted:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; weekdays.keys()
+['Sat', 'Mon', 'Fri', 'Wed', 'Thu', 'Tue', 'Wed', 'Sun', 'Sat', 'Fri',
+'Mon', 'Thu', 'Tue']
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And what values &amp;ZeroWidthSpace;&amp;ZeroWidthSpace;are in the dictionary:
+    &amp;gt;&amp;gt;&amp;gt; weekdays.values()
+    [6, 1, 5, 3, 4, 2, 3, 0, 6, 5, 1, 4,&amp;nbsp;2]&lt;/p&gt;
+&lt;p&gt;One important thing to note is that keys and dictionary elements can be of virtually any type, with the exception of keys which have a constraint. Objects have to be&amp;nbsp;immutable.&lt;/p&gt;
+&lt;p&gt;This means that the list &lt;code&gt;[1, 2, 3]&lt;/code&gt; cannot be a dictionary key as we can change values &amp;ZeroWidthSpace;&amp;ZeroWidthSpace;in the list in the middle of the execution. The tuple &lt;code&gt;(1, 2, 3)&lt;/code&gt; that is immutable can be a dictionary key without any&amp;nbsp;problems.&lt;/p&gt;
+&lt;p&gt;By now, you are familiar with Python Dictionaries, this data structure that has so many important&amp;nbsp;applications.&lt;/p&gt;
+&lt;p&gt;Be sure to post questions and opinions in the comments&amp;nbsp;below!&lt;/p&gt;
+&lt;p&gt;See you in the next&amp;nbsp;post!&lt;/p&gt;</content><category term="Tutoriais"></category><category term="Tutorial"></category><category term="Python 101"></category></entry><entry><title>Python 101 - Parte 9 - Estruturas de Dados - List Comprehention</title><link href="http://programeempython.com.br/python-101-parte-9.html" rel="alternate"></link><published>2022-08-22T23:06:00+02:00</published><updated>2022-08-22T23:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-08-22:/python-101-parte-9.html</id><summary type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
 &lt;p&gt;Como prometido, hoje vamos continuar o post falando sobre listas em Python, pois este &amp;eacute; uma assunto bastante&amp;nbsp;extenso.&lt;/p&gt;
 &lt;p&gt;O assunto de hoje &amp;eacute; &lt;strong&gt;List Comprehension&lt;/strong&gt;, ou em portugu&amp;ecirc;s, abrang&amp;ecirc;ncia de listas. Como o termo em portugu&amp;ecirc;s n&amp;atilde;o retrata bem o que este recurso faz, vamos usar o termo …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ol&amp;aacute;!&lt;/p&gt;
 &lt;p&gt;Como prometido, hoje vamos continuar o post falando sobre listas em Python, pois este &amp;eacute; uma assunto bastante&amp;nbsp;extenso.&lt;/p&gt;
@@ -65,7 +243,7 @@ Agora, veja uma forma de trocar as linhas com as colunas da matriz&amp;nbsp;m:&l
 &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;[1, 4, 7&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;2, 5, 8&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;3, 6, 9&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Acho que por hoje, este recurso est&amp;aacute; bem ilustrado. N&amp;atilde;o deixe de enviar d&amp;uacute;vidas e opini&amp;otilde;es nos coment&amp;aacute;rios&amp;nbsp;abaixo!&lt;/p&gt;
-&lt;p&gt;At&amp;eacute; o pr&amp;oacute;ximo&amp;nbsp;post!&lt;/p&gt;</content><category term="Tutoriais"></category><category term="Tutorial"></category><category term="Python 101"></category></entry><entry><title>Python 101 - Parte 9 - Data Structures - List Comprehention</title><link href="http://programeempython.com.br/python-101-parte-9-en.html" rel="alternate"></link><published>2022-08-22T23:06:00+02:00</published><updated>2022-08-22T23:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-08-22:/python-101-parte-9-en.html</id><summary type="html">&lt;p&gt;Hello!&lt;/p&gt;
+&lt;p&gt;At&amp;eacute; o pr&amp;oacute;ximo&amp;nbsp;post!&lt;/p&gt;</content><category term="Tutoriais"></category><category term="Tutorial"></category><category term="Python 101"></category></entry><entry><title>Python 101 - Part 9 - Data Structures - List Comprehention</title><link href="http://programeempython.com.br/python-101-parte-9-en.html" rel="alternate"></link><published>2022-08-22T23:06:00+02:00</published><updated>2022-08-22T23:06:00+02:00</updated><author><name>Julio Melanda</name></author><id>tag:programeempython.com.br,2022-08-22:/python-101-parte-9-en.html</id><summary type="html">&lt;p&gt;Hello!&lt;/p&gt;
 &lt;p&gt;As promised, today we are going to continue the post talking about lists in Python, as this is a very extensive&amp;nbsp;subject.&lt;/p&gt;
 &lt;p&gt;Today&amp;rsquo;s topic is List&amp;nbsp;Comprehension.&lt;/p&gt;
 &lt;p&gt;List Comprehension is a Python feature that allows the creation of lists in a simple way, simply using an expression followed …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hello!&lt;/p&gt;

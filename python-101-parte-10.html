@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/stylesheet/style.min.css">
+
+  <link id="dark-theme-style" rel="stylesheet" type="text/css"  disabled="disabled"     href="http://programeempython.com.br/theme/stylesheet/dark-theme.min.css">
+
+  <link id="pygments-dark-theme" rel="stylesheet" type="text/css"  disabled="disabled"     href="http://programeempython.com.br/theme/pygments/one-dark.min.css">
+  <link id="pygments-light-theme" rel="stylesheet" type="text/css"     href="http://programeempython.com.br/theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="http://programeempython.com.br/theme/font-awesome/css/solid.css">
+
+
+  <link href="http://programeempython.com.br/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+    title="Programe em Python Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CWQ34LZTCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-CWQ34LZTCX');
+</script>
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#666666">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#666666">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#666666">
+
+<meta name="author" content="Julio Melanda" />
+<meta name="description" content="Olá! Hoje vamos falar de uma estrutura de dados que não está presente em todas as linguagens. Esta estrutura é chamada de dicionário. Os dicionários em Python são estruturas de dados que contém pares de chave-valor. São parecidos com as listas, considerando que ambos são sequencias de elementos, mas o …" />
+<meta name="keywords" content="Tutorial, Python 101">
+
+<link rel="alternate" href="http://programeempython.com.br/python-101-parte-10.html" hreflang="pt_br" />
+<link rel="alternate" href="http://programeempython.com.br/python-101-parte-10-en.html" hreflang="en" />
+
+<meta property="og:site_name" content="Programe em Python"/>
+<meta property="og:title" content="Python 101 - Parte 10 - Dicionários"/>
+<meta property="og:description" content="Olá! Hoje vamos falar de uma estrutura de dados que não está presente em todas as linguagens. Esta estrutura é chamada de dicionário. Os dicionários em Python são estruturas de dados que contém pares de chave-valor. São parecidos com as listas, considerando que ambos são sequencias de elementos, mas o …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://programeempython.com.br/python-101-parte-10.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-08-30 00:06:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://programeempython.com.br/author/julio-melanda.html">
+<meta property="article:section" content="Tutoriais"/>
+<meta property="article:tag" content="Tutorial"/>
+<meta property="article:tag" content="Python 101"/>
+<meta property="og:image" content="/images/logo.png">
+
+  <title>Programe em Python &ndash; Python 101 - Parte 10 - Dicionários</title>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5019623326305470"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="light-theme" >
+  <aside>
+    <div>
+      <a href="http://programeempython.com.br">
+        <img src="/images/logo.png" alt="Programe em Python" title="Programe em Python">
+      </a>
+
+      <h1>
+        <a href="http://programeempython.com.br">Programe em Python</a>
+      </h1>
+
+<p>Um pouco de tudo sobre programação em Python</p>
+
+      <nav>
+        <ul class="list">
+
+
+          <li>
+            <a target="_self"
+              href="http://programeempython.com.br/pages/contato.html#contato">
+              Contato
+            </a>
+          </li>
+          <li>
+            <a target="_self"
+              href="http://programeempython.com.br/pages/sobre-mim.html#sobre-mim">
+              Sobre&nbsp;Mim
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li>
+          <a  class="sc-github" href="https://github.com/jcemelanda" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a  class="sc-linkedin" href="https://www.linkedin.com/in/jcemelanda" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a  class="sc-twitter" href="https://twitter.com/jcemelanda" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-aside" data-ad-client="ca-pub-5019623326305470"
+      data-ad-slot="1234561"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </aside>
+  <main>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive" data-ad-client="ca-pub-5019623326305470"
+      data-ad-slot="1234562"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <nav>
+      <a href="http://programeempython.com.br">Home</a>
+
+      <a href="/archives.html">Arquivo</a>
+      <a href="/categories.html">Categorias</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://programeempython.com.br/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+          <div class="translations">
+    <a class="active" href="http://programeempython.com.br/python-101-parte-10.html">pt_br</a>
+        <a href="http://programeempython.com.br/python-101-parte-10-en.html">en</a>
+    </div>
+
+    <h1 id="python-101-parte-10">Python 101 - Parte 10 -&nbsp;Dicionários</h1>
+    <p>
+      Posted on Tue 30 August 2022 in <a href="http://programeempython.com.br/category/tutoriais.html">Tutoriais</a>
+
+        &#8226; 4 min read
+    </p>
+  </header>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-5019623326305470"
+         data-ad-slot="1234565"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+  <div>
+    <p>Ol&aacute;!</p>
+<p>Hoje vamos falar de uma estrutura de dados que n&atilde;o est&aacute; presente em todas as linguagens. Esta estrutura &eacute; chamada de&nbsp;dicion&aacute;rio.</p>
+<p>Os dicion&aacute;rios em Python s&atilde;o estruturas de dados que cont&eacute;m pares de&nbsp;chave-valor.</p>
+<p>S&atilde;o parecidos com as listas, considerando que ambos s&atilde;o sequencias de elementos, mas o acesso a cada posi&ccedil;&atilde;o da lista &eacute; feito de forma&nbsp;diferente.</p>
+<p>Caso voc&ecirc; ainda n&atilde;o tenha visto os outros artigos da s&eacute;rie Python 101, aqui&nbsp;est&atilde;o:</p>
+<ul>
+<li><a href="http://programeempython.com.br/python-101-parte-1.html">Introdu&ccedil;&atilde;o ao&nbsp;Python</a></li>
+<li><a href="http://programeempython.com.br/python-101-parte-2.html">Blocos de C&oacute;digo em&nbsp;Python</a></li>
+<li><a href="http://programeempython.com.br/python-101-parte-3-condicionais.html">Estruturas Condicionais em Python -&nbsp;1</a></li>
+<li><a href="http://programeempython.com.br/python-101-parte-4.html">Estruturas Condicionais em Python -&nbsp;2</a></li>
+<li><a href="http://programeempython.com.br/python-101-parte-5.html">Estruturas de Repeti&ccedil;&atilde;o -&nbsp;while</a></li>
+<li><a href="http://programeempython.com.br/python-101-parte-6.html">Estruturas de Repeti&ccedil;&atilde;o -&nbsp;for</a></li>
+<li><a href="http://programeempython.com.br/python-101-parte-7.html">Estruturas de Dados do Python -&nbsp;1</a></li>
+<li><a href="http://programeempython.com.br/python-101-parte-8.html">Estruturas de Dados do Python -&nbsp;Listas</a></li>
+<li><a href="http://programeempython.com.br/python-101-parte-9.html">Estruturas de Dados do Python - Lista&nbsp;Comprehentions</a></li>
+</ul>
+<p>Vejamos ent&atilde;o como trabalhar com Dicion&aacute;rios em&nbsp;Python!</p>
+<p>Para come&ccedil;ar, vamos ver as maneiras de definir um&nbsp;dicion&aacute;rio.</p>
+<p>Primeiro definimos um dicion&aacute;rio&nbsp;vazio:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dicionario</span> <span class="o">=</span> <span class="p">{}</span>
+</code></pre></div></td></tr></table></div>
+<p>Este dicion&aacute;rio pode receber valores futuramente durante a execu&ccedil;&atilde;o do&nbsp;programa.</p>
+<p>Agora, imaginemos como seria montar um dicion&aacute;rio que relacionasse strings para os dias da semana, como &lsquo;seg&rsquo; e &lsquo;ter&rsquo; com n&uacute;meros. Indispens&aacute;vel se voc&ecirc; for fazer um calend&aacute;rio, n&atilde;o&nbsp;acha?</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dias_semana</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'dom'</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'seg'</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'ter'</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">'qua'</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s1">'qui'</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">'sex'</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">'sab'</span> <span class="p">:</span> <span class="mi">6</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Ao criarmos um dicion&aacute;rio, ele ter&aacute; esta estrutura. Antes do &lsquo;:&rsquo; temos a chave do par chave-valor, e logo ap&oacute;s, o valor&nbsp;correspondente.</p>
+<p>Mas, e se f&ocirc;ssemos criar um dicion&aacute;rio que relacionasse as letras N, L, S, O dos pontos cardeais com&nbsp;n&uacute;meros?</p>
+<p>Aposto que voc&ecirc; j&aacute; sabe a resposta! Mas, existe uma outra forma, tamb&eacute;m muito &uacute;til de gerar dicion&aacute;rios, e que pode ser muito importante para gera&ccedil;&atilde;o destes dicion&aacute;rios em tempo de&nbsp;execu&ccedil;&atilde;o.</p>
+<p>Usando <code>dict()</code> podemos transformar listas de tuplas em dicion&aacute;rios. Tecnicamente seriam sequencias de sequencias, mas para o exemplo vamos usar listas de&nbsp;tuplas.</p>
+<blockquote>
+<p>Se voc&ecirc; n&atilde;o lembra o que &eacute; uma tupla, confira nosso <a href="http://programeempython.com.br/python-101-parte-7.html">post de introdu&ccedil;&atilde;o &agrave;s estruturas de&nbsp;dados</a></p>
+</blockquote>
+<p>Veja como funciona o <code>dict()</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">pontos_cardeais</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="s1">'N'</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">'L'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">'S'</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">'O'</span><span class="p">,</span> <span class="mi">3</span><span class="p">)])</span>
+</code></pre></div></td></tr></table></div>
+<p>Voc&ecirc; se lembra da <a href="http://programeempython.com.br/python-101-parte-9.html">List Comprehension</a> que vimos no &uacute;ltimo&nbsp;post?</p>
+<p>Pois bem, que tal us&aacute;-la para montar um dicion&aacute;rio que relaciona os inteiros de zero a dez e seus respectivos&nbsp;quadrados?</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">quadrados</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)])</span>
+</code></pre></div></td></tr></table></div>
+<p>&Eacute; muito simples criar dicion&aacute;rio,&nbsp;n&atilde;o?</p>
+<p>Mas&hellip; simplesmente criar os dicion&aacute;rios n&atilde;o tem utilidade nenhuma,&nbsp;certo?</p>
+<p>Vejamos como acessar um valor a partir de sua chave. vamos usar o dicion&aacute;rio dos dias da semana. Experimente os comandos no Shell do&nbsp;Python!</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; dias_semana['ter']
+2
+&gt;&gt;&gt; dias_semana['sab']
+6
+</code></pre></div>
+<p>F&aacute;cil, n&atilde;o&nbsp;&eacute;?</p>
+<p>Vamos inserir alguns valores neste&nbsp;dicion&aacute;rio?</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; dias_semana
+{'qua': 3, 'dom': 0, 'sab': 6, 'sex': 5, 'seg': 1, 'qui': 4, 'ter': 2}
+&gt;&gt;&gt; dias_semana['Dom'] = 0
+&gt;&gt;&gt; dias_semana['Seg'] = 1
+&gt;&gt;&gt; dias_semana['Ter'] = 2
+&gt;&gt;&gt; dias_semana['Qua'] = 3
+&gt;&gt;&gt; dias_semana['Qui'] = 4
+&gt;&gt;&gt; dias_semana['Sex'] = 5
+&gt;&gt;&gt; dias_semana['Sab'] = 6
+&gt;&gt;&gt; dias_semana
+{'qua': 3, 'dom': 0, 'sab': 6, 'Dom': 0, 'Seg': 1, 'sex': 5, 'seg': 1, 
+'Qui': 4, 'Qua': 3, 'Sab': 6, 'qui': 4, 'ter': 2, 'Sex': 5, 'Ter': 2}
+</code></pre></div>
+<p>Num dicion&aacute;rio, a ordem em que os elementos aparecem n&atilde;o &eacute; t&atilde;o importante, pois os valores s&atilde;o acessados principalmente atrav&eacute;s de suas respectivas chaves, e n&atilde;o de suas posi&ccedil;&otilde;es. Al&eacute;m disso, dicion&aacute;rios n&atilde;o guardam a ordem dos elementos, logo, o elemento que aparece em primeiro lugar numa execu&ccedil;&atilde;o pode n&atilde;o ser o primeiro em outra mesmo que a inser&ccedil;&atilde;o tenha sido feita da mesma&nbsp;forma.</p>
+<p>Caso seja necess&aacute;rio verificar se uma chave j&aacute; se encontra no dicion&aacute;rio, basta fazer o&nbsp;seguinte</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; 'seg' in dias_semana
+True
+&gt;&gt;&gt; 'bla' in dias_semana
+False
+</code></pre></div>
+<p>Bem, digamos agora que n&atilde;o quero mais que o dicion&aacute;rio tenha a vers&atilde;o mai&uacute;scula para o&nbsp;domingo.</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; del(dias_semana['Dom])
+</code></pre></div>
+<p>Tamb&eacute;m &eacute; poss&iacute;vel saber quais as chaves que j&aacute; foram&nbsp;inseridas:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; dias_semana.keys()
+['sab', 'seg', 'sex', 'qua', 'qui', 'ter', 'Qua', 'dom', 'Sab', 'Sex',
+'Seg', 'Qui', 'Ter']
+</code></pre></div>
+<p>E quais os valores que h&aacute; no dicion&aacute;rio:
+    &gt;&gt;&gt; dias_semana.values()
+    [6, 1, 5, 3, 4, 2, 3, 0, 6, 5, 1, 4,&nbsp;2]</p>
+<p>Algo importante a se notar &eacute; que as chaves e elementos de dicion&aacute;rios podem ser de virtualmente qualquer tipo, com exce&ccedil;&atilde;o das chaves que tem uma restri&ccedil;&atilde;o. Os objetos tem que ser&nbsp;imut&aacute;veis.</p>
+<p>Isto quer dizer que a lista <code>[1, 2, 3]</code> n&atilde;o pode ser uma chave de dicion&aacute;rio j&aacute; que podemos no meio da execu&ccedil;&atilde;o alterar valores da lista. J&aacute; a tupla <code>(1, 2, 3)</code> que &eacute; imut&aacute;vel pode ser uma chave de dicion&aacute;rios sem&nbsp;problemas.</p>
+<p>Agora, voc&ecirc; j&aacute; conhece os Dicion&aacute;rios do Python, esta estrutura de dados que tem tantas aplica&ccedil;&otilde;es&nbsp;importantes.</p>
+<p>N&atilde;o deixe de enviar d&uacute;vidas e opini&otilde;es nos coment&aacute;rios&nbsp;abaixo!</p>
+<p>At&eacute; o pr&oacute;ximo&nbsp;post!</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://programeempython.com.br/tag/tutorial.html">Tutorial</a>
+      <a href="http://programeempython.com.br/tag/python-101.html">Python 101</a>
+    </p>
+  </div>
+
+
+
+  <div class="related-posts">
+    <h4>You might enjoy</h4>
+    <ul class="related-posts">
+      <li><a href="http://programeempython.com.br/python-101-parte-9.html">Python 101 - Parte 9 - Estruturas de Dados - List&nbsp;Comprehention</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-8.html">Python 101 - Parte 8 - Estruturas de Dados -&nbsp;Listas</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-7.html">Python 101 - Parte 7 - Estruturas de Dados -&nbsp;1</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-6.html">Python 101 - Parte 6 - Estruturas de Repetição -&nbsp;For</a></li>
+      <li><a href="http://programeempython.com.br/python-101-parte-5.html">Python 101 - Parte 5 - Estruturas de Repetição -&nbsp;While</a></li>
+    </ul>
+  </div>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-5019623326305470"
+         data-ad-slot="1234566"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'programeempython';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy; 2022 </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="http://programeempython.com.br/theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="false"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Programe em Python ",
+  "url" : "http://programeempython.com.br",
+  "image": "/images/logo.png",
+  "description": ""
+}
+</script>
+
+
+</body>
+
+</html>

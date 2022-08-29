@@ -1,4 +1,4 @@
-Title: Python 101 - Parte 9 - Data Structures - List Comprehention
+Title: Python 101 - Part 9 - Data Structures - List Comprehention
 Date: 2022-08-22 23:06
 Slug: python-101-parte-9
 Category: Tutoriais

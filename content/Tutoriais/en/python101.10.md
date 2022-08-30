@@ -1,4 +1,4 @@
-Title: Python 101 - Part 10 - Dictionaries
+Title: Python 101 - Part 10 - Data Structures - Dictionaries
 Date: 2022-08-30 00:06
 Slug: python-101-parte-10
 Category: Tutoriais

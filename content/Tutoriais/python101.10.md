@@ -1,4 +1,4 @@
-Title: Python 101 - Parte 10 - Dicionários
+Title: Python 101 - Parte 10 - Estruturas de Dados - Dicionários
 Date: 2022-08-30 00:06
 Slug: python-101-parte-10
 Category: Tutoriais

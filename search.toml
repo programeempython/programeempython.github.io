@@ -15,7 +15,7 @@ title = "Sobre Mim"
 [[input.files]]
 path = "python-101-parte-10.html"
 url = "python-101-parte-10.html"
-title = "Python 101 - Parte 10 - Dicionários"
+title = "Python 101 - Parte 10 - Estruturas de Dados - Dicionários"
 
 [[input.files]]
 path = "python-101-parte-9.html"
@@ -95,7 +95,7 @@ title = "Um novo começo"
 [[input.files]]
 path = "python-101-parte-10-en.html"
 url = "python-101-parte-10-en.html"
-title = "Python 101 - Part 10 - Dictionaries"
+title = "Python 101 - Part 10 - Data Structures - Dictionaries"
 
 [[input.files]]
 path = "python-101-parte-9-en.html"
